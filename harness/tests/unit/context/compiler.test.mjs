@@ -255,6 +255,38 @@ test("optional unrelated candidates are excluded before resolve or read", async 
   assert.equal(sourceProvider.reads.includes("other/unrelated.md"), false);
 });
 
+test("multiple sections share one document snapshot and enforce each expected document hash", async () => {
+  const sourceProvider = provider(files);
+  const sources = [...baseSources, { ...baseSources[3], section: "Section 1" }];
+  const manifest = await new ContextCompiler(sourceProvider).compile(input(sources));
+  assert.equal(manifest.delivery_context.length, 2);
+  assert.equal(sourceProvider.reads.filter((path) => path === "docs/harness.md").length, 1);
+  await assert.rejects(new ContextCompiler(provider(files)).compile(input([
+    ...baseSources,
+    { ...baseSources[3], section: "Section 1", expected_content_sha256: `sha256:${"0".repeat(64)}` },
+  ])), expectHarnessError("HNS-CTX-001", "CONCURRENT_HASH_DRIFT"));
+});
+
+test("repeated on-demand selections revalidate content and caller expected hashes", async () => {
+  const mutableFiles = { ...files };
+  const compiler = new ContextCompiler(provider(mutableFiles));
+  const manifest = await compiler.compile(input(baseSources));
+  const policy = { ...input().boundary, context_budget: input().hard_safety_ceiling };
+  const request = {
+    request_id: "repeat-drift", execution_id: manifest.execution_id,
+    requested_path: "docs/harness.md", section: "Section 2", reason: "revalidate selected context",
+  };
+  const repeated = await compiler.requestContext(manifest, request, policy, root);
+  assert.equal(repeated.reason, "ALREADY_PRESENT");
+  assert.deepEqual(repeated.audit.budget_delta, { bytes: 0, files: 0, sections: 0 });
+  await assert.rejects(compiler.requestContext(manifest, {
+    ...request, expected_content_sha256: `sha256:${"0".repeat(64)}`,
+  }, policy, root), expectHarnessError("HNS-CTX-001", "CONCURRENT_HASH_DRIFT"));
+  mutableFiles["docs/harness.md"] = sectioned.replace("Required section body.", "Changed section body.");
+  await assert.rejects(compiler.requestContext(manifest, request, policy, root),
+    expectHarnessError("HNS-CTX-001", "CONCURRENT_HASH_DRIFT"));
+});
+
 test("the explicit-source ceiling bounds large repositories without scanning", async () => {
   const excessive = Array.from({ length: 20_001 }, () => baseSources[0]);
   const sourceProvider = provider(files);

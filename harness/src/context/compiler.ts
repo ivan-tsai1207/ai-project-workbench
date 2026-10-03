@@ -273,6 +273,7 @@ export class ContextCompiler {
     ref: ContextSourceRef,
     repositoryRoot: string,
     executionId: string,
+    documents?: Map<string, Uint8Array>,
   ): Promise<LoadedEntry> {
     let canonicalPath: string;
     try {
@@ -285,7 +286,7 @@ export class ContextCompiler {
     }
     let content: string | Uint8Array;
     try {
-      content = await this.#provider.read(canonicalPath);
+      content = documents?.get(ref.path) ?? await this.#provider.read(canonicalPath);
     } catch {
       throw contextFailure("HNS-CTX-002", executionId, "SOURCE_UNAVAILABLE", ref.path);
     }
@@ -297,6 +298,7 @@ export class ContextCompiler {
     if (ref.expected_content_sha256 !== undefined && ref.expected_content_sha256 !== documentHash) {
       throw contextFailure("HNS-CTX-001", executionId, "CONCURRENT_HASH_DRIFT", ref.path);
     }
+    documents?.set(ref.path, documentBytes);
 
     let extracted;
     try {
@@ -422,8 +424,9 @@ export class ContextCompiler {
     }
 
     const loaded: LoadedEntry[] = [];
+    const documents = new Map<string, Uint8Array>();
     for (const ref of uniqueRefs.values()) {
-      loaded.push(await this.#load(ref, input.repository.root, input.execution_id));
+      loaded.push(await this.#load(ref, input.repository.root, input.execution_id, documents));
     }
     loaded.sort((left, right) =>
       AUTHORITY_ORDER[left.context_class] - AUTHORITY_ORDER[right.context_class]
@@ -509,24 +512,6 @@ export class ContextCompiler {
       manifest.work_item,
     ];
     const existingEntry = existing.find((entry) => selectorKey(entry.path, entry.section, entry.anchor) === selectorKey(path, section, anchor));
-    if (existingEntry !== undefined) {
-      return defineCoreValue({
-        request_id: request.request_id,
-        status: "LOADED" as const,
-        manifest_entry: existingEntry,
-        reason: "ALREADY_PRESENT",
-        resulting_context_hash: manifest.context_hash,
-        resulting_manifest: manifest,
-        audit: {
-          before_context_hash: manifest.context_hash,
-          after_context_hash: manifest.context_hash,
-          budget_before: before,
-          budget_after: before,
-          budget_delta: { bytes: 0, files: 0, sections: 0 },
-        },
-      }) as OnDemandContextDecision;
-    }
-
     let loaded: LoadedEntry;
     try {
       loaded = await this.#load({
@@ -548,6 +533,27 @@ export class ContextCompiler {
         );
       }
       throw error;
+    }
+
+    if (existingEntry !== undefined) {
+      if (existingEntry.content_sha256 !== loaded.entry.content_sha256) {
+        throw contextFailure("HNS-CTX-001", manifest.execution_id, "CONCURRENT_HASH_DRIFT", path);
+      }
+      return defineCoreValue({
+        request_id: request.request_id,
+        status: "LOADED" as const,
+        manifest_entry: existingEntry,
+        reason: "ALREADY_PRESENT",
+        resulting_context_hash: manifest.context_hash,
+        resulting_manifest: manifest,
+        audit: {
+          before_context_hash: manifest.context_hash,
+          after_context_hash: manifest.context_hash,
+          budget_before: before,
+          budget_after: before,
+          budget_delta: { bytes: 0, files: 0, sections: 0 },
+        },
+      }) as OnDemandContextDecision;
     }
 
     const sameContent = existing.find((entry) => entry.content_sha256 === loaded.entry.content_sha256);
