@@ -8,7 +8,7 @@
 | Role | `IMPLEMENTER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `IMPLEMENTATION` |
-| Status | `TODO` |
+| Status | `BLOCKED` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -98,7 +98,7 @@ Implement the deterministic least-context compiler needed to assemble a bounded 
 
 ## Blockers
 
-- None
+- Required exact-R2 independent TECH/QA/SECURITY checks incomplete; all R2 decisions BLOCK. Additional allocation 8/8 and sole remediation 1/1 exhausted; see `IG-HNS-EXEC-002-001`.
 
 ## Notes
 

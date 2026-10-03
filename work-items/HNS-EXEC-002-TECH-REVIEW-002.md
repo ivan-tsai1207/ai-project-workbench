@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `BLOCKED` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
