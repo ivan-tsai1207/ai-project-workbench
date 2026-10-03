@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `DONE` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -76,10 +76,10 @@ Independently verify exact R3 reviewed-artifact binding, path/hash fail-closed b
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-001-SECURITY-REVIEW-003-001`: R3 identity, manifest hash, dependency provenance, and independent binding are valid.
-- [ ] `AC-HNS-EXEC-001-SECURITY-REVIEW-003-002`: Targeted finding closes across canonical positive and bounded negative security cases.
-- [ ] `AC-HNS-EXEC-001-SECURITY-REVIEW-003-003`: No scan, filesystem write, process, credential, network, adapter, enforcement, or production capability is introduced.
-- [ ] `AC-HNS-EXEC-001-SECURITY-REVIEW-003-004`: Evidence and findings are appended only to the review log.
+- [x] `AC-HNS-EXEC-001-SECURITY-REVIEW-003-001`: R3 identity, manifest hash, dependency provenance, and independent binding are valid.
+- [x] `AC-HNS-EXEC-001-SECURITY-REVIEW-003-002`: Targeted finding closes across canonical positive and bounded negative security cases.
+- [x] `AC-HNS-EXEC-001-SECURITY-REVIEW-003-003`: No scan, filesystem write, process, credential, network, adapter, enforcement, or production capability is introduced.
+- [x] `AC-HNS-EXEC-001-SECURITY-REVIEW-003-004`: Evidence and findings are appended only to the review log.
 
 ## Required Gates
 
@@ -95,5 +95,5 @@ Independently verify exact R3 reviewed-artifact binding, path/hash fail-closed b
 
 ## Notes
 
+- Lifecycle normalization only: existing `REV-HNS-EXEC-001-SECURITY-003` PASS and `IG-HNS-EXEC-001-001` support DONE. No new review or current-candidate approval; see `LC-HNS-EXEC-001-CORRECTION-001`.
 - A same-finding failure stops as `TARGETED_REMEDIATION_FAILED`; a new unrelated MAJOR/BLOCKING finding stops as `NEW_MAJOR_FINDING`.
-

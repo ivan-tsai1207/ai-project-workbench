@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `DONE` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -76,10 +76,10 @@ Independently validate exact R3 acceptance criteria, targeted finding regression
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-001-QA-REVIEW-003-001`: All HNS-EXEC-001 ACs map to reproducible exact-R3 evidence.
-- [ ] `AC-HNS-EXEC-001-QA-REVIEW-003-002`: Registered reviewer binding passes and directly affected invalid bindings fail closed.
-- [ ] `AC-HNS-EXEC-001-QA-REVIEW-003-003`: Full and focused suites pass without failure, cancellation, skip, todo, or regression.
-- [ ] `AC-HNS-EXEC-001-QA-REVIEW-003-004`: Evidence and findings are appended only to the review log.
+- [x] `AC-HNS-EXEC-001-QA-REVIEW-003-001`: All HNS-EXEC-001 ACs map to reproducible exact-R3 evidence.
+- [x] `AC-HNS-EXEC-001-QA-REVIEW-003-002`: Registered reviewer binding passes and directly affected invalid bindings fail closed.
+- [x] `AC-HNS-EXEC-001-QA-REVIEW-003-003`: Full and focused suites pass without failure, cancellation, skip, todo, or regression.
+- [x] `AC-HNS-EXEC-001-QA-REVIEW-003-004`: Evidence and findings are appended only to the review log.
 
 ## Required Gates
 
@@ -95,5 +95,5 @@ Independently validate exact R3 acceptance criteria, targeted finding regression
 
 ## Notes
 
+- Lifecycle normalization only: existing `REV-HNS-EXEC-001-QA-003` PASS and `IG-HNS-EXEC-001-001` support DONE. No new review or current-candidate approval; see `LC-HNS-EXEC-001-CORRECTION-001`.
 - A same-finding failure stops as `TARGETED_REMEDIATION_FAILED`; a new unrelated MAJOR/BLOCKING finding stops as `NEW_MAJOR_FINDING`.
-

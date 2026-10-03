@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `CANCELLED` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -94,4 +94,5 @@ Independently validate all HNS-EXEC-001 acceptance criteria, R1 finding regressi
 
 ## Notes
 
+- Superseded assignment: no persisted QA R2 execution evidence was located in the bounded canonical log lookup; do not invent an execution or PASS. R3 provides final closure; see `LC-HNS-EXEC-001-CORRECTION-001`.
 - Decision is `PASS`, `REQUEST_CHANGES`, or `BLOCK` only; a new MAJOR/BLOCKING generalized finding triggers the review-loop stop rule.

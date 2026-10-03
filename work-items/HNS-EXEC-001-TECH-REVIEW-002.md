@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `CANCELLED` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -94,4 +94,5 @@ Independently verify the exact R2 remediation, all three R1 finding closures, co
 
 ## Notes
 
+- Superseded assignment: historical `REV-HNS-EXEC-001-TECH-002` execution completed with `BLOCK`; decision/evidence retained unchanged. Incomplete ACs are not retroactively passed. R3 provides final closure; see `LC-HNS-EXEC-001-CORRECTION-001`.
 - Decision is `PASS`, `REQUEST_CHANGES`, or `BLOCK` only; a new MAJOR/BLOCKING generalized finding triggers the review-loop stop rule.

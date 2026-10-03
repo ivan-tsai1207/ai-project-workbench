@@ -5461,3 +5461,42 @@ Node `v24.19.0` / npm `11.17.0`; all commands exit 0 at merge HEAD between 20:55
 - Corrected only host-owned four new Work Item metadata references/list markers: evidence references now use real review-log/workflow paths; targeted Finding IDs remain explicit in root Notes and immutable manifest. No requirement, risk, profile, permission, reviewed artifact, Maker candidate/hash or independent decision changes.
 - Final bounded parse checks PASS for all seven lifecycle Work Items with existing canonical parser and registered existing targets: status DONE, every AC checked. Historical failed review decisions remain REQUEST_CHANGES even though their executions are DONE.
 - This is honest control-plane normalization, not another implementation remediation, a new architecture, accepted risk, or retrospective reviewer validation of malformed host metadata. Required source/dependency tests and review bindings remain exact. No additional Agent dispatch.
+
+## LC-HNS-EXEC-001-CORRECTION-001
+
+| Field | Value |
+|---|---|
+| Evidence Type | Historical reviewer lifecycle normalization |
+| Parent Work Item | `HNS-EXEC-001` remains DONE |
+| Authorized operation | Human next-step instruction; parent closure handoff under WORKFLOW Closure and Evidence |
+| Develop preflight | `09841484a49fb67046714d74747b9f847fc7ea45`; local/remote identical, clean |
+| Timestamp | `2026-10-03 21:15:43 UTC` |
+| Original candidate | `a8dc2070d3ae19ff28daab4c30fcf4923b3fa0a0` unchanged |
+| R3 manifest SHA-256 | `52da10037915b88f9bf86a524cd5f3cf65b5e065e2333ee9e10ea4f1e036d7c1` unchanged |
+| Existing Gate | `IG-HNS-EXEC-001-001` PASS, not re-executed |
+| New reviewer executions | 0 |
+
+| Assignment | Normalized status | Historical evidence / rationale |
+|---|---|---|
+| TECH-REVIEW-001 | CANCELLED | Superseded; completed `REV-HNS-EXEC-001-TECH-001` REQUEST_CHANGES remains unchanged |
+| TECH-REVIEW-002 | CANCELLED | Superseded; completed `REV-HNS-EXEC-001-TECH-002` BLOCK remains unchanged |
+| QA-REVIEW-001 / SECURITY-REVIEW-001 | CANCELLED | Superseded; no persisted execution located; no invented review |
+| QA-REVIEW-002 / SECURITY-REVIEW-002 | CANCELLED | Superseded; no persisted execution located; no invented review |
+| TECH-REVIEW-003 | DONE | Existing `REV-HNS-EXEC-001-TECH-003` PASS; four ACs verified by its evidence |
+| QA-REVIEW-003 | DONE | Existing `REV-HNS-EXEC-001-QA-003` PASS; four ACs verified by its evidence |
+| SECURITY-REVIEW-003 | DONE | Existing `REV-HNS-EXEC-001-SECURITY-003` PASS; four ACs verified by its evidence |
+
+- Status describes assignment lifecycle, not a changed Reviewer decision. Old non-PASS/incomplete ACs remain unchecked; no retrospective PASS or accepted risk.
+- Bounded retrieval only: five exact historical review IDs, `FND-HNS-EXEC-001-TECH-002-001`, original Gate/lifecycle IDs; no full historical log.
+- Only nine HNS-EXEC-001 reviewer Work Items and this log append are authorized. Parent HNS-EXEC-001 bytes/hash, all harness source/tests/dependencies, candidates, immutable manifests, governance and main remain unchanged.
+- Control-plane validation checks exact diff scope, immutable binding fields, canonical parser/status/AC validity, and byte-for-byte historical log prefix preservation. No new TECH/QA/SECURITY/Gate, implementation or remediation; no redundant npm suite for unchanged runtime artifacts.
+- Correction allocation: closure-only host operation, at most 10 minutes from 2026-10-03T21:13:25Z, no subsidiary Agent execution; stop rather than expand scope. Token actual/remaining unavailable; minimal context only.
+- This closes the historical status inconsistency only. EXEC-002/003/004 remain pending and the milestone is not declared COMPLETE.
+
+### Correction Validation and Successor Handoff
+
+- At `2026-10-03 21:17:59 UTC`, canonical parser checks PASS for all nine normalized assignments; expected 3 DONE / 6 CANCELLED. Existing role/profile/risk/phase/artifact/hash/Maker bindings unchanged; old AC arrays preserved, R3 completed ACs backed by targeted existing evidence.
+- Exact 10-file correction scope PASS; historical review-log prefix byte equality PASS; harness/source/tests/dependencies, parent HNS-EXEC-001, all manifests and governance byte equality to preflight PASS; whitespace PASS. Existing execution/Gate results are not re-executed.
+- EXEC-002 remains remote candidate `4f2bc723d8fd2338ae08d8bae10413d21c0d50fa`, parent `1766f438e533d975d3cbe3f49486bcf02f8b406e`, created 2026-09-26T13:58:07+08:00. Only one candidate commit is visible beyond current develop; no EXEC-002 immutable manifest or durable complete execution-budget ledger is present in that candidate tree.
+- Successor preflight cannot infer all historical dispatch attempts/cumulative activity from commit count. Original counters/clock are not silently reset. No fresh EXEC-002 Agent dispatched; Human bounded continuation allocation requested (at most 30 minutes, 8 additional executions, one remediation, EXEC-002 only), pending decision. Historical unknown usage remains unknown, not zero.
+- Exit after this correction if no explicit bounded successor allocation is received: `HUMAN_DECISION_REQUIRED` for budget handoff only. Minimal Execution Engine remains PARTIAL, with EXEC-002/003/004 pending; no Adapter/Pilot or extra capability dispatched.

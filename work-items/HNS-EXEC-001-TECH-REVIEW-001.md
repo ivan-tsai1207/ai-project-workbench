@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `CANCELLED` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -94,5 +94,5 @@ Independently verify HNS-EXEC-001 correctness, SDD compliance, dependency impact
 
 ## Notes
 
+- Superseded assignment: historical `REV-HNS-EXEC-001-TECH-001` execution completed with `REQUEST_CHANGES`; decision/evidence retained unchanged. Incomplete ACs are not retroactively passed. R3 provides final closure; see `LC-HNS-EXEC-001-CORRECTION-001`.
 - Decision is `PASS`, `REQUEST_CHANGES`, or `BLOCK` only.
-

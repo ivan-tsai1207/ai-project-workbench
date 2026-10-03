@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `DONE` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -77,10 +77,10 @@ Independently verify exact R3 closure of `FND-HNS-EXEC-001-TECH-002-001` and dir
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-001-TECH-REVIEW-003-001`: R3 identity, lineage, manifest hash, artifact hashes, diff scope, and separation are valid.
-- [ ] `AC-HNS-EXEC-001-TECH-REVIEW-003-002`: `FND-HNS-EXEC-001-TECH-002-001` closes with exact registered artifact/hash verification and bounded negative regressions.
-- [ ] `AC-HNS-EXEC-001-TECH-REVIEW-003-003`: Direct HNS-EXEC-001 regressions, build, typecheck, tests, audit, and capability boundaries pass without new unrelated MAJOR/BLOCKING finding.
-- [ ] `AC-HNS-EXEC-001-TECH-REVIEW-003-004`: Evidence and findings are appended only to the review log.
+- [x] `AC-HNS-EXEC-001-TECH-REVIEW-003-001`: R3 identity, lineage, manifest hash, artifact hashes, diff scope, and separation are valid.
+- [x] `AC-HNS-EXEC-001-TECH-REVIEW-003-002`: `FND-HNS-EXEC-001-TECH-002-001` closes with exact registered artifact/hash verification and bounded negative regressions.
+- [x] `AC-HNS-EXEC-001-TECH-REVIEW-003-003`: Direct HNS-EXEC-001 regressions, build, typecheck, tests, audit, and capability boundaries pass without new unrelated MAJOR/BLOCKING finding.
+- [x] `AC-HNS-EXEC-001-TECH-REVIEW-003-004`: Evidence and findings are appended only to the review log.
 
 ## Required Gates
 
@@ -96,4 +96,5 @@ Independently verify exact R3 closure of `FND-HNS-EXEC-001-TECH-002-001` and dir
 
 ## Notes
 
+- Lifecycle normalization only: existing `REV-HNS-EXEC-001-TECH-003` PASS and `IG-HNS-EXEC-001-001` support DONE. No new review or current-candidate approval; see `LC-HNS-EXEC-001-CORRECTION-001`.
 - If the same finding remains unresolved, stop as `TARGETED_REMEDIATION_FAILED`; a new unrelated MAJOR/BLOCKING finding stops as `NEW_MAJOR_FINDING`.
