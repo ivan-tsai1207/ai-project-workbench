@@ -8,7 +8,7 @@
 | Role | `PRODUCT_ARCHITECT` |
 | Feature | `execution-economy` |
 | Phase | `SPEC` |
-| Status | `TODO` |
+| Status | `DONE` |
 | Spec Version | `execution-economy-v1` |
 | Design Version | `N/A` |
 | Risk Class | `MEDIUM` |
@@ -85,10 +85,10 @@ Make framework execution finite, least-context and risk-proportional through bou
 
 ## Acceptance Criteria
 
-- [ ] `AC-FRM-ECON-001-001`: A finite plan and budgets exist before dispatch; defaults, precedence, telemetry fallback and stop/continuation behavior are unambiguous.
-- [ ] `AC-FRM-ECON-001-002`: Review/remediation/context/validation reuse rules prevent duplicate or unbounded work while preserving required independent reviews, exact hashes, required tests, findings and Gates.
-- [ ] `AC-FRM-ECON-001-003`: Router, Workflow, Harness Contract, operating rules, Work Item template and SDD references agree without schema/architecture/source changes.
-- [ ] `AC-FRM-ECON-001-004`: A bounded scenario matrix covers normal task, explicit milestone, remediation, changed/stale artifact, closure-only correction, missing token telemetry, budget exhaustion and security failure; independent SPEC review and Spec Gate bind exact candidate hashes.
+- [x] `AC-FRM-ECON-001-001`: A finite plan and budgets exist before dispatch; defaults, precedence, telemetry fallback and stop/continuation behavior are unambiguous.
+- [x] `AC-FRM-ECON-001-002`: Review/remediation/context/validation reuse rules prevent duplicate or unbounded work while preserving required independent reviews, exact hashes, required tests, findings and Gates.
+- [x] `AC-FRM-ECON-001-003`: Router, Workflow, Harness Contract, operating rules, Work Item template and SDD references agree without schema/architecture/source changes.
+- [x] `AC-FRM-ECON-001-004`: A bounded scenario matrix covers normal task, explicit milestone, remediation, changed/stale artifact, closure-only correction, missing token telemetry, budget exhaustion and security failure; independent SPEC review and Spec Gate bind exact candidate hashes.
 
 ## Required Gates
 
@@ -109,3 +109,5 @@ Make framework execution finite, least-context and risk-proportional through bou
 - Maker execution: `EXE-FRM-ECON-001-MAKER-001`; fresh context.
 - Batch: this primary Work Item only; maximum one automatic remediation and two independent SPEC review rounds. Do not resume HNS-EXEC-002/003/004.
 - Required validation: documentation scope/whitespace/reference checks and the bounded AC scenario matrix; no npm validation is applicable to unchanged runtime code or dependencies. No assertion that the separate failed npm audit has passed.
+- Completion: `REV-FRM-ECON-001-SPEC-001` PASS, `SG-FRM-ECON-001-001` PASS, merge `669ed70640831683d1fd1defa6f1f2185fd1c401`; post-merge candidate/manifest integrity and protected-path checks PASS. Closure evidence: `LC-FRM-ECON-001-001`.
+- Final allocation snapshot `2026-10-04T04:07:47+08:00`: 2/4 Agent executions used, remediation 0/1; original conservative origin `2026-10-03T19:45:00Z`, elapsed 22m47s, remaining WI wallclock 7m13s and batch 37m13s. Token actual/remaining and complete aggregate active-time telemetry unavailable; finite count/time fallback, no hard-token enforcement claim. Unused allocation does not authorize a successor task.

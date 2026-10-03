@@ -5204,3 +5204,21 @@ The 13 scenario inputs are preserved in candidate `docs/09_session_logs/2026-10-
 - `git diff --check` and protected-path `git diff --quiet` against original develop pass. Required validation is documentation validation, not runtime npm commands; the separate implementation audit failure remains a separate blocker.
 - Host controller aggregates existing evidence; no additional Agent execution or review-of-review was dispatched (G=0). Count remains 2/4, automatic remediation used 0/1, token actual/remaining unknown with finite count/time fallback. Origin and deadline retained; no budget reset or extension.
 - Gate PASS authorizes this document handoff only. No runtime enforcement implementation, dependency remediation, Execution Engine continuation, Adapter, Pilot, release or main update is included.
+
+## LC-FRM-ECON-001-001 - Execution Economy Policy Closure
+
+| Field | Value |
+|---|---|
+| Work Item | `FRM-ECON-001` / `DONE` |
+| Reviewer Work Item | `FRM-ECON-001-SPEC-REVIEW-001` / `DONE` |
+| Final Candidate | `006d1d1cd1b9e82b97ebcf87dfc7065979ac4958` |
+| Manifest SHA-256 | `08afbdc8fbd3334dd3e6dc85c88ded95448c72c16c2bd6329fe4cdd4d4b44c2d` |
+| Review / Gate | `REV-FRM-ECON-001-SPEC-001` PASS / `SG-FRM-ECON-001-001` PASS |
+| Merge Commit | `669ed70640831683d1fd1defa6f1f2185fd1c401` |
+| Timestamp | `2026-10-04T04:07:47+08:00` |
+
+- Post-merge documentation validation PASS: whitespace, exact equality of all seven reviewed artifacts against candidate, unchanged manifest hash, protected source/dependency/Role/Gate/Authority/architecture paths, and byte-for-byte preservation of the entire historical review log prefix. No new probes or npm validation for unchanged runtime artifacts.
+- All root/reviewer ACs complete, no OPEN finding for this specification. Closure only normalizes authorized Work Item statuses/checkboxes and appends this evidence; immutable policy artifacts, manifest and historical evidence remain unchanged.
+- Allocation remains 2/4 Agent executions, 0/1 remediation. Origin `2026-10-03T19:45:00Z` retained; elapsed at snapshot 22m47s, remaining WI wallclock 7m13s and batch 37m13s. Token actual/remaining and complete active-time telemetry unavailable; count/time fallback and documented enforcement limitations, no fabricated measurements.
+- These are adopted operating rules, not implemented runtime enforcement. The earlier dependency security blocker remains OPEN on the preserved closure-test-fix branch; no Accepted Risk, old-audit PASS, code repair or milestone completion is asserted.
+- This finite batch is complete. Stop; do not start an execution milestone, dependency remediation, adapter, Pilot, token audit or new batch using the unused allocation.

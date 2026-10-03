@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `execution-economy` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `DONE` |
 | Spec Version | `execution-economy-v1` |
 | Design Version | `N/A` |
 | Risk Class | `MEDIUM` |
@@ -77,9 +77,9 @@ Independently verify the exact bounded-execution specification candidate, its co
 
 ## Acceptance Criteria
 
-- [ ] `AC-FRM-ECON-001-SPEC-REVIEW-001-001`: Exact candidate hashes, assigned primary profile, scope and independence are verified.
-- [ ] `AC-FRM-ECON-001-SPEC-REVIEW-001-002`: Policy ACs and bounded scenarios pass without governance/security bypass or contradictory defaults.
-- [ ] `AC-FRM-ECON-001-SPEC-REVIEW-001-003`: Findings, limitations and decision are recorded with artifact binding and actual independent execution identity.
+- [x] `AC-FRM-ECON-001-SPEC-REVIEW-001-001`: Exact candidate hashes, assigned primary profile, scope and independence are verified.
+- [x] `AC-FRM-ECON-001-SPEC-REVIEW-001-002`: Policy ACs and bounded scenarios pass without governance/security bypass or contradictory defaults.
+- [x] `AC-FRM-ECON-001-SPEC-REVIEW-001-003`: Findings, limitations and decision are recorded with artifact binding and actual independent execution identity.
 
 ## Required Gates
 
@@ -99,3 +99,4 @@ Independently verify the exact bounded-execution specification candidate, its co
 - Shared parent batch allocation: R=1, G=0, 4 execution cap; Maker used 1, this review uses 1, leaving at most 2 for one remediation/re-review. Do not reset counters or start a successor batch.
 - Conservative parent wallclock origin `2026-10-03T19:45:00Z`; WI deadline `2026-10-03T20:15:00Z`, batch deadline `2026-10-03T20:45:00Z`. Token target 30,000, actual/remaining unknown; finite count/time fallback. Required checks must fit remaining allocation.
 - Return independent evidence for controller-only persistence in the assigned log; no concurrent artifact writes. Decision is `PASS`, `REQUEST_CHANGES` or `BLOCK`, never a GateResult.
+- Completed: `REV-FRM-ECON-001-SPEC-001` PASS persisted, `SG-FRM-ECON-001-001` PASS, no findings; controller-only status normalization changes no reviewed artifact/manifest. Closure `LC-FRM-ECON-001-001`.
