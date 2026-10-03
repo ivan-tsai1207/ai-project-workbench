@@ -1,0 +1,100 @@
+✖ GHSA-qw65-cvwx-89v3: malformed port cannot inject an authority (5.294417ms)
+✖ GHSA-58mr-gqgx-xq4g: malformed bracket host reports an error (1.088375ms)
+✖ GHSA-hrr3-gc8f-f4qj: encoded uppercase unreserved host is lowercase (0.371875ms)
+✖ benign numeric, digit-string and empty ports preserve the intended host (0.299916ms)
+✔ benign HTTPS and IPv6 URIs retain valid authority and resource components (0.498959ms)
+✔ benign scheme-relative case normalization and relative resolution remain valid (0.409333ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 2
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 110.155333
+
+✖ failing tests:
+
+test at tests/unit/schemas/fast-uri-security.test.mjs:5:1
+✖ GHSA-qw65-cvwx-89v3: malformed port cannot inject an authority (5.294417ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///Users/ivan/Documents/Codex/%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%A1%86%E6%9E%B6/.orchestration/hns-core-005-r4.hn6GJU/repo/harness/tests/unit/schemas/fast-uri-security.test.mjs:12:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /URI port is malformed\./,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests/unit/schemas/fast-uri-security.test.mjs:17:1
+✖ GHSA-58mr-gqgx-xq4g: malformed bracket host reports an error (1.088375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'URI host is malformed.'
+  
+      at TestContext.<anonymous> (file:///Users/ivan/Documents/Codex/%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%A1%86%E6%9E%B6/.orchestration/hns-core-005-r4.hn6GJU/repo/harness/tests/unit/schemas/fast-uri-security.test.mjs:19:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'URI host is malformed.',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/unit/schemas/fast-uri-security.test.mjs:25:1
+✖ GHSA-hrr3-gc8f-f4qj: encoded uppercase unreserved host is lowercase (0.371875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  'A.com' !== 'a.com'
+  
+      at TestContext.<anonymous> (file:///Users/ivan/Documents/Codex/%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%A1%86%E6%9E%B6/.orchestration/hns-core-005-r4.hn6GJU/repo/harness/tests/unit/schemas/fast-uri-security.test.mjs:28:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'A.com',
+    expected: 'a.com',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/unit/schemas/fast-uri-security.test.mjs:33:1
+✖ benign numeric, digit-string and empty ports preserve the intended host (0.299916ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'http://trusted.example/app'
+  - 'http://trusted.example:/app'
+                           ^
+  
+      at TestContext.<anonymous> (file:///Users/ivan/Documents/Codex/%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%A1%86%E6%9E%B6/.orchestration/hns-core-005-r4.hn6GJU/repo/harness/tests/unit/schemas/fast-uri-security.test.mjs:36:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'http://trusted.example/app',
+    expected: 'http://trusted.example:/app',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

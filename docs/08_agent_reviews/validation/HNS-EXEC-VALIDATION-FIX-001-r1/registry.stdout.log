@@ -1,0 +1,17 @@
+{
+  "shasum": "f7db8d942e20eead3cfe93b0beeb4eb0169e938b",
+  "tarball": "https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.8.tgz",
+  "fileCount": 44,
+  "integrity": "sha512-GZMtZUTNRpOVIECoXwLNZS5xUGE+mVNbTB8h/7Rwh2TFWcBQiPzTgyZi05BF9UMZKkLJv8XBRJTlU7zg8+ZfMg==",
+  "signatures": [
+    {
+      "sig": "MEQCIAFY8R/oklnujz86Qp91RCMZ7Q4UKVpOIyK6SVQucORxAiB3QAr2EGigSFZvLpNSMnMTSU+e6xRonnMOqbVfgCgmGw==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+    },
+    {
+      "sig": "MEQCIBapYWmwkYVjiNluF7sQZV/v5LCo8e8ABySbJBEICb0CAiAIZoX7yNR4Bh0DuxT3O6hMiBK+fJMbXyEtMYKHbj+Fkg==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+    }
+  ],
+  "unpackedSize": 220886
+}
