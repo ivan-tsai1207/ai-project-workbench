@@ -1,0 +1,24 @@
+{
+  "execution": "EXE-HNS-EXEC-VALIDATION-FIX-001-MAKER-001",
+  "commit": "91544b88d9c55f9742b4f5d77b54a9ebe3cd78e7",
+  "tree": "3adacc74282fcc6a033a3de9a812fc484bed6527",
+  "parent": "f7919e9e1d6db60f35041497d482323a668a3ce9",
+  "branch": "fix/hns-exec-validation-unblock",
+  "timestamp": "2026-10-03T20:42:38.183Z",
+  "files": {
+    "harness/package-lock.json": {
+      "sha256": "3b5aad9054c2757d68bcdcba24b49e67d1c07ad9962306009c78984b17aa3578",
+      "blob": "af04c5c4a743f4f663a699daf904ee5c228a58af"
+    },
+    "harness/tests/unit/schemas/fast-uri-security.test.mjs": {
+      "sha256": "65e28db6eee5742af6c31a80c7b9283b94bb35b2b3151847037fdb9f01e62080",
+      "blob": "79091f2072342547a82daa82f2c3212c6655a3bb"
+    },
+    "harness/tests/unit/work-items/parser.test.mjs": {
+      "sha256": "b2fec13a50f88467828d2b0937d10dfa6635cdb3886a24bbeced9874364585e1",
+      "blob": "ad9f1723c3cbb431c4d5470eef186475c1444379"
+    }
+  },
+  "clean": true,
+  "pushed": false
+}

@@ -68,7 +68,7 @@ test("canonical assigned v2 Work Item parses into an immutable normalized value"
   const value = result.value;
   assert.equal(value.id, "HNS-EXEC-001");
   assert.equal(value.schema_version, "harness.work-item/v2");
-  assert.equal(value.document_hash, "sha256:421d15f66f028803c1068071794124dfb88202a0c4934c3c9560183321d5601b");
+  assert.equal(value.document_hash, "sha256:6dd149a33b1dfa807890fbcc34f258e473ae42d7933555e90187cb59f584730c");
   assert.deepEqual(value.required_gates, ["IMPLEMENTATION_GATE"]);
   assert.deepEqual(value.dependencies.map(({ path }) => path), [
     "work-items/HNS-CORE-005.md",

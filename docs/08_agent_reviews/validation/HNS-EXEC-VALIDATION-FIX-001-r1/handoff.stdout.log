@@ -1,0 +1,187 @@
+{
+  "time": "2026-10-03T20:43:17.623Z",
+  "execution": "EXE-HNS-EXEC-VALIDATION-FIX-001-MAKER-001",
+  "candidate": {
+    "execution": "EXE-HNS-EXEC-VALIDATION-FIX-001-MAKER-001",
+    "commit": "91544b88d9c55f9742b4f5d77b54a9ebe3cd78e7",
+    "tree": "3adacc74282fcc6a033a3de9a812fc484bed6527",
+    "parent": "f7919e9e1d6db60f35041497d482323a668a3ce9",
+    "branch": "fix/hns-exec-validation-unblock",
+    "timestamp": "2026-10-03T20:42:38.183Z",
+    "files": {
+      "harness/package-lock.json": {
+        "sha256": "3b5aad9054c2757d68bcdcba24b49e67d1c07ad9962306009c78984b17aa3578",
+        "blob": "af04c5c4a743f4f663a699daf904ee5c228a58af"
+      },
+      "harness/tests/unit/schemas/fast-uri-security.test.mjs": {
+        "sha256": "65e28db6eee5742af6c31a80c7b9283b94bb35b2b3151847037fdb9f01e62080",
+        "blob": "79091f2072342547a82daa82f2c3212c6655a3bb"
+      },
+      "harness/tests/unit/work-items/parser.test.mjs": {
+        "sha256": "b2fec13a50f88467828d2b0937d10dfa6635cdb3886a24bbeced9874364585e1",
+        "blob": "ad9f1723c3cbb431c4d5470eef186475c1444379"
+      }
+    },
+    "clean": true,
+    "pushed": false
+  },
+  "initialContext": {
+    "files": [
+      "AGENTS.md",
+      ".ai/CONSTITUTION.md",
+      ".ai/AUTHORITY.md",
+      ".ai/WORKFLOW.md",
+      ".ai/roles/implementer.md",
+      ".ai/gates/implementation-gate.md",
+      "work-items/HNS-EXEC-VALIDATION-FIX-001.md"
+    ],
+    "selectedSDDSections": [
+      "38",
+      "40.1",
+      "43"
+    ],
+    "uniqueFiles": 8,
+    "wholeFiles": 7,
+    "extractedSections": 3,
+    "selectedUnits": 10,
+    "bytes": 41161,
+    "deferred": "full review_log, unrelated source, EXEC-002, adapters; no subsidiary agents"
+  },
+  "budget": {
+    "origin": "2026-10-03T20:31:07.000Z",
+    "deadline": "2026-10-03T21:01:07Z",
+    "elapsedSeconds": 730.623,
+    "makerActiveUpperBoundSeconds": 300.623,
+    "remainingWallSeconds": 1069.377,
+    "usedExecutions": 1,
+    "remainingToCap": 7,
+    "plannedParentReviewProfiles": [
+      "TECH_REVIEWER",
+      "QA_REVIEWER",
+      "SECURITY_REVIEWER"
+    ],
+    "tokenTarget": 30000,
+    "tokenActual": null,
+    "tokenRemaining": null,
+    "aggregateActiveActual": null,
+    "limitation": "No aggregate token or parent active-time telemetry; preserve parent counters and origin."
+  },
+  "logs": {
+    "audit.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/audit.meta.json",
+      "sha256": "54a4607d7857ba9826678699ff5222476490fe58f30585859aeeeca899b7a23b"
+    },
+    "audit.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/audit.stdout.log",
+      "sha256": "6d8c5c8f3d7684adb070417bd608d01ae90aa3dc26a65af03ffda4955f38d9a3"
+    },
+    "baseline-security.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/baseline-security.meta.json",
+      "sha256": "ca2700ee16c21795a2f23fcdd271f50087cd7e43db0c376428c11970310cd861"
+    },
+    "baseline-security.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/baseline-security.stdout.log",
+      "sha256": "2f0f1fd65d8aa60ede490c469bf23ddd1e2e56795d552e71cf6c55e54fb53490"
+    },
+    "build.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/build.meta.json",
+      "sha256": "2b3d7ff2815474805ccc72886ac9b557baf5ee83a2cd113cc3693f3499a8ff6e"
+    },
+    "build.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/build.stdout.log",
+      "sha256": "4f508288098c0f594f144ba449b406c86a7cfc01338904328b0d973804b30005"
+    },
+    "candidate.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/candidate.meta.json",
+      "sha256": "6208eb5563baae783c89e593abcfd0fb0685719b20c1714b521c45979c7bbc2c"
+    },
+    "candidate.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/candidate.stdout.log",
+      "sha256": "97ec0bdc03623df5ceec6f1133503c687e513dff724852dd21089c5d803f8c90"
+    },
+    "ci.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/ci.meta.json",
+      "sha256": "9716a5148bff7efb12f92979be3d687ab18888860410ddcc80e6485a124b6455"
+    },
+    "ci.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/ci.stdout.log",
+      "sha256": "ba5aaced9561959ea255256da5a8fde277322ed8e67aab2c679bb5a25a3a7875"
+    },
+    "commit.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/commit.meta.json",
+      "sha256": "d9f4a0dff15d0b2041693d6ccaed5300fa9829f73d2211189aa28a849a93bbb0"
+    },
+    "commit.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/commit.stdout.log",
+      "sha256": "abbf1f38f64439146941114fa4ad7bb75f2d342be3bf9d844be6086bca560376"
+    },
+    "diff-check.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/diff-check.meta.json",
+      "sha256": "9bc0e3372dc14ca4e57cda6be54e50fb89ee75fc7fec95e041015c093e0d367e"
+    },
+    "diff-check.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/diff-check.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "focused-final.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/focused-final.meta.json",
+      "sha256": "b5c6b6abd6d6d9335dcdd66bc7863a98a7716864dc86e6ab352d9bb49f5d4253"
+    },
+    "focused-final.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/focused-final.stdout.log",
+      "sha256": "de0e4f3af7ba1379fc90fafd43c0e14c4c485399fe8e6478e94c6b403eb5447f"
+    },
+    "focused.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/focused.meta.json",
+      "sha256": "cdb7172f08e2fc3a901cd286042ad39e14477d1dc7f624df2b3d6c6e5a377533"
+    },
+    "focused.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/focused.stdout.log",
+      "sha256": "b5560291439a367a9f1a70592447b09a51ea3b1cc5feff2a80d9f60f325fd33e"
+    },
+    "registry.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/registry.meta.json",
+      "sha256": "da9bcfa2f83643c9bd927b4f87dc5822e26a4a09e20c811167b54d35f19a07c5"
+    },
+    "registry.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/registry.stdout.log",
+      "sha256": "d247c5f3e0eebc9b928ff80838cad7422b642ea825b02615659e67cbfbde451b"
+    },
+    "self-review.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/self-review.stdout.log",
+      "sha256": "a158cded4fa0d9cab12104a6db500c12ce7a99a0708826bc2daeb290e538d40b"
+    },
+    "stage.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/stage.meta.json",
+      "sha256": "b01536acc1412be6ea89c2d230c13b671676a9f30c60a8d130e2619d4684826c"
+    },
+    "stage.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/stage.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "test-final.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/test-final.meta.json",
+      "sha256": "26975a17c1447a01d27f113f5fd24ed0e1211dc175664c680bfb67653b3de980"
+    },
+    "test-final.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/test-final.stdout.log",
+      "sha256": "ddd9381b1401b1c4efc4a10b0e40abd9565d725f3e481121d34198e0787aa197"
+    },
+    "test.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/test.meta.json",
+      "sha256": "5773b4cffbf855185758f28d4de0c000b2e139dca6c8a58e50ab207709a44f0e"
+    },
+    "test.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/test.stdout.log",
+      "sha256": "1007cb4f60cd6ae4cd67cfe3fbe2e8aa99e02c8e86a73fb951cf6f1c97b5a8b7"
+    },
+    "typecheck.meta.json": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/typecheck.meta.json",
+      "sha256": "585d86a8e282d5a8c8347d683692e0dbfd331357d983a7b79154b603c16b5805"
+    },
+    "typecheck.stdout.log": {
+      "path": "/private/tmp/hns-exec-validation-maker-3lDO5W/typecheck.stdout.log",
+      "sha256": "db3ea65f9010bc3aad2f6222df86f3a730be7c79cfbbde8172073664a5402092"
+    }
+  }
+}

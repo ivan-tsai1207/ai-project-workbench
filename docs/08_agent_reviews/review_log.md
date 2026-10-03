@@ -5222,3 +5222,201 @@ The 13 scenario inputs are preserved in candidate `docs/09_session_logs/2026-10-
 - Allocation remains 2/4 Agent executions, 0/1 remediation. Origin `2026-10-03T19:45:00Z` retained; elapsed at snapshot 22m47s, remaining WI wallclock 7m13s and batch 37m13s. Token actual/remaining and complete active-time telemetry unavailable; count/time fallback and documented enforcement limitations, no fabricated measurements.
 - These are adopted operating rules, not implemented runtime enforcement. The earlier dependency security blocker remains OPEN on the preserved closure-test-fix branch; no Accepted Risk, old-audit PASS, code repair or milestone completion is asserted.
 - This finite batch is complete. Stop; do not start an execution milestone, dependency remediation, adapter, Pilot, token audit or new batch using the unused allocation.
+
+## REV-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001
+
+| Field | Value |
+|---|---|
+| Evidence ID | `REV-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001` |
+| Execution ID | `EXE-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-REVIEW-001` |
+| Actual independent agent | `01a1033e-6c8e-7781-aae7-c48da7a1bd86` |
+| Work Item | `HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-REVIEW-001` |
+| Role / Profile / Risk | `REVIEWER` / `TECH_REVIEWER` / `LOW` |
+| Maker Execution ID | `EXE-HNS-EXEC-001-CLOSURE-TEST-FIX-001` |
+| Base / Candidate | `4956c367c397a2e196904e08634b522c56be8c91` / `46f4bd6cfb4ddd4b098f04d00576af01f9b4e70b` |
+| Tested detached HEAD | `d625ba673c193d8c01c320ba299f0fd87ae75989` |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-001-closure-test-fix.md` |
+| Verified artifact SHA-256 | `8ac7accebe5addc309599ec1b2630ce99e2bd2734275935c25c26ffc71bb078b` |
+| Timestamp | `2026-10-04T03:32:10+08:00` |
+| Reviewer decision | `REQUEST_CHANGES` |
+
+### Checks and Tests
+
+- References: assigned and Maker Work Items, mandatory governance, TECH profile, implementation gate, SDD Sections 17, 35, 40.1. No historical review log or open-ended probes loaded.
+- Identity/scope PASS: exactly one expected-hash replacement in `harness/tests/unit/work-items/parser.test.mjs`, one insertion/one deletion. Base, candidate and tested HEAD have identical source and dependency metadata; candidate and tested HEAD have identical test trees. No test disabling or capability expansion.
+- Closed `work-items/HNS-EXEC-001.md` SHA-256 is `6dd149a33b1dfa807890fbcc34f258e473ae42d7933555e90187cb59f584730c`, matching the assertion.
+- Parser test blob `ad9f1723c3cbb431c4d5470eef186475c1444379`; SHA-256 `b2fec13a50f88467828d2b0937d10dfa6635cdb3886a24bbeced9874364585e1`, matching the immutable manifest.
+- Maker AC-001/002 and reviewer identity/regression AC-001/002 PASS. Evidence AC-003 is satisfied by this controlled transcription of the independent agent's returned evidence; no artifact was edited by the reviewer.
+- Runtime independently verified: Node `v24.19.0`, npm `11.17.0`; isolated worktree `/private/tmp/hns-exec-001-tech-review.xbgynb/repo`.
+
+| Command | Exit | Result | Captured log |
+|---|---|---|---|
+| `npm ci` | `0` | 41 installed, 42 audited; 1 HIGH vulnerability reported | `/private/tmp/hns-exec-001-tech-review.xbgynb/ci.log` |
+| `npm run build` | `0` | PASS | `/private/tmp/hns-exec-001-tech-review.xbgynb/build.log` |
+| `npm run typecheck` | `0` | PASS | `/private/tmp/hns-exec-001-tech-review.xbgynb/typecheck.log` |
+| `npm test` | `0` | 175/175 PASS; no failed/cancelled/skipped/todo tests | `/private/tmp/hns-exec-001-tech-review.xbgynb/test.log` |
+| `node --test tests/unit/work-items/parser.test.mjs` | `0` | 26/26 PASS; no failed/cancelled/skipped/todo tests | `/private/tmp/hns-exec-001-tech-review.xbgynb/focused.log` |
+| `npm audit --audit-level=high` | `1` | FAILED; 1 HIGH vulnerability | `/private/tmp/hns-exec-001-tech-review.xbgynb/audit.log` |
+
+### Finding and Limitations
+
+| Finding ID | Profile | Owner | Requirement | Severity / Status | Evidence / Required Action |
+|---|---|---|---|---|---|
+| `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001-001` | `TECH_REVIEWER` | `IMPLEMENTER` | Required exact-runtime high-level audit / Implementation Gate | `MAJOR` / `OPEN` | Inherited `fast-uri` dependency fails current audit. A separately scoped dependency correction and required new-candidate review are needed; no accepted risk is claimed. |
+
+- Audit reports vulnerable `fast-uri` range `3.0.0 - 3.1.7`, at `node_modules/fast-uri`, and a fix available via `npm audit fix`.
+- Advisory references: `https://github.com/advisories/GHSA-qw65-cvwx-89v3` (authority injection via unvalidated port); `https://github.com/advisories/GHSA-58mr-gqgx-xq4g` (host confusion via unclosed bracket); `https://github.com/advisories/GHSA-hrr3-gc8f-f4qj` (inconsistent host case normalization via percent-encoded octets).
+- The current audit does not reproduce the manifest's historical zero-vulnerability result. The one-line correction is not the source of this dependency issue; the original manifest/evidence remain unchanged.
+- Installed version, full dependency chain and structured fix target were not captured by this TECH execution; exploitability was not assessed. Logs are local temporary artifacts; command results and advisory details are preserved here.
+- Reviewer changed no artifact, source, dependencies, manifest, shared branch, commit, merge or Gate state. Shared and isolated tracked trees remained clean.
+
+## REV-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-001
+
+| Field | Value |
+|---|---|
+| Evidence ID | `REV-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-001` |
+| Execution ID | `EXE-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-REVIEW-001` |
+| Actual independent agent | `01a1033e-6cf7-7783-a887-3fabf51fbd99` |
+| Work Item | `HNS-EXEC-001-CLOSURE-TEST-FIX-QA-REVIEW-001` |
+| Role / Profile / Risk | `REVIEWER` / `QA_REVIEWER` / `LOW` |
+| Maker Execution ID | `EXE-HNS-EXEC-001-CLOSURE-TEST-FIX-001` |
+| Base / Candidate | `4956c367c397a2e196904e08634b522c56be8c91` / `46f4bd6cfb4ddd4b098f04d00576af01f9b4e70b` |
+| Tested detached HEAD | `d625ba673c193d8c01c320ba299f0fd87ae75989` |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-001-closure-test-fix.md` |
+| Verified artifact SHA-256 | `8ac7accebe5addc309599ec1b2630ce99e2bd2734275935c25c26ffc71bb078b` |
+| Timestamp | `2026-10-04T03:32:34+08:00` |
+| Reviewer decision | `REQUEST_CHANGES` |
+
+### Checks and Tests
+
+- References: mandatory governance, assigned QA profile, implementation gate, assigned/Maker Work Items, SDD Sections 17, 35, 40.1. No historical review log or new probes loaded.
+- Candidate parent matches manifest base; candidate is an ancestor of tested HEAD. Source/package/lockfile match base; tested HEAD's harness and canonical Work Item match candidate. Exact candidate diff and whitespace checks PASS; no capability expansion or test disabling.
+- Canonical closed Work Item digest, parser test blob and content digest independently reproduce the exact values recorded in the TECH evidence above.
+- Maker AC-001/002 and reviewer AC-001/002 PASS; evidence AC-003 is satisfied by controlled transcription of the independent returned evidence.
+- Existing positive/negative coverage is preserved: canonical parsing, immutability, deterministic hashes, byte-change sensitivity, dependency pins, malformed inputs, path/scope boundaries, reviewer bindings, AC/DONE validation and gate rejection.
+- Runtime independently verified: Node `v24.19.0`, npm `11.17.0`; isolated worktree `/private/tmp/hns-exec-001-qa.RWbAN6/repo`.
+
+| Command | Started (+08:00), 2026-10-04 | Exit | Result | Captured log |
+|---|---|---|---|---|
+| `npm ci` | `03:31:33` | `0` | 41 installed, 42 audited; 1 HIGH vulnerability | `/private/tmp/hns-exec-001-qa.RWbAN6/ci.log` |
+| `npm run build` | `03:31:47` | `0` | PASS | `/private/tmp/hns-exec-001-qa.RWbAN6/build.log` |
+| `npm run typecheck` | `03:31:48` | `0` | PASS | `/private/tmp/hns-exec-001-qa.RWbAN6/typecheck.log` |
+| `npm test` | `03:31:48` | `0` | 175/175 PASS; no failed/cancelled/skipped/todo tests | `/private/tmp/hns-exec-001-qa.RWbAN6/test.log` |
+| `npm audit --audit-level=high` | `03:32:01` | `1` | FAILED; 1 HIGH vulnerability | `/private/tmp/hns-exec-001-qa.RWbAN6/audit.log` |
+| `node --test tests/unit/work-items/parser.test.mjs` | `03:32:01` | `0` | 26/26 PASS; no failed/cancelled/skipped/todo tests | `/private/tmp/hns-exec-001-qa.RWbAN6/focused.log` |
+
+### Finding and Limitations
+
+| Finding ID | Profile | Owner | Requirement | Severity / Status | Evidence / Required Action |
+|---|---|---|---|---|---|
+| `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-001-001` | `QA_REVIEWER` | `IMPLEMENTER` | Required exact-runtime high-level audit / Implementation Gate | `MAJOR` / `OPEN` | Independently reproduces the same inherited audit defect as `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001-001`; separately scope dependency correction before Gate PASS. |
+
+- Locked dependency `fast-uri@3.1.6`; same three advisory IDs as TECH. No claim of exploitability or accepted risk. Historical manifest evidence remains unchanged.
+- Logs are local temporary artifacts; durable results are recorded above. Shared and isolated tracked trees stayed clean; reviewer made no artifact edits, commit, merge or Gate decision.
+
+## IG-HNS-EXEC-001-CLOSURE-TEST-FIX-001
+
+| Field | Value |
+|---|---|
+| Evidence ID | `IG-HNS-EXEC-001-CLOSURE-TEST-FIX-001` |
+| Checker Execution ID | `EXE-HNS-EXEC-001-CLOSURE-TEST-FIX-GATE-001` |
+| Work Item / Gate / Risk | `HNS-EXEC-001-CLOSURE-TEST-FIX` / `IMPLEMENTATION_GATE` / `LOW` |
+| Candidate | `46f4bd6cfb4ddd4b098f04d00576af01f9b4e70b` |
+| Manifest SHA-256 | `8ac7accebe5addc309599ec1b2630ce99e2bd2734275935c25c26ffc71bb078b` |
+| Timestamp | `2026-10-04T03:35:10+08:00` |
+| GateResult | `FAILED` |
+
+- Exact candidate/manifest identity, one-line authorized scope, Maker/Reviewer separation, required test coverage and passing build/typecheck/parser/full tests verified by two fresh independent executions.
+- Both required reviews are `REQUEST_CHANGES`, not PASS. Current `npm audit --audit-level=high` exits 1; both MAJOR findings remain OPEN. Mandatory current validation is incomplete, so no Gate PASS, merge or lifecycle closure is issued.
+- Controller confirmed in the unchanged lockfile that `ajv@8.20.0` depends on `fast-uri` through `^3.0.1`, locked to `3.1.6`. No dependency/source/manifest/governance modification was performed.
+- No Security reviewer was added mechanically to this LOW test-only correction. The actual audit failure is recorded as `SECURITY_BLOCK`; the user-specified milestone stop condition is triggered.
+- `develop` remains `1766f438e533d975d3cbe3f49486bcf02f8b406e`; HNS-EXEC-001 remains DONE. Closure-test-fix remains TODO; HNS-EXEC-002 candidate `4f2bc723d8fd2338ae08d8bae10413d21c0d50fa` remains preserved and unmerged. No further milestone execution, remediation loop, adapter or Pilot was started.
+- Context economy: each reviewer loaded only router, mandatory governance/profile/gate, active Work Items, immutable manifest, direct SDD sections and directly reviewed artifacts. No full historical log, generalized matrices or repeated passed validation. Parent persists returned evidence without altering reviewed artifacts; no accepted risk or architecture change is asserted.
+
+Stop condition: `SECURITY_BLOCK`.
+
+## RCE-HNS-EXEC-VALIDATION-FIX-001-MAKER-001
+
+- Work Item: `HNS-EXEC-VALIDATION-FIX-001`; human continuation routed as one bounded dependency/validation correction batch, not resumption of EXEC-002 or a fresh parser redesign.
+- Origin `2026-10-03T20:31:07Z`; develop/local/remote `1ce9754ffab95a3d226e2bd4547f35aea6d1d936`, clean tree, exact Node v24.19.0/npm 11.17.0 verified before dispatch.
+- Normal merge `412dad9b823708036be2d050d7110501c4a5d4f2` preserves branch `fix/hns-exec-001-closure-hash-test` and prior implementation/review history. Only append-tail log conflict was resolved, retaining both parent append segments byte-for-byte. No force push or squash.
+- Maker execution `EXE-HNS-EXEC-VALIDATION-FIX-001-MAKER-001`; fresh agent `01a1037c-f030-7a01-9317-bf3183227029`. Candidate `91544b88d9c55f9742b4f5d77b54a9ebe3cd78e7`; two authorized changes only: fast-uri lock metadata 3.1.6 -> 3.1.8, six named/benign tests. Source/package.json/other dependencies/governance unchanged; inherited parser hash fix preserved.
+- Immutable aggregate manifest `docs/08_agent_reviews/manifests/HNS-EXEC-VALIDATION-FIX-001-r1.md`, SHA-256 `ed7ed76cc0709600cd7f6a042f8069a7452080e676bc25f1d813b32daebc8f3d`; all artifact blobs/content hashes and durable Maker logs bound there.
+- Canonical ci/build/typecheck/full tests/audit final exit 0; full 181/181, focused 32/32, audit zero vulnerabilities. Initial development failures remain raw evidence, not hidden or counted as independent review.
+- Maker self-review/AC mapping in candidate message and durable self-review log. Initial context 8 files, 3 extracted SDD sections, 41,161 bytes. No full historical log or generalized probes.
+- R=3, G=0, cap8; one Maker and three assigned independent reviews = 4 dispatched executions, 0 remediation. Previous test-only executions/results retained, not reset by dependency correction. Tokens actual/remaining and complete active-time telemetry null; 30,000 target is not a measured saving.
+- Host whitespace check distinguishes implementation from raw evidence: candidate code diff passes. Untouched command output includes native whitespace and copied historical metadata/immutable manifest EOF warnings; raw log bytes/hashes are preserved rather than silently reformatted.
+- Required review and Gate results are pending at this checkpoint; no Finding closure or implementation approval by Maker.
+
+## REV-HNS-EXEC-VALIDATION-FIX-001-TECH-001
+
+**Decision: PASS. Required TECH checks complete; no TECH blocker. Review stopped.**
+
+- Execution: `EXE-HNS-EXEC-VALIDATION-FIX-001-TECH-REVIEW-001`
+- Actual agent: `01a10386-86d4-77d0-b6ab-502e9fbf6216`, distinct from Maker.
+- Candidate: `91544b88d9c55f9742b4f5d77b54a9ebe3cd78e7`
+- Manifest SHA-256: `ed7ed76cc0709600cd7f6a042f8069a7452080e676bc25f1d813b32daebc8f3d`
+- Exact runtime verified: Node `v24.19.0` / npm `11.17.0`.
+- Fresh structural checks and six regression/benign tests: exit `0`, **6/6 PASS**.
+- Maker evidence: **29/29 hashes verified**; accepted same-input install/build/typecheck, **181/181 full tests**, **32/32 focused tests**, audit reporting zero vulnerabilities.
+- Both named findings’ dependency cause is addressed; TECH supports closure. Formal closure remains with host after required QA/SECURITY evidence.
+
+Probe evidence: [structural log](/private/tmp/hns-exec-validation-tech.5xK6WV/structural.stdout.log), [test log](/private/tmp/hns-exec-validation-tech.5xK6WV/security.stdout.log). Full command/hash evidence is in the preceding audit.
+
+Completed by `20:51:46Z`. No repository writes, subsidiary agents, additional probes or Gate approval.
+
+
+## REV-HNS-EXEC-VALIDATION-FIX-001-QA-001
+
+**Decision: PASS. Required QA checks complete; review stopped. No blocker.**
+
+- Execution: `EXE-HNS-EXEC-VALIDATION-FIX-001-QA-REVIEW-001`
+- Actual agent: `01a10386-8740-7ef0-92a6-953b09de2b61`, distinct from Maker.
+- Profile: `QA_REVIEWER`
+- Candidate: `91544b88d9c55f9742b4f5d77b54a9ebe3cd78e7`
+- Verified manifest SHA-256: `ed7ed76cc0709600cd7f6a042f8069a7452080e676bc25f1d813b32daebc8f3d`
+
+Fresh `node --test tests/unit/work-items/parser.test.mjs tests/unit/schemas/fast-uri-security.test.mjs` on the supplied Node **v24.19.0** runtime: **exit 0, 32/32 passed**, zero failed/cancelled/skipped/todo. npm **11.17.0** verified.
+
+Verified same-candidate Maker metadata and log hashes: install/build/typecheck/full tests/audit all exit **0**; full suite **181/181**, audit **zero vulnerabilities**. No extra full-suite execution.
+
+QA evidence supports closure of both `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001-001` and `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-001-001`. Formal closure remains with the host after required Security evidence and Gate determination.
+
+No repository writes, subsidiary agents, generalized probes, or Gate approval. Evidence verification completed by **20:51:09Z**, before the **21:01:07Z** deadline.
+
+
+## REV-HNS-EXEC-VALIDATION-FIX-001-SECURITY-001
+
+**Decision: PASS.** Required SECURITY checks are complete; review finished at `20:51:54Z`, before the deadline.
+
+- Execution: `EXE-HNS-EXEC-VALIDATION-FIX-001-SECURITY-REVIEW-001`
+- Actual Agent: `01a10386-87b1-7243-931b-461f6daf62a3`, distinct from Maker.
+- Candidate and supplied manifest hash verified exactly.
+- Fresh audit: exit 0, **0 vulnerabilities**.
+- Fresh parser/security tests: exit 0, **32/32 passed**.
+- Verified same-candidate Maker logs reused: complete suite **181/181 passed**; no duplication.
+- Both named TECH/QA audit findings have closure support; recommend `RESOLVED`.
+- Evidence: `/private/tmp/hns-security-review-5u1gSe/`.
+
+No blockers, new findings, repository writes or Gate approval. Review is finished; host can proceed with persistence, Gate, merge and post-merge validation.
+
+## IG-HNS-EXEC-VALIDATION-FIX-001-001
+
+| Field | Value |
+|---|---|
+| GateResult | `PASS` |
+| Work Items | `HNS-EXEC-VALIDATION-FIX-001`, inherited `HNS-EXEC-001-CLOSURE-TEST-FIX` |
+| Active Gate / Risk | `IMPLEMENTATION_GATE` / `HIGH` |
+| Candidate | `91544b88d9c55f9742b4f5d77b54a9ebe3cd78e7` |
+| Manifest SHA-256 | `ed7ed76cc0709600cd7f6a042f8069a7452080e676bc25f1d813b32daebc8f3d` |
+| Host determination | Parent orchestration after independent profile decisions; not a separate Agent checker execution |
+| Timestamp | `2026-10-03T20:54:00Z` |
+
+- Current byte equality to exact candidate verified for lockfile, security tests, inherited parser tests, package.json and canonical closed HNS-EXEC-001. Manifest hash unchanged, no source delta and implementation whitespace check passes.
+- TECH/QA/SECURITY decisions all PASS from three distinct fresh agent/execution IDs above; no self approval. Maker logs verified against complete input/runtime/hash/freshness; profile probes run independently; current Security audit exits 0 with zero vulnerabilities. No missing required review or current stale hash.
+- AC-001: only fast-uri lock version/resolved/integrity changes, minimum compatible 3.1.8, Ajv/direct dependencies unchanged, reproducible ci and current audit pass.
+- AC-002: three named security regressions and three benign tests; existing positive/negative parser tests retained, exact inherited closure-hash correction, 181/181 full and 32/32 focused pass. No source/capability/API/schema/Role/permission/UX expansion; UI/API/formatter/linter criteria inapplicable to this dependency/test correction, no lint script.
+- Companion test-only artifact remains its original authorized one-line change. Dependency correction belongs only to the separately assigned HIGH root Work Item, not retroactive permission expansion or changed old manifest.
+- Both `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001-001` and `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-001-001`: `MAJOR / RESOLVED`, supported by all fresh profiles and fresh Security audit; no OPEN MAJOR/BLOCKING finding for this batch. Old OPEN rows, REQUEST_CHANGES decisions and failed Gate remain historical and unchanged; no accepted risk.
+- Required Gate passes for the current aggregate candidate. Merge/post-merge/lifecycle portion of AC-003 remains pending; no release/production approval.
+- Durable reviewer probes copied to `docs/08_agent_reviews/validation/HNS-EXEC-VALIDATION-FIX-001-reviews/tech/` and `security/`; QA fresh 32/32 execution decision recorded verbatim above. Four dispatched Agents, zero remediation; G=0, no additional profile/recursive review.

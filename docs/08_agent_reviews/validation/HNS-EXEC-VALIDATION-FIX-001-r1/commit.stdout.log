@@ -1,0 +1,3 @@
+[fix/hns-exec-validation-unblock 91544b8] fix(harness): patch fast-uri security regressions
+ 2 files changed, 62 insertions(+), 3 deletions(-)
+ create mode 100644 harness/tests/unit/schemas/fast-uri-security.test.mjs

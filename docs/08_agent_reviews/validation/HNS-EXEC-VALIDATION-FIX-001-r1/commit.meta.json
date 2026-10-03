@@ -1,0 +1,20 @@
+{
+  "name": "commit",
+  "command": [
+    "git",
+    "commit",
+    "-m",
+    "fix(harness): patch fast-uri security regressions",
+    "-m",
+    "Maker: EXE-HNS-EXEC-VALIDATION-FIX-001-MAKER-001\nWork Item: HNS-EXEC-VALIDATION-FIX-001\nSelf-review: only authorized lockfile and new bounded test file; no dependency drift, source/config changes, disabled tests or placeholders. Inherited parser blob ad9f1723c3cbb431c4d5470eef186475c1444379 preserved.",
+    "-m",
+    "AC-001: fast-uri 3.1.8 reproduces with npm ci; Ajv 8.20.0 and ^3.0.1 unchanged; fresh audit reports 0 vulnerabilities.\nAC-002: 3 named security regressions and 3 benign tests; full 181/181 and focused parser/security 32/32 pass; closed Work Item assertion 6dd149a33b1dfa807890fbcc34f258e473ae42d7933555e90187cb59f584730c preserved.\nAC-003: exact two-file scope; independent reviews, finding closure, Gate, merge and post-merge validation remain parent-owned.\nValidation: Node v24.19.0/npm 11.17.0; ci/build/typecheck/test/focused/audit and diff check exit 0. No separate lint script. Raw logs: /private/tmp/hns-exec-validation-maker-3lDO5W"
+  ],
+  "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+  "runtime": "v24.19.0",
+  "execPath": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/node",
+  "start": "2026-10-03T20:42:38.032Z",
+  "end": "2026-10-03T20:42:38.063Z",
+  "exit": 0,
+  "signal": null
+}

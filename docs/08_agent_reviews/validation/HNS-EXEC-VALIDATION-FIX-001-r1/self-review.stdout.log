@@ -1,0 +1,42 @@
+{
+  "execution": "EXE-HNS-EXEC-VALIDATION-FIX-001-MAKER-001",
+  "workItem": "HNS-EXEC-VALIDATION-FIX-001",
+  "time": "2026-10-03T20:41:57.999Z",
+  "base": "f7919e9e1d6db60f35041497d482323a668a3ce9",
+  "lockChangedFields": [
+    "version",
+    "resolved",
+    "integrity"
+  ],
+  "ajv": "8.20.0",
+  "ajvFastUriRange": "^3.0.1",
+  "installedFastUri": "3.1.8",
+  "parserBlob": "ad9f1723c3cbb431c4d5470eef186475c1444379",
+  "files": {
+    "package-lock.json": "3b5aad9054c2757d68bcdcba24b49e67d1c07ad9962306009c78984b17aa3578",
+    "tests/unit/schemas/fast-uri-security.test.mjs": "65e28db6eee5742af6c31a80c7b9283b94bb35b2b3151847037fdb9f01e62080",
+    "tests/unit/work-items/parser.test.mjs": "b2fec13a50f88467828d2b0937d10dfa6635cdb3886a24bbeced9874364585e1",
+    "package.json": "5cb391a5372e2f681bd4c258a1ff8274f03bb25f1f17455fdf9532c8bb77b0e7",
+    "../work-items/HNS-EXEC-001.md": "6dd149a33b1dfa807890fbcc34f258e473ae42d7933555e90187cb59f584730c"
+  },
+  "scope": " M harness/package-lock.json\n?? harness/tests/unit/schemas/fast-uri-security.test.mjs\n",
+  "acMapping": {
+    "001": "lock metadata only; ci and fresh audit exit 0; no dependency drift",
+    "002": "6 bounded security/benign tests plus preserved parser hash; final test logs",
+    "003": "two-file scope confirmed; parent owns reviews, closure, Gate, merge, postmerge"
+  },
+  "selfReview": "scope, dependency, API semantics, no disabled tests/placeholders/ignores, source/contract unchanged; no separate lint script",
+  "budget": {
+    "origin": "2026-10-03T20:31:07Z",
+    "deadline": "2026-10-03T21:01:07Z",
+    "usedExecutions": 1,
+    "cap": 8,
+    "R": 3,
+    "G": 0,
+    "tokenTarget": 30000,
+    "tokenActual": null,
+    "tokenRemaining": null,
+    "telemetry": "missing aggregate token telemetry; count/time fallback"
+  },
+  "baselineLimitation": "initial 3.1.6 run: 3 named regression failures plus empty HTTP port expectation failure; final test corrects empty-port semantics and bracket host payload; initial failed logs retained"
+}

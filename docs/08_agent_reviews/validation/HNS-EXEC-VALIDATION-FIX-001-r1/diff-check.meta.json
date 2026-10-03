@@ -1,0 +1,15 @@
+{
+  "name": "diff-check",
+  "command": [
+    "git",
+    "diff",
+    "--check"
+  ],
+  "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+  "runtime": "v24.19.0",
+  "execPath": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/node",
+  "start": "2026-10-03T20:41:57.890Z",
+  "end": "2026-10-03T20:41:57.915Z",
+  "exit": 0,
+  "signal": null
+}

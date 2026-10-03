@@ -1,0 +1,14 @@
+✔ GHSA-qw65-cvwx-89v3: malformed port cannot inject an authority (2.321458ms)
+✔ GHSA-58mr-gqgx-xq4g: malformed bracket host reports an error (0.514292ms)
+✔ GHSA-hrr3-gc8f-f4qj: encoded uppercase unreserved host is lowercase (0.287208ms)
+✔ benign numeric, digit-string and empty ports preserve the intended host (0.320292ms)
+✔ benign HTTPS and IPv6 URIs retain valid authority and resource components (0.736375ms)
+✔ benign scheme-relative case normalization and relative resolution remain valid (0.292416ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 90.160667

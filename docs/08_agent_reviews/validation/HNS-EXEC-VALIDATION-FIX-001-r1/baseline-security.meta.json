@@ -1,0 +1,15 @@
+{
+  "name": "baseline-security",
+  "command": [
+    "node",
+    "--test",
+    "tests/unit/schemas/fast-uri-security.test.mjs"
+  ],
+  "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+  "runtime": "v24.19.0",
+  "execPath": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/node",
+  "start": "2026-10-03T20:40:05.058Z",
+  "end": "2026-10-03T20:40:05.250Z",
+  "exit": 1,
+  "signal": null
+}

@@ -1,0 +1,40 @@
+✔ GHSA-qw65-cvwx-89v3: malformed port cannot inject an authority (2.139833ms)
+✔ GHSA-58mr-gqgx-xq4g: malformed bracket host reports an error (0.389458ms)
+✔ GHSA-hrr3-gc8f-f4qj: encoded uppercase unreserved host is lowercase (0.265292ms)
+✔ benign numeric, digit-string and empty ports preserve the intended host (0.21325ms)
+✔ benign HTTPS and IPv6 URIs retain valid authority and resource components (0.436042ms)
+✔ benign scheme-relative case normalization and relative resolution remain valid (0.232166ms)
+✔ canonical assigned v2 Work Item parses into an immutable normalized value (95.139167ms)
+✔ equivalent parses are deterministic and preserve checkbox completion (6.591791ms)
+✔ document hash binds exact Markdown content (4.432125ms)
+✔ the Markdown AST dependency is exact-pinned at 2.0.3 (1.380959ms)
+✔ parser production code has no adapter, enforcement, process, network, or credential capability (1.116458ms)
+✔ a valid REVIEWER binding parses with typed artifact identity (2.530417ms)
+✔ REVIEWER artifacts must be safe registered canonical targets (6.714625ms)
+✔ REVIEWER artifacts require supported target metadata and an exact registered hash (5.603167ms)
+✔ malformed REVIEWER binding fields still fail closed (2.225167ms)
+✔ v1 and unknown schema versions fail closed (3.242208ms)
+✔ absolute, traversing, noncanonical, and filename-mismatched source paths fail closed (8.172708ms)
+✔ missing, duplicate, and unknown sections fail closed (3.578583ms)
+✔ malformed, duplicate, missing, and unknown metadata fail closed (5.287542ms)
+✔ duplicate metadata tables fail closed (1.987917ms)
+✔ invalid metadata enums fail closed without inference (4.792584ms)
+✔ invalid non-reviewer and reviewer-only bindings fail closed (3.554375ms)
+✔ unsafe scope and dependency paths fail closed (2.577417ms)
+✔ Write Scope overlap with Forbidden Scope fails closed (1.318ms)
+✔ unsupported embedded glob segments fail closed in both scope directions (14.987458ms)
+✔ supported segment globs detect overlap in both operand directions (2.734041ms)
+✔ supported segment globs preserve non-overlap in both operand directions (2.982833ms)
+✔ canonical Work Item dependencies, artifact paths, and anchors resolve or fail closed (6.027833ms)
+✔ malformed, duplicate, and mismatched acceptance criteria fail closed (5.329292ms)
+✔ DONE Work Items require every acceptance criterion to be checked (3.336666ms)
+✔ unknown, duplicate, and missing phase Gates fail closed (3.891417ms)
+✔ missing and malformed requirement-reference fields fail closed (2.401083ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 453.082959
