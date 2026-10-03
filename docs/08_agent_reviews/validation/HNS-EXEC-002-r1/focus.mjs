@@ -1,0 +1,13 @@
+import { spawnSync } from 'node:child_process';
+import { readFileSync, writeFileSync } from 'node:fs';
+const dir = '/private/tmp/hns-exec-002-maker.QFMdL9';
+const runtime = '/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin';
+const command = 'node --test tests/unit/context/*.test.mjs';
+const metadata = JSON.parse(readFileSync(`${dir}/final-commands.json`, 'utf8'));
+const started = new Date().toISOString();
+const result = spawnSync('/bin/zsh', ['-c', command], { cwd: metadata[0].cwd, env: {...process.env, PATH:`${runtime}:${process.env.PATH}`}, encoding:'utf8', timeout:60000 });
+writeFileSync(`${dir}/focused-glob.stdout`, result.stdout ?? '');
+writeFileSync(`${dir}/focused-glob.stderr`, result.stderr ?? '');
+metadata.push({command, executable:'/bin/zsh', runtime, cwd:metadata[0].cwd, input_hash:metadata[0].input_hash, started, ended:new Date().toISOString(), exit:result.status, signal:result.signal});
+writeFileSync(`${dir}/final-commands.json`,JSON.stringify(metadata,null,2));
+console.log(JSON.stringify(metadata.at(-1)));
