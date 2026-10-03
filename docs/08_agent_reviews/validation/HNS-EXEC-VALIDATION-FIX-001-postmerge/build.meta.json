@@ -1,0 +1,16 @@
+{
+  "head": "df480f86b6cf4357735597348e7500b6e8754d19",
+  "runtime": "v24.19.0",
+  "npm": "11.17.0",
+  "command": [
+    "npm",
+    "run",
+    "build"
+  ],
+  "start": "2026-10-03T20:55:06.011Z",
+  "end": "2026-10-03T20:55:07.066Z",
+  "exit": 0,
+  "signal": null,
+  "stdoutSHA256": "4f508288098c0f594f144ba449b406c86a7cfc01338904328b0d973804b30005",
+  "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

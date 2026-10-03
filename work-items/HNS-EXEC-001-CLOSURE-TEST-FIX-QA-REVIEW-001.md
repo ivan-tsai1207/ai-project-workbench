@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `DONE` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `LOW` |
@@ -71,9 +71,9 @@ Independently verify the exact single-line HNS-EXEC-001 closure hash test normal
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-REVIEW-001-001`: Candidate identity, scope, and independent binding are valid.
-- [ ] `AC-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-REVIEW-001-002`: Canonical hash assertion and focused/full regression suites pass exactly.
-- [ ] `AC-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-REVIEW-001-003`: Evidence/findings are appended only to the review log.
+- [x] `AC-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-REVIEW-001-001`: Candidate identity, scope, and independent binding are valid.
+- [x] `AC-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-REVIEW-001-002`: Canonical hash assertion and focused/full regression suites pass exactly.
+- [x] `AC-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-REVIEW-001-003`: Evidence/findings are appended only to the review log.
 
 ## Required Gates
 
@@ -90,4 +90,3 @@ Independently verify the exact single-line HNS-EXEC-001 closure hash test normal
 ## Notes
 
 - Decision is `PASS`, `REQUEST_CHANGES`, or `BLOCK` only.
-

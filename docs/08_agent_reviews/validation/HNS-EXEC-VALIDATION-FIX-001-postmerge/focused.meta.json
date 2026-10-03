@@ -1,0 +1,17 @@
+{
+  "head": "df480f86b6cf4357735597348e7500b6e8754d19",
+  "runtime": "v24.19.0",
+  "npm": "11.17.0",
+  "command": [
+    "node",
+    "--test",
+    "tests/unit/work-items/parser.test.mjs",
+    "tests/unit/schemas/fast-uri-security.test.mjs"
+  ],
+  "start": "2026-10-03T20:55:09.701Z",
+  "end": "2026-10-03T20:55:10.194Z",
+  "exit": 0,
+  "signal": null,
+  "stdoutSHA256": "434748cfaeabeaadcdfbeaa7c19942b8c3ba0493ac977a0b0ecc7952fa17c37a",
+  "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

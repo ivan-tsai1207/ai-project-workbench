@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `DONE` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -28,7 +28,7 @@ Independently review exact aggregate candidate and the two named audit findings;
 - Screen IDs / Screen Specs: `N/A`
 - ADR: `N/A`
 - Architecture / SDD sections: `docs/harness_v0.1_SDD.md` Sections 38, 40.1, 43
-- Review / Evidence references: `docs/08_agent_reviews/manifests/HNS-EXEC-VALIDATION-FIX-001-r1.md`; `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001-001`, `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-001-001`
+- Review / Evidence references: `docs/08_agent_reviews/manifests/HNS-EXEC-VALIDATION-FIX-001-r1.md`; `docs/08_agent_reviews/review_log.md`
 
 ## Read Scope
 
@@ -74,13 +74,13 @@ Independently review exact aggregate candidate and the two named audit findings;
 
 ## Out of Scope
 
-Implementation, remediation, final Gate approval, Context Compiler, adapters, production and Pilot.
+- Implementation, remediation, final Gate approval, Context Compiler, adapters, production and Pilot.
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-VALIDATION-FIX-001-QA-REVIEW-001-001`: Identity, independence, scope and required profile criteria verified.
-- [ ] `AC-HNS-EXEC-VALIDATION-FIX-001-QA-REVIEW-001-002`: Candidate required validations and named findings independently assessed with bounded probes.
-- [ ] `AC-HNS-EXEC-VALIDATION-FIX-001-QA-REVIEW-001-003`: Honest decision and evidence delivered for append-only host persistence.
+- [x] `AC-HNS-EXEC-VALIDATION-FIX-001-QA-REVIEW-001-001`: Identity, independence, scope and required profile criteria verified.
+- [x] `AC-HNS-EXEC-VALIDATION-FIX-001-QA-REVIEW-001-002`: Candidate required validations and named findings independently assessed with bounded probes.
+- [x] `AC-HNS-EXEC-VALIDATION-FIX-001-QA-REVIEW-001-003`: Honest decision and evidence delivered for append-only host persistence.
 
 ## Required Gates
 
@@ -99,4 +99,3 @@ Implementation, remediation, final Gate approval, Context Compiler, adapters, pr
 - Return PASS / REQUEST_CHANGES / BLOCK; parent appends returned evidence verbatim to avoid shared-log races.
 - Fresh profile execution; Maker != Reviewer. Deadline 2026-10-03T21:01:07Z and existing counters do not reset.
 - This is one of three required reviews, not a checker or recursive review chain. Target <=4 minutes, minimal canonical context; extra evidence on demand only.
-

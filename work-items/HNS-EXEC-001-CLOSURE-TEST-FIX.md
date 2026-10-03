@@ -8,7 +8,7 @@
 | Role | `IMPLEMENTER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `IMPLEMENTATION` |
-| Status | `TODO` |
+| Status | `DONE` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `LOW` |
@@ -78,8 +78,8 @@ Restore the deterministic HNS-EXEC-001 parser test after canonical lifecycle clo
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-001-CLOSURE-TEST-FIX-001`: The exact expected document hash matches the canonical closed `HNS-EXEC-001.md` bytes.
-- [ ] `AC-HNS-EXEC-001-CLOSURE-TEST-FIX-002`: Focused parser tests and the complete suite pass without source, dependency, or unrelated test changes.
+- [x] `AC-HNS-EXEC-001-CLOSURE-TEST-FIX-001`: The exact expected document hash matches the canonical closed `HNS-EXEC-001.md` bytes.
+- [x] `AC-HNS-EXEC-001-CLOSURE-TEST-FIX-002`: Focused parser tests and the complete suite pass without source, dependency, or unrelated test changes.
 
 ## Required Gates
 

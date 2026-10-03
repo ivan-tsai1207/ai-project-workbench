@@ -8,7 +8,7 @@
 | Role | `IMPLEMENTER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `IMPLEMENTATION` |
-| Status | `TODO` |
+| Status | `DONE` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -28,7 +28,7 @@ Resolve the two known dependency-audit findings and restore exact-runtime valida
 - Screen IDs / Screen Specs: `N/A`
 - ADR: `N/A`
 - Architecture / SDD sections: `docs/harness_v0.1_SDD.md` Sections 38, 40.1, 43
-- Review / Evidence references: `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001-001`, `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-001-001`; `.ai/WORKFLOW.md#bounded-execution-economy`
+- Review / Evidence references: `docs/08_agent_reviews/review_log.md`; `.ai/WORKFLOW.md`
 
 ## Read Scope
 
@@ -82,9 +82,9 @@ Resolve the two known dependency-audit findings and restore exact-runtime valida
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-VALIDATION-FIX-001-001`: Only `fast-uri` lock metadata changes to 3.1.8; clean install reproduces it, Ajv/direct dependencies remain unchanged and current high-level audit passes.
-- [ ] `AC-HNS-EXEC-VALIDATION-FIX-001-002`: Named URI security regressions and benign cases pass, all existing tests remain enabled/passing, and inherited closed Work Item hash assertion remains exact.
-- [ ] `AC-HNS-EXEC-VALIDATION-FIX-001-003`: No source, capability, governance or unrelated dependency change; current candidate receives required independent reviews, finding closure, Implementation Gate, merge and exact-runtime post-merge validation.
+- [x] `AC-HNS-EXEC-VALIDATION-FIX-001-001`: Only `fast-uri` lock metadata changes to 3.1.8; clean install reproduces it, Ajv/direct dependencies remain unchanged and current high-level audit passes.
+- [x] `AC-HNS-EXEC-VALIDATION-FIX-001-002`: Named URI security regressions and benign cases pass, all existing tests remain enabled/passing, and inherited closed Work Item hash assertion remains exact.
+- [x] `AC-HNS-EXEC-VALIDATION-FIX-001-003`: No source, capability, governance or unrelated dependency change; current candidate receives required independent reviews, finding closure, Implementation Gate, merge and exact-runtime post-merge validation.
 
 ## Required Gates
 
@@ -101,6 +101,7 @@ Resolve the two known dependency-audit findings and restore exact-runtime valida
 
 ## Notes
 
+- Finding IDs (targeted review-log lookup, not filesystem paths): `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001-001`, `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-001-001`.
 - Human authorization: continue the unfinished work; this separately scoped dependency correction addresses the previously reported security blocker. Do not expand the old test-only Work Item's write permissions or reset its historical attempts.
 - Risk HIGH: security dependency correction; required TECH_REVIEWER and QA_REVIEWER, with SECURITY_REVIEWER activated by the existing vulnerability findings. R=3, G=0; max 8 Agent executions including at most one remediation/re-review cycle. Initial planned use is Maker+3 independent profiles=4.
 - Batch: this primary Work Item only, including inherited hash-fix validation/closure handoff. Stop after this batch; do not start HNS-EXEC-002/003/004 or runtime enforcement.

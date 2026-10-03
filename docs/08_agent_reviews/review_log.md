@@ -5420,3 +5420,44 @@ No blockers, new findings, repository writes or Gate approval. Review is finishe
 - Both `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001-001` and `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-001-001`: `MAJOR / RESOLVED`, supported by all fresh profiles and fresh Security audit; no OPEN MAJOR/BLOCKING finding for this batch. Old OPEN rows, REQUEST_CHANGES decisions and failed Gate remain historical and unchanged; no accepted risk.
 - Required Gate passes for the current aggregate candidate. Merge/post-merge/lifecycle portion of AC-003 remains pending; no release/production approval.
 - Durable reviewer probes copied to `docs/08_agent_reviews/validation/HNS-EXEC-VALIDATION-FIX-001-reviews/tech/` and `security/`; QA fresh 32/32 execution decision recorded verbatim above. Four dispatched Agents, zero remediation; G=0, no additional profile/recursive review.
+
+## LC-HNS-EXEC-VALIDATION-FIX-001-001
+
+| Field | Value |
+|---|---|
+| Lifecycle Result | `COMPLETE` |
+| Candidate | `91544b88d9c55f9742b4f5d77b54a9ebe3cd78e7` |
+| Manifest SHA-256 | `ed7ed76cc0709600cd7f6a042f8069a7452080e676bc25f1d813b32daebc8f3d` unchanged |
+| Required reviews | TECH / QA / SECURITY `PASS` |
+| Gate | `IG-HNS-EXEC-VALIDATION-FIX-001-001` / `PASS` |
+| Merge Commit | `df480f86b6cf4357735597348e7500b6e8754d19` |
+| Branch | `develop` |
+| Timestamp | `2026-10-03 20:56:08 UTC` |
+
+### Exact Runtime Post-Merge Validation
+
+Node `v24.19.0` / npm `11.17.0`; all commands exit 0 at merge HEAD between 20:55:04.962Z and 20:55:10.194Z on 2026-10-03.
+
+| Check | Result |
+|---|---|
+| npm ci | PASS; 41 installed / 42 audited, zero vulnerabilities |
+| npm run build | PASS |
+| npm run typecheck | PASS |
+| npm test | PASS; 181/181, zero failed/cancelled/skipped/todo |
+| npm audit --audit-level=high | PASS; zero vulnerabilities |
+| Focused parser/security | PASS; 32/32 |
+
+- Raw stdout/stderr, exact commands, merge HEAD, timestamps, exits and SHA-256 identities persist in `docs/08_agent_reviews/validation/HNS-EXEC-VALIDATION-FIX-001-postmerge/`.
+- Root `HNS-EXEC-VALIDATION-FIX-001` and companion `HNS-EXEC-001-CLOSURE-TEST-FIX`: DONE, all ACs complete. Three new review WIs: DONE with actual PASS evidence. Two historical closure-test-fix review WIs: DONE as completed executions with preserved REQUEST_CHANGES decisions, not retrospective PASS; their factual identity/test/evidence ACs are complete. Current audit resolution belongs to this fresh aggregate candidate/reviews/Gate.
+- Both named audit findings are RESOLVED; no current OPEN MAJOR/BLOCKING finding for this batch. Old failed Gate and old manifests/candidates remain immutable, not invalid history rewritten.
+- Closure-only edits normalize assigned statuses/ACs and append audit evidence. Reviewed source/tests/lockfile/manifest/canonical HNS-EXEC-001 remain unchanged; no recursive review dispatch.
+- Budget: 4/8 fresh executions, 0/1 remediation. Origin/deadline retained; elapsed at this snapshot below 30-minute WI wallclock. Known Maker/reviewer execution intervals bounded; complete parent aggregate active-time and token telemetry unavailable, no hard token saving/enforcement claim. Token target 30,000, actual/remaining null. No full historical review log, unbounded matrix or duplicate complete suites by reviewers.
+- Batch stop: HNS-EXEC-002 candidate `4f2bc723d8fd2338ae08d8bae10413d21c0d50fa` remains preserved/unmerged; HNS-EXEC-003/004, runtime budget enforcement, Codex/Claude Adapters, E2E Pilot and Token A/B Audit are not started. This completes the validation correction batch, not the full Minimal Execution Engine milestone.
+- Final remote develop identity is verified after closure commit/push; no main/release/production changes.
+
+### Closure Metadata Normalization Check
+
+- Host's bounded parser check initially exposed incomplete supplied target registrations and host-authored reference/list formatting: bare Finding IDs were interpreted as nonexistent Work Item paths, Markdown # anchor syntax is not supported in that reference field, and three new Out of Scope sections required unordered-list syntax.
+- Corrected only host-owned four new Work Item metadata references/list markers: evidence references now use real review-log/workflow paths; targeted Finding IDs remain explicit in root Notes and immutable manifest. No requirement, risk, profile, permission, reviewed artifact, Maker candidate/hash or independent decision changes.
+- Final bounded parse checks PASS for all seven lifecycle Work Items with existing canonical parser and registered existing targets: status DONE, every AC checked. Historical failed review decisions remain REQUEST_CHANGES even though their executions are DONE.
+- This is honest control-plane normalization, not another implementation remediation, a new architecture, accepted risk, or retrospective reviewer validation of malformed host metadata. Required source/dependency tests and review bindings remain exact. No additional Agent dispatch.
