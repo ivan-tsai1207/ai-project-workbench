@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+const dir='/private/tmp/HNS-EXEC-002-QA-003.OGx1da';
+const bin='/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin';
+const start=new Date().toISOString();
+const r=spawnSync(bin+'/node',[dir+'/probes.mjs'],{cwd:'/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness',env:{...process.env,PATH:bin+':'+process.env.PATH},encoding:'utf8'});
+fs.writeFileSync(dir+'/probes.stdout.log',r.stdout);fs.writeFileSync(dir+'/probes.stderr.log',r.stderr);
+const hash=s=>createHash('sha256').update(s).digest('hex');
+const meta={start,end:new Date().toISOString(),exit:r.status,signal:r.signal,stdout_sha256:hash(r.stdout),stderr_sha256:hash(r.stderr)};
+fs.writeFileSync(dir+'/probes-run.json',JSON.stringify(meta,null,2));console.log(JSON.stringify(meta));console.log(r.stdout);if(r.status)console.log(r.stderr);process.exitCode=r.status;

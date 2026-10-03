@@ -1,0 +1,170 @@
+{
+  "start": "2026-10-03T22:06:06.385Z",
+  "end": "2026-10-03T22:06:08.613Z",
+  "count": 15,
+  "probes": [
+    {
+      "name": "sensitive",
+      "mode": "initial",
+      "target": ".env",
+      "failure": "SENSITIVE_CONTEXT_DENIED",
+      "result": "PASS",
+      "reads": [],
+      "start": "2026-10-03T22:06:08.603Z",
+      "end": "2026-10-03T22:06:08.605Z"
+    },
+    {
+      "name": "sensitive",
+      "mode": "onDemand",
+      "target": ".env",
+      "failure": "SENSITIVE_CONTEXT_DENIED",
+      "result": "PASS",
+      "reads": [
+        "/virtual/security/work-items/SECURITY.md"
+      ],
+      "start": "2026-10-03T22:06:08.605Z",
+      "end": "2026-10-03T22:06:08.608Z"
+    },
+    {
+      "name": "forbidden",
+      "mode": "initial",
+      "target": "docs/private/blocked.md",
+      "failure": "FORBIDDEN_SCOPE",
+      "result": "PASS",
+      "reads": [],
+      "start": "2026-10-03T22:06:08.608Z",
+      "end": "2026-10-03T22:06:08.608Z"
+    },
+    {
+      "name": "forbidden",
+      "mode": "onDemand",
+      "target": "docs/private/blocked.md",
+      "failure": "FORBIDDEN_SCOPE",
+      "result": "PASS",
+      "reads": [
+        "/virtual/security/work-items/SECURITY.md"
+      ],
+      "start": "2026-10-03T22:06:08.608Z",
+      "end": "2026-10-03T22:06:08.609Z"
+    },
+    {
+      "name": "policy",
+      "mode": "initial",
+      "target": "outside/notallowed.md",
+      "failure": "POLICY_READ_SCOPE_DENIED",
+      "result": "PASS",
+      "reads": [],
+      "start": "2026-10-03T22:06:08.609Z",
+      "end": "2026-10-03T22:06:08.609Z"
+    },
+    {
+      "name": "policy",
+      "mode": "onDemand",
+      "target": "outside/notallowed.md",
+      "failure": "POLICY_READ_SCOPE_DENIED",
+      "result": "PASS",
+      "reads": [
+        "/virtual/security/work-items/SECURITY.md"
+      ],
+      "start": "2026-10-03T22:06:08.609Z",
+      "end": "2026-10-03T22:06:08.609Z"
+    },
+    {
+      "name": "read",
+      "mode": "initial",
+      "target": "work-items/OTHER.md",
+      "failure": "WORK_ITEM_READ_SCOPE_DENIED",
+      "result": "PASS",
+      "reads": [],
+      "start": "2026-10-03T22:06:08.609Z",
+      "end": "2026-10-03T22:06:08.609Z"
+    },
+    {
+      "name": "read",
+      "mode": "onDemand",
+      "target": "work-items/OTHER.md",
+      "failure": "WORK_ITEM_READ_SCOPE_DENIED",
+      "result": "PASS",
+      "reads": [
+        "/virtual/security/work-items/SECURITY.md"
+      ],
+      "start": "2026-10-03T22:06:08.609Z",
+      "end": "2026-10-03T22:06:08.610Z"
+    },
+    {
+      "name": "direct-sensitive",
+      "mode": "initial",
+      "target": ".env",
+      "failure": "SENSITIVE_CONTEXT_DENIED",
+      "result": "PASS",
+      "reads": [],
+      "start": "2026-10-03T22:06:08.610Z",
+      "end": "2026-10-03T22:06:08.610Z"
+    },
+    {
+      "name": "direct-sensitive",
+      "mode": "onDemand",
+      "target": ".env",
+      "failure": "SENSITIVE_CONTEXT_DENIED",
+      "result": "PASS",
+      "reads": [
+        "/virtual/security/work-items/SECURITY.md"
+      ],
+      "start": "2026-10-03T22:06:08.610Z",
+      "end": "2026-10-03T22:06:08.611Z"
+    },
+    {
+      "name": "outside-root",
+      "mode": "initial",
+      "target": "/virtual/security-other/target.md",
+      "failure": "CANONICAL_PATH_OUTSIDE_REPOSITORY",
+      "result": "PASS",
+      "reads": [],
+      "start": "2026-10-03T22:06:08.611Z",
+      "end": "2026-10-03T22:06:08.611Z"
+    },
+    {
+      "name": "outside-root",
+      "mode": "onDemand",
+      "target": "/virtual/security-other/target.md",
+      "failure": "CANONICAL_PATH_OUTSIDE_REPOSITORY",
+      "result": "PASS",
+      "reads": [
+        "/virtual/security/work-items/SECURITY.md"
+      ],
+      "start": "2026-10-03T22:06:08.611Z",
+      "end": "2026-10-03T22:06:08.611Z"
+    },
+    {
+      "name": "benign",
+      "mode": "initial",
+      "target": "docs/public.md",
+      "failure": null,
+      "result": "PASS",
+      "reads": [
+        "/virtual/security/docs/public.md",
+        "/virtual/security/work-items/SECURITY.md"
+      ],
+      "start": "2026-10-03T22:06:08.611Z",
+      "end": "2026-10-03T22:06:08.612Z"
+    },
+    {
+      "name": "benign",
+      "mode": "onDemand",
+      "target": "docs/public.md",
+      "failure": null,
+      "result": "PASS",
+      "reads": [
+        "/virtual/security/work-items/SECURITY.md",
+        "/virtual/security/docs/public.md"
+      ],
+      "start": "2026-10-03T22:06:08.612Z",
+      "end": "2026-10-03T22:06:08.612Z"
+    },
+    {
+      "name": "initial-work-item-only",
+      "result": "PASS",
+      "reads": []
+    }
+  ]
+}

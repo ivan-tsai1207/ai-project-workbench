@@ -1,0 +1,20 @@
+{
+  "start": "2026-10-03T22:05:52.123Z",
+  "end": "2026-10-03T22:05:52.144Z",
+  "checks": [
+    "initial Work Item-only canonical target deny before read: docs/private/denied.md",
+    "initial Work Item-only canonical target deny before read: work-items/OTHER.md",
+    "Uint8Array UTF-8 provider and reversed inputs yield byte-identical frozen manifests",
+    "on-demand load and mismatched-execution deny preserve immutable audit accounting",
+    "AST ancestry and fenced pseudoheading preserve only requested section"
+  ],
+  "count": 5,
+  "r2BundleHash": "104cbf61f837a44b546fa532e8e389287b3318b0023c4ddd88a97276c3fc1556",
+  "compilerMtime": "2026-10-03T22:01:19.250Z",
+  "node": "v24.19.0",
+  "environment": {
+    "NODE_OPTIONS": null,
+    "NODE_PATH": null,
+    "TZ": null
+  }
+}

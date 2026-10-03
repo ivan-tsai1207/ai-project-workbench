@@ -5880,3 +5880,176 @@ Allocation remains **8/8 executions**, **1/1 remediation**; token actual/remaini
 - Previously exhausted8/8 attempts and1/1 remediation retained; historical totals unknown, not reset. TOKEN target20,000, actual/remaining null without full telemetry. Named Findings: `FND-HNS-EXEC-002-QA-001-001`, `FND-HNS-EXEC-002-SECURITY-001-001`.
 - Fresh exact-runtime canonical ci/build/typecheck/test/audit and separate focused context tests before reviews; independently qualified by each profile. AllPASS then Gate/normal develop merge/postmerge validation/closure. Any nonPASS or new MAJOR/BLOCKING stops Human. Stop afterEXEC-002; no successors/adapters/Pilot.
 - Preflight clean branch HEAD `3230fe87045f89e00c6eceea53868f3982829b4e`, remote branch same; local/remote develop `77f93daef6f880ac9a548ac0a088137f51c74041`. No source change allowed.
+
+
+## EXEC-002 Independent TECH Review-only Continuation Evidence
+
+## Evidence Metadata
+
+| Field | Value |
+|---|---|
+| Evidence ID | `REV-HNS-EXEC-002-TECH-003` |
+| Execution / Reviewer Agent ID | `01a103ca-0fd6-7fd0-90ab-46ee963dce75` |
+| Assigned Work Item | `work-items/HNS-EXEC-002-TECH-REVIEW-003.md` |
+| Role / Profile / Risk | `REVIEWER / TECH_REVIEWER / HIGH` |
+| Maker Execution ID | `HNS-EXEC-002-REMEDIATION-01a103b6-27da-74c0-9183-f3e87bf4fe33` |
+| Maker Agent ID | `01a103b6-27da-74c0-9183-f3e87bf4fe33`, different from Reviewer |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r2.md` |
+| Artifact Hash | `sha256:eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72` |
+| Candidate | `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f` |
+| Observed HEAD / Branch | `d0f4b358553e117ed702b6c3de0cce94f7f227c5` / `feature/hns-exec-002-resume` |
+| Observed Review Interval | `2026-10-03T22:02:31Z`–`2026-10-03T22:06:31Z` |
+| Deadline | `2026-10-03T22:08:16.403Z`; checks completed before deadline |
+
+## Specification References
+
+Root ACs `AC-HNS-EXEC-002-001`–`004`; assigned TECH ACs `001`–`003`; SDD §§5.3, 18, 31, 38, 40.1, 43 and §46 Phase 3; mandatory governance, TECH profile, Implementation Gate and necessary Harness boundary sections.
+
+## Checks Performed
+
+| Check | Evidence / Result |
+|---|---|
+| Candidate identity | Candidate parent/tree match manifest; all eight artifact hashes verified. **PASS** |
+| Complete executable inputs | All **72/72** inventory hashes match current files; all **70/70** candidate executable inputs are inventoried and unchanged. **PASS** |
+| Metadata reconciliation | Only root WI differs within input inventory: status, blocker and continuation notes. Candidate-to-HEAD changes are evidence/review/WI metadata; `harness` diff is empty. **PASS** |
+| Raw host evidence | Eight command records, **16/16** stdout/stderr hashes, arguments, cwd, runtime, ordered timestamps, exits and results verified. **PASS** |
+| Dependency/dist provenance | Fresh host ci/build qualified; **92/92** dist hashes match. Compiler mtime falls within host build/test interval. **PASS** |
+| Manifest validation bundle | R2 input-bundle SHA-256 matches manifest: `104cbf61f837a44b546fa532e8e389287b3318b0023c4ddd88a97276c3fc1556`. **PASS** |
+| Engineering scope | Eight changed harness paths are root-WI authorized; remediation changes exactly compiler, path helper and context tests. No package/config changes. **PASS** |
+| Technical responsibilities | Reviewed typing, immutable snapshots, AST extraction, deterministic hashes, error handling, budgets, drift, dependencies and compatibility. No new scan/write/process/network/policy/adapter capability found. **PASS** |
+
+Current input-bundle hash: `8d23359fdc37ebf57b4862accdf10611051f4e1cc9bc14c432e3e733ca8991ae`. Dist-inventory hash: `8df51c8384e88e7440f909cc29330596ba37b1ee1aa4efca9dbfaa141297eaeb`.
+
+## Tests and Acceptance Criteria
+
+Qualified reused evidence: Node **v24.19.0**, npm **11.17.0**, ci/build/typecheck exit 0, existing tests **181/181**, separate context tests **11/11**, audit **0 vulnerabilities**. This TECH execution did not rerun ci/build or audit.
+
+Fresh independent command: `node --test tests/unit/context/compiler.test.mjs`, correct harness cwd and specified runtime prepended to PATH; **11/11**, exit 0, `22:04:36.071Z`–`22:04:36.358Z`. Five additional bounded assertions passed at `22:05:52.123Z`–`22:05:52.144Z`.
+
+| Root AC | Assessment |
+|---|---|
+| `001` | **PASS**: reversed-input byte equality, nested immutability and UTF-8 byte-provider checks. |
+| `002` | **PASS**: tier selection, deduplication, AST ancestry/fenced headings, extraction/fallback, unrelated exclusion and 20,001-source rejection. |
+| `003` | **PASS**: traversal, sensitive/forbidden/read/policy targets, containment, expected-hash drift, snapshot regressions and budgets fail closed. Additional initial Work Item-only target denials confirmed zero reads. |
+| `004` | **PASS**: load/deny/defer, repeat revalidation, tamper rejection, immutable audit hashes and budget deltas; independent execution-mismatch denial preserved hash and zero delta. |
+
+Assigned TECH ACs `001`–`003`: **PASS** for identity/scope, complete technical assessment and returned evidence.
+
+## Findings and Limitations
+
+- `FND-HNS-EXEC-002-SECURITY-001-001`: remediation effectiveness verified. Canonical-relative sensitivity/read/policy/forbidden checks precede provider read; initial loading also enforces Work Item boundaries. Fresh tests cover both initial/on-demand denials and allowed control. **Supports closure; formal closure remains with required SECURITY review.**
+- `FND-HNS-EXEC-002-QA-001-001`: missing-evidence finding, not a source defect. This execution supplies qualified provenance and fresh technical checks. **Required independent QA completion remains the closure condition.**
+- **No new candidate finding confirmed.** No repository writes, new agents, remediation or retries. Assigned reference normalization was reread within this same execution.
+- Context files/selections/bytes and token actual: **null**, not measured comprehensively. On-demand reads covered affected context source/tests, shared immutability/hash/error helpers and package/config. Unrelated review-log heading metadata and adjacent §46 phase rows were returned during navigation; these retrieval deviations are recorded, not waived. Historical process/context deviations remain unchanged.
+- Provider assertions establish compiler behavior, not a filesystem sandbox. Parent persistence is pending; no ongoing process.
+
+## Evidence Paths and Decision
+
+Fresh files under `/private/tmp/`: `hns-exec-002-tech-01a103ca.mjs`, `.verification.json`, `.focused.stdout.log`, `.focused.stderr.log`, `hns-exec-002-tech-01a103ca-probes.mjs` and `hns-exec-002-tech-01a103ca.probes.json`. Validator/probe stdout and exit results are in the tool transcript. Reused raw evidence remains in `docs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/`.
+
+**Reviewer decision: PASS.** Independent TECH assessment only; not Gate approval or QA/Security approval.
+
+## EXEC-002 Independent QA Review-only Continuation Evidence
+
+**Decision: PASS, independent QA review only.** Required checks completed before `2026-10-03T22:08:16Z`; final integrity checkpoint: `22:07:38.264Z`. All activity is stopped. No known active command sessions remain. This is not Gate approval.
+
+### Evidence Metadata
+
+| Field | Value |
+|---|---|
+| Evidence ID | `REV-HNS-EXEC-002-QA-003` |
+| Role / Profile / Risk | `REVIEWER` / `QA_REVIEWER` / `HIGH` |
+| Work Item | `work-items/HNS-EXEC-002-QA-REVIEW-003.md` |
+| Reviewer Agent / Execution ID | `01a103ca-1061-7332-ae5d-b4820447f4f1` |
+| Maker Agent | `01a103b6-27da-74c0-9183-f3e87bf4fe33` |
+| Maker Execution ID | `HNS-EXEC-002-REMEDIATION-01a103b6-27da-74c0-9183-f3e87bf4fe33` |
+| Candidate | `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f` |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r2.md` |
+| Artifact SHA-256 | `eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72` |
+| Observed HEAD / Branch | `d0f4b358553e117ed702b6c3de0cce94f7f227c5` / `feature/hns-exec-002-resume` |
+| Observed review interval | `22:02:29Z`–`22:07:38.264Z` |
+| Context files / selections / bytes | `null / null / null`; not measured |
+| Token actual | `null`; no aggregate telemetry |
+| Repository writes / New agents | `0 / 0` |
+
+### Specification References
+
+Root ACs `AC-HNS-EXEC-002-001`–`004`; referenced requirements `AC-HNS-021/023/024`; SDD §§5.3,18,31,38,40.1,43 and Phase 3; assigned QA profile, Reviewer role, Implementation Gate, runtime boundary §§4–5.
+
+### Checks and Tests
+
+| Check | Completed Evidence / Result |
+|---|---|
+| Artifact and independence | Exact manifest hash, eight artifact hashes, candidate tree/parent, assigned profile and distinct Maker/Reviewer verified: PASS. |
+| Complete executable inputs | All **72/72** inventory paths match current hashes; **70/70 executable inputs** match candidate. Inventory covers tracked harness source/tests/packages/config: PASS. |
+| Metadata reconciliation | Sole inventory difference from candidate is root WI status/blocker/continuation metadata. Scoped harness diff empty. Parent REVIEW-003 reference normalization reread; no source change. |
+| Host raw evidence | All **16 stdout/stderr hashes**, eight command records, cwd/runtime/environment/timestamps/results verified. Every command exit 0; stderr empty. |
+| Dependencies and dist | Fresh host ci/build provenance qualified; **41 installed-lock package records** match locked versions/integrities; **92/92 dist hashes** match. Final checkpoint rechecked inputs/dist/manifest. |
+| Reused validation | Host `22:01:16.327Z`–`22:01:21.089Z`: ci/build/typecheck PASS; existing tests **181/181**, explicit context **11/11**, audit **0 vulnerabilities**. |
+| Fresh runtime / focused | Node `v24.19.0`, npm `11.17.0`; prescribed PATH and harness cwd. `node --test tests/unit/context/compiler.test.mjs`, `22:05:12.057Z`–`22:05:12.276Z`: **11/11**, no failures/skips/cancellations/todo. |
+| Fresh independent assertions | `22:06:33.822Z`–`22:06:33.970Z`: **5/5 groups**, including **9 canonical-alias cases**, PASS. |
+| Source / capability scope | Remediation diff exactly compiler/path/context-test files. Context imports and fresh capability regression show no added scan/write/process/network/adapter capability. |
+| Other validation | Lint script absent; separate integration runner not assigned. Fresh Security audit belongs to assigned Security execution. |
+
+### Four-AC Mapping
+
+| AC | Assessment |
+|---|---|
+| `001` | PASS: caller-order equality, byte-identical manifests/hashes, immutable nested values. |
+| `002` | PASS: AST sections/fallback, content deduplication, single-document snapshot, Tier 2 deferral, unrelated exclusion and 20,001-source rejection without reads. |
+| `003` | PASS: path/sensitive/read/policy/forbidden/canonical-root denials, unavailable required context, expected/concurrent hash drift, size/budget limits and tamper rejection. Canonical target authorization precedes provider read; initial WorkItem boundary independently checked. Exact-budget success, one-byte overflow and recovery passed. |
+| `004` | PASS: deterministic load/deny/defer, unchanged denial/defer hashes and zero deltas, immutable loaded audit, repeat idempotency, execution mismatch and defer-to-load recovery. |
+
+### Findings and Limitations
+
+- `FND-HNS-EXEC-002-QA-001-001`: **RESOLVED assessment**. Missing independent QA evidence is now complete; it was an evidence gap, not a source defect.
+- `FND-HNS-EXEC-002-SECURITY-001-001`: QA regression supports remediation and closure. Formal Security closure remains the assigned independent Security reviewer’s responsibility.
+- No new confirmed implementation finding. Assigned QA review ACs `001`–`003`: PASS; durable repository persistence remains parent-owned.
+- Context counters are unmeasured. Navigation returned unrelated review-log headings, and the SDD46 extraction included other phase rows. These process deviations are recorded without waiver; no full review-log body was loaded.
+- Temporary verifier initially rejected Node’s reporter format before launching fresh tests; corrected within this execution. No candidate test failure or extra reviewer dispatch occurred. Prior deviations remain unwaived.
+- Probes use bounded provider fixtures and supplied effective policy. No filesystem sandbox, future adapter enforcement, postmerge validation or release claim.
+
+Raw evidence: [temporary directory](/private/tmp/HNS-EXEC-002-QA-003.OGx1da), containing `verification.json`, `checkpoint.json`, `focused.stdout.log`/`stderr.log`, runtime logs, `probes.json`, `probes-run.json`, probe stdout/stderr and reproducible runners. Hashes are recorded in the checkpoint. Qualified host evidence remains under `docs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/`. No mandatory check remains missing.
+
+## EXEC-002 Independent SECURITY Review-only Continuation Evidence
+
+**STOP acknowledged. Decision: PASS for the completed SECURITY_REVIEWER review only.** All required security checks completed before `2026-10-03T22:08:16Z`; no new commands, reads, probes or retries were performed after your stop instruction.
+
+- Reviewer: `01a103ca-116f-7983-b8e0-79d4873b0401`, independent of Maker.
+- Candidate: `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f`.
+- Manifest hash verified: `sha256:eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72`.
+- Inputs: 72/72 current hashes verified; 71 match candidate exactly. Root WI differs only in verified metadata normalization. Harness executable inputs unchanged.
+- Reused evidence: eight host command records and 16 raw-log hashes verified; install/build/typecheck passed, existing suite 181/181.
+- Dist: 92/92 hashes verified before and after fresh checks.
+- Fresh focused tests: **11/11**.
+- Fresh audit: **0 vulnerabilities**.
+- Independent security probes: **15/15**, including four alias-denial boundaries, direct/outside-root/benign controls and initial Work Item boundary. No denied canonical-target provider reads.
+- All four root ACs assessed PASS. No mandatory security checks remain missing.
+
+Fresh execution finished `22:06:08.617Z`; final verification checkpoint was `22:07:14Z`.
+
+Security finding remediation supports closure. QA finding closure remains with the independent QA execution. The recorded context-loading OBSERVATION and prior process deviations remain unwaived; aggregate context/token measurements are null. This is not Gate approval.
+
+Raw evidence: [/private/tmp/hns-security-01a103ca-116f-7983-b8e0-79d4873b0401](/private/tmp/hns-security-01a103ca-116f-7983-b8e0-79d4873b0401), containing runner, provenance, fresh results, probes and context/audit stdout/stderr logs.
+
+**Known active sessions: none.** Command session `88019` completed with exit 0. Repository writes: none. Parent persistence remains pending.
+
+## IG-HNS-EXEC-002-002 - Implementation Gate
+
+| Field | Value |
+|---|---|
+| GateResult | `PASS` |
+| Timestamp | `2026-10-03T22:10:50.243Z` |
+| Candidate | `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f` |
+| Manifest | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r2.md` |
+| Manifest SHA-256 | `eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72` |
+| Independent reviews | TECH `REV-HNS-EXEC-002-TECH-003` PASS; QA `REV-HNS-EXEC-002-QA-003` PASS; Security `HNS-EXEC-002-SECURITY-REVIEW-003-RESULT` PASS |
+| Findings | Original QA BLOCKING and Security MAJOR RESOLVED by current-hash independent evidence; no OPEN MAJOR/BLOCKING |
+
+- `FND-HNS-EXEC-002-QA-001-001`: `BLOCKING / RESOLVED`, independent QA review now completes provenance, fresh tests and all four ACs; no source defect claimed.
+- `FND-HNS-EXEC-002-SECURITY-001-001`: `MAJOR / RESOLVED`, independent Security15/15 alias/initial/on-demand/direct/outside-root/benign controls passed before deadline, no denied target reads; all four ACs PASS, fresh audit0. Final original Security assessment interval22:02:28Z-22:07:14Z; returned stop acknowledgment preserved above. No source remediation in this increment.
+- `FND-HNS-EXEC-002-SECURITY-003-001`: `OBSERVATION / OPEN`, reviewer-owned context retrieval deviation (unrelated SDD48-50 and Phase1/2 rows); preserve follow-up, not Accepted Risk or blocker. All profiles context/token totals unmeasured; prior deviations unwaived.
+- Independent agent IDs distinct from Maker and each other, assigned profiles HIGH with explicit security trigger, candidate hash unchanged. All root ACs001-004 verified independently; fresh host ci/build/typecheck181/context11/audit0 logs qualified. Existing R1/R2 decisions and failed Gate retained unchanged in historical evidence; this Gate does not rewrite them.
+- Base-to-candidate executable scope exactly eight authorized context/export/test/fixture files; candidate-to-current source/tests/deps/config/governance diff empty. Whitespace check PASS on source/governance/WIs/manifests; raw historic command logs contain captured whitespace and are preserved, excluded from formatting edits. No unauthorized capabilities, API/schema/Role/permissions or new architecture.
+- Parent assignment reference-format normalization (Finding IDs moved to Notes, canonical evidence paths retained) parses3/3; no candidate/hash change, no additional dispatch. No further review retry/remediation or successor authorized.
+- Reviews production complete before22:08:16Z deadline; QA/Security final stop acknowledgments afterward were bounded checkpoint preservation only, no new checks. Three additional attempts3/3, additional Maker/remediation0. Gate PASS permits authorized normal develop merge, exact-runtime postmerge validations and lifecycle closure; not production/release approval.

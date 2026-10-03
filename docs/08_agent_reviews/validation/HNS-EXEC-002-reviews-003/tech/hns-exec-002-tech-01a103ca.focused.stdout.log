@@ -1,0 +1,19 @@
+✔ compile is immutable, order-independent, section-bounded, deduplicated, and excludes deferred sources (15.236ms)
+✔ AST section extraction records deterministic full-document fallback only when explicitly allowed (3.643459ms)
+✔ path, forbidden, policy, sensitivity, canonical-root, and unavailable-source boundaries fail closed (0.990708ms)
+✔ canonical alias targets are authorized before initial and on-demand reads (4.576125ms)
+✔ expected hash drift, conflicting duplicate hashes, required gates, and budgets fail closed (32.460583ms)
+✔ optional unrelated candidates are excluded before resolve or read (2.103875ms)
+✔ multiple sections share one document snapshot and enforce each expected document hash (2.962708ms)
+✔ repeated on-demand selections revalidate content and caller expected hashes (7.083334ms)
+✔ the explicit-source ceiling bounds large repositories without scanning (1.29875ms)
+✔ on-demand load, deny, dedup, and defer decisions include immutable audit hashes and budget deltas (5.3055ms)
+✔ production context code has no scan, write, process, network, credential, policy, or adapter capability (4.733625ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 204.673875
