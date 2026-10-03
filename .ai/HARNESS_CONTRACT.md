@@ -95,6 +95,8 @@ Role binding 必須使用下列固定映射：
 
 ## 4. Context Compiler
 
+Operational context target 與有限 execution / time / telemetry 規則依 `.ai/WORKFLOW.md#bounded-execution-economy`；SDD 43 host defaults / ceilings 不變，文件政策不代表 runtime 已實作。
+
 Harness 必須根據 `role`、`feature`、`phase` 與 `work_item` 建立最小必要 Context Package。
 
 Mandatory Governance Context：
@@ -427,6 +429,7 @@ final_status: string
 ```
 
 - Audit evidence 記錄 execution facts，不是產品或系統 Source of Truth。
+- Budget counters、resume clocks、context selections 與 stop evidence 依 `.ai/WORKFLOW.md#bounded-execution-economy` 留在既有 audit / Notes，不新增 schema。
 - Audit evidence 不得覆蓋 canonical spec、Gate rule 或 Change Request decision。
 - Agent 不得修改、刪除或偽造 Harness 已記錄的 evidence。
 - 敏感資訊必須遮罩；不得將 secret 或 credential 寫入 audit log。

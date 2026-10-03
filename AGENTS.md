@@ -29,6 +29,7 @@
 - Maker 不得 final approve 自己的 artifact；artifact hash 改變後，既有 review evidence 失效。
 - 高風險或 restricted operation 依 Constitution、Workflow 與 active Gate 取得必要 Human approval。
 - 初始 context 必須 small-by-default；額外 context 需經 Role、Read Scope、Policy 與 budget 驗證並留下 audit evidence。
+- 有限 plan、共用 budget、context target 與 stop / resume 規則只依 `.ai/WORKFLOW.md#bounded-execution-economy`；不形成新 Role 或 runtime permission。
 
 ## Detailed Rules
 

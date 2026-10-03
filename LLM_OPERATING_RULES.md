@@ -41,12 +41,12 @@
 
 ## 記憶策略
 
-- 優先讀取專案 `docs/00_index.md`。
-- 需要決策脈絡時讀取 `docs/05_decisions/` 的 ADR。
-- 需要歷史過程時讀取 `docs/09_session_logs/`。
+- 先依 `AGENTS.md` 載入 mandatory context；僅在 assigned scope 需要時讀取 `docs/00_index.md`、直接引用 ADR 或指定 Session Log。
+- Finite plan、budget / stop / resume 與最小 evidence 依 `.ai/WORKFLOW.md#bounded-execution-economy`；已有授權的同一有限 scope 不重問。
 - 每次有實質討論、規則變更、文件更新、程式變更、決策、風險或未解問題時，需更新 Session Log。
 - 一般寒暄或無實質內容不記錄。
 - Session Log 不寫逐字稿、不寫流水帳，只記錄能幫助未來恢復上下文的內容。
+- 已有 command / review evidence 只留 durable link，不複製；無授權寫入範圍時留下 scoped handoff。
 - Session Log 長度原則：一般討論約 300 到 800 字；複雜討論可到約 1,500 字。
 
 ## 分級執行

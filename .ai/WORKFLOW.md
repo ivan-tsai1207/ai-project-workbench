@@ -139,6 +139,54 @@ Required reviews與 existing phase Gates完成後，Orchestrator建立 immutable
 
 Delivery Assurance PASS不自動 merge、release或 deploy；Human仍保留 business approval、accepted risk、high-risk side effect與 release / production decision。
 
+## Bounded Execution Economy
+
+本節是唯一 canonical operational policy；不新增 schema field / enum、Role、Gate、架構或 runtime permission。文件規則不代表 runtime enforcement 已實作。
+
+### Finite Plan and Allocation
+
+- 執行前在既有 Work Item Notes 與 host audit 記錄有限 plan：primary WI、已授權 milestones、完成條件、必需命令、review assignments、Gates、execution / time caps、token target、context selections 與 stop conditions。
+- 預設 batch 只有一個 primary WI；使用者已明確授權的有限 milestones 必須保留、逐項配置與合計 budget。同一有限 scope 不重問已有上層授權；完成目標即停止，不推論下一階段授權。
+- Parent 產生的 required review WIs、checkers 與其 retries 共用 parent / batch allocation，不成立獨立或遞迴 batch；多 primary WI 的有限 batch 逐 WI 計算後合計，不共用額外未分配 cycles。
+- 從既有 canonical Risk / artifact policy 計算並凍結 required independent profile set；令 R 為每輪 required profile executions，G 為另行必需、未計入 R 的 checker executions（含明定重驗）。一個 execution 只有一個 primary profile。
+- 每 WI 上限為 initial Maker + R，加最多一次 remediation Maker + R，再加 G：`2 * (1 + R) + G`。這是上限而非必須消耗的配額；初輪成功只用 `1 + R` 加必需 G。
+- 每次 dispatched attempt 均計數，包含 failed / canceled / retry；session、角色切換、新對話或 resume 不重設。Lost counters 或剩餘 allocation 無法確認時停止交接，不假定零使用量。
+- 預設每 WI cumulative active time 與 elapsed wallclock 各上限 30 minutes、batch elapsed wallclock 上限 60 minutes；batch token TARGET 30,000，合計所有 WI、primary / generated review agents 與 retries 的 usage。
+- Active time 累加 primary 與 generated review / checker executions 的活動區間（parallel agents 各自計入），包括 validation；明確 host pause / 等待 approval 才可扣除且須記起迄，否則照計。WI / batch clocks 各從其 preflight 開始，pause / approval 仍計時；resume 延續原始起點、counters 與 remaining。
+- 所有 execution count / time allocation 必須有限；套用 operational allocation、host limits、WI / invocation 限制的最小值。WI / invocation 只能縮小 host limits，process runtime ceiling 另依 SDD 43.2，不以 WI / batch 配額放大。
+- Human 可明確續配 operational allocation，記錄有限增額、用途與原始累計值；不得越過 host hard ceiling、默認重設時計，或以重新開始 batch 繞過停止條件。
+- Preflight 必須確認 mandatory context、validation、assignments 與 Gates 能在已知剩餘 count / time / host limits 內完成；不足即 `BUDGET_INSUFFICIENT`，不省略治理或 required validation。執行中 count / time / 已知 token ceiling 耗盡即 `BUDGET_EXHAUSTED`，停止目前 Agent production、read、probes、retries 與新 dispatch；沿既有 host cancellation / timeout 保留 bounded checkpoint / evidence，不聲稱 enforcement 已實作。
+- 精確 HARD token cap 被要求但 host 無可用完整 aggregate telemetry / enforcement 時，停止 `BUDGET_UNENFORCEABLE`。只有 TARGET 時記 `actual: null`、missing telemetry 與 count / time fallback，不聲稱精確 token bound 或 remaining。
+- Token 是模型 input / output / reasoning 或 provider-reported usage，包含 context、generated / tool transcript，依 provider accounting 去重彙總；context 與整體 usage 不等價，shell test runtime 本身不是 token。Bytes / files / sections 不是 token 換算或精確 cap；已知 usage 到頂亦停止，不用 TARGET 掩蓋耗盡。
+
+### Least Context
+
+- Ordinary initial context operational target 為 16 files / 24 extracted sections / 64 KiB；它縮小 SDD 43.1 host defaults 24 / 64 / 1 MiB，後者與 SDD 43.2 hard ceilings 不變。
+- 取所有 applicable boundaries 最小值；先 deduplicate、精確 anchor / section extraction、defer optional Tier 2。完整 mandatory Tier 1 不可丟棄、截斷或摘要；仍不符合則 explicit fail，續配也不得越過 host ceiling。
+- 一個實際選取的完整文件計一個 selection，抽取區段各計一個 section；audit 分開記 unique files、selected units、實際 bytes，不能用文件內 heading 數冒充 extraction 數或把多區段合併規避限制。
+- 只讀直接 requirements、相關 open findings 與必要 resolved regressions；完整 review_log / history 不預設載入。On-demand context 也受 read scope、剩餘 budget、host ceiling 約束，並記 selection / defer 理由。
+
+### Review, Validation and Stop
+
+- 每個 required review 都須 fresh、independent 且綁 exact current artifact hash / Maker execution；禁止 general reviewer PASS cache。不得降低 Risk、刪除 required profile 或重複同 profile 工作來填配額。
+- 加 profile 必須指出實際 canonical required trigger、owner 與新增有限 budget；無 trigger 不加。發現新的 required trigger 須更新 assignment / preflight 後才 dispatch，不能自動加 execution。
+- Review scope 為 canonical AC、相關 open findings、resolved regressions，以及高信心正常邊界 negative checks；不得自行展開 open-ended fuzz taxonomy 或掃描無關範圍。
+- 可引用 exact candidate command logs，但先驗證 artifact identity、完整輸入（含 code / tests / dependencies / config）、command / environment / runtime freshness 與結果完整性；不足或 stale 必須重跑並計 budget。
+- 明確 required commands、fresh audit / postmerge validations 永遠執行；引用舊 logs 不豁免。Artifact 改變立即使舊 PASS、review 與 dependent Gate evidence 失效，必需驗證無法容納則停止，不能以 budget waiver 跳過。
+- 無關範圍 evidence 的變動不自動重開已審 artifact 或遞迴新 review；先檢查實際依賴 / hash binding。Security failure 阻擋受影響 artifact / required validation / Gate；保留無關既有 blocker、轉 separate scoped handoff，不全域阻擋無關文件修正，也不把舊 audit 標成 PASS。
+- 只允許一次 automatic remediation，且限既有 scope / findings；新 unrelated MAJOR / BLOCKING 立即停止並回報 Human。Retry 後仍 OPEN MAJOR / BLOCKING 或 required re-review 非 PASS，停止等待 Human decision；MINOR / OBSERVATION 記 follow-up，不自動新增 remediation。
+- Human exception 必須指名 Finding 與有限 added count / time / token allocation；只是額外修正機會，不是 `ACCEPTED_RISK`、Gate waiver 或 permissions 擴張。
+- 已完成 batch、budget 耗盡或上述 stop 時，停止後續 task / review / milestone dispatch；保留已完成工作與未完成 mandatory handoff，不能以 completion 壓力自動續跑。
+
+### Closure and Evidence
+
+- 純 parent-authorized status / evidence correction，且 reviewed artifacts 與其 hash 不變時，沿既有 parent handoff 完成，不新增 Role / profile / governance chain；parent write scope 未授權即停止 scoped handoff，不擴權。
+- Tests、source、dependencies 或 security fixes 不是 closure-only；交由正常 owner / required review / Gate。Correction 若改到被審 artifact，適用 hash invalidation 與剩餘 budget。
+- 保留 history、舊 hashes、invalidated evidence 與修正對照；附誠實 limitations，不自封 Independent Review / Gate PASS。
+- 每次 handoff 留短 audit summary：plan、used / remaining counters、累積 active / elapsed time、token actual 或 missing telemetry、context selections、checks / exits、blockers、completed / remaining work 與 durable evidence references。
+- Resume 必須先恢復同一 summary / counters / 原始 clocks；Session Log 只連結已有 command / review evidence，不複製 transcript。只在授權 path 寫最小恢復紀錄，無寫入授權則 scoped handoff，不另造 audit schema。
+- 本節 `BUDGET_*` 是 operational exit reasons，依既有 lifecycle 記錄；不是新增 Work Item Status、GateResult 或 runtime schema enum。
+
 ## 交接規則
 
 - ChatGPT / Product Architect 產出或更新規格，不直接產出未授權 UI 或 code。

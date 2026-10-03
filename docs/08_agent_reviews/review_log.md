@@ -5142,3 +5142,65 @@ Exact R3 artifact binding, bounded path/hash failures, immutable output, depende
 - This Gate result does not merge, release, deploy, close lifecycle, or authorize production execution.
 
 GateResult: `PASS`.
+
+## REV-FRM-ECON-001-SPEC-001 - Bounded Framework Execution Policy
+
+| Field | Value |
+|---|---|
+| Evidence ID | `REV-FRM-ECON-001-SPEC-001` |
+| Reviewer Execution ID | `EXE-FRM-ECON-001-SPEC-REVIEW-001` |
+| Actual independent reviewer | `01a1035b-1b62-7a00-8416-5fd92fdd6140` |
+| Work Item | `FRM-ECON-001-SPEC-REVIEW-001` |
+| Role / Profile / Risk | `REVIEWER` / `SPEC_REVIEWER` / `MEDIUM` |
+| Maker Execution ID / Agent | `EXE-FRM-ECON-001-MAKER-001` / `01a10350-c451-7261-b69d-01be0c06a182` |
+| Base / Candidate | `446f80a4fc49395fceaa2260c084d5d379fc0e61` / `006d1d1cd1b9e82b97ebcf87dfc7065979ac4958` |
+| Artifact | `docs/08_agent_reviews/manifests/FRM-ECON-001-spec-r1.md` |
+| Verified Artifact SHA-256 | `08afbdc8fbd3334dd3e6dc85c88ded95448c72c16c2bd6329fe4cdd4d4b44c2d` |
+| Checked HEAD | `4e4e61bdc125251e0e5f44c281e085df4b9994ba` |
+| Timestamp | `2026-10-04T04:03:34+08:00` |
+| Reviewer Decision | `PASS` |
+
+This is controlled transcription of the fresh independent reviewer's returned evidence; the controller is the evidence recorder, not the specification Maker or the source of the review decision.
+
+### Actual Checks and Acceptance Evidence
+
+| Check | Result | Evidence |
+|---|---|---|
+| Manifest / artifact identity | PASS | Manifest digest 1/1, Git blob identities 7/7, content SHA-256 7/7 and candidate/worktree byte equality 7/7, against the exact immutable manifest. |
+| Scope and lineage | PASS | Seven authorized document paths, candidate ancestry and whitespace check; clean checkout. Checked HEAD adds only assignment manifest and reviewer Work Item. No source, tests, dependencies, Constitution, Authority, Role or Gate changes. |
+| Cross-document consistency | PASS | 8/8 documentation checks: canonical anchor, five companion pointers, unchanged SDD 43.1/43.2 and unchanged template outside Notes. |
+| Authority / independence | PASS | Constitution explicit-authorization provision and dedicated root Work Item support this maintenance scope; runtime permissions unchanged. Maker and reviewer executions and actual agents differ; reviewer made no artifact edit. |
+| `AC-FRM-ECON-001-001` | PASS | Finite allocations, precedence, counters, deadlines and honest token telemetry fallback. |
+| `AC-FRM-ECON-001-002` | PASS | Required reviews, one remediation, bounded context, current artifact hashes, validation freshness and security blockers preserved. |
+| `AC-FRM-ECON-001-003` | PASS | Single Workflow policy and consistent document references, no runtime/schema/architecture change. |
+| `AC-FRM-ECON-001-004` review/scenarios | PASS | 13/13 supplied scenarios independently checked; Gate decision is left to the controller. |
+
+The 13 scenario inputs are preserved in candidate `docs/09_session_logs/2026-10-04-execution-economy.md`: normal LOW; explicit finite milestones; HIGH reviewer/checker budget; finding after remediation; new unrelated MAJOR/BLOCKING; stale artifact; eligible command logs; pure closure correction; source/test/dependency/security fix; unknown tokens; insufficient/exhausted/context budget; affected security failure; persistent counters on resume/pause. Every expected outcome was independently verified as PASS without additional speculative probes.
+
+### Findings, Limits and Handoff
+
+- Findings: None; no material SPEC GAP, SPEC CONFLICT or governance bypass. No accepted risk asserted.
+- Validation methods: exact Git candidate diff/ancestry/whitespace and blob checks, SHA-256 reproduction, bounded document/reference checks and 13 manual specification scenarios. No npm tests/audit or dependency research performed; runtime code and dependencies are unchanged.
+- Documentation policy only: runtime enforcement is neither implemented nor verified. 30,000 tokens is a TARGET; actual/remaining and complete aggregate active-time telemetry are unavailable. Count/time caps remain mandatory. Operational context target 16/24/64 KiB narrows unchanged host defaults 24/64/1 MiB.
+- Required primary profile is SPEC_REVIEWER for this MEDIUM operational specification; no implementation/runtime behavior or security-capability change triggers another profile. Existing separate `fast-uri` dependency blocker remains unresolved and is not relabeled PASS.
+- Reviewer context: 15 unique files / 16 selected units / 55,908 raw bytes; candidate diff inspected separately. No historical review log, source exploration, subsidiary dispatch or successor milestone loaded.
+- At review completion: count 2/4, remaining 2; observed reviewer interval 2m14s. Conservative parent origin `2026-10-03T19:45:00Z`, elapsed 18m34s; remaining WI wallclock 11m26s, batch 41m26s. No clock or counter reset, no remediation.
+- Reviewer wrote no shared files, commits or Gate result. This persisted evidence satisfies assigned evidence-recording AC; reviewer PASS is distinct from GateResult.
+
+## SG-FRM-ECON-001-001 - Bounded Execution Economy Spec Gate
+
+| Field | Value |
+|---|---|
+| Evidence ID / Controller Check | `SG-FRM-ECON-001-001` / `EXE-FRM-ECON-001-SPEC-GATE-001` |
+| Work Item / Gate / Risk | `FRM-ECON-001` / `SPEC_GATE` / `MEDIUM` |
+| Candidate | `006d1d1cd1b9e82b97ebcf87dfc7065979ac4958` |
+| Manifest SHA-256 | `08afbdc8fbd3334dd3e6dc85c88ded95448c72c16c2bd6329fe4cdd4d4b44c2d` |
+| Timestamp | `2026-10-04T04:04:36+08:00` |
+| Required independent review | `REV-FRM-ECON-001-SPEC-001` / `PASS` |
+| GateResult | `PASS` |
+
+- Controller verified the exact seven manifest artifacts and authorized candidate scope; mandatory governance, Role/Gate definitions, runtime/source/tests/dependencies and architecture are unchanged outside the authorized operating-document delta.
+- Current artifact hashes match independent SPEC review; no Maker self-approval, missing required review, OPEN MAJOR/BLOCKING, scope drift or unresolved spec conflict for this candidate. All four root ACs are covered by exact-hash independent checks and bounded scenario evidence.
+- `git diff --check` and protected-path `git diff --quiet` against original develop pass. Required validation is documentation validation, not runtime npm commands; the separate implementation audit failure remains a separate blocker.
+- Host controller aggregates existing evidence; no additional Agent execution or review-of-review was dispatched (G=0). Count remains 2/4, automatic remediation used 0/1, token actual/remaining unknown with finite count/time fallback. Origin and deadline retained; no budget reset or extension.
+- Gate PASS authorizes this document handoff only. No runtime enforcement implementation, dependency remediation, Execution Engine continuation, Adapter, Pilot, release or main update is included.
