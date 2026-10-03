@@ -5873,3 +5873,10 @@ Allocation remains **8/8 executions**, **1/1 remediation**; token actual/remaini
 - Planning/process limitation: host shortened finalprofiles to ~76seconds after metadata preparation, insufficient for mandatory context/provenance/review. Contexttargetmiss and small cutoff overruns from priorattempts disclosed; knownprofile activity bounded by dispatch/checkpointrecords, complete aggregate/token/historical telemetry unavailable, no costcompliance claim.
 - Remaining work is finish exactR2 TECH/QA/SECURITY requiredchecks under an explicit Human finitecontinuation, then Gate/merge/postmerge/closure only ifPASS. No new implementation remediation is authorized. EXEC-003/004 and allAdapters/Pilot remain pending; Minimal Execution Engine remains PARTIAL.
 
+## HNS-EXEC-002-RESUME-002 - Human Review-only Allocation
+
+- Human approved the finite proposal by saying to proceed. Only unchanged R2 candidate `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f`, manifest SHA256 `eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72`.
+- Origin `2026-10-03T21:58:48.089Z`, elapsed deadline `2026-10-03T22:28:48.089Z`; elapsed and cumulative conservative host/reviewer activity each <=30min. At most3 fresh independent profiles, each <=6min; no retry, no Maker/source remediation. Parent checks elapsed plus summed reviewer intervals to avoid over-allocation.
+- Previously exhausted8/8 attempts and1/1 remediation retained; historical totals unknown, not reset. TOKEN target20,000, actual/remaining null without full telemetry. Named Findings: `FND-HNS-EXEC-002-QA-001-001`, `FND-HNS-EXEC-002-SECURITY-001-001`.
+- Fresh exact-runtime canonical ci/build/typecheck/test/audit and separate focused context tests before reviews; independently qualified by each profile. AllPASS then Gate/normal develop merge/postmerge validation/closure. Any nonPASS or new MAJOR/BLOCKING stops Human. Stop afterEXEC-002; no successors/adapters/Pilot.
+- Preflight clean branch HEAD `3230fe87045f89e00c6eceea53868f3982829b4e`, remote branch same; local/remote develop `77f93daef6f880ac9a548ac0a088137f51c74041`. No source change allowed.
