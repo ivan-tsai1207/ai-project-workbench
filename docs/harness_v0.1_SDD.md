@@ -1903,6 +1903,8 @@ Fixtures必須synthetic且不含real token。Security regression test未通過�
 
 Core budget使用vendor-neutral bytes、file count與section count，不使用vendor tokenizer作為correctness dependency。
 
+Operational execution / context targets、aggregate token telemetry 與 stop / resume 依 `.ai/WORKFLOW.md#bounded-execution-economy`，只縮小下列 host defaults / ceilings；此文件修訂不代表 runtime enforcement 已實作。
+
 ### 43.1 Initial Context Budget
 
 Initial Context採small-by-default。下列是host secure defaults；host可依環境調整，但不得超過Hard Safety Ceiling，project / invocation只能縮小：

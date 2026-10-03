@@ -187,7 +187,7 @@ Reviewed Artifact必須是可解析的 repository-relative path。多 artifact�
 
 ## Notes
 
--
+- 依 `.ai/WORKFLOW.md#bounded-execution-economy` 記有限 plan、parent / milestone budget、R / G assignments、mandatory checks、used / remaining、clocks、token telemetry / fallback 與 evidence references；本欄不擴張 host limits、schema 或 permissions。
 
 ## Validation Rules
 
