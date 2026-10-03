@@ -5142,3 +5142,115 @@ Exact R3 artifact binding, bounded path/hash failures, immutable output, depende
 - This Gate result does not merge, release, deploy, close lifecycle, or authorize production execution.
 
 GateResult: `PASS`.
+
+## REV-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001
+
+| Field | Value |
+|---|---|
+| Evidence ID | `REV-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001` |
+| Execution ID | `EXE-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-REVIEW-001` |
+| Actual independent agent | `01a1033e-6c8e-7781-aae7-c48da7a1bd86` |
+| Work Item | `HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-REVIEW-001` |
+| Role / Profile / Risk | `REVIEWER` / `TECH_REVIEWER` / `LOW` |
+| Maker Execution ID | `EXE-HNS-EXEC-001-CLOSURE-TEST-FIX-001` |
+| Base / Candidate | `4956c367c397a2e196904e08634b522c56be8c91` / `46f4bd6cfb4ddd4b098f04d00576af01f9b4e70b` |
+| Tested detached HEAD | `d625ba673c193d8c01c320ba299f0fd87ae75989` |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-001-closure-test-fix.md` |
+| Verified artifact SHA-256 | `8ac7accebe5addc309599ec1b2630ce99e2bd2734275935c25c26ffc71bb078b` |
+| Timestamp | `2026-10-04T03:32:10+08:00` |
+| Reviewer decision | `REQUEST_CHANGES` |
+
+### Checks and Tests
+
+- References: assigned and Maker Work Items, mandatory governance, TECH profile, implementation gate, SDD Sections 17, 35, 40.1. No historical review log or open-ended probes loaded.
+- Identity/scope PASS: exactly one expected-hash replacement in `harness/tests/unit/work-items/parser.test.mjs`, one insertion/one deletion. Base, candidate and tested HEAD have identical source and dependency metadata; candidate and tested HEAD have identical test trees. No test disabling or capability expansion.
+- Closed `work-items/HNS-EXEC-001.md` SHA-256 is `6dd149a33b1dfa807890fbcc34f258e473ae42d7933555e90187cb59f584730c`, matching the assertion.
+- Parser test blob `ad9f1723c3cbb431c4d5470eef186475c1444379`; SHA-256 `b2fec13a50f88467828d2b0937d10dfa6635cdb3886a24bbeced9874364585e1`, matching the immutable manifest.
+- Maker AC-001/002 and reviewer identity/regression AC-001/002 PASS. Evidence AC-003 is satisfied by this controlled transcription of the independent agent's returned evidence; no artifact was edited by the reviewer.
+- Runtime independently verified: Node `v24.19.0`, npm `11.17.0`; isolated worktree `/private/tmp/hns-exec-001-tech-review.xbgynb/repo`.
+
+| Command | Exit | Result | Captured log |
+|---|---|---|---|
+| `npm ci` | `0` | 41 installed, 42 audited; 1 HIGH vulnerability reported | `/private/tmp/hns-exec-001-tech-review.xbgynb/ci.log` |
+| `npm run build` | `0` | PASS | `/private/tmp/hns-exec-001-tech-review.xbgynb/build.log` |
+| `npm run typecheck` | `0` | PASS | `/private/tmp/hns-exec-001-tech-review.xbgynb/typecheck.log` |
+| `npm test` | `0` | 175/175 PASS; no failed/cancelled/skipped/todo tests | `/private/tmp/hns-exec-001-tech-review.xbgynb/test.log` |
+| `node --test tests/unit/work-items/parser.test.mjs` | `0` | 26/26 PASS; no failed/cancelled/skipped/todo tests | `/private/tmp/hns-exec-001-tech-review.xbgynb/focused.log` |
+| `npm audit --audit-level=high` | `1` | FAILED; 1 HIGH vulnerability | `/private/tmp/hns-exec-001-tech-review.xbgynb/audit.log` |
+
+### Finding and Limitations
+
+| Finding ID | Profile | Owner | Requirement | Severity / Status | Evidence / Required Action |
+|---|---|---|---|---|---|
+| `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001-001` | `TECH_REVIEWER` | `IMPLEMENTER` | Required exact-runtime high-level audit / Implementation Gate | `MAJOR` / `OPEN` | Inherited `fast-uri` dependency fails current audit. A separately scoped dependency correction and required new-candidate review are needed; no accepted risk is claimed. |
+
+- Audit reports vulnerable `fast-uri` range `3.0.0 - 3.1.7`, at `node_modules/fast-uri`, and a fix available via `npm audit fix`.
+- Advisory references: `https://github.com/advisories/GHSA-qw65-cvwx-89v3` (authority injection via unvalidated port); `https://github.com/advisories/GHSA-58mr-gqgx-xq4g` (host confusion via unclosed bracket); `https://github.com/advisories/GHSA-hrr3-gc8f-f4qj` (inconsistent host case normalization via percent-encoded octets).
+- The current audit does not reproduce the manifest's historical zero-vulnerability result. The one-line correction is not the source of this dependency issue; the original manifest/evidence remain unchanged.
+- Installed version, full dependency chain and structured fix target were not captured by this TECH execution; exploitability was not assessed. Logs are local temporary artifacts; command results and advisory details are preserved here.
+- Reviewer changed no artifact, source, dependencies, manifest, shared branch, commit, merge or Gate state. Shared and isolated tracked trees remained clean.
+
+## REV-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-001
+
+| Field | Value |
+|---|---|
+| Evidence ID | `REV-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-001` |
+| Execution ID | `EXE-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-REVIEW-001` |
+| Actual independent agent | `01a1033e-6cf7-7783-a887-3fabf51fbd99` |
+| Work Item | `HNS-EXEC-001-CLOSURE-TEST-FIX-QA-REVIEW-001` |
+| Role / Profile / Risk | `REVIEWER` / `QA_REVIEWER` / `LOW` |
+| Maker Execution ID | `EXE-HNS-EXEC-001-CLOSURE-TEST-FIX-001` |
+| Base / Candidate | `4956c367c397a2e196904e08634b522c56be8c91` / `46f4bd6cfb4ddd4b098f04d00576af01f9b4e70b` |
+| Tested detached HEAD | `d625ba673c193d8c01c320ba299f0fd87ae75989` |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-001-closure-test-fix.md` |
+| Verified artifact SHA-256 | `8ac7accebe5addc309599ec1b2630ce99e2bd2734275935c25c26ffc71bb078b` |
+| Timestamp | `2026-10-04T03:32:34+08:00` |
+| Reviewer decision | `REQUEST_CHANGES` |
+
+### Checks and Tests
+
+- References: mandatory governance, assigned QA profile, implementation gate, assigned/Maker Work Items, SDD Sections 17, 35, 40.1. No historical review log or new probes loaded.
+- Candidate parent matches manifest base; candidate is an ancestor of tested HEAD. Source/package/lockfile match base; tested HEAD's harness and canonical Work Item match candidate. Exact candidate diff and whitespace checks PASS; no capability expansion or test disabling.
+- Canonical closed Work Item digest, parser test blob and content digest independently reproduce the exact values recorded in the TECH evidence above.
+- Maker AC-001/002 and reviewer AC-001/002 PASS; evidence AC-003 is satisfied by controlled transcription of the independent returned evidence.
+- Existing positive/negative coverage is preserved: canonical parsing, immutability, deterministic hashes, byte-change sensitivity, dependency pins, malformed inputs, path/scope boundaries, reviewer bindings, AC/DONE validation and gate rejection.
+- Runtime independently verified: Node `v24.19.0`, npm `11.17.0`; isolated worktree `/private/tmp/hns-exec-001-qa.RWbAN6/repo`.
+
+| Command | Started (+08:00), 2026-10-04 | Exit | Result | Captured log |
+|---|---|---|---|---|
+| `npm ci` | `03:31:33` | `0` | 41 installed, 42 audited; 1 HIGH vulnerability | `/private/tmp/hns-exec-001-qa.RWbAN6/ci.log` |
+| `npm run build` | `03:31:47` | `0` | PASS | `/private/tmp/hns-exec-001-qa.RWbAN6/build.log` |
+| `npm run typecheck` | `03:31:48` | `0` | PASS | `/private/tmp/hns-exec-001-qa.RWbAN6/typecheck.log` |
+| `npm test` | `03:31:48` | `0` | 175/175 PASS; no failed/cancelled/skipped/todo tests | `/private/tmp/hns-exec-001-qa.RWbAN6/test.log` |
+| `npm audit --audit-level=high` | `03:32:01` | `1` | FAILED; 1 HIGH vulnerability | `/private/tmp/hns-exec-001-qa.RWbAN6/audit.log` |
+| `node --test tests/unit/work-items/parser.test.mjs` | `03:32:01` | `0` | 26/26 PASS; no failed/cancelled/skipped/todo tests | `/private/tmp/hns-exec-001-qa.RWbAN6/focused.log` |
+
+### Finding and Limitations
+
+| Finding ID | Profile | Owner | Requirement | Severity / Status | Evidence / Required Action |
+|---|---|---|---|---|---|
+| `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-QA-001-001` | `QA_REVIEWER` | `IMPLEMENTER` | Required exact-runtime high-level audit / Implementation Gate | `MAJOR` / `OPEN` | Independently reproduces the same inherited audit defect as `FND-HNS-EXEC-001-CLOSURE-TEST-FIX-TECH-001-001`; separately scope dependency correction before Gate PASS. |
+
+- Locked dependency `fast-uri@3.1.6`; same three advisory IDs as TECH. No claim of exploitability or accepted risk. Historical manifest evidence remains unchanged.
+- Logs are local temporary artifacts; durable results are recorded above. Shared and isolated tracked trees stayed clean; reviewer made no artifact edits, commit, merge or Gate decision.
+
+## IG-HNS-EXEC-001-CLOSURE-TEST-FIX-001
+
+| Field | Value |
+|---|---|
+| Evidence ID | `IG-HNS-EXEC-001-CLOSURE-TEST-FIX-001` |
+| Checker Execution ID | `EXE-HNS-EXEC-001-CLOSURE-TEST-FIX-GATE-001` |
+| Work Item / Gate / Risk | `HNS-EXEC-001-CLOSURE-TEST-FIX` / `IMPLEMENTATION_GATE` / `LOW` |
+| Candidate | `46f4bd6cfb4ddd4b098f04d00576af01f9b4e70b` |
+| Manifest SHA-256 | `8ac7accebe5addc309599ec1b2630ce99e2bd2734275935c25c26ffc71bb078b` |
+| Timestamp | `2026-10-04T03:35:10+08:00` |
+| GateResult | `FAILED` |
+
+- Exact candidate/manifest identity, one-line authorized scope, Maker/Reviewer separation, required test coverage and passing build/typecheck/parser/full tests verified by two fresh independent executions.
+- Both required reviews are `REQUEST_CHANGES`, not PASS. Current `npm audit --audit-level=high` exits 1; both MAJOR findings remain OPEN. Mandatory current validation is incomplete, so no Gate PASS, merge or lifecycle closure is issued.
+- Controller confirmed in the unchanged lockfile that `ajv@8.20.0` depends on `fast-uri` through `^3.0.1`, locked to `3.1.6`. No dependency/source/manifest/governance modification was performed.
+- No Security reviewer was added mechanically to this LOW test-only correction. The actual audit failure is recorded as `SECURITY_BLOCK`; the user-specified milestone stop condition is triggered.
+- `develop` remains `1766f438e533d975d3cbe3f49486bcf02f8b406e`; HNS-EXEC-001 remains DONE. Closure-test-fix remains TODO; HNS-EXEC-002 candidate `4f2bc723d8fd2338ae08d8bae10413d21c0d50fa` remains preserved and unmerged. No further milestone execution, remediation loop, adapter or Pilot was started.
+- Context economy: each reviewer loaded only router, mandatory governance/profile/gate, active Work Items, immutable manifest, direct SDD sections and directly reviewed artifacts. No full historical log, generalized matrices or repeated passed validation. Parent persists returned evidence without altering reviewed artifacts; no accepted risk or architecture change is asserted.
+
+Stop condition: `SECURITY_BLOCK`.
