@@ -5510,3 +5510,191 @@ Node `v24.19.0` / npm `11.17.0`; all commands exit 0 at merge HEAD between 20:55
 - Exact runtime Node v24.19.0/npm 11.17.0; required ci/build/typecheck/test/audit plus separate context tests. Existing default npm test does not discover the context directory; separate command/count is mandatory, package settings remain forbidden here. Do not claim all-module default discovery.
 - Context target16 files/24 sections/64KiB, Tier1 intact; direct SDD5.3/18/31/38/40.1/43/46 Phase3, only affected dependencies on demand. Same-candidate full logs may be verified/reused for review; each profile remains fresh and independently checks ACs. Security fresh audit and postmerge exact-runtime validation required.
 - Token target30,000 for this increment, actual/remaining null without complete telemetry; no hard cap/enforcement or historical compliance claim. Track new primary/reviewer dispatch-to-finish upper bounds; no silent retries. End after EXEC-002 closure or explicit blocker/budget stop. EXEC-003/004 and Adapters/Pilot remain pending.
+
+## RCE-HNS-EXEC-002-RESUME-MAKER-001
+
+| Field | Value |
+|---|---|
+| Maker Execution ID | `HNS-EXEC-002-MAKER-FRESH-20261003T212235Z` |
+| Agent | `01a103a5-7e1f-7570-b214-7d1ac90eb2e1` |
+| Candidate | `1f11ff00fae30415a12674fd56ddea71c34a16e3` |
+| Manifest / Hash | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r1.md` / `e9f03174a6fd198050915f0f1445d1d6172720e79f49b93e698531d2a66a30b2` |
+| Role / Risk | IMPLEMENTER / HIGH |
+| Completion | READY_FOR_REVIEW, not Gate approval |
+
+- Candidate source/check production fixed at21:28:26Z; final complete check at21:28:56Z, before narrowed Maker deadline21:29:00Z. Parent deadline interrupt later requested no added production; agent reported clean tree/all known commands complete and returned existing checkpoint only.
+- Fresh Maker fixes two bounded canonical gaps: one normalized document snapshot for several sections; repeated on-demand selectors verify expected hash/current content before unchanged-manifest return. Two positive-before/negative-before regression cases fail before fix (8pass/2fail), then10/10 pass. Only compiler.ts and context tests change in fresh commit; aggregate8 inherited/new artifacts remain within WI scope.
+- All canonical exact-runtime commands pass, existing suite181/181 plus explicit Context10/10; audit zero vulnerabilities. Durable per-command inputs/times/exits/stdout/stderr and self-review/AC mapping recorded in manifest validation directory. No lint/formatter or separate integration script; focused tests exercise compiler/provider boundaries.
+- Full final input inventory hash `7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0` verified after commands; manifest binds current content SHA-256 identities. Current three review WIs parse with canonical registered target/hash/Maker bindings.
+- Maker context deviation disclosed: initial9files/15selections/77,436bytes and total18files/24selections/134,875bytes exceed operational target; SDD46 table over-read. Not compliant target measurement, not retrospective waiver; no claim that context/token enforcement is implemented. Mandatory content not trimmed to hide overrun.
+- New continuation4/8 dispatches (Maker + fresh TECH `01a103af-f8de-7c41-90d8-faf92c5512cc`, QA `01a103af-f957-7d21-895f-fad88a24a07c`, SECURITY `01a103af-f9d0-7d11-9129-e6b086960e01` at21:33:46Z); remediation0/1. Maker dispatch21:22:19Z through last active check21:28:56Z =6m37s conservative primary interval; profile intervals track separately. Required profile deadline21:37:30Z, WI21:50:22Z retained. Historical counters/activity/token unknown remain unknown.
+- No source, candidate, manifest, profile, gate or evidence approval is issued by Maker; independent decisions pending. Default context-test discovery gap remains explicitly scoped limitation; context tests required separately, not omitted.
+
+## EXEC-002 Independent TECH R1 Evidence
+
+**Decision: PASS — TECH_REVIEWER only.** Required technical checks completed by `2026-10-03T21:37:17Z`, before the deadline. Production stopped; no known ongoing processes. QA/SECURITY PASS and Gate approval remain required before merge.
+
+| Field | Value |
+|---|---|
+| Evidence ID | `HNS-EXEC-002-TECH-REVIEW-001-CHECKPOINT-20261003` |
+| Agent | `01a103af-f8de-7c41-90d8-faf92c5512cc` |
+| Execution / Reviewer Execution ID | `HNS-EXEC-002-TECH-01a103af-20261003T213400Z` |
+| Work Item | `work-items/HNS-EXEC-002-TECH-REVIEW-001.md` |
+| Role / Profile / Risk | `REVIEWER` / `TECH_REVIEWER` / `HIGH` |
+| Maker Execution ID | `HNS-EXEC-002-MAKER-FRESH-20261003T212235Z` |
+| Maker Agent | `01a103a5-7e1f-7570-b214-7d1ac90eb2e1`, distinct |
+| Reviewed Commit | `1f11ff00fae30415a12674fd56ddea71c34a16e3` |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r1.md` |
+| Artifact SHA-256 | `e9f03174a6fd198050915f0f1445d1d6172720e79f49b93e698531d2a66a30b2` |
+| Complete Input Hash | `7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0` |
+| Checkpoint Timestamp | `2026-10-03T21:37:17Z` |
+
+**Checks Performed**
+
+| Requirement | Assessment | Result |
+|---|---|---|
+| AC001 | Canonical ordering/hash, immutable manifests; fresh reversed-input byte equality and frozen-entry assertions | PASS |
+| AC002 | Tier deferral, AST extraction/fallback, deduplication, unrelated exclusion, explicit-source ceiling; fresh two-section/one-document-read assertion | PASS |
+| AC003 | Path/sensitive/forbidden/policy/containment, missing context, expected-hash drift and budgets; fresh repeated-content drift rejection | PASS |
+| AC004 | Immutable load/deny/defer decisions and audit deltas; fresh repeat zero-delta and deny-before-read/unchanged-hash assertions | PASS |
+| Identity / provenance | All 82 inventoried inputs match both candidate Git blobs and current files; canonical inventory hash and manifest hash match | PASS |
+| Technical scope | Fresh Maker commit changes only `compiler.ts` and its focused tests; eight implementation artifacts fit root WI scope; dependencies/settings unchanged | PASS |
+
+References: root/assigned WIs and SDD §§5.3, 18, 31, 38, 40.1, 43, 46 Phase 3. Architecture remains an explicit-source compiler with a supplied provider/effective boundary. Snapshot storage is local to each compile; repeated requests revalidate content.
+
+**Tests and Provenance**
+
+Runtime independently confirmed: Node `v24.19.0`, npm `11.17.0`.
+
+| Command | Exit / Result | Evidence |
+|---|---|---|
+| `npm ci` | 0 | Verified Maker `final-2.stdout/.stderr` |
+| `npm run build` | 0 | Verified Maker `final-3.stdout/.stderr` |
+| `npm run typecheck` | 0 | Verified Maker `final-4.stdout/.stderr` |
+| `npm test` | 0; 181/181 | Verified Maker `final-5.stdout/.stderr` |
+| `npm audit --audit-level=high` | 0; zero vulnerabilities | Verified Maker `final-6.stdout/.stderr`; reused TECH evidence |
+| `node --test tests/unit/context/compiler.test.mjs` | 0; fresh 10/10, zero failed/skipped/cancelled/todo | Private `context.stdout`, `context.stderr`, `commands.json` |
+| `node --input-type=module -e '<six-assertion script recorded in execution tool transcript>'` | 0; fresh 6/6 | Private `probe.stdout`; `21:36:50.712Z–21:36:50.726Z` |
+| `git diff --check a6f3ec5092dfb62b6dc95fea40e4464cea50c54a 1f11ff00fae30415a12674fd56ddea71c34a16e3` | 0 | Execution tool transcript |
+
+Durable Maker evidence: `docs/08_agent_reviews/validation/HNS-EXEC-002-r1/`, including `final-inputs.json`, `final-commands.json`, complete final stdout/stderr and `maker-evidence.json`.
+
+Fresh raw outputs: `/private/tmp/hns-exec-002-tech-01a103af-7nQ0Tu/`. Fresh context execution: `21:35:40.181Z–21:35:40.385Z`. The 181 existing tests **exclude** the separate 10 context tests.
+
+**Findings and Limitations**
+
+No confirmed implementation finding; Finding ID/severity/status: `N/A`.
+
+Maker context deviation remains recorded: initial `9 files / 15 selections / 77,436 bytes`; total `18 / 24 / 134,875`, including excess SDD46 selection. No retrospective compliance waiver.
+
+Host validates WI/references/effective boundaries and supplies canonical resolution. Virtual-provider tests do not establish filesystem sandbox or symlink enforcement. Fresh SECURITY audit remains assigned to SECURITY_REVIEWER. No lint/formatter or separate integration command is configured.
+
+Complete aggregate budget/token telemetry is unavailable. No repository files were written by this reviewer; the shared review log changed concurrently. Parent persistence remains pending. This evidence grants no Gate or merge approval.
+
+
+
+
+## EXEC-002 Independent QA R1 Evidence
+
+**Decision: BLOCK**。必要 fresh QA checks 未完成；已停止所有 production、reads、probes 與 retries，未延長 budget。
+
+| Metadata | Value |
+|---|---|
+| Evidence ID | `HNS-EXEC-002-QA-REVIEW-001-CHECKPOINT` |
+| Work Item | `HNS-EXEC-002-QA-REVIEW-001` |
+| Role / Profile / Risk | `REVIEWER` / `QA_REVIEWER` / `HIGH` |
+| Actual Reviewer Agent | `01a103af-f957-7d21-895f-fad88a24a07c` |
+| Execution Identity | 上述 host chat ID；未取得另行核發的 Harness execution ID |
+| Maker Execution | `HNS-EXEC-002-MAKER-FRESH-20261003T212235Z` |
+| Maker Agent | `01a103a5-7e1f-7570-b214-7d1ac90eb2e1`，與 reviewer 不同 |
+| Candidate | `1f11ff00fae30415a12674fd56ddea71c34a16e3` |
+| Manifest | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r1.md` |
+| Manifest SHA256 | `e9f03174a6fd198050915f0f1445d1d6172720e79f49b93e698531d2a66a30b2` |
+| Review Interval | 首次時間核對 `2026-10-03T21:33:59Z`；最後程序結果 `21:37:21Z`；截止 `21:37:30Z` |
+
+完成的 identity／provenance checks：
+
+- Manifest hash 吻合；`final-inputs.json` 解析後以 Maker 的 `JSON.stringify(inventory)` 算法重算，完整 input hash 吻合 `7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0`。檔案本身的 SHA256 不等於此 inventory hash，並非 mismatch。
+- 清單與 tracked harness inputs 一致；逐項核對 working-tree bytes、candidate Git bytes、記錄 hashes 均通過。Candidate 至 observed HEAD `7aeff8d46714468f0f23f4ef84a693d001a27e02` 的 `harness` diff 為空。
+- Maker `final-commands.json` 的九筆紀錄均 exit `0`、signal `null`、input hash 一致；相應完整 stdout/stderr 可讀。既有 suite **181/181**、context **10/10** 分別核對，未將 context tests 宣稱為 default suite 內容。
+- 本次直接執行的 runtime version check：Node `v24.19.0`，exit `0`。npm `11.17.0` 由 Maker 原始 version log 確认，尚未 fresh 重跑。
+
+| Canonical AC | 已有 QA assessment | 未完成 |
+|---|---|---|
+| `AC-HNS-EXEC-002-001` | 靜態核對 immutable／ordering／hash assertions及 Maker results | Fresh determinism execution |
+| `AC-HNS-EXEC-002-002` | Tier、AST extraction、dedup、unrelated exclusion、20,001-source rejection coverage | Fresh focused execution |
+| `AC-HNS-EXEC-002-003` | Path／scope／sensitivity／hash drift／budget negatives，以及兩項 Maker regression coverage | Fresh negatives及 dist/source 對應核對 |
+| `AC-HNS-EXEC-002-004` | Load／deny／defer／audit deltas／repeat idempotency assertions | Fresh decisions與 recovery probes |
+
+| Finding ID | Severity / Status | Description / Required Action |
+|---|---|---|
+| `FND-HNS-EXEC-002-QA-001-001` | `BLOCKING` / `OPEN` | 必要 fresh context tests與 QA probes未執行，無法完成獨立 QA evidence。Owner：`QA_REVIEWER`；由 parent 在有效有限 allocation 下安排完成 required checks，再評定 decision。此 finding 不宣稱 candidate source defect。 |
+
+本次 verifier 命令為：
+
+```text
+/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/node /private/tmp/hns-exec-002-qa.hQfcrm/qa.mjs
+```
+
+三次執行均 exit `1`：第一次遇到 parent 並行更新 `review_log.md`；第二次遇到 verifier 對 Node reporter 格式的錯誤假設；最後一次在上述 identity／Maker-log assertions 通過後，因本地 `typescript/lib/typescript.js` 無法載入而中止。**Fresh context test count：0；fresh recovery probe count：0。**
+
+既有暫存 verifier 保留於 [qa.mjs](/private/tmp/hns-exec-002-qa.hQfcrm/qa.mjs)。Fresh stdout/stderr 檔尚未產生；三次錯誤輸出留在本次 tool transcript。Maker durable raw logs 保留於原 validation 目錄。未修改任何 repo file，未啟動 agents、remediation 或 Gate approval。
+
+已知 processes 均已退出，無已知 ongoing process。Maker context target miss 維持原記錄，未追認合規或豁免。TECH／SECURITY 結論與 fresh Security audit 不由本 QA checkpoint 取代；parent 未取得全部 required PASS 前不得 merge。
+
+
+
+
+## EXEC-002 Independent SECURITY R1 Evidence
+
+Decision: **REQUEST_CHANGES**。已停止所有工作；未達 required PASS，Parent 不可據此 merge。
+
+| Metadata | Value |
+|---|---|
+| Evidence ID | `REV-HNS-EXEC-002-SECURITY-001` |
+| Execution / Reviewer Execution ID | `HNS-EXEC-002-SECURITY-01a103af-f9d0-7d11-9129-e6b086960e01` |
+| Actual Agent | `01a103af-f9d0-7d11-9129-e6b086960e01` |
+| Work Item | `HNS-EXEC-002-SECURITY-REVIEW-001` |
+| Role / Profile / Risk | `REVIEWER` / `SECURITY_REVIEWER` / `HIGH` |
+| Maker Execution ID | `HNS-EXEC-002-MAKER-FRESH-20261003T212235Z` |
+| Maker Agent | `01a103a5-7e1f-7570-b214-7d1ac90eb2e1`，與 Reviewer 不同 |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r1.md` |
+| Artifact SHA256 | `e9f03174a6fd198050915f0f1445d1d6172720e79f49b93e698531d2a66a30b2` |
+| Reviewed Commit | `1f11ff00fae30415a12674fd56ddea71c34a16e3` |
+| Finding reproduction timestamp | `2026-10-03T21:36:32.751Z`，截止前 |
+| Latest checkpoint timestamp | `2026-10-03T21:37:31.138Z`，超過截止 1.138 秒，不能聲稱按時完成 |
+
+| Finding ID | Severity / Status | Owner / Requirement |
+|---|---|---|
+| `FND-HNS-EXEC-002-SECURITY-001-001` | `MAJOR / OPEN` | `IMPLEMENTER` / `AC-HNS-EXEC-002-003`、SDD 18.2、18.5、38 |
+
+**Finding：resolved canonical target 未重新套用 sensitive／scope 授權。** [compiler.ts:284](/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness/src/context/compiler.ts:284) 只確認 realpath 位於 repository root，隨後第 289 行讀取。獨立 provider probe 將允許的 `docs/alias.md` 解析到 repo 內 `.env` 或 forbidden `docs/private/secret.md`；initial compile 與 on-demand 四個案例均讀取目標並接受為 `LOADED`，manifest 仍記錄允許的 alias。這證明 unauthorized read／context admission；未聲稱目前 API 直接回傳 secret 原文。
+
+Required action：讀取前驗證 resolved target 的 sensitivity、Read Scope、Policy 與 Forbidden Scope，補上 initial／on-demand regression，再由獨立 SECURITY execution 重驗。本 execution 未 remediation。
+
+| Canonical AC | Assessment |
+|---|---|
+| `AC-HNS-EXEC-002-001` | PASS：排序一致、immutable manifest/hash；fresh focused cases 通過。 |
+| `AC-HNS-EXEC-002-002` | PASS：Tier、AST extraction/fallback、dedup、unrelated exclusion、explicit-source ceiling。 |
+| `AC-HNS-EXEC-002-003` | **FAILED**：上述 canonical-target bypass；直接 sensitive 路徑與 outside-root control 正確拒絕。 |
+| `AC-HNS-EXEC-002-004` | 部分通過：load/deny/defer、hash/budget deltas、tamper/repeated-selection checks 通過；alias authorization 有相同 Finding。 |
+
+| Validation / Provenance | Result |
+|---|---|
+| Manifest、完整 input inventory | 指定 manifest hash 相符；82/82 current files 與 candidate Git blobs 相符；完整 input hash `7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0`。 |
+| Maker durable logs | `final-inputs.json`、`final-commands.json`、全部 final stdout/stderr、Maker evidence 已核對；9 個 command records exit 0、stderr 空。 |
+| Reused Maker checks | `npm ci`、`npm run build`、`npm run typecheck`、`npm test`：exit 0；既有 suite **181/181**，不包含 context 10 項。 |
+| Fresh runtime | Node `v24.19.0` / npm `11.17.0`；指定 runtime bin。 |
+| Fresh focused | `node --test tests/unit/context/compiler.test.mjs`：exit 0，**10/10**，0 failed/skipped/todo；21:35:28.985–21:35:29.252Z。 |
+| Fresh security audit | `npm audit --audit-level=high`：exit 0，**0 vulnerabilities**；21:35:29.252–21:35:29.888Z。 |
+| Independent probes | 指定 runtime 執行 `security-probes.mjs`：exit 0；4 個 bypass reproductions、2 個拒絕 controls。Exit 0 表示 probe runner 完成，不表示安全 PASS。 |
+
+Threat/control assessment：logical deny-first、outside-root containment、hash drift/tamper、budgets 有正向證據；canonical target authorization 失敗。技術檢查未見新增 process/network/write capability。Authentication、payment、production 與 destructive operations 不在本候選功能範圍。
+
+既有輸出保留於 [private probe directory](/private/tmp/HNS-EXEC-002-SECURITY-01a103af-OhWWZS)：`verification.json`、`focused.stdout/stderr`、`audit.stdout/stderr`、`security-probes.mjs/json/stdout/stderr`、`final-checkpoint.json`。首次 Finding 在截止前完成；最後重複 probe／checkpoint 於截止後完成，已如實記錄。
+
+Limitations：provider 為 bounded virtual fixture，未宣稱實作 filesystem sandbox；僅按需要讀 HARNESS §§4–5。Reviewer initial context 為 12 files／18 selections／67,772 bytes，超出 64 KiB target；Maker 已記錄的 context deviation 同樣保留，無 retrospective waiver。完整 aggregate token telemetry 未取得。
+
+Integrity：本 Reviewer 未修改任何 repository file；後續 shared `review_log.md` 修改來自其他活動。唯一已啟動的背景驗證 session 已正常完成；最後同步命令 exit 0，無已知 ongoing process。Evidence 尚待 Parent persistence；本結果不是 Gate approval。
+
+

@@ -1,0 +1,76 @@
+{
+  "started": "2026-10-03T21:37:31.106Z",
+  "candidate": "1f11ff00fae30415a12674fd56ddea71c34a16e3",
+  "results": [
+    {
+      "check": "canonical-target-initial",
+      "target": "/virtual/repository/.env",
+      "decision": "LOADED",
+      "reads": [
+        "/virtual/repository/.env",
+        "/virtual/repository/work-items/HNS-EXEC-002.md"
+      ],
+      "exposed_entry": {
+        "path": "docs/alias.md",
+        "content_sha256": "sha256:cbc833d13ecfa1bc7841761bd377e17a504821788861b438447d9a78a0f7c87b",
+        "reason": "direct reference",
+        "tier": "TIER_1_MANDATORY"
+      }
+    },
+    {
+      "check": "canonical-target-on-demand",
+      "target": "/virtual/repository/.env",
+      "decision": "LOADED",
+      "reason": "AUTHORIZED_AND_LOADED",
+      "reads": [
+        "/virtual/repository/work-items/HNS-EXEC-002.md",
+        "/virtual/repository/.env"
+      ],
+      "exposed_entry": {
+        "path": "docs/alias.md",
+        "content_sha256": "sha256:cbc833d13ecfa1bc7841761bd377e17a504821788861b438447d9a78a0f7c87b",
+        "reason": "directly affected boundary probe",
+        "tier": "TIER_2_ON_DEMAND"
+      }
+    },
+    {
+      "check": "canonical-target-initial",
+      "target": "/virtual/repository/docs/private/secret.md",
+      "decision": "LOADED",
+      "reads": [
+        "/virtual/repository/docs/private/secret.md",
+        "/virtual/repository/work-items/HNS-EXEC-002.md"
+      ],
+      "exposed_entry": {
+        "path": "docs/alias.md",
+        "content_sha256": "sha256:cbc833d13ecfa1bc7841761bd377e17a504821788861b438447d9a78a0f7c87b",
+        "reason": "direct reference",
+        "tier": "TIER_1_MANDATORY"
+      }
+    },
+    {
+      "check": "canonical-target-on-demand",
+      "target": "/virtual/repository/docs/private/secret.md",
+      "decision": "LOADED",
+      "reason": "AUTHORIZED_AND_LOADED",
+      "reads": [
+        "/virtual/repository/work-items/HNS-EXEC-002.md",
+        "/virtual/repository/docs/private/secret.md"
+      ],
+      "exposed_entry": {
+        "path": "docs/alias.md",
+        "content_sha256": "sha256:cbc833d13ecfa1bc7841761bd377e17a504821788861b438447d9a78a0f7c87b",
+        "reason": "directly affected boundary probe",
+        "tier": "TIER_2_ON_DEMAND"
+      }
+    },
+    {
+      "check": "logical-sensitive-denied-before-read",
+      "result": "PASS"
+    },
+    {
+      "check": "outside-realpath-denied-before-read",
+      "result": "PASS"
+    }
+  ]
+}
