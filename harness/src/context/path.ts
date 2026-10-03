@@ -18,9 +18,9 @@ export function normalizeRepositoryPath(value: string): string | undefined {
   return candidate;
 }
 
-export function isCanonicalPathInsideRoot(root: string, canonicalPath: string): boolean {
+export function canonicalRepositoryPath(root: string, canonicalPath: string): string | undefined {
   if (!root.startsWith("/") || !canonicalPath.startsWith("/")) {
-    return false;
+    return undefined;
   }
   const normalizeAbsolute = (value: string): string | undefined => {
     const segments: string[] = [];
@@ -41,9 +41,15 @@ export function isCanonicalPathInsideRoot(root: string, canonicalPath: string): 
   };
   const normalizedRoot = normalizeAbsolute(root);
   const normalizedPath = normalizeAbsolute(canonicalPath);
-  return normalizedRoot !== undefined
-    && normalizedPath !== undefined
-    && (normalizedRoot === "/" || normalizedPath === normalizedRoot || normalizedPath.startsWith(`${normalizedRoot}/`));
+  if (normalizedRoot === undefined || normalizedPath === undefined
+    || !(normalizedRoot === "/" || normalizedPath.startsWith(`${normalizedRoot}/`))) {
+    return undefined;
+  }
+  return normalizeRepositoryPath(normalizedPath.slice(normalizedRoot === "/" ? 1 : normalizedRoot.length + 1));
+}
+
+export function isCanonicalPathInsideRoot(root: string, canonicalPath: string): boolean {
+  return canonicalRepositoryPath(root, canonicalPath) !== undefined;
 }
 
 function matchSegments(

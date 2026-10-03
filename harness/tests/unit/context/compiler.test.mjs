@@ -171,6 +171,41 @@ test("path, forbidden, policy, sensitivity, canonical-root, and unavailable-sour
   );
 });
 
+test("canonical alias targets are authorized before initial and on-demand reads", async () => {
+  const alias = { path: "docs/alias.md", context_class: "delivery", tier: "TIER_1_MANDATORY", reason: "alias regression" };
+  const cases = [
+    [".env", "SENSITIVE_CONTEXT_DENIED"],
+    ["docs/private/blocked.md", "FORBIDDEN_SCOPE"],
+    ["outside/allowed.md", "POLICY_READ_SCOPE_DENIED"],
+    ["work-items/OTHER.md", "WORK_ITEM_READ_SCOPE_DENIED"],
+    ["docs/public.md", undefined],
+  ];
+  for (const [target, failure] of cases) {
+    const fixture = { ...files, [alias.path]: "alias", [target]: "# Canonical target\n" };
+    const p = provider(fixture, { [alias.path]: `${root}/${target}` });
+    const compiler = new ContextCompiler(p);
+    const boundary = { ...input().boundary, forbidden_scope: ["docs/private/**"] };
+    if (failure !== undefined) {
+      await assert.rejects(compiler.compile(input([alias, baseSources[5]], { boundary })), expectHarnessError("HNS-CTX-002", failure));
+      assert.equal(p.reads.length, 0);
+    } else {
+      const manifest = await compiler.compile(input([alias, baseSources[5]], { boundary }));
+      assert.equal(manifest.delivery_context[0].path, alias.path);
+    }
+    const q = provider(fixture, { [alias.path]: `${root}/${target}` });
+    const onDemand = new ContextCompiler(q);
+    const base = await onDemand.compile(input([baseSources[5]], { boundary }));
+    const decision = await onDemand.requestContext(base, { request_id: "alias", execution_id: base.execution_id, requested_path: alias.path, reason: "regression" }, { ...boundary, context_budget: base.hard_safety_ceiling }, root);
+    assert.equal(decision.status, failure === undefined ? "LOADED" : "DENIED");
+    if (failure !== undefined) {
+      assert.equal(decision.reason, failure);
+      assert.deepEqual(q.reads, [baseSources[5].path]);
+      assert.equal(decision.audit.before_context_hash, decision.audit.after_context_hash);
+      assert.deepEqual(decision.audit.budget_delta, { bytes: 0, files: 0, sections: 0 });
+    }
+  }
+});
+
 test("expected hash drift, conflicting duplicate hashes, required gates, and budgets fail closed", async () => {
   const stale = { ...baseSources[1], expected_content_sha256: `sha256:${"0".repeat(64)}` };
   await assert.rejects(

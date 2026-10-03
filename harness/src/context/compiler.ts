@@ -3,7 +3,7 @@ import { encodeUtf8, hashCanonicalValue, sha256Hex } from "../core/hash/index.js
 import { HarnessError } from "../errors/index.js";
 import { extractMarkdownSection } from "./markdown.js";
 import {
-  isCanonicalPathInsideRoot,
+  canonicalRepositoryPath,
   isSensitiveContextPath,
   matchesScope,
   normalizeRepositoryPath,
@@ -273,7 +273,9 @@ export class ContextCompiler {
     ref: ContextSourceRef,
     repositoryRoot: string,
     executionId: string,
+    boundary: ContextReadBoundary,
     documents?: Map<string, Uint8Array>,
+    workItemReadScope?: readonly string[],
   ): Promise<LoadedEntry> {
     let canonicalPath: string;
     try {
@@ -281,8 +283,18 @@ export class ContextCompiler {
     } catch {
       throw contextFailure("HNS-CTX-002", executionId, "SOURCE_RESOLUTION_FAILED", ref.path);
     }
-    if (!isCanonicalPathInsideRoot(repositoryRoot, canonicalPath)) {
+    const canonicalRelativePath = canonicalRepositoryPath(repositoryRoot, canonicalPath);
+    if (canonicalRelativePath === undefined) {
       throw contextFailure("HNS-CTX-001", executionId, "CANONICAL_PATH_OUTSIDE_REPOSITORY", ref.path);
+    }
+    const denied = isSensitiveContextPath(canonicalRelativePath)
+      ? "SENSITIVE_CONTEXT_DENIED"
+      : authorizePath(canonicalRelativePath, ref.tier, boundary)
+        ?? (ref.tier !== "TIER_0_BOOTSTRAP" && workItemReadScope !== undefined
+          && !matchesScope(canonicalRelativePath, workItemReadScope)
+          ? "WORK_ITEM_READ_SCOPE_DENIED" : undefined);
+    if (denied !== undefined) {
+      throw contextFailure("HNS-CTX-002", executionId, denied, ref.path);
     }
     let content: string | Uint8Array;
     try {
@@ -426,7 +438,11 @@ export class ContextCompiler {
     const loaded: LoadedEntry[] = [];
     const documents = new Map<string, Uint8Array>();
     for (const ref of uniqueRefs.values()) {
-      loaded.push(await this.#load(ref, input.repository.root, input.execution_id, documents));
+      const boundary = {
+        ...input.boundary,
+        forbidden_scope: [...input.boundary.forbidden_scope, ...input.work_item.forbidden_scope],
+      };
+      loaded.push(await this.#load(ref, input.repository.root, input.execution_id, boundary, documents, input.work_item.read_scope));
     }
     loaded.sort((left, right) =>
       AUTHORITY_ORDER[left.context_class] - AUTHORITY_ORDER[right.context_class]
@@ -523,7 +539,7 @@ export class ContextCompiler {
         ...(anchor === undefined ? {} : { anchor }),
         ...(request.expected_content_sha256 === undefined ? {} : { expected_content_sha256: request.expected_content_sha256 }),
         ...(request.allow_full_document_fallback === true ? { allow_full_document_fallback: true } : {}),
-      }, repositoryRoot, manifest.execution_id);
+      }, repositoryRoot, manifest.execution_id, policy);
     } catch (error) {
       if (error instanceof HarnessError && error.code === "HNS-CTX-002") {
         const failure = error.details.failure;
