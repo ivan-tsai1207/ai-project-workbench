@@ -8,7 +8,7 @@
 | Role | `IMPLEMENTER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `IMPLEMENTATION` |
-| Status | `TODO` |
+| Status | `IN_PROGRESS` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -105,6 +105,7 @@ Implement deterministic Risk Assignment, Reviewer Assignment, and immutable Exec
 
 ## Notes
 
+- IMPLEMENTATION-ALLOCATION-001: Human requested next execution after contract closure. Original preflight origin02:45:34Z/no childattempts preserved; added finite implementation allocation origin `2026-10-04T04:34:53.250Z`, deadline `2026-10-04T05:04:53.250Z`, elapsed/cumulative<=30min, max8 attempts R=3/G=0, at most1 remediation only if required fullrequalification fits remaining time. Initial fresh Maker hard9min/target6min, each fresh TECH/QA/SECURITY hard4.5min/target3min; initial child maxima22.5min, host critical work target<=6min, explicit host pause while waiting must record start/end and counts wallclock. No reset of historical clocks/unknown activity, pause is not extra childtime. Required canonical ci/build/typecheck/test/audit-high plus focusedContext/Risk/profile, frozen manifest/source hashes, independent reviews, ImplementationGate, normalmerge/postmerge/lifecycle/remoteverify. TokenTARGET30,000 actualnull; no hardcap. Initialcontexttarget16files/24selections/64KiB, fullTier1 plus directASTSDDsections, source on demand; no whole reviewlog/fuzzing. Stop after003, no004/adapters/Pilot.
 - Current handoff `LC-HNS-EXEC-003-CONTRACT-001`: both `HNS-EXEC-003-PREFLIGHT-001` contract gaps resolved by SDD5.5/16.1/21 in reviewed merge `afcb13a795d99ff3b274cb380dbcd3da2a74b12d`, clarification WI DONE, `SG-HNS-EXEC-003-CONTRACT-001` PASS and CR-HNS-EXEC-003-001 Closed. Scope/Role/HIGH required TECH/QA/SECURITY unchanged; host mappings remain canonical-authority inputs, not invented global policy. StatusTODO means ready for a separate fresh implementation execution, not completed or authorized by this closure to begin. All implementation ACs remain unchecked. Older preflight Notes below remain historical evidence.
 - Host preflight `HNS-EXEC-003-PREFLIGHT-001`, base develop `1b6fdfca5507c5274a893d0074c602b98ff2cb99`; dependency Work Items001/002 DONE. Default one-WI plan would require HIGH TECH/QA/SECURITY (R=3,G=0), initial1Maker+3reviews, at most1remediation+3reviews; maximum8 attempts and30min elapsed/cumulative, tokenTARGET30,000 with actualnull. Preflight began2026-10-04T02:45:34Z; no Maker/Reviewer dispatched, no implementation allocation consumed by childagents. Original milestone/history counters not reset or claimedknown.
 - Preflight cannot establish implementability against frozen canonical contracts, so exits `HUMAN_DECISION_REQUIRED` / SPEC_GAP before implementation, validation/review/Gate/merge. Two contract clarifications belong to PRODUCT_ARCHITECT; approval must be incorporated into canonical requirements before a fresh implementation context. No ad hoc risk rule DSL, caller-asserted unbound commit, Context schema change or re-opening EXEC-002 is authorized.
