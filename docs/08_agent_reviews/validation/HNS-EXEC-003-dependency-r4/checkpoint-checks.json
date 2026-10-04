@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-04T13:35:21.463Z",
+  "input_unchanged": 95,
+  "input_status_handoff_delta": [
+    "work-items/HNS-EXEC-003.md"
+  ],
+  "compiled_unchanged": 116,
+  "raw_logs_unchanged": 16,
+  "manifest_unchanged": true,
+  "result": "PASS"
+}

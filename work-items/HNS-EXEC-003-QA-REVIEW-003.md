@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `BLOCKED` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -106,7 +106,7 @@ Independently review exact candidate `52ce59dd4867f2f99db0a01386fba325e2266da5` 
 
 ## Blockers
 
-- None for dispatch; decision requires exact current hashes and full bounded assigned profile checks.
+- BUDGET_EXHAUSTED parentcumulative1978s/1800s; interrupted2026-10-04T13:32:11Z with no completed decision/evidence. No PASS or newFinding inferred from incomplete execution. Required qualification remainsmissing; no automaticretry.
 
 ## Notes
 

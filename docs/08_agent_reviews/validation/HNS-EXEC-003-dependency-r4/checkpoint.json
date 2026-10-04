@@ -1,0 +1,56 @@
+{
+  "id": "CHECKPOINT-HNS-EXEC-003-DEPENDENCY-R4",
+  "timestamp": "2026-10-04T13:32:11.522Z",
+  "source_candidate": "52ce59dd4867f2f99db0a01386fba325e2266da5",
+  "manifest": "docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r4.md",
+  "manifest_hash": "sha256:b14fb23611b370809aa6b3abe577dacb4c12a26235b4972e5b2244094d69df6a",
+  "stop": "BUDGET_EXHAUSTED",
+  "elapsed_seconds": 1451.522,
+  "cumulative_active_seconds_conservative": 1978,
+  "cumulative_cap_seconds": 1800,
+  "attempts": {
+    "historical": 6,
+    "added": 4,
+    "total": 10,
+    "cap": 10
+  },
+  "durations_ms": {
+    "maker": 194697,
+    "tech": 325149,
+    "qa_interrupted": 226481,
+    "security_interrupted": 226390
+  },
+  "explicit_host_pauses": [
+    [
+      "13:17:50Z",
+      "13:18:49Z"
+    ],
+    [
+      "13:22:47Z",
+      "13:27:15Z"
+    ],
+    [
+      "13:29:40Z",
+      "13:31:40Z"
+    ]
+  ],
+  "reviews": {
+    "TECH": "PASS",
+    "QA": "INCOMPLETE",
+    "SECURITY": "INCOMPLETE"
+  },
+  "gate": "NOT_RUN",
+  "merge": "NOT_RUN",
+  "lifecycle": "NOT_COMPLETE",
+  "develop": "90f4ff4fe6479a4644723c33e153f7083e07ec88",
+  "tokens": {
+    "target": 20000,
+    "actual": null
+  },
+  "limitations": [
+    "Cumulative cap detected late; no timely budget-compliance claim",
+    "Parent preflight underestimated aggregate cost of parallel required reviewers",
+    "No new defect inferred from interrupted reviews",
+    "Historical aggregate unknown; no counters reset"
+  ]
+}
