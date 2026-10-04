@@ -1,0 +1,106 @@
+{
+  "runtime": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin",
+  "input_sha256": "104cbf61f837a44b546fa532e8e389287b3318b0023c4ddd88a97276c3fc1556",
+  "results": [
+    {
+      "name": "node",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/node",
+      "args": [
+        "--version"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-03T21:42:49.573Z",
+      "end": "2026-10-03T21:42:49.600Z",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "name": "npm",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/npm",
+      "args": [
+        "--version"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-03T21:42:49.604Z",
+      "end": "2026-10-03T21:42:49.780Z",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "name": "ci",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/npm",
+      "args": [
+        "ci"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-03T21:42:49.781Z",
+      "end": "2026-10-03T21:42:50.926Z",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "name": "build",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/npm",
+      "args": [
+        "run",
+        "build"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-03T21:42:50.927Z",
+      "end": "2026-10-03T21:42:51.819Z",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "name": "typecheck",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/npm",
+      "args": [
+        "run",
+        "typecheck"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-03T21:42:51.819Z",
+      "end": "2026-10-03T21:42:52.135Z",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "name": "test",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/npm",
+      "args": [
+        "test"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-03T21:42:52.135Z",
+      "end": "2026-10-03T21:42:53.841Z",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "name": "context",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/node",
+      "args": [
+        "--test",
+        "tests/unit/context/compiler.test.mjs"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-03T21:42:53.841Z",
+      "end": "2026-10-03T21:42:54.046Z",
+      "exit": 0,
+      "signal": null
+    },
+    {
+      "name": "audit",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/npm",
+      "args": [
+        "audit",
+        "--json"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-03T21:42:54.047Z",
+      "end": "2026-10-03T21:42:54.770Z",
+      "exit": 0,
+      "signal": null
+    }
+  ]
+}

@@ -8,7 +8,7 @@
 | Role | `IMPLEMENTER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `IMPLEMENTATION` |
-| Status | `TODO` |
+| Status | `BLOCKED` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -98,9 +98,15 @@ Implement the deterministic least-context compiler needed to assemble a bounded 
 
 ## Blockers
 
-- None
+- Exact-R2 fresh TECH/QA/SECURITY REVIEW-003 all PASS; `IG-HNS-EXEC-002-002` PASS, original QA/Security Findings RESOLVED. Review-only increment3/3 attempts and cumulative30-minute allocation exhausted before merge/postmerge/lifecycle closure. Status remains BLOCKED until bounded human merge/closure continuation; see `HNS-EXEC-002-RESUME-002-CHECKPOINT`. No source remediation or additional review authorized.
 
 ## Notes
 
+- Human merge/closure increment `HNS-EXEC-002-CLOSURE-ALLOCATION-001`: user approved the proposed last5-minute continuation by saying proceed. Origin `2026-10-04T02:27:02.610Z`, deadline `2026-10-04T02:32:02.610Z`; at most5minutes elapsed/cumulative host activity, no new Reviewer/Maker dispatch, no remediation/retry or implementation changes. Preserve previous8/8 and1/1 plus review-only3/3 and1806.565-second exhaustion checkpoint; historical aggregate/token totals remain unknown, not zero. Only normal merge of unchanged reviewed R2, exact-runtime complete postmerge validation plus separate context tests, DONE/evidence normalization and normalpush/remoteHEAD verification. Any divergence/failure/timeout stops. Stop afterEXEC-002; no successors/adapters/Pilot.
+- Human review-only continuation `HNS-EXEC-002-RESUME-002`: user approved the proposed finite increment by asking to proceed. Origin `2026-10-03T21:58:48.089Z`, elapsed deadline `2026-10-03T22:28:48.089Z`; elapsed and cumulative host/reviewer activity each <=30 minutes. Exactly at most 3 new independent TECH/QA/SECURITY attempts, no retries, no new Maker/source remediation. Each reviewer <=6 minutes activity; host activity plus sum of reviewer dispatch-to-completion intervals counted conservatively. Token TARGET20,000; actual/remaining null without full telemetry. Prior 8/8 attempts, 1/1 remediation and unknown historical totals remain unchanged, not reset. Only verify/close `FND-HNS-EXEC-002-QA-001-001` and `FND-HNS-EXEC-002-SECURITY-001-001` against unchanged R2 candidate, canonical ACs and affected boundaries. Non-PASS/new MAJOR/BLOCKING or exhausted allocation stops Human. All PASS permits Implementation Gate, normal merge develop, exact-runtime postmerge validation and lifecycle closure; stop after EXEC-002, no EXEC-003/004 or adapters.
 - Required independent profiles: `TECH_REVIEWER`, `QA_REVIEWER`, `SECURITY_REVIEWER`.
-
+- Human continuation allocation `HNS-EXEC-002-RESUME-001`: user answered continue to the proposed finite successor allocation. Additional origin `2026-10-03T21:20:22Z`, deadline `2026-10-03T21:50:22Z`; at most 30 minutes elapsed and cumulative primary/reviewer activity, 8 additional dispatched attempts, 1 remediation. Preserve old candidate `4f2bc723d8fd2338ae08d8bae10413d21c0d50fa` and all history. Original complete counts/activity/token usage remain unknown, not zero; this is a bounded human continuation increment, not a reset or historical compliance claim.
+- This allocation is EXEC-002 only; mandatory TECH/QA/SECURITY (R=3,G=0); initial planned 1 fresh Maker + 3 distinct profile executions. Record dispatch start/end conservatively for each; retry only if count/elapsed/aggregate active remaining can fit required review/validation. Known activity beyond allocation or new unrelated MAJOR/BLOCKING stops Human handoff. Token target 30,000; actual/remaining null without complete telemetry.
+- Focused context tests must run explicitly in addition to npm ci/build/typecheck/test/audit on exact Node v24.19.0/npm 11.17.0. Existing npm test script does not discover context subdirectory, and package.json is forbidden here; report separate counts, not fictional full-suite inclusion. No hidden omission or test-script permission expansion.
+- Required reviews may reuse verified same-candidate complete input/runtime/command logs when current; each profile still independently checks canonical ACs with bounded probes. Fresh security audit and exact-runtime postmerge commands remain required.
+- Context target 16 files /24 selected sections /64 KiB; only assigned mandatory context, direct SDD sections and affected source/tests. No complete review_log, generalized fuzzing, historical R1-R8 context, new architecture or adapter. Stop after EXEC-002 closure; EXEC-003/004 remain explicitly pending.

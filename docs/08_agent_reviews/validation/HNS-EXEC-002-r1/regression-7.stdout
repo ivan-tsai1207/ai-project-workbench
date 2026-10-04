@@ -1,0 +1,50 @@
+✔ compile is immutable, order-independent, section-bounded, deduplicated, and excludes deferred sources (12.691458ms)
+✔ AST section extraction records deterministic full-document fallback only when explicitly allowed (3.077833ms)
+✔ path, forbidden, policy, sensitivity, canonical-root, and unavailable-source boundaries fail closed (1.250917ms)
+✔ expected hash drift, conflicting duplicate hashes, required gates, and budgets fail closed (27.273792ms)
+✔ optional unrelated candidates are excluded before resolve or read (2.307708ms)
+✖ multiple sections share one document snapshot and enforce each expected document hash (2.780208ms)
+✖ repeated on-demand selections revalidate content and caller expected hashes (2.37475ms)
+✔ the explicit-source ceiling bounds large repositories without scanning (1.088042ms)
+✔ on-demand load, deny, dedup, and defer decisions include immutable audit hashes and budget deltas (4.855625ms)
+✔ production context code has no scan, write, process, network, credential, policy, or adapter capability (4.64625ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 8
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 157.286083
+
+✖ failing tests:
+
+test at tests/unit/context/compiler.test.mjs:258:1
+✖ multiple sections share one document snapshot and enforce each expected document hash (2.780208ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (file:///Users/ivan/Documents/Codex/%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%A1%86%E6%9E%B6/.orchestration/hns-core-005-r4.hn6GJU/repo/harness/tests/unit/context/compiler.test.mjs:263:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/unit/context/compiler.test.mjs:270:1
+✖ repeated on-demand selections revalidate content and caller expected hashes (2.37475ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///Users/ivan/Documents/Codex/%E7%B3%BB%E7%B5%B1%E9%96%8B%E7%99%BC%E6%A1%86%E6%9E%B6/.orchestration/hns-core-005-r4.hn6GJU/repo/harness/tests/unit/context/compiler.test.mjs:282:3)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }

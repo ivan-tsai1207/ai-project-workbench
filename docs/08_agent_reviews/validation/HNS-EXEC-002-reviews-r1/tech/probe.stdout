@@ -1,0 +1,16 @@
+{
+  "started": "2026-10-03T21:36:50.712Z",
+  "ended": "2026-10-03T21:36:50.726Z",
+  "runtime": "v24.19.0",
+  "exit": 0,
+  "checks": 6,
+  "pass": 6,
+  "checks_description": [
+    "one-read document snapshot",
+    "reversed input byte equality",
+    "deep immutability",
+    "repeat zero budget delta",
+    "deny before provider read with unchanged hash",
+    "repeated content drift rejection"
+  ]
+}

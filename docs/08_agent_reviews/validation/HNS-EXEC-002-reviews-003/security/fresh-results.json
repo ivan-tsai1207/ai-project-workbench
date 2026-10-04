@@ -1,0 +1,43 @@
+[
+  {
+    "name": "context",
+    "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/node",
+    "args": [
+      "--test",
+      "tests/unit/context/compiler.test.mjs"
+    ],
+    "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+    "start": "2026-10-03T22:06:07.672Z",
+    "end": "2026-10-03T22:06:07.893Z",
+    "exit": 0,
+    "signal": null,
+    "stdout_sha256": "0342a9fccc6fc3ace8a58271f8ea1411844653da52f5762b850d9a44fbe8154d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "environment": {
+      "NODE_OPTIONS": null,
+      "NODE_PATH": null,
+      "TZ": null
+    }
+  },
+  {
+    "name": "audit",
+    "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/npm",
+    "args": [
+      "audit",
+      "--audit-level=high",
+      "--json"
+    ],
+    "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+    "start": "2026-10-03T22:06:07.893Z",
+    "end": "2026-10-03T22:06:08.572Z",
+    "exit": 0,
+    "signal": null,
+    "stdout_sha256": "9a9a9e22d39e17125ce3f943ccc73c2e5a252b3edb4ebe857cc2067288d34599",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "environment": {
+      "NODE_OPTIONS": null,
+      "NODE_PATH": null,
+      "TZ": null
+    }
+  }
+]

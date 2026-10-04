@@ -1,0 +1,126 @@
+{
+  "started": "2026-10-03T21:35:28.810Z",
+  "out": "/private/tmp/HNS-EXEC-002-SECURITY-01a103af-OhWWZS",
+  "node": "v24.19.0",
+  "manifest": "e9f03174a6fd198050915f0f1445d1d6172720e79f49b93e698531d2a66a30b2",
+  "inputHash": "7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0",
+  "inputCount": 82,
+  "mismatches": [],
+  "gitMismatch": [],
+  "commands": [
+    {
+      "name": "npm-version",
+      "command": "npm --version",
+      "started": "2026-10-03T21:35:28.819Z",
+      "ended": "2026-10-03T21:35:28.985Z",
+      "exit": 0,
+      "signal": null,
+      "stdout": "11.17.0\n",
+      "stderr": ""
+    },
+    {
+      "name": "focused",
+      "command": "node --test tests/unit/context/compiler.test.mjs",
+      "started": "2026-10-03T21:35:28.985Z",
+      "ended": "2026-10-03T21:35:29.252Z",
+      "exit": 0,
+      "signal": null,
+      "stdout": "✔ compile is immutable, order-independent, section-bounded, deduplicated, and excludes deferred sources (13.028291ms)\n✔ AST section extraction records deterministic full-document fallback only when explicitly allowed (3.573875ms)\n✔ path, forbidden, policy, sensitivity, canonical-root, and unavailable-source boundaries fail closed (1.346208ms)\n✔ expected hash drift, conflicting duplicate hashes, required gates, and budgets fail closed (29.559958ms)\n✔ optional unrelated candidates are excluded before resolve or read (2.087416ms)\n✔ multiple sections share one document snapshot and enforce each expected document hash (2.603ms)\n✔ repeated on-demand selections revalidate content and caller expected hashes (5.555625ms)\n✔ the explicit-source ceiling bounds large repositories without scanning (1.125334ms)\n✔ on-demand load, deny, dedup, and defer decisions include immutable audit hashes and budget deltas (3.163166ms)\n✔ production context code has no scan, write, process, network, credential, policy, or adapter capability (3.951ms)\nℹ tests 10\nℹ suites 0\nℹ pass 10\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 216.520042\n",
+      "stderr": ""
+    },
+    {
+      "name": "audit",
+      "command": "npm audit --audit-level=high",
+      "started": "2026-10-03T21:35:29.252Z",
+      "ended": "2026-10-03T21:35:29.888Z",
+      "exit": 0,
+      "signal": null,
+      "stdout": "found 0 vulnerabilities\n",
+      "stderr": ""
+    }
+  ],
+  "logs": [
+    {
+      "command": "node --version",
+      "exit": 0,
+      "input_hash": "7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0",
+      "stdout_hash": "b7677d3ec37ee1897ba07dc2cfe8292fe421c9ac93396cca5bbece486d1a2a41",
+      "stderr_bytes": 0,
+      "counts": null,
+      "tail": "v24.19.0\n"
+    },
+    {
+      "command": "npm --version",
+      "exit": 0,
+      "input_hash": "7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0",
+      "stdout_hash": "a38e383f1e9080b0dd9001481f6e56b341000de90a05061b66734350ad3adc41",
+      "stderr_bytes": 0,
+      "counts": null,
+      "tail": "11.17.0\n"
+    },
+    {
+      "command": "npm ci",
+      "exit": 0,
+      "input_hash": "7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0",
+      "stdout_hash": "618704654daca381db3d8506140b1932d028cd27f510c0261bc517f99e8c63c8",
+      "stderr_bytes": 0,
+      "counts": null,
+      "tail": "\nadded 41 packages, and audited 42 packages in 834ms\n\n29 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities\n"
+    },
+    {
+      "command": "npm run build",
+      "exit": 0,
+      "input_hash": "7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0",
+      "stdout_hash": "4f508288098c0f594f144ba449b406c86a7cfc01338904328b0d973804b30005",
+      "stderr_bytes": 0,
+      "counts": null,
+      "tail": "\n> @ivan-tsai1207/ai-system-delivery-harness@0.1.0 build\n> tsc --project tsconfig.json\n\n"
+    },
+    {
+      "command": "npm run typecheck",
+      "exit": 0,
+      "input_hash": "7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0",
+      "stdout_hash": "db3ea65f9010bc3aad2f6222df86f3a730be7c79cfbbde8172073664a5402092",
+      "stderr_bytes": 0,
+      "counts": null,
+      "tail": "\n> @ivan-tsai1207/ai-system-delivery-harness@0.1.0 typecheck\n> tsc --project tsconfig.json --noEmit\n\n"
+    },
+    {
+      "command": "npm test",
+      "exit": 0,
+      "input_hash": "7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0",
+      "stdout_hash": "95bda2c8ae00def7879e7d532eaaa1f2834ce157a320c66e06e2a28055fe8acd",
+      "stderr_bytes": 0,
+      "counts": null,
+      "tail": "osed (3.743542ms)\n✔ missing and malformed requirement-reference fields fail closed (2.731667ms)\nℹ tests 181\nℹ suites 0\nℹ pass 181\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 1190.718334\n"
+    },
+    {
+      "command": "npm audit --audit-level=high",
+      "exit": 0,
+      "input_hash": "7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0",
+      "stdout_hash": "6d8c5c8f3d7684adb070417bd608d01ae90aa3dc26a65af03ffda4955f38d9a3",
+      "stderr_bytes": 0,
+      "counts": null,
+      "tail": "found 0 vulnerabilities\n"
+    },
+    {
+      "command": "node --test tests/unit/context/compiler.test.mjs",
+      "exit": 0,
+      "input_hash": "7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0",
+      "stdout_hash": "cae81bcccdeea8966cb79ff36f3378298673e5e0a5c87d8ed6d2b6023121ab53",
+      "stderr_bytes": 0,
+      "counts": null,
+      "tail": " code has no scan, write, process, network, credential, policy, or adapter capability (3.987083ms)\nℹ tests 10\nℹ suites 0\nℹ pass 10\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 158.460916\n"
+    },
+    {
+      "command": "node --test tests/unit/context/*.test.mjs",
+      "exit": 0,
+      "input_hash": "7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0",
+      "stdout_hash": "d1b63b6b6c04724b04fd44f1edc00bbb26b0b6ef718f9a33ee50fc64bcceab07",
+      "stderr_bytes": 0,
+      "counts": null,
+      "tail": " code has no scan, write, process, network, credential, policy, or adapter capability (5.414542ms)\nℹ tests 10\nℹ suites 0\nℹ pass 10\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 268.294917\n"
+    }
+  ],
+  "ended": "2026-10-03T21:35:29.888Z"
+}

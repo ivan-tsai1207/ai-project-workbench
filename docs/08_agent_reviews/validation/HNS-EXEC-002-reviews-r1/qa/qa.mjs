@@ -1,0 +1,61 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+const repo='/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo';
+const dir='/private/tmp/hns-exec-002-qa.hQfcrm';
+const runtime='/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin';
+const candidate='1f11ff00fae30415a12674fd56ddea71c34a16e3';
+const evidence=repo+'/docs/08_agent_reviews/validation/HNS-EXEC-002-r1/';
+const hash=x=>createHash('sha256').update(x).digest('hex');
+const git=args=>{const p=spawnSync('git',args,{cwd:repo,encoding:'utf8'});assert.equal(p.status,0);return p.stdout;};
+const inventory=JSON.parse(readFileSync(evidence+'final-inputs.json','utf8'));
+assert.equal(hash(JSON.stringify(inventory)),'7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0');
+assert.deepEqual(git(['ls-files','harness']).trim().split('\n'),inventory.map(x=>x.path));
+for(const x of inventory){assert.equal(hash(readFileSync(repo+'/'+x.path)),x.sha256,x.path);assert.equal(hash(git(['show',candidate+':'+x.path])),x.sha256,'candidate '+x.path);}
+assert.equal(git(['diff','--name-only',candidate,'HEAD','--','harness']).trim(),'');
+const initialStatus=git(['status','--porcelain=v1']).trim();
+assert.ok(initialStatus===''||initialStatus==='M docs/08_agent_reviews/review_log.md');
+assert.equal(hash(readFileSync(repo+'/docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r1.md')),'e9f03174a6fd198050915f0f1445d1d6172720e79f49b93e698531d2a66a30b2');
+const commands=JSON.parse(readFileSync(evidence+'final-commands.json','utf8'));
+const inherited=[];
+for(let i=0;i<commands.length;i++){const c=commands[i];assert.equal(c.exit,0);assert.equal(c.signal,null);assert.equal(c.input_hash,hash(JSON.stringify(inventory)));const prefix=i===8?'focused-glob':'final-'+i;const out=readFileSync(evidence+prefix+'.stdout','utf8');const err=readFileSync(evidence+prefix+'.stderr','utf8');if(c.command==='npm test')assert.match(out,/tests 181\s+[^\n]*suites 0\s+[^\n]*pass 181\s+[^\n]*fail 0/);if(c.command.startsWith('node --test'))assert.match(out,/tests 10\s+[^\n]*suites 0\s+[^\n]*pass 10\s+[^\n]*fail 0/);inherited.push({...c,stdout_sha256:hash(out),stderr_sha256:hash(err),stderr_bytes:Buffer.byteLength(err),summary:out.slice(-450)});}
+const ts=await import(repo+'/harness/node_modules/typescript/lib/typescript.js');
+const config=ts.default.readConfigFile(repo+'/harness/tsconfig.json',ts.default.sys.readFile);
+const options=ts.default.parseJsonConfigFileContent(config.config,ts.default.sys,repo+'/harness').options;
+const dist=[];
+for(const x of inventory.filter(x=>x.path.startsWith('harness/src/context/')&&x.path.endsWith('.ts'))){const result=ts.default.transpileModule(readFileSync(repo+'/'+x.path,'utf8'),{compilerOptions:options,fileName:repo+'/'+x.path});const output=repo+'/'+x.path.replace('/src/','/dist/').replace(/\.ts$/,'.js');assert.equal(readFileSync(output,'utf8'),result.outputText,output);dist.push({path:output,sha256:hash(result.outputText)});}
+const env={...process.env,PATH:runtime+':'+process.env.PATH};
+const fresh=[];
+function run(name,program,args){const started=new Date().toISOString();const p=spawnSync(program,args,{cwd:repo+'/harness',env,encoding:'utf8',timeout:20000});const ended=new Date().toISOString();writeFileSync(dir+'/'+name+'.stdout',p.stdout??'');writeFileSync(dir+'/'+name+'.stderr',p.stderr??'');fresh.push({name,program,args,cwd:repo+'/harness',started,ended,exit:p.status,signal:p.signal});assert.equal(p.status,0,p.stderr||p.stdout);return p.stdout;}
+assert.equal(run('node-version',runtime+'/node',['--version']).trim(),'v24.19.0');
+assert.equal(run('npm-version',runtime+'/npm',['--version']).trim(),'11.17.0');
+run('context',runtime+'/node',['--test','tests/unit/context/compiler.test.mjs']);
+let setup=readFileSync(repo+'/harness/tests/unit/context/compiler.test.mjs','utf8').split('\ntest("compile is immutable')[0];
+setup=setup.replaceAll('"../../../dist/','"'+repo+'/harness/dist/').replace('new URL("../../fixtures/context/sectioned.md", import.meta.url)','"'+repo+'/harness/tests/fixtures/context/sectioned.md"');
+const probes=`
+const cp=provider(files);const cc=new ContextCompiler(cp);const m=await cc.compile(input());
+const policy={...input().boundary,context_budget:input().hard_safety_ceiling};
+const request={request_id:'fresh-qa',execution_id:m.execution_id,requested_path:'harness/src/context/extra.ts',section:'API',reason:'QA recovery'};
+const initialReads=cp.reads.length;
+const denied=await cc.requestContext(m,{...request,execution_id:'wrong'},policy,root);
+assert.equal(denied.status,'DENIED');assert.equal(cp.reads.length,initialReads);assert.equal(denied.audit.after_context_hash,m.context_hash);
+const deferred=await cc.requestContext(m,request,{...policy,context_budget:{max_bytes:m.context_usage.bytes,max_files:20,max_sections:20}},root);
+assert.equal(deferred.status,'DEFERRED');assert.deepEqual(deferred.audit.budget_delta,{bytes:0,files:0,sections:0});
+const loaded=await cc.requestContext(m,request,policy,root);assert.equal(loaded.status,'LOADED');
+const repeated=await cc.requestContext(loaded.resulting_manifest,request,policy,root);assert.equal(repeated.reason,'ALREADY_PRESENT');assert.equal(repeated.resulting_context_hash,loaded.resulting_context_hash);
+const second=await new ContextCompiler(provider(files)).requestContext(m,request,policy,root);assert.equal(canonicalStringify(second),canonicalStringify(loaded));
+const mutable={...files};const driftCompiler=new ContextCompiler(provider(mutable));const before=await driftCompiler.compile(input());
+mutable['docs/harness.md']=sectioned.replace('Required section body.','Changed section body.');
+const r={...request,requested_path:'docs/harness.md',section:'Section 2'};
+await assert.rejects(driftCompiler.requestContext(before,r,policy,root),expectHarnessError('HNS-CTX-001','CONCURRENT_HASH_DRIFT'));
+mutable['docs/harness.md']=sectioned;const restored=await driftCompiler.requestContext(before,r,policy,root);assert.equal(restored.reason,'ALREADY_PRESENT');
+console.log('QA fresh probes: 6/6 PASS (deny/no-read, defer/no-delta, recovery load, repeat idempotency, deterministic decisions, drift then restored recovery)');
+`;
+writeFileSync(dir+'/probe.mjs',setup+probes);
+run('probe',runtime+'/node',[dir+'/probe.mjs']);
+const finalStatus=git(['status','--porcelain=v1']).trim();
+assert.ok(finalStatus===''||finalStatus==='M docs/08_agent_reviews/review_log.md');
+for(const x of inventory)assert.equal(hash(readFileSync(repo+'/'+x.path)),x.sha256,x.path);
+writeFileSync(dir+'/verification.json',JSON.stringify({timestamp:new Date().toISOString(),candidate,checkout_head:git(['rev-parse','HEAD']).trim(),input_hash:hash(JSON.stringify(inventory)),input_count:inventory.length,dist,inherited,fresh,initialStatus,finalStatus,artifact_unchanged:true},null,2));
+console.log(JSON.stringify({input_count:inventory.length,input_hash:hash(JSON.stringify(inventory)),fresh,dist_count:dist.length,initialStatus,finalStatus,artifact_unchanged:true}));

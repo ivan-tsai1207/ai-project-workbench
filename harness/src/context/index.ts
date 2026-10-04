@@ -1,0 +1,21 @@
+export { ContextCompiler } from "./compiler.js";
+export {
+  CONTEXT_CLASSES,
+  CONTEXT_TIERS,
+  type ContextBudget,
+  type ContextBudgetDelta,
+  type ContextClass,
+  type ContextCompilerInput,
+  type ContextManifestEntry,
+  type ContextReadBoundary,
+  type ContextReadPolicy,
+  type ContextSourceProvider,
+  type ContextSourceRef,
+  type ContextTier,
+  type ContextUsage,
+  type ExecutionContextManifest,
+  type ExcludedRef,
+  type OnDemandContextDecision,
+  type OnDemandContextRequest,
+  type OnDemandDecisionAudit,
+} from "./types.js";

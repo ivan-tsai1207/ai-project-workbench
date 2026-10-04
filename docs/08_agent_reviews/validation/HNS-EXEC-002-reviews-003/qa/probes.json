@@ -1,0 +1,29 @@
+{
+  "started": "2026-10-03T22:06:33.930Z",
+  "ended": "2026-10-03T22:06:33.958Z",
+  "groups": 5,
+  "results": [
+    {
+      "name": "AC001 ordering and immutable snapshot",
+      "result": "PASS"
+    },
+    {
+      "name": "AC002 section hash, tier deferral and zero unrelated reads",
+      "result": "PASS"
+    },
+    {
+      "name": "AC003 canonical target denials before read and allowed controls",
+      "result": "PASS"
+    },
+    {
+      "name": "AC003 missing required section, boundary overflow and recovery",
+      "result": "PASS"
+    },
+    {
+      "name": "AC004 defer then recover, repeated selection and execution mismatch",
+      "result": "PASS"
+    }
+  ],
+  "alias_cases": 9,
+  "status": "PASS"
+}

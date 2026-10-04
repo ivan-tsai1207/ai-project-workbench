@@ -1,0 +1,15 @@
+fix(context): snapshot sections and revalidate repeated requests
+
+HNS-EXEC-002 fresh IMPLEMENTER self-review: only compiler.ts and its focused
+unit tests changed within authorized scope. Preserve existing architecture,
+dependencies, governance, Work Item and host metadata.
+
+One compile reads each normalized document once. Repeated on-demand selectors
+revalidate expected document hashes and selected content before returning the
+existing immutable manifest. Two bounded regressions failed before the fix.
+
+Exact Node v24.19.0/npm 11.17.0: npm ci/build/typecheck/test/audit and explicit
+context tests exit 0. Canonical 181/181; focused 10/10; audit 0 vulnerabilities;
+git diff --check exit 0. No lint/formatter or separate integration script.
+Raw logs/input hashes/metadata: /private/tmp/hns-exec-002-maker.QFMdL9.
+No independent review or Gate approval asserted. Parent owns remaining reviews.

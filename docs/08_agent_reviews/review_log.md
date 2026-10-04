@@ -5500,3 +5500,583 @@ Node `v24.19.0` / npm `11.17.0`; all commands exit 0 at merge HEAD between 20:55
 - EXEC-002 remains remote candidate `4f2bc723d8fd2338ae08d8bae10413d21c0d50fa`, parent `1766f438e533d975d3cbe3f49486bcf02f8b406e`, created 2026-09-26T13:58:07+08:00. Only one candidate commit is visible beyond current develop; no EXEC-002 immutable manifest or durable complete execution-budget ledger is present in that candidate tree.
 - Successor preflight cannot infer all historical dispatch attempts/cumulative activity from commit count. Original counters/clock are not silently reset. No fresh EXEC-002 Agent dispatched; Human bounded continuation allocation requested (at most 30 minutes, 8 additional executions, one remediation, EXEC-002 only), pending decision. Historical unknown usage remains unknown, not zero.
 - Exit after this correction if no explicit bounded successor allocation is received: `HUMAN_DECISION_REQUIRED` for budget handoff only. Minimal Execution Engine remains PARTIAL, with EXEC-002/003/004 pending; no Adapter/Pilot or extra capability dispatched.
+
+## CP-HNS-EXEC-002-RESUME-001
+
+- Human answered continue after the bounded successor allocation question. Additional allocation is EXEC-002 only: 30 minutes elapsed/cumulative primary+review activity, up to 8 additional dispatched attempts, at most one remediation; origin `2026-10-03T21:20:22Z`, deadline `2026-10-03T21:50:22Z`. Original complete execution/token/activity ledger is unavailable and remains unknown, not reset or fabricated.
+- Clean local/remote develop `77f93daef6f880ac9a548ac0a088137f51c74041`; remote old candidate `4f2bc723d8fd2338ae08d8bae10413d21c0d50fa`. Normal merge on `feature/hns-exec-002-resume` retains the old candidate and lineage; no squash/force/main changes. Continuation metadata commit `eb8347b4bf8874df49f8f52bf00a75876e16d2b1`.
+- Canonical Work Item parsing PASS before review dispatch; HIGH retained. Scope: deterministic least-context compiler only. Security trigger is read/forbidden/sensitive/path containment/hash-drift/budget boundary, so required TECH, QA, SECURITY; R=3, G=0, initial planned four new executions.
+- Fresh Maker `01a103a5-7e1f-7570-b214-7d1ac90eb2e1`, dispatched at `2026-10-03 21:22:19 UTC`; new increment counter 1/8, remediation 0/1. Maker execution deadline narrows to 21:29:00Z; host checks time/count before required reviewer dispatch. Initial reviewer target <=3 minutes each; no unbounded probes or whole history.
+- Exact runtime Node v24.19.0/npm 11.17.0; required ci/build/typecheck/test/audit plus separate context tests. Existing default npm test does not discover the context directory; separate command/count is mandatory, package settings remain forbidden here. Do not claim all-module default discovery.
+- Context target16 files/24 sections/64KiB, Tier1 intact; direct SDD5.3/18/31/38/40.1/43/46 Phase3, only affected dependencies on demand. Same-candidate full logs may be verified/reused for review; each profile remains fresh and independently checks ACs. Security fresh audit and postmerge exact-runtime validation required.
+- Token target30,000 for this increment, actual/remaining null without complete telemetry; no hard cap/enforcement or historical compliance claim. Track new primary/reviewer dispatch-to-finish upper bounds; no silent retries. End after EXEC-002 closure or explicit blocker/budget stop. EXEC-003/004 and Adapters/Pilot remain pending.
+
+## RCE-HNS-EXEC-002-RESUME-MAKER-001
+
+| Field | Value |
+|---|---|
+| Maker Execution ID | `HNS-EXEC-002-MAKER-FRESH-20261003T212235Z` |
+| Agent | `01a103a5-7e1f-7570-b214-7d1ac90eb2e1` |
+| Candidate | `1f11ff00fae30415a12674fd56ddea71c34a16e3` |
+| Manifest / Hash | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r1.md` / `e9f03174a6fd198050915f0f1445d1d6172720e79f49b93e698531d2a66a30b2` |
+| Role / Risk | IMPLEMENTER / HIGH |
+| Completion | READY_FOR_REVIEW, not Gate approval |
+
+- Candidate source/check production fixed at21:28:26Z; final complete check at21:28:56Z, before narrowed Maker deadline21:29:00Z. Parent deadline interrupt later requested no added production; agent reported clean tree/all known commands complete and returned existing checkpoint only.
+- Fresh Maker fixes two bounded canonical gaps: one normalized document snapshot for several sections; repeated on-demand selectors verify expected hash/current content before unchanged-manifest return. Two positive-before/negative-before regression cases fail before fix (8pass/2fail), then10/10 pass. Only compiler.ts and context tests change in fresh commit; aggregate8 inherited/new artifacts remain within WI scope.
+- All canonical exact-runtime commands pass, existing suite181/181 plus explicit Context10/10; audit zero vulnerabilities. Durable per-command inputs/times/exits/stdout/stderr and self-review/AC mapping recorded in manifest validation directory. No lint/formatter or separate integration script; focused tests exercise compiler/provider boundaries.
+- Full final input inventory hash `7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0` verified after commands; manifest binds current content SHA-256 identities. Current three review WIs parse with canonical registered target/hash/Maker bindings.
+- Maker context deviation disclosed: initial9files/15selections/77,436bytes and total18files/24selections/134,875bytes exceed operational target; SDD46 table over-read. Not compliant target measurement, not retrospective waiver; no claim that context/token enforcement is implemented. Mandatory content not trimmed to hide overrun.
+- New continuation4/8 dispatches (Maker + fresh TECH `01a103af-f8de-7c41-90d8-faf92c5512cc`, QA `01a103af-f957-7d21-895f-fad88a24a07c`, SECURITY `01a103af-f9d0-7d11-9129-e6b086960e01` at21:33:46Z); remediation0/1. Maker dispatch21:22:19Z through last active check21:28:56Z =6m37s conservative primary interval; profile intervals track separately. Required profile deadline21:37:30Z, WI21:50:22Z retained. Historical counters/activity/token unknown remain unknown.
+- No source, candidate, manifest, profile, gate or evidence approval is issued by Maker; independent decisions pending. Default context-test discovery gap remains explicitly scoped limitation; context tests required separately, not omitted.
+
+## EXEC-002 Independent TECH R1 Evidence
+
+**Decision: PASS — TECH_REVIEWER only.** Required technical checks completed by `2026-10-03T21:37:17Z`, before the deadline. Production stopped; no known ongoing processes. QA/SECURITY PASS and Gate approval remain required before merge.
+
+| Field | Value |
+|---|---|
+| Evidence ID | `HNS-EXEC-002-TECH-REVIEW-001-CHECKPOINT-20261003` |
+| Agent | `01a103af-f8de-7c41-90d8-faf92c5512cc` |
+| Execution / Reviewer Execution ID | `HNS-EXEC-002-TECH-01a103af-20261003T213400Z` |
+| Work Item | `work-items/HNS-EXEC-002-TECH-REVIEW-001.md` |
+| Role / Profile / Risk | `REVIEWER` / `TECH_REVIEWER` / `HIGH` |
+| Maker Execution ID | `HNS-EXEC-002-MAKER-FRESH-20261003T212235Z` |
+| Maker Agent | `01a103a5-7e1f-7570-b214-7d1ac90eb2e1`, distinct |
+| Reviewed Commit | `1f11ff00fae30415a12674fd56ddea71c34a16e3` |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r1.md` |
+| Artifact SHA-256 | `e9f03174a6fd198050915f0f1445d1d6172720e79f49b93e698531d2a66a30b2` |
+| Complete Input Hash | `7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0` |
+| Checkpoint Timestamp | `2026-10-03T21:37:17Z` |
+
+**Checks Performed**
+
+| Requirement | Assessment | Result |
+|---|---|---|
+| AC001 | Canonical ordering/hash, immutable manifests; fresh reversed-input byte equality and frozen-entry assertions | PASS |
+| AC002 | Tier deferral, AST extraction/fallback, deduplication, unrelated exclusion, explicit-source ceiling; fresh two-section/one-document-read assertion | PASS |
+| AC003 | Path/sensitive/forbidden/policy/containment, missing context, expected-hash drift and budgets; fresh repeated-content drift rejection | PASS |
+| AC004 | Immutable load/deny/defer decisions and audit deltas; fresh repeat zero-delta and deny-before-read/unchanged-hash assertions | PASS |
+| Identity / provenance | All 82 inventoried inputs match both candidate Git blobs and current files; canonical inventory hash and manifest hash match | PASS |
+| Technical scope | Fresh Maker commit changes only `compiler.ts` and its focused tests; eight implementation artifacts fit root WI scope; dependencies/settings unchanged | PASS |
+
+References: root/assigned WIs and SDD §§5.3, 18, 31, 38, 40.1, 43, 46 Phase 3. Architecture remains an explicit-source compiler with a supplied provider/effective boundary. Snapshot storage is local to each compile; repeated requests revalidate content.
+
+**Tests and Provenance**
+
+Runtime independently confirmed: Node `v24.19.0`, npm `11.17.0`.
+
+| Command | Exit / Result | Evidence |
+|---|---|---|
+| `npm ci` | 0 | Verified Maker `final-2.stdout/.stderr` |
+| `npm run build` | 0 | Verified Maker `final-3.stdout/.stderr` |
+| `npm run typecheck` | 0 | Verified Maker `final-4.stdout/.stderr` |
+| `npm test` | 0; 181/181 | Verified Maker `final-5.stdout/.stderr` |
+| `npm audit --audit-level=high` | 0; zero vulnerabilities | Verified Maker `final-6.stdout/.stderr`; reused TECH evidence |
+| `node --test tests/unit/context/compiler.test.mjs` | 0; fresh 10/10, zero failed/skipped/cancelled/todo | Private `context.stdout`, `context.stderr`, `commands.json` |
+| `node --input-type=module -e '<six-assertion script recorded in execution tool transcript>'` | 0; fresh 6/6 | Private `probe.stdout`; `21:36:50.712Z–21:36:50.726Z` |
+| `git diff --check a6f3ec5092dfb62b6dc95fea40e4464cea50c54a 1f11ff00fae30415a12674fd56ddea71c34a16e3` | 0 | Execution tool transcript |
+
+Durable Maker evidence: `docs/08_agent_reviews/validation/HNS-EXEC-002-r1/`, including `final-inputs.json`, `final-commands.json`, complete final stdout/stderr and `maker-evidence.json`.
+
+Fresh raw outputs: `/private/tmp/hns-exec-002-tech-01a103af-7nQ0Tu/`. Fresh context execution: `21:35:40.181Z–21:35:40.385Z`. The 181 existing tests **exclude** the separate 10 context tests.
+
+**Findings and Limitations**
+
+No confirmed implementation finding; Finding ID/severity/status: `N/A`.
+
+Maker context deviation remains recorded: initial `9 files / 15 selections / 77,436 bytes`; total `18 / 24 / 134,875`, including excess SDD46 selection. No retrospective compliance waiver.
+
+Host validates WI/references/effective boundaries and supplies canonical resolution. Virtual-provider tests do not establish filesystem sandbox or symlink enforcement. Fresh SECURITY audit remains assigned to SECURITY_REVIEWER. No lint/formatter or separate integration command is configured.
+
+Complete aggregate budget/token telemetry is unavailable. No repository files were written by this reviewer; the shared review log changed concurrently. Parent persistence remains pending. This evidence grants no Gate or merge approval.
+
+
+
+
+## EXEC-002 Independent QA R1 Evidence
+
+**Decision: BLOCK**。必要 fresh QA checks 未完成；已停止所有 production、reads、probes 與 retries，未延長 budget。
+
+| Metadata | Value |
+|---|---|
+| Evidence ID | `HNS-EXEC-002-QA-REVIEW-001-CHECKPOINT` |
+| Work Item | `HNS-EXEC-002-QA-REVIEW-001` |
+| Role / Profile / Risk | `REVIEWER` / `QA_REVIEWER` / `HIGH` |
+| Actual Reviewer Agent | `01a103af-f957-7d21-895f-fad88a24a07c` |
+| Execution Identity | 上述 host chat ID；未取得另行核發的 Harness execution ID |
+| Maker Execution | `HNS-EXEC-002-MAKER-FRESH-20261003T212235Z` |
+| Maker Agent | `01a103a5-7e1f-7570-b214-7d1ac90eb2e1`，與 reviewer 不同 |
+| Candidate | `1f11ff00fae30415a12674fd56ddea71c34a16e3` |
+| Manifest | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r1.md` |
+| Manifest SHA256 | `e9f03174a6fd198050915f0f1445d1d6172720e79f49b93e698531d2a66a30b2` |
+| Review Interval | 首次時間核對 `2026-10-03T21:33:59Z`；最後程序結果 `21:37:21Z`；截止 `21:37:30Z` |
+
+完成的 identity／provenance checks：
+
+- Manifest hash 吻合；`final-inputs.json` 解析後以 Maker 的 `JSON.stringify(inventory)` 算法重算，完整 input hash 吻合 `7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0`。檔案本身的 SHA256 不等於此 inventory hash，並非 mismatch。
+- 清單與 tracked harness inputs 一致；逐項核對 working-tree bytes、candidate Git bytes、記錄 hashes 均通過。Candidate 至 observed HEAD `7aeff8d46714468f0f23f4ef84a693d001a27e02` 的 `harness` diff 為空。
+- Maker `final-commands.json` 的九筆紀錄均 exit `0`、signal `null`、input hash 一致；相應完整 stdout/stderr 可讀。既有 suite **181/181**、context **10/10** 分別核對，未將 context tests 宣稱為 default suite 內容。
+- 本次直接執行的 runtime version check：Node `v24.19.0`，exit `0`。npm `11.17.0` 由 Maker 原始 version log 確认，尚未 fresh 重跑。
+
+| Canonical AC | 已有 QA assessment | 未完成 |
+|---|---|---|
+| `AC-HNS-EXEC-002-001` | 靜態核對 immutable／ordering／hash assertions及 Maker results | Fresh determinism execution |
+| `AC-HNS-EXEC-002-002` | Tier、AST extraction、dedup、unrelated exclusion、20,001-source rejection coverage | Fresh focused execution |
+| `AC-HNS-EXEC-002-003` | Path／scope／sensitivity／hash drift／budget negatives，以及兩項 Maker regression coverage | Fresh negatives及 dist/source 對應核對 |
+| `AC-HNS-EXEC-002-004` | Load／deny／defer／audit deltas／repeat idempotency assertions | Fresh decisions與 recovery probes |
+
+| Finding ID | Severity / Status | Description / Required Action |
+|---|---|---|
+| `FND-HNS-EXEC-002-QA-001-001` | `BLOCKING` / `OPEN` | 必要 fresh context tests與 QA probes未執行，無法完成獨立 QA evidence。Owner：`QA_REVIEWER`；由 parent 在有效有限 allocation 下安排完成 required checks，再評定 decision。此 finding 不宣稱 candidate source defect。 |
+
+本次 verifier 命令為：
+
+```text
+/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/node /private/tmp/hns-exec-002-qa.hQfcrm/qa.mjs
+```
+
+三次執行均 exit `1`：第一次遇到 parent 並行更新 `review_log.md`；第二次遇到 verifier 對 Node reporter 格式的錯誤假設；最後一次在上述 identity／Maker-log assertions 通過後，因本地 `typescript/lib/typescript.js` 無法載入而中止。**Fresh context test count：0；fresh recovery probe count：0。**
+
+既有暫存 verifier 保留於 [qa.mjs](/private/tmp/hns-exec-002-qa.hQfcrm/qa.mjs)。Fresh stdout/stderr 檔尚未產生；三次錯誤輸出留在本次 tool transcript。Maker durable raw logs 保留於原 validation 目錄。未修改任何 repo file，未啟動 agents、remediation 或 Gate approval。
+
+已知 processes 均已退出，無已知 ongoing process。Maker context target miss 維持原記錄，未追認合規或豁免。TECH／SECURITY 結論與 fresh Security audit 不由本 QA checkpoint 取代；parent 未取得全部 required PASS 前不得 merge。
+
+
+
+
+## EXEC-002 Independent SECURITY R1 Evidence
+
+Decision: **REQUEST_CHANGES**。已停止所有工作；未達 required PASS，Parent 不可據此 merge。
+
+| Metadata | Value |
+|---|---|
+| Evidence ID | `REV-HNS-EXEC-002-SECURITY-001` |
+| Execution / Reviewer Execution ID | `HNS-EXEC-002-SECURITY-01a103af-f9d0-7d11-9129-e6b086960e01` |
+| Actual Agent | `01a103af-f9d0-7d11-9129-e6b086960e01` |
+| Work Item | `HNS-EXEC-002-SECURITY-REVIEW-001` |
+| Role / Profile / Risk | `REVIEWER` / `SECURITY_REVIEWER` / `HIGH` |
+| Maker Execution ID | `HNS-EXEC-002-MAKER-FRESH-20261003T212235Z` |
+| Maker Agent | `01a103a5-7e1f-7570-b214-7d1ac90eb2e1`，與 Reviewer 不同 |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r1.md` |
+| Artifact SHA256 | `e9f03174a6fd198050915f0f1445d1d6172720e79f49b93e698531d2a66a30b2` |
+| Reviewed Commit | `1f11ff00fae30415a12674fd56ddea71c34a16e3` |
+| Finding reproduction timestamp | `2026-10-03T21:36:32.751Z`，截止前 |
+| Latest checkpoint timestamp | `2026-10-03T21:37:31.138Z`，超過截止 1.138 秒，不能聲稱按時完成 |
+
+| Finding ID | Severity / Status | Owner / Requirement |
+|---|---|---|
+| `FND-HNS-EXEC-002-SECURITY-001-001` | `MAJOR / OPEN` | `IMPLEMENTER` / `AC-HNS-EXEC-002-003`、SDD 18.2、18.5、38 |
+
+**Finding：resolved canonical target 未重新套用 sensitive／scope 授權。** [compiler.ts:284](/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness/src/context/compiler.ts:284) 只確認 realpath 位於 repository root，隨後第 289 行讀取。獨立 provider probe 將允許的 `docs/alias.md` 解析到 repo 內 `.env` 或 forbidden `docs/private/secret.md`；initial compile 與 on-demand 四個案例均讀取目標並接受為 `LOADED`，manifest 仍記錄允許的 alias。這證明 unauthorized read／context admission；未聲稱目前 API 直接回傳 secret 原文。
+
+Required action：讀取前驗證 resolved target 的 sensitivity、Read Scope、Policy 與 Forbidden Scope，補上 initial／on-demand regression，再由獨立 SECURITY execution 重驗。本 execution 未 remediation。
+
+| Canonical AC | Assessment |
+|---|---|
+| `AC-HNS-EXEC-002-001` | PASS：排序一致、immutable manifest/hash；fresh focused cases 通過。 |
+| `AC-HNS-EXEC-002-002` | PASS：Tier、AST extraction/fallback、dedup、unrelated exclusion、explicit-source ceiling。 |
+| `AC-HNS-EXEC-002-003` | **FAILED**：上述 canonical-target bypass；直接 sensitive 路徑與 outside-root control 正確拒絕。 |
+| `AC-HNS-EXEC-002-004` | 部分通過：load/deny/defer、hash/budget deltas、tamper/repeated-selection checks 通過；alias authorization 有相同 Finding。 |
+
+| Validation / Provenance | Result |
+|---|---|
+| Manifest、完整 input inventory | 指定 manifest hash 相符；82/82 current files 與 candidate Git blobs 相符；完整 input hash `7217e13764b4a1548a6befa483fe9ef45f5e94f8d794b000957dbcc49065a6d0`。 |
+| Maker durable logs | `final-inputs.json`、`final-commands.json`、全部 final stdout/stderr、Maker evidence 已核對；9 個 command records exit 0、stderr 空。 |
+| Reused Maker checks | `npm ci`、`npm run build`、`npm run typecheck`、`npm test`：exit 0；既有 suite **181/181**，不包含 context 10 項。 |
+| Fresh runtime | Node `v24.19.0` / npm `11.17.0`；指定 runtime bin。 |
+| Fresh focused | `node --test tests/unit/context/compiler.test.mjs`：exit 0，**10/10**，0 failed/skipped/todo；21:35:28.985–21:35:29.252Z。 |
+| Fresh security audit | `npm audit --audit-level=high`：exit 0，**0 vulnerabilities**；21:35:29.252–21:35:29.888Z。 |
+| Independent probes | 指定 runtime 執行 `security-probes.mjs`：exit 0；4 個 bypass reproductions、2 個拒絕 controls。Exit 0 表示 probe runner 完成，不表示安全 PASS。 |
+
+Threat/control assessment：logical deny-first、outside-root containment、hash drift/tamper、budgets 有正向證據；canonical target authorization 失敗。技術檢查未見新增 process/network/write capability。Authentication、payment、production 與 destructive operations 不在本候選功能範圍。
+
+既有輸出保留於 [private probe directory](/private/tmp/HNS-EXEC-002-SECURITY-01a103af-OhWWZS)：`verification.json`、`focused.stdout/stderr`、`audit.stdout/stderr`、`security-probes.mjs/json/stdout/stderr`、`final-checkpoint.json`。首次 Finding 在截止前完成；最後重複 probe／checkpoint 於截止後完成，已如實記錄。
+
+Limitations：provider 為 bounded virtual fixture，未宣稱實作 filesystem sandbox；僅按需要讀 HARNESS §§4–5。Reviewer initial context 為 12 files／18 selections／67,772 bytes，超出 64 KiB target；Maker 已記錄的 context deviation 同樣保留，無 retrospective waiver。完整 aggregate token telemetry 未取得。
+
+Integrity：本 Reviewer 未修改任何 repository file；後續 shared `review_log.md` 修改來自其他活動。唯一已啟動的背景驗證 session 已正常完成；最後同步命令 exit 0，無已知 ongoing process。Evidence 尚待 Parent persistence；本結果不是 Gate approval。
+
+## RCE-HNS-EXEC-002-REMEDIATION-001
+
+- Actual Maker `01a103b6-27da-74c0-9183-f3e87bf4fe33`, host execution identity `HNS-EXEC-002-REMEDIATION-01a103b6-27da-74c0-9183-f3e87bf4fe33`; sole remediation1/1 used, current candidate `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f`, immutable manifest `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r2.md` / `eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72`.
+- Three authorized source/test changes reauthorize canonical targets before read; Maker commands ci/build/typecheck/test/context/audit all exit0, existing181/181 plusContext11/11, auditzero. Raw complete R2 inputs/metadata/logs durably tracked; self-review states exactscope/whitespacePASS, not independentapproval.
+- Commit timestamp21:43:29Z precedes narrowedproductiondeadline21:43:30Z; actualMaker did not record exactcompletion observation. Parent received existingcheckpoint afterward; no source/check production was authorized afterdeadline.
+- Formal security finding closure and missing QA validation require exactR2 independent reviews; no acceptedrisk, no fakePASS. R1 TECHPASS superseded for changedartifact. Final3freshprofile attempts reach8/8; no additionaldispatch, remediation or loop remains.
+
+## EXEC-002 Independent TECH R2 Deadline Evidence
+
+**Decision: BLOCK.** Required verification was incomplete at `2026-10-03T21:48:20Z`. Production, reads, probes and retries have stopped. No retrospective PASS or Gate approval.
+
+| Audit Field | Value |
+|---|---|
+| Assigned WI | `HNS-EXEC-002-TECH-REVIEW-002` |
+| Role / Profile / Risk | `REVIEWER` / `TECH_REVIEWER` / `HIGH` |
+| Actual reviewer agent | `01a103bc-237d-7c51-85e2-f8217c9f489a` |
+| Execution identity | Current fresh reviewer session identified by that actual agent ID; no separate host execution ID verified |
+| Maker agent | `01a103b6-27da-74c0-9183-f3e87bf4fe33`, distinct from reviewer |
+| Maker execution | `HNS-EXEC-002-REMEDIATION-01a103b6-27da-74c0-9183-f3e87bf4fe33` |
+| Candidate | `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f` |
+| Manifest | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r2.md` |
+| Verified manifest SHA-256 | `eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72` |
+| Timing | Start observed `21:47:13Z`; deadline `21:48:20Z`; next clock observation `21:48:34Z` |
+| Allocation | Parent-reported `8/8`; remediation `1/1`; no further automatic round |
+
+Fresh command evidence:
+
+| Command / Working Directory | Exit / Result |
+|---|---|
+| Exact-runtime `node --test tests/unit/context/compiler.test.mjs`, repo root | `1`: test path not found |
+| Same command, `repo/harness` | `0`: **11 passed, 0 failed, 0 skipped**, using existing built dist |
+| Bounded input/provenance inspection | `1`: inventory checks completed, then log retrieval failed because `.stdout` was used instead of `.stdout.log` |
+
+Fresh focused stdout/stderr are preserved in [/private/tmp/hns-exec-002-tech-r2.7H4NoN](/private/tmp/hns-exec-002-tech-r2.7H4NoN). The inventory command completed; its output was retrieved after the deadline and is recorded as checkpoint evidence only. All launched processes are finished; no known running process remains.
+
+Inventory output showed **72 inputs**, no missing tracked source/test/dependency/config entries, no current-file hash mismatches and no candidate-content mismatches. The input file hash matched `104cbf61f837a44b546fa532e8e389287b3318b0023c4ddd88a97276c3fc1556`. Observed checkout HEAD was `fa40b83f06e28d8d5885f034b699e567ae5078e2`, not the candidate; candidate input equality was checked, but the HEAD difference was not fully characterized.
+
+| Canonical AC | Completed Evidence / Assessment |
+|---|---|
+| `AC-HNS-EXEC-002-001` | Fresh immutability, order independence and deterministic hash test passed. |
+| `AC-HNS-EXEC-002-002` | Fresh section extraction/fallback, deduplication, unrelated exclusion and explicit-source ceiling tests passed; supports root ACs 021/023. |
+| `AC-HNS-EXEC-002-003` | Fresh path/sensitivity/forbidden/policy, alias-target authorization, snapshot/drift and budget tests passed. |
+| `AC-HNS-EXEC-002-004` | Fresh load/deny/defer, repeated-request and immutable audit-delta tests passed; supports root AC024. |
+
+Both finding assessments remain provisional:
+
+- `FND-HNS-EXEC-002-SECURITY-001-001`: targeted source diff places canonical-target sensitivity and boundary authorization **before provider read**. Fresh alias regression passed. This supports the correction; formal closure and required Security review remain unverified.
+- `FND-HNS-EXEC-002-QA-001-001`: fresh built-dist context tests completed successfully without TypeScript SDK setup. Complete independent QA verification was not established; no formal closure claimed.
+
+**Precise missing checks:** complete stdout/stderr inspection for reusable ci/build/typecheck/default181/audit evidence; live npm `11.17.0` verification; built-dist provenance; complete bounded technical assessment and candidate/checkout scope reconciliation. Metadata reported command success, but those logs were not fully validated and are **not accepted as verified reuse**.
+
+No new confirmed source defect. Shared repository was not modified. Prior Maker process/context deviations remain unwaived; aggregate token telemetry and exact context totals were not measured. This BLOCK cannot support merge.
+
+
+
+
+## EXEC-002 Independent QA R2 Deadline Evidence
+
+**Decision: BLOCK — deadline checkpoint.** Stopped all work. No retrospective PASS or Gate approval.
+
+| Binding | Value |
+|---|---|
+| Work Item / Profile / Risk | `HNS-EXEC-002-QA-REVIEW-002` / `QA_REVIEWER` / `HIGH` |
+| Reviewer execution | `HNS-EXEC-002-QA-R2-01a103bc-2406-7290-9158-7d0fb76dbd2a` |
+| Actual reviewer agent | `01a103bc-2406-7290-9158-7d0fb76dbd2a` |
+| Maker execution | `HNS-EXEC-002-REMEDIATION-01a103b6-27da-74c0-9183-f3e87bf4fe33` |
+| Actual Maker agent | `01a103b6-27da-74c0-9183-f3e87bf4fe33`; distinct from reviewer |
+| Candidate | `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f` |
+| Manifest | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r2.md` |
+| Verified manifest SHA-256 | `eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72` |
+| Timing | First clock observation `2026-10-03T21:47:14Z`; final observation `21:48:24Z`, after hard deadline `21:48:20Z` |
+| Allocation | `8/8` executions; remediation `1/1`; no further round |
+
+Fresh execution used `/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/node`:
+
+| Command / cwd | Result |
+|---|---|
+| `node --test tests/unit/context/compiler.test.mjs` / repository root | Exit **1**, file not found; invocation error |
+| Same command / `harness/` | Exit **0**; **11 passed**, 0 failed/cancelled/skipped/todo |
+| Exact-runtime `npm --version` | Exit **0**, `11.17.0` |
+| Input/candidate/manifest verification with exact-runtime Node | Exit **0**, Node `v24.19.0` |
+
+Fresh test logs: [stdout](/private/tmp/hns-exec-002-qa-r2.hS7Thz/context.stdout), [stderr](/private/tmp/hns-exec-002-qa-r2.hS7Thz/context.stderr). The first invocation and provenance output exist in the tool transcript only. All commands returned; **no process remains running**. No repository writes, additional agents, rebuild, installation, SDK import, or transpilation occurred.
+
+Provenance verification found **72/72 inventory entries** matching both current files and the exact candidate; no tracked source/test inventory omissions. Raw `inputs.json` SHA-256 matched `104cbf61f837a44b546fa532e8e389287b3318b0023c4ddd88a97276c3fc1556`. Observed HEAD was `fa40b83f06e28d8d5885f034b699e567ae5078e2`; candidate equality was verified for inventoried inputs, not the whole HEAD tree.
+
+R2 metadata and stdout/stderr showed `npm ci`, build, typecheck, default tests, explicit context tests, and audit all exit **0**, recorded `21:42:49.573Z–21:42:54.770Z`. Default suite: **181/181**, separate context suite: **11/11**, audit: **0 vulnerabilities**. These are inspected prior logs, not fresh QA executions. Full reuse qualification was **unfinished**: dependency installation integrity and built-dist/source correspondence were not conclusively verified; timestamps alone do not establish integrity.
+
+| Canonical AC | Completed fresh evidence / checkpoint assessment |
+|---|---|
+| `AC-HNS-EXEC-002-001` | Immutability, ordering independence, deterministic hashes: focused test passed |
+| `AC-HNS-EXEC-002-002` | Tier exclusion, AST extraction/fallback, deduplication, unrelated-source exclusion, explicit-source ceiling: focused tests passed |
+| `AC-HNS-EXEC-002-003` | Path/sensitivity/scope denial, canonical aliases, drift, unresolved context and budgets: focused tests passed |
+| `AC-HNS-EXEC-002-004` | Load/deny/defer/dedup, immutable audit hashes and budget deltas: focused tests passed |
+
+These results support the ACs but **do not constitute completed independent sign-off**.
+
+- **`FND-HNS-EXEC-002-SECURITY-001-001`:** Fresh alias regression passed initial and on-demand checks for four denied targets plus an allowed control. Denials assert no target provider read; on-demand denials preserve context hash and zero budget delta. Supports remediation effectiveness; **formal closure not claimed**.
+- **`FND-HNS-EXEC-002-QA-001-001`:** Fresh focused execution and input verification succeeded without the prior reporter/SDK failure. Complete independent validation remains missing, so **closure is not supported by this checkpoint**.
+- **New findings:** No confirmed new implementation defect. Incomplete verification is the reason for BLOCK.
+
+Mandatory router, Tier 1, assigned profile/gate/WIs/manifest and direct SDD references were loaded. Combined source/test output was truncated, leaving the independent affected-source review incomplete. Exact reviewer context accounting was not completed; prior Maker deviations remain recorded without waiver. Token actual/remaining unavailable.
+
+**Missing at deadline:** complete affected-source review and conclusive dependency/built-dist provenance qualification for inherited validation reuse. Parent must persist this checkpoint; it cannot support merge authorization.
+
+
+
+
+## EXEC-002 Independent SECURITY R2 Deadline Evidence
+
+**Decision: BLOCK.** Required review was incomplete at `2026-10-03T21:48:20Z`. Production, reads, probes and retries have stopped. No retrospective PASS, finding closure or Gate approval.
+
+| Binding | Value |
+|---|---|
+| Work Item | `HNS-EXEC-002-SECURITY-REVIEW-002` |
+| Role / Profile / Risk | `REVIEWER` / `SECURITY_REVIEWER` / `HIGH` |
+| Reviewer actual agent | `01a103bc-2486-7a82-9650-d123a3900525` |
+| Reviewer execution label | `SECURITY-R2-01a103bc-2486-7a82-9650-d123a3900525` |
+| Maker actual agent | `01a103b6-27da-74c0-9183-f3e87bf4fe33` |
+| Maker execution | `HNS-EXEC-002-REMEDIATION-01a103b6-27da-74c0-9183-f3e87bf4fe33` |
+| Candidate | `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f` |
+| Manifest | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r2.md` |
+| Manifest SHA-256 | `eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72` |
+| Start / last observed time | `21:47:13Z` / `21:48:30Z`, 2026-10-03 |
+
+Reviewer identity differs from Maker. Shared repository received no writes; no extra agents, rebuild, dependency installation or TypeScript SDK verifier.
+
+Fresh commands used `/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin`.
+
+| Command / check | Result | Deadline evidence |
+|---|---|---|
+| `node --test tests/unit/context/compiler.test.mjs`, repository root | Exit 1: path unavailable | Before deadline |
+| Same command, `harness` working directory | Exit 0; **11/11** | Completion observed by `21:47:55Z` |
+| `npm audit --audit-level=high`, `harness` | Exit 0; **0 vulnerabilities** | Completion confirmed at `21:48:30Z`; completion by cutoff unverified |
+| Input/runtime/hash verification | Exit 0 | Result received after cutoff; cannot establish timely completion |
+
+Fresh logs: `/private/tmp/hns-exec-002-security-r2-214713/{context,audit,provenance}.{stdout,stderr}`. The initial path failure exists in the tool transcript. All launched command processes are known completed; audit session `60084` returned exit 0.
+
+Provenance output reported Node `v24.19.0`, npm `11.17.0`, matching manifest and input-bundle hash `104cbf61f837a44b546fa532e8e389287b3318b0023c4ddd88a97276c3fc1556`, 72 inventoried inputs, zero hash mismatches and zero missing tracked source/test/package/config inputs. Observed clean HEAD was `fa40b83f06e28d8d5885f034b699e567ae5078e2`; its relationship to the exact candidate was **not verified**. Built-dist provenance and complete canonical stdout/stderr verification remain incomplete. Consequently, Maker ci/build/typecheck/181-test/audit logs were **not accepted as fully verified reusable evidence**.
+
+| Canonical AC | Existing fresh evidence / remaining assessment |
+|---|---|
+| `AC-HNS-EXEC-002-001` | Ordering, immutability and deduplication tests passed; canonical assessment incomplete. |
+| `AC-HNS-EXEC-002-002` | Extraction, unrelated-source exclusion and explicit-source ceiling tests passed; direct SDD/root-AC assessment incomplete. |
+| `AC-HNS-EXEC-002-003` | Canonical alias authorization, containment, sensitivity, drift and budget tests passed; independent affected-case probes incomplete. |
+| `AC-HNS-EXEC-002-004` | Load/deny/dedup/defer and immutable audit-delta tests passed; complete permission-boundary assessment incomplete. |
+
+**Finding assessments:** `FND-HNS-EXEC-002-SECURITY-001-001` has a passing fresh canonical-alias regression, but the separate four affected cases/two controls were not completed; no formal closure claimed. `FND-HNS-EXEC-002-QA-001-001` has fresh built-dist context tests, but complete provenance and required independent QA evidence remain unverified; no formal closure claimed. No new implementation defect was confirmed.
+
+Precisely missing: complete mandatory/direct canonical-context assessment, candidate/HEAD relationship, built-dist binding, full reusable-log validation, bounded independent affected-case probes, and confirmed fresh-audit completion by cutoff. This is an evidence/deadline block, not an inferred source defect.
+
+Allocation remains **8/8 executions**, **1/1 remediation**; token actual/remaining unavailable. No automatic round remains. Parent persists evidence; this checkpoint does not authorize merge.
+
+
+
+## IG-HNS-EXEC-002-001 - Failed Implementation Gate and Bounded Checkpoint
+
+| Field | Value |
+|---|---|
+| GateResult | `FAILED` |
+| Work Item / Status | `HNS-EXEC-002` / `BLOCKED` |
+| Candidate | `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f` |
+| Manifest SHA-256 | `eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72` |
+| Required R2 Decisions | TECH BLOCK / QA BLOCK / SECURITY BLOCK |
+| Merge / Postmerge / Closure | Not performed |
+| Develop | `77f93daef6f880ac9a548ac0a088137f51c74041`, unchanged |
+| Allocation | 8/8 additional attempts, 1/1 remediation, origin21:20:22Z/deadline21:50:22Z preserved |
+| Exit Reasons | `REVIEW_LOOP_LIMIT_REACHED`, `BUDGET_EXHAUSTED`; Human Review required |
+
+- All eight fresh primary/reviewer attempts stopped; known child commands exited. No automatic furtherexecution, sourcechange, probes, retry, merge or successor dispatch. Host now only preserves bounded checkpoint/evidence and normalpush after cancellation; this is not a new production allocation.
+- R2 fresh context tests11/11 in each profile support the repair, but required log reuse/provenance/affected-source review not completed. Technical/QA invocation failures from wrong workingdirectory/logsuffix and earlier verifier assumptions consumed budget; not inferred source defects. Dist/install/source binding and remaining canonical/security assessment incomplete, so no reviewPASS or findingclosure/GatePASS.
+- `FND-HNS-EXEC-002-SECURITY-001-001` remains MAJOR/OPEN pending full independentclosure; `FND-HNS-EXEC-002-QA-001-001` remains BLOCKING/OPEN. No new confirmed R2 implementation defect; unresolved evidence is not acceptedrisk. R1 decisions/findings/manifests remain unchanged.
+- R1 review assignments CANCELLED as superseded by R2; historical TECHPASS/QA BLOCK/SECURITY REQUEST_CHANGES retained. R2 assignments BLOCKED, incompleteACs notchecked. RootBLOCKED notDONE. No lifecycleclosure is claimed.
+- Planning/process limitation: host shortened finalprofiles to ~76seconds after metadata preparation, insufficient for mandatory context/provenance/review. Contexttargetmiss and small cutoff overruns from priorattempts disclosed; knownprofile activity bounded by dispatch/checkpointrecords, complete aggregate/token/historical telemetry unavailable, no costcompliance claim.
+- Remaining work is finish exactR2 TECH/QA/SECURITY requiredchecks under an explicit Human finitecontinuation, then Gate/merge/postmerge/closure only ifPASS. No new implementation remediation is authorized. EXEC-003/004 and allAdapters/Pilot remain pending; Minimal Execution Engine remains PARTIAL.
+
+## HNS-EXEC-002-RESUME-002 - Human Review-only Allocation
+
+- Human approved the finite proposal by saying to proceed. Only unchanged R2 candidate `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f`, manifest SHA256 `eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72`.
+- Origin `2026-10-03T21:58:48.089Z`, elapsed deadline `2026-10-03T22:28:48.089Z`; elapsed and cumulative conservative host/reviewer activity each <=30min. At most3 fresh independent profiles, each <=6min; no retry, no Maker/source remediation. Parent checks elapsed plus summed reviewer intervals to avoid over-allocation.
+- Previously exhausted8/8 attempts and1/1 remediation retained; historical totals unknown, not reset. TOKEN target20,000, actual/remaining null without full telemetry. Named Findings: `FND-HNS-EXEC-002-QA-001-001`, `FND-HNS-EXEC-002-SECURITY-001-001`.
+- Fresh exact-runtime canonical ci/build/typecheck/test/audit and separate focused context tests before reviews; independently qualified by each profile. AllPASS then Gate/normal develop merge/postmerge validation/closure. Any nonPASS or new MAJOR/BLOCKING stops Human. Stop afterEXEC-002; no successors/adapters/Pilot.
+- Preflight clean branch HEAD `3230fe87045f89e00c6eceea53868f3982829b4e`, remote branch same; local/remote develop `77f93daef6f880ac9a548ac0a088137f51c74041`. No source change allowed.
+
+
+## EXEC-002 Independent TECH Review-only Continuation Evidence
+
+## Evidence Metadata
+
+| Field | Value |
+|---|---|
+| Evidence ID | `REV-HNS-EXEC-002-TECH-003` |
+| Execution / Reviewer Agent ID | `01a103ca-0fd6-7fd0-90ab-46ee963dce75` |
+| Assigned Work Item | `work-items/HNS-EXEC-002-TECH-REVIEW-003.md` |
+| Role / Profile / Risk | `REVIEWER / TECH_REVIEWER / HIGH` |
+| Maker Execution ID | `HNS-EXEC-002-REMEDIATION-01a103b6-27da-74c0-9183-f3e87bf4fe33` |
+| Maker Agent ID | `01a103b6-27da-74c0-9183-f3e87bf4fe33`, different from Reviewer |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r2.md` |
+| Artifact Hash | `sha256:eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72` |
+| Candidate | `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f` |
+| Observed HEAD / Branch | `d0f4b358553e117ed702b6c3de0cce94f7f227c5` / `feature/hns-exec-002-resume` |
+| Observed Review Interval | `2026-10-03T22:02:31Z`–`2026-10-03T22:06:31Z` |
+| Deadline | `2026-10-03T22:08:16.403Z`; checks completed before deadline |
+
+## Specification References
+
+Root ACs `AC-HNS-EXEC-002-001`–`004`; assigned TECH ACs `001`–`003`; SDD §§5.3, 18, 31, 38, 40.1, 43 and §46 Phase 3; mandatory governance, TECH profile, Implementation Gate and necessary Harness boundary sections.
+
+## Checks Performed
+
+| Check | Evidence / Result |
+|---|---|
+| Candidate identity | Candidate parent/tree match manifest; all eight artifact hashes verified. **PASS** |
+| Complete executable inputs | All **72/72** inventory hashes match current files; all **70/70** candidate executable inputs are inventoried and unchanged. **PASS** |
+| Metadata reconciliation | Only root WI differs within input inventory: status, blocker and continuation notes. Candidate-to-HEAD changes are evidence/review/WI metadata; `harness` diff is empty. **PASS** |
+| Raw host evidence | Eight command records, **16/16** stdout/stderr hashes, arguments, cwd, runtime, ordered timestamps, exits and results verified. **PASS** |
+| Dependency/dist provenance | Fresh host ci/build qualified; **92/92** dist hashes match. Compiler mtime falls within host build/test interval. **PASS** |
+| Manifest validation bundle | R2 input-bundle SHA-256 matches manifest: `104cbf61f837a44b546fa532e8e389287b3318b0023c4ddd88a97276c3fc1556`. **PASS** |
+| Engineering scope | Eight changed harness paths are root-WI authorized; remediation changes exactly compiler, path helper and context tests. No package/config changes. **PASS** |
+| Technical responsibilities | Reviewed typing, immutable snapshots, AST extraction, deterministic hashes, error handling, budgets, drift, dependencies and compatibility. No new scan/write/process/network/policy/adapter capability found. **PASS** |
+
+Current input-bundle hash: `8d23359fdc37ebf57b4862accdf10611051f4e1cc9bc14c432e3e733ca8991ae`. Dist-inventory hash: `8df51c8384e88e7440f909cc29330596ba37b1ee1aa4efca9dbfaa141297eaeb`.
+
+## Tests and Acceptance Criteria
+
+Qualified reused evidence: Node **v24.19.0**, npm **11.17.0**, ci/build/typecheck exit 0, existing tests **181/181**, separate context tests **11/11**, audit **0 vulnerabilities**. This TECH execution did not rerun ci/build or audit.
+
+Fresh independent command: `node --test tests/unit/context/compiler.test.mjs`, correct harness cwd and specified runtime prepended to PATH; **11/11**, exit 0, `22:04:36.071Z`–`22:04:36.358Z`. Five additional bounded assertions passed at `22:05:52.123Z`–`22:05:52.144Z`.
+
+| Root AC | Assessment |
+|---|---|
+| `001` | **PASS**: reversed-input byte equality, nested immutability and UTF-8 byte-provider checks. |
+| `002` | **PASS**: tier selection, deduplication, AST ancestry/fenced headings, extraction/fallback, unrelated exclusion and 20,001-source rejection. |
+| `003` | **PASS**: traversal, sensitive/forbidden/read/policy targets, containment, expected-hash drift, snapshot regressions and budgets fail closed. Additional initial Work Item-only target denials confirmed zero reads. |
+| `004` | **PASS**: load/deny/defer, repeat revalidation, tamper rejection, immutable audit hashes and budget deltas; independent execution-mismatch denial preserved hash and zero delta. |
+
+Assigned TECH ACs `001`–`003`: **PASS** for identity/scope, complete technical assessment and returned evidence.
+
+## Findings and Limitations
+
+- `FND-HNS-EXEC-002-SECURITY-001-001`: remediation effectiveness verified. Canonical-relative sensitivity/read/policy/forbidden checks precede provider read; initial loading also enforces Work Item boundaries. Fresh tests cover both initial/on-demand denials and allowed control. **Supports closure; formal closure remains with required SECURITY review.**
+- `FND-HNS-EXEC-002-QA-001-001`: missing-evidence finding, not a source defect. This execution supplies qualified provenance and fresh technical checks. **Required independent QA completion remains the closure condition.**
+- **No new candidate finding confirmed.** No repository writes, new agents, remediation or retries. Assigned reference normalization was reread within this same execution.
+- Context files/selections/bytes and token actual: **null**, not measured comprehensively. On-demand reads covered affected context source/tests, shared immutability/hash/error helpers and package/config. Unrelated review-log heading metadata and adjacent §46 phase rows were returned during navigation; these retrieval deviations are recorded, not waived. Historical process/context deviations remain unchanged.
+- Provider assertions establish compiler behavior, not a filesystem sandbox. Parent persistence is pending; no ongoing process.
+
+## Evidence Paths and Decision
+
+Fresh files under `/private/tmp/`: `hns-exec-002-tech-01a103ca.mjs`, `.verification.json`, `.focused.stdout.log`, `.focused.stderr.log`, `hns-exec-002-tech-01a103ca-probes.mjs` and `hns-exec-002-tech-01a103ca.probes.json`. Validator/probe stdout and exit results are in the tool transcript. Reused raw evidence remains in `docs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/`.
+
+**Reviewer decision: PASS.** Independent TECH assessment only; not Gate approval or QA/Security approval.
+
+## EXEC-002 Independent QA Review-only Continuation Evidence
+
+**Decision: PASS, independent QA review only.** Required checks completed before `2026-10-03T22:08:16Z`; final integrity checkpoint: `22:07:38.264Z`. All activity is stopped. No known active command sessions remain. This is not Gate approval.
+
+### Evidence Metadata
+
+| Field | Value |
+|---|---|
+| Evidence ID | `REV-HNS-EXEC-002-QA-003` |
+| Role / Profile / Risk | `REVIEWER` / `QA_REVIEWER` / `HIGH` |
+| Work Item | `work-items/HNS-EXEC-002-QA-REVIEW-003.md` |
+| Reviewer Agent / Execution ID | `01a103ca-1061-7332-ae5d-b4820447f4f1` |
+| Maker Agent | `01a103b6-27da-74c0-9183-f3e87bf4fe33` |
+| Maker Execution ID | `HNS-EXEC-002-REMEDIATION-01a103b6-27da-74c0-9183-f3e87bf4fe33` |
+| Candidate | `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f` |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r2.md` |
+| Artifact SHA-256 | `eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72` |
+| Observed HEAD / Branch | `d0f4b358553e117ed702b6c3de0cce94f7f227c5` / `feature/hns-exec-002-resume` |
+| Observed review interval | `22:02:29Z`–`22:07:38.264Z` |
+| Context files / selections / bytes | `null / null / null`; not measured |
+| Token actual | `null`; no aggregate telemetry |
+| Repository writes / New agents | `0 / 0` |
+
+### Specification References
+
+Root ACs `AC-HNS-EXEC-002-001`–`004`; referenced requirements `AC-HNS-021/023/024`; SDD §§5.3,18,31,38,40.1,43 and Phase 3; assigned QA profile, Reviewer role, Implementation Gate, runtime boundary §§4–5.
+
+### Checks and Tests
+
+| Check | Completed Evidence / Result |
+|---|---|
+| Artifact and independence | Exact manifest hash, eight artifact hashes, candidate tree/parent, assigned profile and distinct Maker/Reviewer verified: PASS. |
+| Complete executable inputs | All **72/72** inventory paths match current hashes; **70/70 executable inputs** match candidate. Inventory covers tracked harness source/tests/packages/config: PASS. |
+| Metadata reconciliation | Sole inventory difference from candidate is root WI status/blocker/continuation metadata. Scoped harness diff empty. Parent REVIEW-003 reference normalization reread; no source change. |
+| Host raw evidence | All **16 stdout/stderr hashes**, eight command records, cwd/runtime/environment/timestamps/results verified. Every command exit 0; stderr empty. |
+| Dependencies and dist | Fresh host ci/build provenance qualified; **41 installed-lock package records** match locked versions/integrities; **92/92 dist hashes** match. Final checkpoint rechecked inputs/dist/manifest. |
+| Reused validation | Host `22:01:16.327Z`–`22:01:21.089Z`: ci/build/typecheck PASS; existing tests **181/181**, explicit context **11/11**, audit **0 vulnerabilities**. |
+| Fresh runtime / focused | Node `v24.19.0`, npm `11.17.0`; prescribed PATH and harness cwd. `node --test tests/unit/context/compiler.test.mjs`, `22:05:12.057Z`–`22:05:12.276Z`: **11/11**, no failures/skips/cancellations/todo. |
+| Fresh independent assertions | `22:06:33.822Z`–`22:06:33.970Z`: **5/5 groups**, including **9 canonical-alias cases**, PASS. |
+| Source / capability scope | Remediation diff exactly compiler/path/context-test files. Context imports and fresh capability regression show no added scan/write/process/network/adapter capability. |
+| Other validation | Lint script absent; separate integration runner not assigned. Fresh Security audit belongs to assigned Security execution. |
+
+### Four-AC Mapping
+
+| AC | Assessment |
+|---|---|
+| `001` | PASS: caller-order equality, byte-identical manifests/hashes, immutable nested values. |
+| `002` | PASS: AST sections/fallback, content deduplication, single-document snapshot, Tier 2 deferral, unrelated exclusion and 20,001-source rejection without reads. |
+| `003` | PASS: path/sensitive/read/policy/forbidden/canonical-root denials, unavailable required context, expected/concurrent hash drift, size/budget limits and tamper rejection. Canonical target authorization precedes provider read; initial WorkItem boundary independently checked. Exact-budget success, one-byte overflow and recovery passed. |
+| `004` | PASS: deterministic load/deny/defer, unchanged denial/defer hashes and zero deltas, immutable loaded audit, repeat idempotency, execution mismatch and defer-to-load recovery. |
+
+### Findings and Limitations
+
+- `FND-HNS-EXEC-002-QA-001-001`: **RESOLVED assessment**. Missing independent QA evidence is now complete; it was an evidence gap, not a source defect.
+- `FND-HNS-EXEC-002-SECURITY-001-001`: QA regression supports remediation and closure. Formal Security closure remains the assigned independent Security reviewer’s responsibility.
+- No new confirmed implementation finding. Assigned QA review ACs `001`–`003`: PASS; durable repository persistence remains parent-owned.
+- Context counters are unmeasured. Navigation returned unrelated review-log headings, and the SDD46 extraction included other phase rows. These process deviations are recorded without waiver; no full review-log body was loaded.
+- Temporary verifier initially rejected Node’s reporter format before launching fresh tests; corrected within this execution. No candidate test failure or extra reviewer dispatch occurred. Prior deviations remain unwaived.
+- Probes use bounded provider fixtures and supplied effective policy. No filesystem sandbox, future adapter enforcement, postmerge validation or release claim.
+
+Raw evidence: [temporary directory](/private/tmp/HNS-EXEC-002-QA-003.OGx1da), containing `verification.json`, `checkpoint.json`, `focused.stdout.log`/`stderr.log`, runtime logs, `probes.json`, `probes-run.json`, probe stdout/stderr and reproducible runners. Hashes are recorded in the checkpoint. Qualified host evidence remains under `docs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/`. No mandatory check remains missing.
+
+## EXEC-002 Independent SECURITY Review-only Continuation Evidence
+
+**STOP acknowledged. Decision: PASS for the completed SECURITY_REVIEWER review only.** All required security checks completed before `2026-10-03T22:08:16Z`; no new commands, reads, probes or retries were performed after your stop instruction.
+
+- Reviewer: `01a103ca-116f-7983-b8e0-79d4873b0401`, independent of Maker.
+- Candidate: `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f`.
+- Manifest hash verified: `sha256:eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72`.
+- Inputs: 72/72 current hashes verified; 71 match candidate exactly. Root WI differs only in verified metadata normalization. Harness executable inputs unchanged.
+- Reused evidence: eight host command records and 16 raw-log hashes verified; install/build/typecheck passed, existing suite 181/181.
+- Dist: 92/92 hashes verified before and after fresh checks.
+- Fresh focused tests: **11/11**.
+- Fresh audit: **0 vulnerabilities**.
+- Independent security probes: **15/15**, including four alias-denial boundaries, direct/outside-root/benign controls and initial Work Item boundary. No denied canonical-target provider reads.
+- All four root ACs assessed PASS. No mandatory security checks remain missing.
+
+Fresh execution finished `22:06:08.617Z`; final verification checkpoint was `22:07:14Z`.
+
+Security finding remediation supports closure. QA finding closure remains with the independent QA execution. The recorded context-loading OBSERVATION and prior process deviations remain unwaived; aggregate context/token measurements are null. This is not Gate approval.
+
+Raw evidence: [/private/tmp/hns-security-01a103ca-116f-7983-b8e0-79d4873b0401](/private/tmp/hns-security-01a103ca-116f-7983-b8e0-79d4873b0401), containing runner, provenance, fresh results, probes and context/audit stdout/stderr logs.
+
+**Known active sessions: none.** Command session `88019` completed with exit 0. Repository writes: none. Parent persistence remains pending.
+
+## IG-HNS-EXEC-002-002 - Implementation Gate
+
+| Field | Value |
+|---|---|
+| GateResult | `PASS` |
+| Timestamp | `2026-10-03T22:10:50.243Z` |
+| Candidate | `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f` |
+| Manifest | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r2.md` |
+| Manifest SHA-256 | `eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72` |
+| Independent reviews | TECH `REV-HNS-EXEC-002-TECH-003` PASS; QA `REV-HNS-EXEC-002-QA-003` PASS; Security `HNS-EXEC-002-SECURITY-REVIEW-003-RESULT` PASS |
+| Findings | Original QA BLOCKING and Security MAJOR RESOLVED by current-hash independent evidence; no OPEN MAJOR/BLOCKING |
+
+- `FND-HNS-EXEC-002-QA-001-001`: `BLOCKING / RESOLVED`, independent QA review now completes provenance, fresh tests and all four ACs; no source defect claimed.
+- `FND-HNS-EXEC-002-SECURITY-001-001`: `MAJOR / RESOLVED`, independent Security15/15 alias/initial/on-demand/direct/outside-root/benign controls passed before deadline, no denied target reads; all four ACs PASS, fresh audit0. Final original Security assessment interval22:02:28Z-22:07:14Z; returned stop acknowledgment preserved above. No source remediation in this increment.
+- `FND-HNS-EXEC-002-SECURITY-003-001`: `OBSERVATION / OPEN`, reviewer-owned context retrieval deviation (unrelated SDD48-50 and Phase1/2 rows); preserve follow-up, not Accepted Risk or blocker. All profiles context/token totals unmeasured; prior deviations unwaived.
+- Independent agent IDs distinct from Maker and each other, assigned profiles HIGH with explicit security trigger, candidate hash unchanged. All root ACs001-004 verified independently; fresh host ci/build/typecheck181/context11/audit0 logs qualified. Existing R1/R2 decisions and failed Gate retained unchanged in historical evidence; this Gate does not rewrite them.
+- Base-to-candidate executable scope exactly eight authorized context/export/test/fixture files; candidate-to-current source/tests/deps/config/governance diff empty. Whitespace check PASS on source/governance/WIs/manifests; raw historic command logs contain captured whitespace and are preserved, excluded from formatting edits. No unauthorized capabilities, API/schema/Role/permissions or new architecture.
+- Parent assignment reference-format normalization (Finding IDs moved to Notes, canonical evidence paths retained) parses3/3; no candidate/hash change, no additional dispatch. No further review retry/remediation or successor authorized.
+- Reviews production complete before22:08:16Z deadline; QA/Security final stop acknowledgments afterward were bounded checkpoint preservation only, no new checks. Three additional attempts3/3, additional Maker/remediation0. Gate PASS permits authorized normal develop merge, exact-runtime postmerge validations and lifecycle closure; not production/release approval.
+
+
+## HNS-EXEC-002-RESUME-002-CHECKPOINT - Reviews Complete, Merge Pending
+
+| Field | Value |
+|---|---|
+| Checkpoint Timestamp | `2026-10-03T22:12:39.241Z` |
+| Root Work Item | `HNS-EXEC-002` / `BLOCKED`, not DONE |
+| Required current-hash reviews | TECH PASS / QA PASS / SECURITY PASS |
+| Latest Gate | `IG-HNS-EXEC-002-002` / `PASS` |
+| Candidate / immutable manifest | `bdcd60bb36e30e63855f06bbcb06923eb9b02e1f` / R2 unchanged |
+| Merge / Postmerge / Lifecycle | Not performed |
+| Develop | `77f93daef6f880ac9a548ac0a088137f51c74041`, unchanged |
+| Exit | `BUDGET_EXHAUSTED`; bounded checkpoint only, no new production |
+
+- Three fresh profile attempts3/3, no source remediation or retry. Previous8/8 and1/1 preserved. TECH dispatch22:02:16.403Z-to-host-completion-observation22:07:55.138Z conservatively338.735seconds; QA/SECURITY each6-minute production interval counted through22:08:16 hardstop, afterward only final stop/checkpoint acknowledgment. Sum reviewer production allocation1058.735seconds. Host entire elapsed counted conservatively, no waiting deduction: at22:11:15 check747.830seconds, aggregate1806.565seconds exceeds1800. Gate/source-scope/provenance production last observed22:10:51 within remaining budget; no merge/source/test/probe/dispatch after exhaustion. Exact historical complete usage stillunknown, not reset; no budget-compliance waiver.
+- All three profiles stopped, known commands exited, agents closed. Security original detailed result completed all required checks at22:07:14; final stop acknowledgment preserved verbatim. Fresh15/15 probes and audit0 raw data are durable. TECH/QA final reports and all raw evidence preserved under `docs/08_agent_reviews/validation/HNS-EXEC-002-reviews-003/`.
+- `FND-HNS-EXEC-002-QA-001-001` and `FND-HNS-EXEC-002-SECURITY-001-001` RESOLVED by same-R2 independent evidence; no OPEN MAJOR/BLOCKING. Context observation `FND-HNS-EXEC-002-SECURITY-003-001` remains OPEN and nonblocking; all historical deviations retained, no Accepted Risk claim.
+- Remaining authorized work: normal merge same-reviewed feature state into unchanged develop, exact-runtime ci/build/typecheck/test/audit plus focusedContext, then parent status/evidence lifecycleclosure and remoteHEAD confirmation. No additional Reviewer or implementation needed if reviewed executable artifacts/input hashes remain unchanged. This requires finite human continuation because current allocation is exhausted. If develop/source/manifest diverges, stop for required requalification, do not silently reuse stale approval.
+- Process limitation: host underestimated mandatory context/routing/evidence preparation and final persistence time again. Gates are now genuinelycomplete, but test/review/Gate PASS are not merge/lifecyclecompletion. Token actual and context aggregate counts null without telemetry; targets not reported as enforced or achieved. Additional activity now only bounded checkpoint/status correction, commit and normalfeaturepush to preserve completed evidence.
+- EXEC-003/004 and adapters/Pilot not started. Minimal Execution Engine milestone remains PARTIAL.
+
+## HNS-EXEC-002-CLOSURE-ALLOCATION-001 - Approved Merge and Closure
+
+- Human approved the proposed5-minute merge/closure-only increment; origin `2026-10-04T02:27:02.610Z`, deadline `2026-10-04T02:32:02.610Z`. No new agents/profiles/source correction, no retry. Old allocation checkpoints retained unchanged; aggregate historical telemetry unknown. Existing R2 TECH/QA/Security PASS and `IG-HNS-EXEC-002-002` PASS are used only after current identity verification, not as a general approval cache.
+- Preflight clean feature `e9d20e343e6ae7dff98854c06f27443d7b5e6140`, exact same remote; local/remote develop `77f93daef6f880ac9a548ac0a088137f51c74041`. Manifest SHA256 `eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72` verified;71/71 immutable R2 listed inputs equal both candidate Git blobs and currentfiles, excluding documented root-WI control-plane status/Notes. Tracked harness/governance/SDD source diff from candidate empty.
+- Required postmerge: Nodev24.19.0/npm11.17.0, npmci/build/typecheck/test/audithigh plus focusedContext. Validation failure/divergence/budget stops without DONE. Parent-authorized status/evidence normalization only; no manifest/governance/package/source/test changes. Original findings RESOLVED; nonblocking context observation remains OPEN/unwaived. No release/production claim.

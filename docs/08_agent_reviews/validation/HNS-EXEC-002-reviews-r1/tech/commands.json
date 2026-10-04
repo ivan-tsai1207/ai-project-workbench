@@ -1,0 +1,8 @@
+{
+  "command": "node --test tests/unit/context/compiler.test.mjs",
+  "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+  "runtime": "v24.19.0",
+  "started": "2026-10-03T21:35:40.181Z",
+  "ended": "2026-10-03T21:35:40.385Z",
+  "exit": 0
+}

@@ -1,0 +1,108 @@
+# Work Item Contract
+
+| Field | Value |
+|---|---|
+| Schema Version | `harness.work-item/v2` |
+| ID | `HNS-EXEC-002-QA-REVIEW-001` |
+| Title | Independently Review Minimal Context Compiler QA |
+| Role | `REVIEWER` |
+| Feature | `minimal-execution-engine` |
+| Phase | `REVIEW` |
+| Status | `CANCELLED` |
+| Spec Version | `harness-v0.1-review` |
+| Design Version | `N/A` |
+| Risk Class | `HIGH` |
+| Review Profile | `QA_REVIEWER` |
+| Reviewed Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r1.md` |
+| Reviewed Artifact Hash | `sha256:e9f03174a6fd198050915f0f1445d1d6172720e79f49b93e698531d2a66a30b2` |
+| Maker Execution ID | `HNS-EXEC-002-MAKER-FRESH-20261003T212235Z` |
+
+## Objective
+
+Independently assess exact fixed EXEC-002 candidate, all canonical ACs and directly affected risk boundaries. No implementation or Gate approval.
+
+## Requirement References
+
+- Requirement IDs: `AC-HNS-021`, `AC-HNS-023`, `AC-HNS-024`, `AC-HNS-EXEC-002-001`, `AC-HNS-EXEC-002-002`, `AC-HNS-EXEC-002-003`, `AC-HNS-EXEC-002-004`
+- Feature Spec: `N/A`
+- Screen IDs / Screen Specs: `N/A`
+- ADR: `N/A`
+- Architecture / SDD sections: `docs/harness_v0.1_SDD.md` Sections 5.3, 18, 31, 38, 40.1, 43, 46 Phase 3
+- Review / Evidence references: `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r1.md`; `docs/08_agent_reviews/review_log.md`
+
+## Read Scope
+
+- `AGENTS.md`
+- `.ai/CONSTITUTION.md`
+- `.ai/AUTHORITY.md`
+- `.ai/WORKFLOW.md`
+- `.ai/roles/reviewer.md`
+- `.ai/roles/reviewer-profiles/qa-reviewer.md`
+- `.ai/gates/implementation-gate.md`
+- `.ai/HARNESS_CONTRACT.md` only relevant runtime-boundary sections if needed
+- `templates/Agent_Review_Log.md`
+- `work-items/HNS-EXEC-002.md`
+- `work-items/HNS-EXEC-002-QA-REVIEW-001.md`
+- `docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r1.md`
+- `docs/08_agent_reviews/validation/HNS-EXEC-002-r1/**`
+- `docs/08_agent_reviews/review_log.md` only current EXEC-002 evidence IDs
+- `docs/harness_v0.1_SDD.md` only directly referenced sections
+- `harness/src/context/**`
+- `harness/src/index.ts`
+- `harness/src/core/**`
+- `harness/src/errors/**`
+- `harness/tests/unit/context/**`
+- `harness/tests/fixtures/context/**`
+- `harness/package.json`
+- `harness/package-lock.json`
+- `harness/tsconfig.json`
+- `harness/dist/context/**` for bounded probes
+
+## Write Scope
+
+- `docs/08_agent_reviews/review_log.md`
+
+## Forbidden Scope
+
+- `harness/**`
+- `.ai/**`
+- `work-items/**`
+- `docs/08_agent_reviews/manifests/**`
+- `main`
+
+## Scope
+
+- All four canonical ACs, observable normal/boundary/negative/recovery cases, focused10 tests and inherited181 suite provenance; do not claim default context discovery.
+- Verify exact candidate, manifest/input hashes, runtime and fresh Maker identity. Reuse complete same-input Maker canonical logs only when hashes/environment/freshness/results reproduce.
+- Run bounded profile-specific probes; fresh context tests or focused correctness probes mandatory.
+- Report Maker context deviation honestly; no retrospective budget waiver, forged compliance or source defect inference from target miss alone.
+- Do not expand into generic fuzzing, whole-repo lookup, new attack taxonomy or unrelated history.
+
+## Out of Scope
+
+- Remediation, code/test editing, Gate approval, new architecture, enforcement, adapters, EXEC-003/004, production or Pilot.
+
+## Acceptance Criteria
+
+- [ ] `AC-HNS-EXEC-002-QA-REVIEW-001-001`: Current candidate/input/manifest identity, independence and authorized scope verified.
+- [ ] `AC-HNS-EXEC-002-QA-REVIEW-001-002`: All four EXEC-002 ACs and profile risk boundaries independently assessed with reproducible bounded evidence.
+- [ ] `AC-HNS-EXEC-002-QA-REVIEW-001-003`: Decision, findings, runtime/probes/log provenance and known limitations delivered for append-only host persistence.
+
+## Required Gates
+
+- `IMPLEMENTATION_GATE`
+
+## Dependencies
+
+- `HNS-EXEC-002`
+
+## Blockers
+
+- None; any new confirmed defect must be documented without automatic scope expansion.
+
+## Notes
+
+- Parent transcribes returned evidence to avoid shared-log conflicts; do not write repository files. Return PASS / REQUEST_CHANGES / BLOCK with complete required fields; not GateResult.
+- One primary profile, fresh independent execution. WI deadline21:50:22Z, additional8attempts/one remediation shared with Maker/allprofiles; counters/clocks do not reset.
+- Initial context operational target16files/24sections/64KiB; mandatoryTier1 intact, on-demand extra selections recorded. Avoid full HARNESS contract unless needed; exact SDD46 Phase3 row only.
+- Reviewer target <=3min and narrowed deadline21:37:30Z. Required checks must be complete, otherwise checkpoint non-PASS; no unbounded reads or probes. Parent checks aggregate activity and wall remaining before any remediation.

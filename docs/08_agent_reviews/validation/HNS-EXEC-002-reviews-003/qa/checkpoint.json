@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-10-03T22:07:38.264Z",
+  "status": "PASS",
+  "reviewer": "01a103ca-1061-7332-ae5d-b4820447f4f1",
+  "initial_context": {
+    "unique_files": null,
+    "selected_units": null,
+    "bytes": null,
+    "target": {
+      "files": 16,
+      "units": 24,
+      "bytes": 65536
+    }
+  },
+  "on_demand_context": {
+    "unique_files": null,
+    "selected_units": null,
+    "bytes": null
+  },
+  "token_actual": null,
+  "repo_writes": 0,
+  "artifact_sha256": "eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72",
+  "temp_file_hashes": {
+    "checkpoint.mjs": "9bb73803ba757879f56f790aebfc44179da9b269b05518d84f41a78547bb9820",
+    "focused.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "focused.stdout.log": "66720b4ab478058648e1a6243d4d6f6b541d2b90c132f070b7ee7f5f5daa5ab5",
+    "node.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "node.stdout.log": "b7677d3ec37ee1897ba07dc2cfe8292fe421c9ac93396cca5bbece486d1a2a41",
+    "npm.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "npm.stdout.log": "a38e383f1e9080b0dd9001481f6e56b341000de90a05061b66734350ad3adc41",
+    "probes-run.json": "e968e52cc41ee59b6fe1797d217e7f6a4caf5b239ae484b757f7a400e495ae08",
+    "probes.json": "971903cf93205e40edc947d60fd8bd50db5a2723f496db1bc202be43c851d08a",
+    "probes.mjs": "c6e83ec89b4cf2f394a6590eda5e62d8d3814ea361b8196df77d92f50721fbb8",
+    "probes.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "probes.stdout.log": "fd8620468e96874c1f78a059e4f2c5eafe878adc87006cd6e501eead8d5c9a37",
+    "run-probes.mjs": "2bf2279f3df177a99c6923227635b9b0619d47dcb508b9479c0bc1924c4550bf",
+    "verification.json": "3ca735dafb49de0e647b1960fc6de7614f078ea24a708a1bcbc9b7734f751409",
+    "verify.mjs": "755dc8fb6bcd05cab414955283d26618d548593cc88372fd2dac73f91f9ea5d0"
+  },
+  "limitations": [
+    "Context counters not measured; no compliance claim. Navigation query returned unrelated review-log headings and SDD46 selection included other phase rows; process deviations recorded without waiver.",
+    "Parent review-WI reference normalization observed; source and manifest unchanged.",
+    "Initial temporary verifier reporter parser assertion failed before fresh test launch; parser corrected within same execution; no candidate failure or dispatched retry.",
+    "Provider fixtures and supplied effective boundary; no filesystem sandbox or future adapter enforcement claim."
+  ]
+}

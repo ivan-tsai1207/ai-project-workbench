@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import assert from 'node:assert/strict';
+const repo='/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo';
+const dir='/private/tmp/HNS-EXEC-002-QA-003.OGx1da';
+const base=repo+'/docs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/';
+const sha=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+for(const file of ['inputs.json','dist-inputs.json'])for(const [p,h] of JSON.parse(fs.readFileSync(base+file)))assert.equal(sha(repo+'/'+p),h,p);
+assert.equal(sha(repo+'/docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r2.md'),'eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72');
+assert.equal(execFileSync('git',['diff','bdcd60bb36e30e63855f06bbcb06923eb9b02e1f','--','harness'],{cwd:repo}).length,0);
+const record={timestamp:new Date().toISOString(),status:'PASS',reviewer:process.env.CODEX_THREAD_ID,initial_context:{unique_files:null,selected_units:null,bytes:null,target:{files:16,units:24,bytes:65536}},on_demand_context:{unique_files:null,selected_units:null,bytes:null},token_actual:null,repo_writes:0,artifact_sha256:'eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72',temp_file_hashes:Object.fromEntries(fs.readdirSync(dir).filter(p=>p!=='checkpoint.json').map(p=>[p,sha(dir+'/'+p)])),limitations:['Context counters not measured; no compliance claim. Navigation query returned unrelated review-log headings and SDD46 selection included other phase rows; process deviations recorded without waiver.','Parent review-WI reference normalization observed; source and manifest unchanged.','Initial temporary verifier reporter parser assertion failed before fresh test launch; parser corrected within same execution; no candidate failure or dispatched retry.','Provider fixtures and supplied effective boundary; no filesystem sandbox or future adapter enforcement claim.']};
+fs.writeFileSync(dir+'/checkpoint.json',JSON.stringify(record,null,2));console.log(JSON.stringify(record,null,2));

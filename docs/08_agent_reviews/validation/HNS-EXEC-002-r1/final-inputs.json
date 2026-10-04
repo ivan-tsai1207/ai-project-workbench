@@ -1,0 +1,330 @@
+[
+  {
+    "path": "harness/package-lock.json",
+    "sha256": "3b5aad9054c2757d68bcdcba24b49e67d1c07ad9962306009c78984b17aa3578"
+  },
+  {
+    "path": "harness/package.json",
+    "sha256": "5cb391a5372e2f681bd4c258a1ff8274f03bb25f1f17455fdf9532c8bb77b0e7"
+  },
+  {
+    "path": "harness/schemas/audit-v2.schema.json",
+    "sha256": "3151da6f45da61587cdfc5e949ae31b08981b5538d824ee1c3b8e4c58dd563b1"
+  },
+  {
+    "path": "harness/schemas/bootstrap-v1.schema.json",
+    "sha256": "9f4f4046ff5a6b285b2d7151ceb587a9c727d2d7a023e73769a282bc5277f657"
+  },
+  {
+    "path": "harness/schemas/context-v3.schema.json",
+    "sha256": "770c711593207504f302fb72dd3bff5f831817cd9e30459cfee118621f7b4550"
+  },
+  {
+    "path": "harness/schemas/delivery-assurance-v1.schema.json",
+    "sha256": "440e3ab3af36995ffb53662e495ebde8ab0fa3372a5d0418554b359b51355170"
+  },
+  {
+    "path": "harness/schemas/execution-profile-v2.schema.json",
+    "sha256": "2167fd03e41b2024aa81f8c1dd8b3323de1b71fbf90b5e209a25f918c14800de"
+  },
+  {
+    "path": "harness/schemas/finding-v1.schema.json",
+    "sha256": "6923bc30e3266118a19aa2c4cb7662324a928500af4982eb1a1f39bee90ce948"
+  },
+  {
+    "path": "harness/schemas/policy-v1.schema.json",
+    "sha256": "c5badb35ef794e9f1e656309985688cc85105f023ebc84dee2d56912d51cdcf5"
+  },
+  {
+    "path": "harness/schemas/project-context-v1.schema.json",
+    "sha256": "040754eab6b1c0f48f37da605e6bbe79aa38c230a397ff0005ec112fa8649ef8"
+  },
+  {
+    "path": "harness/schemas/review-assignment-v1.schema.json",
+    "sha256": "c79ae6089c108d15a150dcab45c5a2b1e7ea3968407f64f6ec93056f76c3aeb0"
+  },
+  {
+    "path": "harness/schemas/risk-assignment-v1.schema.json",
+    "sha256": "c7e7dc6b44f063f950584159310147d8266571b1abfe545b86f5b9d0956c1ab9"
+  },
+  {
+    "path": "harness/schemas/role-evidence-v1.schema.json",
+    "sha256": "daa6bc27ad15b8e54516344261f02bbd61d9a4b2e0ba84ed6eb7ab86f372ed12"
+  },
+  {
+    "path": "harness/schemas/work-item-v2.schema.json",
+    "sha256": "b3b4172cd8a5584b8718520bb000158f030c08a051298e0765f8075a7abd5919"
+  },
+  {
+    "path": "harness/src/config/config.ts",
+    "sha256": "be377db9617fc036a31f545e9bb46cd71751ea433e014c6711f988c13f5e035e"
+  },
+  {
+    "path": "harness/src/config/index.ts",
+    "sha256": "5851ea2dbae760271c9ba166f35c3e71d8d99627b722a3feebd686a4b569cfbc"
+  },
+  {
+    "path": "harness/src/context/compiler.ts",
+    "sha256": "5f570b370274bdfaf14e821012e9df5a3fa271ce6b5cf8d88b39c39942fc6416"
+  },
+  {
+    "path": "harness/src/context/index.ts",
+    "sha256": "594b97438cc8d09a82eee171f89b1afe7a6d3dd4c7e25a17e3159e1398752299"
+  },
+  {
+    "path": "harness/src/context/markdown.ts",
+    "sha256": "36179aa4e2b79c3597651801c0f1a87159ee8c9f6bc716e18df61639bf4e75ac"
+  },
+  {
+    "path": "harness/src/context/path.ts",
+    "sha256": "64d83f7b0dd4e23a178b93db7e633b521e5235ac16676194fae34e0956dec862"
+  },
+  {
+    "path": "harness/src/context/types.ts",
+    "sha256": "b467b3be3b204da691999c00fd1b0fd2b6920410596524f3457fc3e046a3ab52"
+  },
+  {
+    "path": "harness/src/core/domain.ts",
+    "sha256": "1821a08bd4a88d0b30291a7b6ec71eb3caf2b7023b00d181e13959821b1af082"
+  },
+  {
+    "path": "harness/src/core/hash/canonical.ts",
+    "sha256": "066b2a6b8a7d7b6fe41e394d08a87251f4af3cc361c3bafeb75042bb8bde208e"
+  },
+  {
+    "path": "harness/src/core/hash/index.ts",
+    "sha256": "8f3cb25d0fac720345f00f0d83c7485755545865e7a3327d2d25526ae59d6e4d"
+  },
+  {
+    "path": "harness/src/core/hash/sha256.ts",
+    "sha256": "c6b0b201d73d605d0f339046811ba659d4d6feb27b4d531cd17aa12d7105cf80"
+  },
+  {
+    "path": "harness/src/errors/error-catalog.ts",
+    "sha256": "8025c4b45bffe920cb04868d18b934bde6e75e114fe28a4f41845844eb7dd982"
+  },
+  {
+    "path": "harness/src/errors/exit-code-registry.ts",
+    "sha256": "9e16fe96618c092ed48518db7189f32b2dc2039bfa878bd1c211ddb58fc31f32"
+  },
+  {
+    "path": "harness/src/errors/harness-error.ts",
+    "sha256": "71a31700b20b3b7b018648a0173f6ece1bb460605e3d9e7d2510b1d5cccfa81b"
+  },
+  {
+    "path": "harness/src/errors/index.ts",
+    "sha256": "4ed4efb10f5af8550f7c4cca3a8890f13f972d56291b170cc1046f51ee520353"
+  },
+  {
+    "path": "harness/src/errors/safe-details.ts",
+    "sha256": "66065b49582d380a9c985d6f487e5c6f9324ec4aea77cba94c085e772a550aca"
+  },
+  {
+    "path": "harness/src/execution/state.ts",
+    "sha256": "b7e1cb3cd70fffcf2a88d5bb69899b27d7d2d42a9c154f89b13e5a74d0d0b3c9"
+  },
+  {
+    "path": "harness/src/index.ts",
+    "sha256": "060b874b2c766e3581caf2e744ae3a3eb3f4164862a77a9ca5d18600428ac1b2"
+  },
+  {
+    "path": "harness/src/schemas/documents.ts",
+    "sha256": "47ff3f04e5e0067a23be64b0f98685b6ae37b7ba113c9b6aea629eaa6349b6aa"
+  },
+  {
+    "path": "harness/src/schemas/index.ts",
+    "sha256": "518a74d88930222b0922d4c46cb889e9e364ab11cc0f69698af7a47a549969e4"
+  },
+  {
+    "path": "harness/src/schemas/registry.ts",
+    "sha256": "a2b9acd7842f72d7d7628ffab27310e24716427e2a33f092042d0a24815e45ff"
+  },
+  {
+    "path": "harness/src/work-items/index.ts",
+    "sha256": "0506e8322f2ccab26de5cc10931232df93e8099505ac48b1cf5b049586662758"
+  },
+  {
+    "path": "harness/src/work-items/parser.ts",
+    "sha256": "26ffa75410222276a122c65a9229fb9d6a92d82d8c59193709eedb3fef20f449"
+  },
+  {
+    "path": "harness/tests/fixtures/config/canonical-a.json",
+    "sha256": "8a3463c95e38ff5e80b294afebcfdb5823346212137f89bad1c55d8125c4d3f8"
+  },
+  {
+    "path": "harness/tests/fixtures/config/canonical-b.json",
+    "sha256": "2348bde25fcc4d3f2454759d6185f554ec233c9ee3ccd3152ff2a2606bab0fea"
+  },
+  {
+    "path": "harness/tests/fixtures/config/host-valid.json",
+    "sha256": "b6ef5d682275a950a7e565b42a32eb1db975b1c5877292c1680abf308466c42b"
+  },
+  {
+    "path": "harness/tests/fixtures/config/project-narrow.json",
+    "sha256": "37d5dfa66a2ddda0aa2087977c1a586597057678ac044d47746920daf0b8f24e"
+  },
+  {
+    "path": "harness/tests/fixtures/config/secret-value.json",
+    "sha256": "04851c9bdce991e093109830b189ebffaf39cad4e052cbdce0698891d320d4fb"
+  },
+  {
+    "path": "harness/tests/fixtures/config/unknown-key.json",
+    "sha256": "f3757aec77c16bb7f9e041db9a91bb5e82fc7ca59df3849518b9e2d5d53f0331"
+  },
+  {
+    "path": "harness/tests/fixtures/context/sectioned.md",
+    "sha256": "8634ef6e288023f4fe504a8345d8a6f076d2ceb0d7ce6ce54f35b42efc982786"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/delivery-assurance-invalid-enum.json",
+    "sha256": "6efbd54b091c44a5b334a14fa0d65d2386bc6954606cee20f90a2925e9300f02"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/delivery-assurance-missing-required.json",
+    "sha256": "6ea1975f17d4cefc52df1429e185728205574747f0ebdf13cda65638ad61a24a"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/delivery-assurance-valid.json",
+    "sha256": "51a08f99f27b4d40d670a7e6d5fc015077d12a205512ac7b678ae36b62bb7da0"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/delivery-assurance-wrong-schema-version.json",
+    "sha256": "37776e24a0c8fd752ab4768e8bbe697e9625cbe3616cab24d74ed82fd411192c"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/finding-invalid-enum.json",
+    "sha256": "f3311d08a1cc6c759d305ff611950bec0067de98b818c23c23f56783956def37"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/finding-missing-required.json",
+    "sha256": "9599e86eec5789f9683e7581f9b89a0907c0e83377c155ebd5fb9a8b5896df6f"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/finding-valid.json",
+    "sha256": "ebec6898637bf7aece2d6d4fede898256e4c6746a4f7f8a14932ba98ab944081"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/finding-wrong-schema-version.json",
+    "sha256": "4d66ab2c677f14502b9e105f7c736f304844c2f72b4c1836106031735461f3ca"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/review-assignment-invalid-enum.json",
+    "sha256": "8c3300d491ad0720e0adfc4c71c4d9ff97d284e5ff03d279746af89eae894d0f"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/review-assignment-missing-required.json",
+    "sha256": "2c9c23fb161baea7c4ecf04f76940eb8c8e8a8bd030e097eff0601a135558abd"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/review-assignment-valid.json",
+    "sha256": "c20bdc0e2f99488f4ab4119691b35d79d8ba4e6c22e7c6cb7d65c5c47257494d"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/review-assignment-wrong-schema-version.json",
+    "sha256": "2cab19702fc9afeafe1c05cfd9f7d3494783d859ef4090997692bfb0da88ca89"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/role-evidence-invalid-enum.json",
+    "sha256": "c4c4b0328d7f5f1f65df063d66b8414360c20026a2521da2abb7460722ae78ce"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/role-evidence-missing-required.json",
+    "sha256": "4d62c7d3c1adcaf1dcf199ba039b40ff1455743e393f5cfcc348f46da4038b1f"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/role-evidence-valid.json",
+    "sha256": "721713c0af1f9deb1fa60d50287cc5c6eab4107c04f734528aec60fe936a909c"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/role-evidence-wrong-schema-version.json",
+    "sha256": "a65a8f11041a637993d05a9e799e8b26e58611d1fe67aef6bb0d1986e91320b8"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/work-item-v1-legacy.json",
+    "sha256": "3a7f46cebd8255dc51e4fae6c1af8c153b83cca05dfd5bdc8fcda057564ab9a0"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/work-item-v2-invalid-enum.json",
+    "sha256": "f747f816cd9b47d147e18517391f48bc88dfdba1041b3d37198fa2d5323f3548"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/work-item-v2-missing-required.json",
+    "sha256": "94d9590360b5f9408049e23b77a9fe01a43163798e2321bb2cf38fa50f1378de"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/work-item-v2-valid.json",
+    "sha256": "99fae0a1d3ec031ef95c8e42422cd7a4e81e4925ac7c5c50253edf99b383ccac"
+  },
+  {
+    "path": "harness/tests/fixtures/schemas/work-item-v2-wrong-schema-version.json",
+    "sha256": "093932d912e89228de4039d7ac22e90ac513e6f1b44c7498f72b9a1f5f751a6f"
+  },
+  {
+    "path": "harness/tests/fixtures/work-items/HNS-FIXTURE-001.md",
+    "sha256": "d37a3e1bad7a39fd17063121f1e4c21fccc1755e9db93080b4ba5ed4901c5db0"
+  },
+  {
+    "path": "harness/tests/package-smoke.test.mjs",
+    "sha256": "9822cf82e0de875091f9bd97f6e5ae1140589a094894bf644fd6b29a03f73e8d"
+  },
+  {
+    "path": "harness/tests/unit/config/config.test.mjs",
+    "sha256": "d99799c881cd0bb0b5b540b1f17d6a0b593ce6324c4b9e9dafb7fd63e8b19bd2"
+  },
+  {
+    "path": "harness/tests/unit/context/compiler.test.mjs",
+    "sha256": "ea96331acacc3af8c86d49ee21ea06ee1113c4df1c0ef579165480bb53af562a"
+  },
+  {
+    "path": "harness/tests/unit/core/domain.test.mjs",
+    "sha256": "fce5b380a5874fcc432df1e79068d60e3e7311fcbdf2abaf49f359681c06037b"
+  },
+  {
+    "path": "harness/tests/unit/core/hash/hash.test.mjs",
+    "sha256": "3ed9f93968ac5bf422ffcab3d9f9ff7cd267c4237bbb9fbda3c21a85931ba76e"
+  },
+  {
+    "path": "harness/tests/unit/errors/errors.test.mjs",
+    "sha256": "d6b2902138d1a6ef42e39fc52eafd4fd71859391a2e0b1cd2f565d3a532a0d57"
+  },
+  {
+    "path": "harness/tests/unit/errors/harness-error.types.ts",
+    "sha256": "eae46354acc7ff6ab7945e30394cf826bbc98101148cb86a8651b1f93b365ea3"
+  },
+  {
+    "path": "harness/tests/unit/execution/state.test.mjs",
+    "sha256": "31574a43b429d8265ce83bcac05c693bee24ed4a0cb24e55676760c9282bc68e"
+  },
+  {
+    "path": "harness/tests/unit/schemas/accountability.test.mjs",
+    "sha256": "63f386268a9440ad98949e9f3e8e95d002ee85b404a5147e5a7a48f7fae0867c"
+  },
+  {
+    "path": "harness/tests/unit/schemas/artifacts.test.mjs",
+    "sha256": "750f9671c7e61b4babb1ea3877e24e07f3b86451f322cfe6e00f1dda78ee6ef5"
+  },
+  {
+    "path": "harness/tests/unit/schemas/boundary.test.mjs",
+    "sha256": "58fe80ee2ea1a1d732aed646ba2e41e68e7b77b98734875ad749ecc9bbfde9b5"
+  },
+  {
+    "path": "harness/tests/unit/schemas/fast-uri-security.test.mjs",
+    "sha256": "65e28db6eee5742af6c31a80c7b9283b94bb35b2b3151847037fdb9f01e62080"
+  },
+  {
+    "path": "harness/tests/unit/schemas/registry.test.mjs",
+    "sha256": "bc6083f321eacf15841e7d3e7184fbbcf03e3f6b42727ec1b44731f7b2b40668"
+  },
+  {
+    "path": "harness/tests/unit/schemas/work-item.test.mjs",
+    "sha256": "952d4e9631cf5ee4df86264ff36efa28e725455e4bf12110a76e3e3e0d8e6ed0"
+  },
+  {
+    "path": "harness/tests/unit/work-items/parser.test.mjs",
+    "sha256": "b2fec13a50f88467828d2b0937d10dfa6635cdb3886a24bbeced9874364585e1"
+  },
+  {
+    "path": "harness/tsconfig.json",
+    "sha256": "97a0cdc7fa65f8600d01fc52067f752d6e3bd3453191122ee6c070a98c8b6a7f"
+  }
+]

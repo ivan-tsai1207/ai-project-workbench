@@ -1,0 +1,24 @@
+{
+  "start": "2026-10-03T22:06:06.385Z",
+  "end": "2026-10-03T22:06:07.617Z",
+  "candidate": "bdcd60bb36e30e63855f06bbcb06923eb9b02e1f",
+  "head": "d0f4b358553e117ed702b6c3de0cce94f7f227c5",
+  "input_sha256": "8d23359fdc37ebf57b4862accdf10611051f4e1cc9bc14c432e3e733ca8991ae",
+  "input_count": 72,
+  "candidate_matches": 71,
+  "metadataOnly": [
+    "work-items/HNS-EXEC-002.md"
+  ],
+  "inventoryCount": 67,
+  "dist_count": 92,
+  "dist_input_sha256": "8df51c8384e88e7440f909cc29330596ba37b1ee1aa4efca9dbfaa141297eaeb",
+  "reused_commands": 8,
+  "log_hashes": 16,
+  "git_status": " M work-items/HNS-EXEC-002-QA-REVIEW-003.md\n M work-items/HNS-EXEC-002-SECURITY-REVIEW-003.md\n M work-items/HNS-EXEC-002-TECH-REVIEW-003.md\n",
+  "scoped_diff": "docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r2.md\ndocs/08_agent_reviews/review_log.md\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/audit.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/audit.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/build.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/build.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/ci.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/ci.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/context.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/context.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/inputs.json\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/node.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/node.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/npm.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/npm.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/results.json\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/test.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/test.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/typecheck.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/typecheck.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-r2/validate.mjs\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/audit.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/audit.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/build.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/build.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/ci.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/ci.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/context.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/context.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/dist-inputs.json\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/inputs.json\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/node.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/node.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/npm.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/npm.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/results.json\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/test.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/test.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/typecheck.stderr.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-resume-002/typecheck.stdout.log\ndocs/08_agent_reviews/validation/HNS-EXEC-002-reviews-r2/qa/context.stderr\ndocs/08_agent_reviews/validation/HNS-EXEC-002-reviews-r2/qa/context.stdout\ndocs/08_agent_reviews/validation/HNS-EXEC-002-reviews-r2/security/audit.stderr\ndocs/08_agent_reviews/validation/HNS-EXEC-002-reviews-r2/security/audit.stdout\ndocs/08_agent_reviews/validation/HNS-EXEC-002-reviews-r2/security/context.stderr\ndocs/08_agent_reviews/validation/HNS-EXEC-002-reviews-r2/security/context.stdout\ndocs/08_agent_reviews/validation/HNS-EXEC-002-reviews-r2/security/provenance.stderr\ndocs/08_agent_reviews/validation/HNS-EXEC-002-reviews-r2/security/provenance.stdout\ndocs/08_agent_reviews/validation/HNS-EXEC-002-reviews-r2/tech/context.stderr\ndocs/08_agent_reviews/validation/HNS-EXEC-002-reviews-r2/tech/context.stdout\nwork-items/HNS-EXEC-002-QA-REVIEW-001.md\nwork-items/HNS-EXEC-002-QA-REVIEW-002.md\nwork-items/HNS-EXEC-002-QA-REVIEW-003.md\nwork-items/HNS-EXEC-002-SECURITY-REVIEW-001.md\nwork-items/HNS-EXEC-002-SECURITY-REVIEW-002.md\nwork-items/HNS-EXEC-002-SECURITY-REVIEW-003.md\nwork-items/HNS-EXEC-002-TECH-REVIEW-001.md\nwork-items/HNS-EXEC-002-TECH-REVIEW-002.md\nwork-items/HNS-EXEC-002-TECH-REVIEW-003.md\nwork-items/HNS-EXEC-002.md\n",
+  "environment": {
+    "NODE_OPTIONS": null,
+    "NODE_PATH": null,
+    "TZ": null
+  }
+}
