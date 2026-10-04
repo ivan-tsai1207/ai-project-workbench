@@ -1,0 +1,51 @@
+{
+  "tested_commit": "a25dd12616768d2374f749d79fc33fda45a17f31",
+  "reviewed_candidate": "52b9dcbae50dd573ade54046c5e5dfe66bf33ae8",
+  "manifest_hash": "sha256:448394b05c9f435125665148eb03d7583f981ce32860f5005cf93631403d2110",
+  "inputs": 96,
+  "raw_logs": 16,
+  "dist": 116,
+  "dist_digest": "5a40ef07dc3aa4ae6ad75e87be53d560c6e8ef23e608c19ca76a34795d755430",
+  "dist_json_raw_sha256": "45202fbf587c30c0e570394f7e487b91b199b9426df4151ac3fe5796de03e538",
+  "results_sha256": "1cec15bbf3e062eb971b3d6fcdfd66e62a856d415994859ae69971bff68cda5f",
+  "inputs_sha256": "931ddbeb69996daf6c809f6c5a7a3014aba6e939f7859fb9c840ebe8e560eaf7",
+  "start": "2026-10-04T08:06:40.792Z",
+  "end": "2026-10-04T08:06:45.988Z",
+  "old_input_metadata_difference": [
+    "work-items/HNS-EXEC-003.md"
+  ],
+  "parses": [
+    {
+      "path": "work-items/HNS-EXEC-003.md",
+      "status": "IN_PROGRESS",
+      "document_hash": "sha256:fbd8c183fe11b7bb05a1c1c5f72aeb6b294033f9563caf62f098c287e4737990"
+    },
+    {
+      "path": "work-items/HNS-EXEC-003-TECH-REVIEW-002.md",
+      "status": "TODO",
+      "document_hash": "sha256:a8856c2a5e270698c9e175b8b4552a6dde9425e78e266e7270164ac71a539136"
+    },
+    {
+      "path": "work-items/HNS-EXEC-003-QA-REVIEW-001.md",
+      "status": "TODO",
+      "document_hash": "sha256:d2597ac606b7da856b60e22f6d6ac5dfc4c373008f1bf2f71af71ad784d208ba"
+    },
+    {
+      "path": "work-items/HNS-EXEC-003-SECURITY-REVIEW-001.md",
+      "status": "TODO",
+      "document_hash": "sha256:6ee4b861b87d0e3087f883a20927003aa71f329d0fd09b03a07904220769c767"
+    }
+  ],
+  "source_binding": "git diff reviewed_candidate..tested_commit -- harness is empty; only primary Work Item metadata differs from R2 input inventory",
+  "original_maker": "01a10535-54ac-7693-b13a-9085abfc6ca3",
+  "correction_maker": "01a105c1-8580-7c70-af1c-555ff65aad5d",
+  "required_profiles": [
+    "TECH_REVIEWER",
+    "QA_REVIEWER",
+    "SECURITY_REVIEWER"
+  ],
+  "review_decisions": "pending independent executions",
+  "gate": "NOT_RUN",
+  "remediation_used": 1,
+  "remediation_limit": 1
+}
