@@ -1,0 +1,14 @@
+{
+  "requirement": "WB-016",
+  "acceptance": "AC-WB-016",
+  "maker_execution_id": "01a10814-7188-7ae0-8c0a-c8fd2d117b12",
+  "files": {
+    "docs/03_requirements/PR_NAMING_RULES.md": "0c4fe2f7519c80ff0557d1066d6bc8397da77748d4baaf7cffaf4e8d31767a08",
+    "docs/02_product/PRD.md": "c2bed7aacefdd110448273961e4cd1d55483a7ffc9dcacb8841e01fc98a65ee8",
+    "docs/03_requirements/SRS.md": "ce7783a3a43623c3037857b0b0359696de6e176d77624eb8af9dc5c478a64d1c",
+    "docs/04_system/SDD.md": "03dabb8c62e656f8dda5bea4f0ff288589cefea593e137970563a400ac90f927",
+    "specs/workbench/spec.md": "24157d5e73202f3060a1b9e434422d6d362a2ff034fd222df7431ffc6f343194",
+    "LLM_OPERATING_RULES.md": "f97f72ea28d3fcc1ef28c126422183b7d2e5bedede0563032ac1dd82fa22cd1a",
+    "README.md": "a689d043c2e2aa2e57e9acdbef66642b1ea308719bef96b10eeceda3958efc49"
+  }
+}

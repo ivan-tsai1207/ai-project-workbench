@@ -33,3 +33,9 @@ Human2026-10-05 approves: start on a project home, never auto-select an acceptan
 Selected project workspace exposes latest completed AI reply as 第一份專案計畫／最新成果, read-only user editable by further conversation, persistent task/message binding, ordinary chat secondary, back-to-project-home always present. Failed/unavailable analysis preserves created project/idea, offers explicit 重新整理計畫 with no duplicate project or automatic retries; same action one in-flight submission only, returning/reload never reruns automatically. At most1process/global20queue unchanged. Waiting/cancel/error show plain next step. Results are local records, not automatically GitHub-uploaded/approved specification. Existing full GitHub proposal and preview approvals retained. UI may view and continue multiple projects, data and confirmation state never leak between them.
 
 Acceptance: complete home→new→idea→first real-model plan→resume/restart without advanced settings or GitHub; demonstrate actual output and failure recovery, default fresh user data shows no test records. Home/project navigation clears stale results/approval/skill selection, composer draft does not leak across projects. Mobile375+desktop keyboard/focus/no-overflow checked. Existing alias-identity finding must be repaired and freshly re-reviewed before release: canonicalize new managed roots and existing project paths without rewriting historical hashed task/events; busy/admission checks recognize alias paths for legacy/queued/current tasks. Test aliased managed root and existing rows in both route directions; unrelated project remains available. No extra model engines, GitHub skill installer, accounts/cloud/autonomous coding/new schema/API. Real general-user study deferred and disclosed.
+
+<a id="pr-naming-rules"></a>
+
+## WB-016 / AC-WB-016 — Repository 驅動的 PR 命名
+
+AC-WB-016：允許前綴、中文摘要、純紀錄使用 docs、拒絕多重狀態與英文 fallback、規則缺失／衝突提示及原有批准邊界。 規則來源：[PR 命名規則](PR_NAMING_RULES.md)。

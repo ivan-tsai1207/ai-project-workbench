@@ -134,3 +134,7 @@ project-name/
 3. 高風險操作必須先用繁體中文詢問使用者。
 4. 產出文件需寫回專案記憶，並推送到 GitHub。
 5. 重大技術決策需建立 ADR。
+
+## PR 命名與工作台規則
+
+工作台與 Agent 的 PR 命名要求已記錄於 [PR 命名規則](docs/03_requirements/PR_NAMING_RULES.md)，並由 PRD、SRS、SDD、Feature Spec 與跨 Agent 操作指引引用。格式為單一小寫前綴加正體中文摘要，例如 `docs: 更新專案計畫與對話紀錄`。目前工作台 PR 產生程式尚待套用此要求；文件存在不代表程式已自動執行規則。

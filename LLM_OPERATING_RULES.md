@@ -83,3 +83,7 @@ Reviewer decision使用 `PASS / REQUEST_CHANGES / BLOCK`；GateResult使用 `PAS
 ```
 
 也可使用自然語言指定，例如「用 MVP 模式做」、「用正式 SI 模式整理」、「這次只要快速驗證」或「這次要完整規格」。
+
+## PR 標題
+
+建立或修改 PR 前讀取 [PR 命名規則](docs/03_requirements/PR_NAMING_RULES.md)，使用 `type: 正體中文摘要`，只放一個前綴。主要使用 `feature`、`fix`、`bug`，必要時用 `docs` 或 `refactor`。工作台與 Agent 都以 repo 已確認規則為依據；規則衝突依既有 Authority 處理，不以對話記憶覆蓋。
