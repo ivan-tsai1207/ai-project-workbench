@@ -1,0 +1,23 @@
+{
+  "requirement": "WB-017",
+  "acceptance": "AC-WB-017",
+  "maker_execution_id": "01a1082f-3fd2-77b2-8676-e91852ba47d5",
+  "files": {
+    "apps/workbench-cloud/.gitignore": "de0d886cb546d2333194161c3df3400341a992a486301243e01e491993b2796c",
+    "apps/workbench-cloud/README.md": "7cad2c54b0b636ba0b50536190498aa7739bd1b01eea8ee561e703401cf497f4",
+    "apps/workbench-cloud/build.mjs": "81e48205ae955ba00357777999e1b25b7a1aaa342703a627cdc940114e1c5361",
+    "apps/workbench-cloud/package-lock.json": "ff2016b34692b5caed094f3b146ecb59b6cf3be817fd946544e0e343dea1055d",
+    "apps/workbench-cloud/package.json": "eb967176a5b4be642dd4ed85d9c6bafcdccdc6eceb1459892751dfce290eb772",
+    "apps/workbench-cloud/public/app.mjs": "9b79a5d0363b5ee2204e461fdda9a69770dfacbafb0843d90499e4841c59361d",
+    "apps/workbench-cloud/public/client.mjs": "e640ec72f697cb90622f7fb2bba687d677aa6d82bda6ddc8449685fa20b0f33e",
+    "apps/workbench-cloud/public/config-validation.mjs": "b3559cebe931c6143e121c575b4614bbb213eb7c77a2cd11c97103992c949587",
+    "apps/workbench-cloud/public/index.html": "c6e3fc0db3b16d3893cd4b255bd2be4fd1a32b46144ab607cf17dce8411b1cd1",
+    "apps/workbench-cloud/public/styles.css": "74d5ac13cbadcc434ea4f2bfcd72b28eb8033f3c64a7f3a239f549ed31cfdde3",
+    "apps/workbench-cloud/tests/client.test.mjs": "6b131a3da5123ef0716f028e22915f901445a1b29d8f5b9513d673ae5b582080",
+    "apps/workbench-cloud/tests/config.test.mjs": "a0c66c1000f2e5a0ee2289597e851b04acf154c9650853cec612b2e8543ea2f6",
+    "apps/workbench-cloud/vercel.json": "61c4426e686986233f1763c6331c15c67c21998ea1b785885a15a1028069297a",
+    "supabase/migrations/202610050001_workbench_cloud.sql": "11285498ada91f591efe5c9f59fd508aba446a1c93723ecff4cfd83232cc1e38",
+    "supabase/tests/workbench_rls.sql": "c530bf9214f99925a14041f351b3e859a077799af822a652c33d42c2434956da",
+    "docs/09_deployment/WORKBENCH_CLOUD.md": "f38ffc660d8e7bf1eb20833b582b574d8fd9df285bde075ac94847bc512e1273"
+  }
+}
