@@ -1,0 +1,13 @@
+{
+  "reviewed_candidate": "52ce59dd4867f2f99db0a01386fba325e2266da5",
+  "actual_tested_merge": "f2cbbb36711132e4ac1b7b6f65b283c348448de1",
+  "artifact": "docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r4.md",
+  "artifact_hash": "sha256:b14fb23611b370809aa6b3abe577dacb4c12a26235b4972e5b2244094d69df6a",
+  "commands": 8,
+  "log_hashes_verified": 16,
+  "input_hashes_verified": 96,
+  "dist_hashes_verified": 116,
+  "post_validation_metadata_delta": "work-items/HNS-EXEC-003.md lifecycle only",
+  "timestamp": "2026-10-04T14:31:45.697631+00:00",
+  "result": "PASS"
+}

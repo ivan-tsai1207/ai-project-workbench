@@ -15,7 +15,7 @@
   "remediation_remaining": 0,
   "token_target": 30000,
   "token_actual": null,
-  "status": "GATE_PASS",
+  "status": "CLOSURE_VALIDATED",
   "pauses": [
     {
       "start": "2026-10-04T14:25:49.384932+00:00",
@@ -124,5 +124,12 @@
     "cached_input": 2825728,
     "coverage": "two child executions only; parent/historical aggregate unknown",
     "target_met": false
+  },
+  "closure_budget": {
+    "timestamp": "2026-10-04T14:31:45.697631+00:00",
+    "elapsed_s": 765.697631,
+    "conservative_active_s": 1232.777631,
+    "remaining_activity_s": 567.2223690000001,
+    "remaining_wall_s": 734.302369
   }
 }

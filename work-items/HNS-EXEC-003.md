@@ -8,7 +8,7 @@
 | Role | `IMPLEMENTER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `IMPLEMENTATION` |
-| Status | `BLOCKED` |
+| Status | `DONE` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -91,10 +91,10 @@ Implement deterministic Risk Assignment, Reviewer Assignment, and immutable Exec
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-003-001`: Same normalized trigger inputs produce the same immutable Risk Assignment hash and highest applicable risk.
-- [ ] `AC-HNS-EXEC-003-002`: Reviewer assignments are deterministic, artifact-bound, role-aligned, and include TECH plus risk-required QA/SECURITY without self-assignment.
-- [ ] `AC-HNS-EXEC-003-003`: Valid profile inputs produce a canonical deep-frozen profile whose hash changes for every execution-relevant field change.
-- [ ] `AC-HNS-EXEC-003-004`: Downgrade, stale hash, missing gate, identity mismatch, and assignment collision fail closed without adapter or enforcement behavior.
+- [x] `AC-HNS-EXEC-003-001`: Same normalized trigger inputs produce the same immutable Risk Assignment hash and highest applicable risk.
+- [x] `AC-HNS-EXEC-003-002`: Reviewer assignments are deterministic, artifact-bound, role-aligned, and include TECH plus risk-required QA/SECURITY without self-assignment.
+- [x] `AC-HNS-EXEC-003-003`: Valid profile inputs produce a canonical deep-frozen profile whose hash changes for every execution-relevant field change.
+- [x] `AC-HNS-EXEC-003-004`: Downgrade, stale hash, missing gate, identity mismatch, and assignment collision fail closed without adapter or enforcement behavior.
 
 ## Required Gates
 
@@ -107,6 +107,14 @@ Implement deterministic Risk Assignment, Reviewer Assignment, and immutable Exec
 
 ## Blockers
 
+- None for EXEC003 implementation closure. Historical budget/timeout checkpoints preserved below; EXEC002 nonblocking Observation remains OPEN.
+
+## Notes
+
+- LC-HNS-EXEC-003-001: allfourAC checked from exactR4 TECH004/QA004/SECURITY004 completed independent PASS; Gate IG-HNS-EXEC-003-001 PASS; normalmerge `f2cbbb36711132e4ac1b7b6f65b283c348448de1`; fresh exactruntime ci/build/typecheck/full233/focused72/audit0 PASS, no skip/cancel/todo. StatusDONE denotes scoped003 core, not004/adapters/production/workbench complete. Historical12attempts/automatic1/1/C5exception1/1/005exception1/1 retained, no source change thisallocation. Durable postmerge results/inputs/dist/rawlogs/binding in docs/08_agent_reviews/validation/HNS-EXEC-003-postmerge-r4. Original1978s/1800s overrun178s and incompletehistoricalaggregate retained; currentpartial reviewtelemetry249095noncached+output, TARGET30000missed, not billing. Source/manifest/SDD/package bytes unchanged.
+
+### Preserved Historical Blocker Checkpoints
+
 - ACTIVE HUMAN AUTHORIZATION 2026-10-04: latest Human "如果沒有開始修正" approves one named two-file dependency correction FND-HNS-EXEC-003-PREFLIGHT-005-001. Earlier approval/scope/timeout blockers below are preserved historical checkpoints, superseded only by this finite allocation. Finding remains OPEN pending independent review; no Gate/closure claim.
 
 - CURRENT STOP BUDGET_EXHAUSTED: cumulative added activity conservatively1978s at13:32:11.522Z exceeds1800s; parallel reviewers count separately. Parent planning/late budget detection, not a new implementation finding. Attempts10/10; no new dispatch/retry/source cycle. QA003 andSecurity003 interrupted with no finaldecision; Gate/merge/postmerge/lifecycle NOT RUN. develop90f4ff4fe6479a4644723c33e153f7083e07ec88 unchanged.
@@ -115,7 +123,7 @@ Implement deterministic Risk Assignment, Reviewer Assignment, and immutable Exec
 - HUMAN_DECISION_REQUIRED - REVIEW_FINALIZATION_TIMEOUT: TECH-003 final report08:53:58.770Z is21.770s beyond parenthard08:53:37Z, stop08:54:00.763Z is23.763s late. Complete report recovered from actual execution journal, not a timely-completion claim or Gate waiver. Required QA/Security/Gate/merge/postmerge/lifecycle not run.
 - Attempts6/8, automaticcorrection1/1 exhausted andHuman targetedexception1/1 consumed. No source retry/new review dispatch. Any continuation requires finite Human operational allocation/decision; no new implementation defect or scope inferred.
 
-## Notes
+
 
 - HUMAN-FINAL-ALLOCATION-006: new-chat Human delegation authorizes unchanged R4 closure, exactly two fresh independent QA/SECURITY executions; conservative preflight origin2026-10-04T14:19:00Z, hard wall deadline2026-10-04T14:44:00Z, added cumulative active<=1800s, elapsed<=1500s. Preserve original preflight02:45:34Z, historical10 attempts and known prior1978s/1800s overrun178s; historical aggregate unknown. Total attempts<=12; automatic1/1, C5exception1/1,005exception1/1 exhausted; no Maker/source correction, retry or TECH repetition. Each child hard480s including final report, target<=360s and stop probes<=420s. Reserve child maxima960s, host/preflight/validation/Gate/merge/closure720s plus120s safety; parallel children count individually. TECH004 retained only after exact manifest/12artifacts/full dependencies/dist/log qualification. Required exact-runtime fresh audit, unchanged-develop normal merge, fresh ci/build/typecheck/full tests/focused Risk+Profile+Context/audit, lifecycle DONE and normalpush/remoteverify after complete required PASS only. Token TARGET30000/actualnull incomplete telemetry; not enforced or billable cost. Mandatory Tier1 full; direct SDD sections, targeted findings, no full reviewlog/history. Stop new MAJOR/BLOCKING, nonPASS, source/hash/input drift, missing independence, runtime/unavailable, divergence, insufficient/exhausted budget; preserve concrete handoff. User authorizes later004 and independent MVP milestones separately; not completion claims or reset of003 counters. Parent writes only assigned WI/review assignments/audit/evidence/status, no source writes.
 
