@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `BLOCKED` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -89,9 +89,9 @@ Independently review exact candidate `8e4c06650d13ead12a66eb02cb9e681e862b504a` 
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-003-TECH-REVIEW-003-001`: Immutable candidate/hash, independence, full input/runtime/log provenance and scope verified.
-- [ ] `AC-HNS-EXEC-003-TECH-REVIEW-003-002`: All original ACs and directly affected profile-specific boundaries fully assessed.
-- [ ] `AC-HNS-EXEC-003-TECH-REVIEW-003-003`: Complete evidence, findings, limitations and decision returned for durable audit.
+- [x] `AC-HNS-EXEC-003-TECH-REVIEW-003-001`: Immutable candidate/hash, independence, full input/runtime/log provenance and scope verified.
+- [x] `AC-HNS-EXEC-003-TECH-REVIEW-003-002`: All original ACs and directly affected profile-specific boundaries fully assessed.
+- [x] `AC-HNS-EXEC-003-TECH-REVIEW-003-003`: Complete evidence, findings, limitations and decision returned for durable audit.
 
 ## Required Gates
 
@@ -103,7 +103,7 @@ Independently review exact candidate `8e4c06650d13ead12a66eb02cb9e681e862b504a` 
 
 ## Blockers
 
-- Required independent assessment pending.
+- Complete technical assessment PASS/FND-HNS-EXEC-003-TECH-002-001 RESOLVED; operational completion late21.770s, stoplate23.763s. StatusBLOCKED preserves timeout, not source rejection/timelyPASS/Gate waiver. Raw report/probe preserved in validation/HNS-EXEC-003-targeted-r3.
 
 ## Notes
 

@@ -1,0 +1,102 @@
+{
+  "evidence_id": "HNS-EXEC-003-TARGETED-CHECKPOINT-004",
+  "state": "BLOCKED",
+  "reason": "HUMAN_DECISION_REQUIRED - REVIEW_FINALIZATION_TIMEOUT",
+  "candidate": "8e4c06650d13ead12a66eb02cb9e681e862b504a",
+  "manifest": "docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r3.md",
+  "manifest_hash": "sha256:6b92a4c829c0fdc70c00fc8ad3da65332ca1bd5fdd5d63d2fdf41829855adc02",
+  "original_preflight": "2026-10-04T02:45:34Z",
+  "allocation_start": "2026-10-04T08:36:08.000Z",
+  "allocation_deadline": "2026-10-04T09:06:08.000Z",
+  "observed": "2026-10-04 08:57:52 UTC",
+  "elapsed_ms": 1304000,
+  "explicit_host_pauses": [
+    {
+      "start": "2026-10-04 08:43:24 UTC",
+      "end": "2026-10-04 08:44:24 UTC"
+    },
+    {
+      "start": "2026-10-04 08:44:34 UTC",
+      "end": "2026-10-04 08:45:04 UTC"
+    },
+    {
+      "start": "2026-10-04 08:45:13 UTC",
+      "end": "2026-10-04 08:45:15 UTC"
+    },
+    {
+      "start": "2026-10-04 08:48:37 UTC",
+      "end": "2026-10-04 08:49:07 UTC"
+    },
+    {
+      "start": "2026-10-04 08:49:24 UTC",
+      "end": "2026-10-04 08:51:24 UTC"
+    },
+    {
+      "start": "2026-10-04 08:51:35 UTC",
+      "end": "2026-10-04 08:53:05 UTC"
+    },
+    {
+      "start": "2026-10-04 08:53:14 UTC",
+      "end": "2026-10-04 08:53:34 UTC"
+    },
+    {
+      "start": "2026-10-04 08:53:40 UTC",
+      "end": "2026-10-04 08:53:50 UTC"
+    }
+  ],
+  "pause_ms": 362000,
+  "maker_activity_ms": 155572,
+  "tech_activity_through_stop_ms": 323763,
+  "conservative_active_ms": 1481335,
+  "management_allowance_ms": 60000,
+  "prior_aggregate_activity": null,
+  "attempts_total": 6,
+  "attempts_max": 8,
+  "attempts_added": 2,
+  "automatic_remediation": {
+    "used": 1,
+    "max": 1
+  },
+  "human_targeted_remediation": {
+    "used": 1,
+    "max": 1
+  },
+  "token": {
+    "target": 20000,
+    "actual": null,
+    "telemetry": "Complete aggregate unavailable"
+  },
+  "tech": {
+    "execution": "01a10619-ced3-7f91-a776-bbcf150eee6c",
+    "technical_decision": "PASS",
+    "finding": "FND-HNS-EXEC-003-TECH-002-001",
+    "finding_status": "RESOLVED in independent technical assessment",
+    "hard_deadline": "2026-10-04T08:53:37.000Z",
+    "report_time": "2026-10-04T08:53:58.770Z",
+    "report_lateness_ms": 21770,
+    "operational_status": "Late finalization; no timely-completion or Gate waiver",
+    "stop_time": "2026-10-04T08:54:00.763Z",
+    "stop_overshoot_ms": 23763
+  },
+  "validation": {
+    "node": "v24.19.0",
+    "npm": "11.17.0",
+    "full_tests": 233,
+    "focused_tests": 69,
+    "audit_vulnerabilities": 0
+  },
+  "qa": "NOT_RUN",
+  "security": "NOT_RUN",
+  "gate": "NOT_RUN",
+  "merge": "NOT_RUN",
+  "postmerge": "NOT_RUN",
+  "lifecycle": "NOT_DONE",
+  "develop": "90f4ff4fe6479a4644723c33e153f7083e07ec88",
+  "limitations": [
+    "Original clocks/counters and unknown historical aggregate retained",
+    "Initial context target not a hard cap or full aggregate measurement",
+    "Existing EXEC-002 nonblocking security observation remains OPEN",
+    "No additional source correction or automatic review retry",
+    "Host cancellation timing overshoot preserved"
+  ]
+}

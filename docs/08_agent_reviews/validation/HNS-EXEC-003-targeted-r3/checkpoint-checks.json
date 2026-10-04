@@ -1,0 +1,28 @@
+{
+  "stable_inputs": 95,
+  "total_inputs": 96,
+  "expected_metadata_change": "work-items/HNS-EXEC-003.md",
+  "dist_files": 116,
+  "rawlogs": 16,
+  "parsed": [
+    {
+      "id": "HNS-EXEC-003",
+      "ok": true
+    },
+    {
+      "id": "HNS-EXEC-003-TECH-REVIEW-003",
+      "ok": true
+    },
+    {
+      "id": "HNS-EXEC-003-QA-REVIEW-002",
+      "ok": true
+    },
+    {
+      "id": "HNS-EXEC-003-SECURITY-REVIEW-002",
+      "ok": true
+    }
+  ],
+  "failures": [],
+  "source_changes_since_candidate": "",
+  "develop": "90f4ff4fe6479a4644723c33e153f7083e07ec88"
+}
