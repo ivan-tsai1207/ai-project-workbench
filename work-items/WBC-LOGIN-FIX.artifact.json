@@ -1,0 +1,8 @@
+{
+  "maker_execution_id": "01a10864-9797-72d2-85d0-aa9c6a3da77c",
+  "requirement": "WB017 login receiver regression",
+  "files": {
+    "apps/workbench-cloud/public/client.mjs": "024009dd37007d127cd37ace812fd2d1d27efb88f4f861eea6a5fdeb0887c161",
+    "apps/workbench-cloud/tests/client.test.mjs": "a05c9ded8f9e6dac67eec0f9e39b4bb99c463da8a00b0ab6bf9eeaeb3d87cd1a"
+  }
+}
