@@ -6104,3 +6104,23 @@ Raw evidence: [/private/tmp/hns-security-01a103ca-116f-7983-b8e0-79d4873b0401](/
 - Validation inputs include rootWI before this status/checkbox/Notes normalization; `binding.json` explicitly separates reviewedcandidate and actual testedmerge. Closure-only metadata does not change runtime executable input or approved artifact hash; no recursive review required.
 - Human closureincrement5min; current host elapsed/cumulative conservative activity254s before final evidence commit/push, no childagents/newMaker/remediation/retry. Prior8/8 and1/1, review-only3/3 and1806.565s exhaustion remain recorded; historical complete cumulative/token totals unknown, not reset. Actual token/context aggregate measurements null; no hard-token cap/compliance claim. Context loaded only activeWI/governance/role/gate, named Gate/checkpoint evidence and bounded validation metadata/hash comparisons; no full historical review-log context.
 - Final closure commit and normal developpush follow this record; final handoff verifies/report exact remoteHEAD and cleanstatus. Stop atEXEC-002. EXEC-003/004, Minimal Execution Engine overall completion, adapters and Pilot remain pending; no whole-milestone COMPLETE claim.
+
+## HNS-EXEC-003-PREFLIGHT-001 - Specification Handoff Before Implementation
+
+| Field | Value |
+|---|---|
+| Timestamp | `2026-10-04 02:49:39 UTC` |
+| Work Item / Role / Risk | `HNS-EXEC-003` / `IMPLEMENTER` preflight / `HIGH` |
+| Base develop | `1b6fdfca5507c5274a893d0074c602b98ff2cb99`, local/remote verified, clean |
+| Dependencies | HNS-EXEC-001 DONE; HNS-EXEC-002 DONE |
+| Result / Operational exit | BLOCKED / `HUMAN_DECISION_REQUIRED` (SPEC_GAP) |
+| Maker / Reviewer attempts | No child executions dispatched in this preflight |
+| Candidate / Review / Gate / Merge | None; not started, no PASS claimed |
+| Return owner | `PRODUCT_ARCHITECT` for canonical contract clarification |
+
+- Gap1: SDD16.1 (`docs/harness_v0.1_SDD.md:1091`) demands canonical trigger evaluation; SDD5.5 defines `RiskPolicy.rules: readonly string[]` at646, but no concrete trigger table, mapping or evaluation syntax appears in directly referenced SDD/governance. HIGH risk reviewer baseline in Harness13 and reviewerRole is not a trigger-classification table. Host-policy ports are an existing architecture option, but their accepted table/rule semantics must be specified rather than invented.
+- Gap2: SDD21 (`docs/harness_v0.1_SDD.md:1331`) requires repository.commit_before == Context compile commit. SDD5.3 context/v3 and `harness/src/context/types.ts` contain no compile commit/identity binding; compiler validates repository.commit at348 but returns only caller-supplied spec_versions at207. Merely asking caller for a commit assertion would not establish immutable linkage. Producer change outside EXEC-003 WriteScope or a canonical host-owned hashed provenance contract needs explicit specification/ownership.
+- These are incomplete cross-module contracts, not new generalized edge-case findings or a retroactive EXEC-002 implementation defect. No Context/schema/source/governance/manifest/package/test changed; no risk assignment grammar or new adapter/permission model created. SPEC_GAP is not disguised as SPEC_CONFLICT or Accepted Risk.
+- Proposed smallest continuation: canonicalize risk table/host-port semantics and commit provenance binding only, preserving frozen architecture; then fresh assigned implementation/review per existing gates. Raw Human approval alone cannot bypass canonical Spec update or required independent review.
+- Default plan would be one primaryWI, requiredTECH/QA/SECURITY, at most8 child attempts/one remediation and30min elapsed/cumulative; preflightorigin02:45:34Z, stops before dispatch because canonical implementation foundation incomplete. Original milestone/history usageunknown, not zero; token/context aggregate telemetry not measured. No full review-log context, no open-ended probing. Some navigation returned adjacent SDD phase/section content; this retrieval deviation is disclosed, not waived.
+- Changed scope only parent control-plane rootWI/blocker/Notes and this append-only handoff. No implementation means ci/build/typecheck/test/audit notrun forEXEC-003 and no inferredPASS fromEXEC-002. Develop/main unchanged. Preserve handoff on normal featurebranch push, no force/squash. Stop; no EXEC-004/adapters/Pilot.

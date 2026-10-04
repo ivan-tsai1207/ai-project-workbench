@@ -8,7 +8,7 @@
 | Role | `IMPLEMENTER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `IMPLEMENTATION` |
-| Status | `TODO` |
+| Status | `BLOCKED` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -101,9 +101,13 @@ Implement deterministic Risk Assignment, Reviewer Assignment, and immutable Exec
 
 ## Blockers
 
-- None
+- `HNS-EXEC-003-PREFLIGHT-001`: SDD16.1 requires a canonical risk trigger table, but directly referenced canonical sources do not define concrete trigger identifiers/risk mappings or the evaluation syntax of RiskPolicy.rules. Implementer cannot invent security policy or a new grammar under frozen Governance/Architecture.
+- `HNS-EXEC-003-PREFLIGHT-001`: SDD21 requires repository.commit_before to equal the Context compile commit, but canonical context/v3 and implemented manifest carry no repository/commit provenance. Compiler validates input.repository.commit and does not retain it in the returned hashed manifest; no canonical host provenance binding is specified. This cannot be proven by the builder as currently contracted.
 
 ## Notes
 
+- Host preflight `HNS-EXEC-003-PREFLIGHT-001`, base develop `1b6fdfca5507c5274a893d0074c602b98ff2cb99`; dependency Work Items001/002 DONE. Default one-WI plan would require HIGH TECH/QA/SECURITY (R=3,G=0), initial1Maker+3reviews, at most1remediation+3reviews; maximum8 attempts and30min elapsed/cumulative, tokenTARGET30,000 with actualnull. Preflight began2026-10-04T02:45:34Z; no Maker/Reviewer dispatched, no implementation allocation consumed by childagents. Original milestone/history counters not reset or claimedknown.
+- Preflight cannot establish implementability against frozen canonical contracts, so exits `HUMAN_DECISION_REQUIRED` / SPEC_GAP before implementation, validation/review/Gate/merge. Two contract clarifications belong to PRODUCT_ARCHITECT; approval must be incorporated into canonical requirements before a fresh implementation context. No ad hoc risk rule DSL, caller-asserted unbound commit, Context schema change or re-opening EXEC-002 is authorized.
+- Minimal pending decisions: define a versioned/hashed canonical risk trigger policy or explicitly specified existing host-policy port; define immutable Context compile repository/commit provenance consumed by SDD21 (including hash/source binding), and narrowly scoped implementation ownership if producer changes are required. Clarifications only, no Governance/Architecture redesign. Existing EXEC-002 independent approval and closure are not invalidated by this cross-module specification gap.
+- Stop after this handoff. No EXEC-004/adapters/Pilot. Required runtime validation remains mandatory when implementation exists; none run or claimedPASS for this blocked preflight. No complete review_log loaded; only direct requirement sections, assigned governance/WI and bounded source/type checks.
 - Required independent profiles: `TECH_REVIEWER`, `QA_REVIEWER`, `SECURITY_REVIEWER`.
-
