@@ -94,10 +94,11 @@ Close only the two canonical contract gaps recorded by HNS-EXEC-003 preflight, k
 
 ## Blockers
 
-- Sole automatic correction missed its hard deadline; preserved checkpoint is unreviewed. Human decision required before any further production or independent review. EXEC-003 runtime remains blocked until this specification passes and merges.
+- Human authorized saved-checkpoint review continuation. Required independent SPEC/Security reviews and Spec Gate/merge remain pending; EXEC-003 runtime stays blocked until canonical closure.
 
 ## Notes
 
+- Human continuation allocation RESUME-001: origin `2026-10-04T03:58:23.317Z`, deadline `2026-10-04T04:18:23.317Z`, at most2 new reviewer attempts; elapsed and host+child cumulative each<=20min. Original two Maker attempts, remediation1/1 exhausted and deadline failure remain; no new Maker/source edit/retry. Full canonical validation before Gate and after merge, only then closure/normalize003 blocker. SPEC_REVIEWER and SECURITY_REVIEWER only, each hard4min. TokenTARGET20,000, actual null. Stop on nonPASS/new MAJOR/BLOCKING/divergence/budget; no implementation003/004/adapters.
 - Checkpoint `HNS-EXEC-003-CONTRACT-CLARIFICATION-001-CHECKPOINT-001`: two Maker attempts, one correction used, zero independent reviews; no Spec Gate/merge/closure. Initial candidate validation does not qualify corrected checkpoint. Original EXEC-003 remains BLOCKED; all ACs remain unchecked.
 - Human authorization: user approved the proposed PRODUCT_ARCHITECT minimal two-contract correction by asking to proceed. Freeze exception only these two clarifications, no broader architecture/governance/implementation change; CR-HNS-EXEC-003-001 approved for this scope.
 - Risk MEDIUM: documentation contract clarification, not runtime/permission/production change; independent basic SPEC_REVIEWER plus SECURITY_REVIEWER required for risk/identity trust-boundary semantics. No code/test-behavior QA or TECH implementation review for this artifact. Original EXEC-003 HIGH TECH/QA/SECURITY unchanged.
