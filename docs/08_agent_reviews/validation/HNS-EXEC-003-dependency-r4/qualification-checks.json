@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-04T13:21:04.229Z",
+  "manifestPath": "docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r4.md",
+  "manifestHash": "sha256:b14fb23611b370809aa6b3abe577dacb4c12a26235b4972e5b2244094d69df6a",
+  "inputs": 96,
+  "dist": 116,
+  "logs": 16,
+  "parsedWorkItems": [
+    "HNS-EXEC-003",
+    "HNS-EXEC-003-TECH-REVIEW-004",
+    "HNS-EXEC-003-QA-REVIEW-003",
+    "HNS-EXEC-003-SECURITY-REVIEW-003"
+  ],
+  "artifacts": 12,
+  "result": "PASS"
+}
