@@ -3,7 +3,7 @@ export function projectId(id){if(!uuid.test(id))throw Error('專案識別無效�
 export function text(value,min,max,label){if(typeof value!=='string'||value.trim().length<min||value.trim().length>max)throw Error(label+'長度不符。');return value.trim();}
 export function repoURL(value){if(value==='')return '';if(typeof value!=='string'||!/^https:\/\/github\.com\/[A-Za-z0-9][A-Za-z0-9-]{0,38}\/[A-Za-z0-9][A-Za-z0-9._-]{0,99}$/.test(value)||/\/(?:\.|\.\.)$/.test(value))throw Error('請填寫 GitHub HTTPS repo 連結，或留空。');return value;}
 export class Workbench {
- constructor(config,{fetcher=fetch,storage=sessionStorage,now=()=>Date.now(),changed=()=>{}}={}){this.config=config;this.fetcher=fetcher;this.storage=storage;this.now=now;this.changed=changed;this.epoch=0;this.recovery=null;this.state=this.empty();}
+ constructor(config,{fetcher=(...args)=>fetch(...args),storage=sessionStorage,now=()=>Date.now(),changed=()=>{}}={}){this.config=config;this.fetcher=fetcher;this.storage=storage;this.now=now;this.changed=changed;this.epoch=0;this.recovery=null;this.state=this.empty();}
  empty(){return {view:'login',session:null,user:null,projects:[],project:null,notes:[],draft:{plan:'',note:'',repo:''},newDraft:{name:'',summary:''},busy:false,loading:false,status:'',error:''};}
  emit(){this.changed(this.state);}
  async request(path,{method='GET',body,session=this.state.session}={}){
