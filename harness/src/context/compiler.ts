@@ -438,11 +438,7 @@ export class ContextCompiler {
     const loaded: LoadedEntry[] = [];
     const documents = new Map<string, Uint8Array>();
     for (const ref of uniqueRefs.values()) {
-      const boundary = {
-        ...input.boundary,
-        forbidden_scope: [...input.boundary.forbidden_scope, ...input.work_item.forbidden_scope],
-      };
-      loaded.push(await this.#load(ref, input.repository.root, input.execution_id, boundary, documents, input.work_item.read_scope));
+      loaded.push(await this.#load(ref, input.repository.root, input.execution_id, input.boundary, documents, input.work_item.read_scope));
     }
     loaded.sort((left, right) =>
       AUTHORITY_ORDER[left.context_class] - AUTHORITY_ORDER[right.context_class]

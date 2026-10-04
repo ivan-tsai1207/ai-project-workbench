@@ -1,0 +1,27 @@
+{
+  "execution_id": "01a105f5-5385-7f83-8189-01a09da6d2ec",
+  "session_sha256": "0f5726d84ce1e000c220791adfa8527c368441a63c188fc13cbef930f64c34f8",
+  "lifecycle": [
+    {
+      "timestamp": "2026-10-04T08:08:46.337Z",
+      "type": "task_started"
+    },
+    {
+      "timestamp": "2026-10-04T08:14:54.422Z",
+      "type": "task_complete"
+    }
+  ],
+  "probe": {
+    "timestamp": "2026-10-04T08:12:36.519Z",
+    "call_id": "call_vM7uN6CGv7Q199kTmKucDOfY",
+    "exact_runner_call": "text(await tools.exec_command({cmd:\"PATH=/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin:$PATH node --input-type=module <<'JS'\\nimport assert from 'node:assert/strict';import {ExecutionProfileBuilder} from './dist/index.js';import {fixture,hash,rawHash} from './tests/unit/risk/fixtures.mjs';\\nfunction setup(){const f=fixture();let repo={identity:'repo-1',root:'/virtual/repo',branch:'feature/test',commit:'a'.repeat(40)};const payload={schema_version:'harness.policy/v1',sources:[{path:'.ai/policy.md',sha256:rawHash(f.files['.ai/policy.md'])}],filesystem:{read:['.ai/**','work-items/**'],write:[],deny_write:[]},tools:{allow:[],deny:[]},commands:{safe_read:[],development_write:[],restricted:[]},environment:{allowed:[],denied:[]},approval_required:{operations:[]}};const policy={...payload,policy_hash:hash(payload)};const binding={status:'ACTIVE',work_item:f.wi,policy,risk:f.classifier.classify(f.input,f.policy)};let repoReads=0,mode='normal',moved=false;const host={repository:()=>{repoReads++;return {...repo};},binding:()=>binding,risk:f.authority,source:path=>{const result={canonical_path:repo.root+'/'+path,bytes:f.files[path]};if(!moved&&((mode==='compile-final'&&repoReads===2)||(mode==='build-final'&&repoReads>=1&&path===f.wi.source_path))){repo={...repo,commit:'b'.repeat(40)};moved=true;}return result;}};const compile={execution_id:'maker-probe',work_item:f.wi,repository:{...repo},sources:Object.keys(f.files).map(path=>({path,context_class:path.startsWith('work-items/')?'work_item':'governance',tier:'TIER_1_MANDATORY',reason:'bounded C5 boundary'})),boundary:{read_scope:f.wi.read_scope,policy_read_scope:f.wi.read_scope,forbidden_scope:[]},required_gates:f.wi.required_gates,initial_budget:{max_bytes:4096,max_files:10,max_sections:10},hard_safety_ceiling:{max_bytes:8192,max_files:20,max_sections:20}};const builder=new ExecutionProfileBuilder(host);const build=context=>({execution:{execution_id:'maker-probe',task_id:f.wi.id,role:f.wi.role,risk_class:f.wi.risk_class,feature:f.wi.feature,phase:f.wi.phase,adapter:'fixture'},repository:{identity:compile.repository.identity,root:compile.repository.root,branch:compile.repository.branch,commit_before:compile.repository.commit},work_item:{path:f.wi.source_path,hash:f.wi.document_hash},context,policy,gates:f.wi.required_gates,adapter_requirements:[],audit:{sink:'host',redaction_policy:'canonical',required_fields:['execution_id']}});return {builder,compile,build,setMode:m=>{mode=m;repoReads=0;},repository:()=>({...repo}),moved:()=>moved};}\\nconsole.log('START',new Date().toISOString(),'NODE',process.version,'RUNNER node --input-type=module (read-only inline C5 boundary)');const normal=setup();const context=await normal.builder.compile(normal.compile);const p=normal.builder.build(normal.build(context));assert.equal(p.repository.commit_before,normal.repository().commit);console.log('NORMAL stable compile/build PASS');const c=setup();c.setMode('compile-final');const cc=await c.builder.compile(c.compile);assert.ok(c.moved());console.log('COMPILE_FINAL acceptedContext',cc.context_hash,'compiledAt',c.compile.repository.commit,'current',c.repository().commit);assert.throws(()=>c.builder.build(c.build(cc)));console.log('COMPILE_FINAL later build rejects stale snapshot');const b=setup();const bc=await b.builder.compile(b.compile);b.setMode('build-final');const admitted=b.builder.build(b.build(bc));assert.ok(b.moved());assert.notEqual(admitted.repository.commit_before,b.repository().commit);console.log('BUILD_FINAL ADMITTED_STALE_PROFILE commit_before',admitted.repository.commit_before,'current',b.repository().commit,'hash',admitted.profile_hash,'deepFrozen',Object.isFrozen(admitted));console.log('END',new Date().toISOString(),'EXIT 0','3 scenarios; 2 counterexamples');\\nJS\",workdir:\"/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness\",max_output_tokens:2200}));",
+    "actual_result": {
+      "chunk_id": "7a66dd",
+      "wall_time_seconds": 0.306069792,
+      "exit_code": 0,
+      "original_token_count": 173,
+      "output": "START 2026-10-04T08:12:36.432Z NODE v24.19.0 RUNNER node --input-type=module (read-only inline C5 boundary)\nNORMAL stable compile/build PASS\nCOMPILE_FINAL acceptedContext sha256:1d0cb3888f13155eb5334ad035c5fb46e60438f7cb6d1d0731e203ff8a0c89d3 compiledAt aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa current bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nCOMPILE_FINAL later build rejects stale snapshot\nBUILD_FINAL ADMITTED_STALE_PROFILE commit_before aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa current bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb hash sha256:82d49cc23130f966c2029d3329e8c3cccdff7a9d02fb61ecb32109b76e893030 deepFrozen true\nEND 2026-10-04T08:12:36.466Z EXIT 0 3 scenarios; 2 counterexamples\n"
+    }
+  },
+  "notes": "Selected actual lifecycle and exact completed C5 probe only. No unrelated source-body/tool transcript or hidden reasoning copied. Probe exit0 means counterexample reproduced, not requirement PASS."
+}

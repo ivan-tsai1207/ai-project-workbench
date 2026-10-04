@@ -1,0 +1,4 @@
+
+> @ivan-tsai1207/ai-system-delivery-harness@0.1.0 build
+> tsc --project tsconfig.json
+

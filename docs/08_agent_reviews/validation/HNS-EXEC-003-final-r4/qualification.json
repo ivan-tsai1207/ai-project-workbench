@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-04T14:24:20.869Z",
+  "result": "PASS",
+  "inputs": 96,
+  "metadata_delta": [
+    "work-items/HNS-EXEC-003.md"
+  ],
+  "dist": 116,
+  "artifacts": 12,
+  "logs": 16,
+  "review_wis_parsed": 2,
+  "source": "52ce59dd4867f2f99db0a01386fba325e2266da5",
+  "tech_completion": "2026-10-04T13:27:05.681Z"
+}

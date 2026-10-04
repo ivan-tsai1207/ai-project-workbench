@@ -6237,3 +6237,355 @@ Raw evidence: [/private/tmp/hns-security-01a103ca-116f-7983-b8e0-79d4873b0401](/
 - Existing nonsemantic EOF warnings in historicalmanifest/controlplane/rawstdout retained, no reviewedhash rewrite or overall repository whitespacePASS. ChangedSDD whitespace and current closure-text scope check remain separate.
 - Finish commit/pushdevelop and preservedfeature, verifyremoteHEAD. Then STOP before EXEC-003 implementation/EXEC-004/Codex/Claude adapters/Pilot; no milestoneCOMPLETE/release/productionclaim.
 - Final closure checks04:26:19.106Z: canonicalWorkItemparse4/4, clarificationDONE/fourACchecked, both reviewassignmentsDONE/threeACchecked, original003TODO/allfourACunchecked.72/74 postmerge staticinputs unchanged; exactly primaryWI/CR metadata differ as binding.json declares;16/16 rawlogs unchanged. HNS001 fixturehash6dd149a33b1dfa807890fbcc34f258e473ae42d7933555e90187cb59f584730c, reviewedSDD/manifesthashes unchanged. Closureworkingdiffwhitespaceexit0 and exactfourcontrolplane paths verified; results in closure-checks.json. Current hostelapsed~449s/newchild0 within15min; remaining intended work only normalcommit/push/remote verification. No duplicate fulltest/review needed for status-onlymetadata with proven unchanged executableinputs.
+
+## HNS-EXEC-003-IMPLEMENTATION-ALLOCATION-001
+
+- Human approved next execution after contract closure; one primaryWI HNS-EXEC-003, HIGH, fourexistingACs, three required independentTECH/QA/SECURITY. No newrequirement/policy/architecture. Exact local/remote clean develop90f4ff4fe6479a4644723c33e153f7083e07ec88 and unchanged reviewedSDDhash90bbe07a15f8d4bd2ef33238b2300434ca600e02ae078561b1aabc0aa52c5933 verified, dedicated feature/hns-exec-003-implementation. Existing001/002 DONE and clarification LC-HNS-EXEC-003-CONTRACT-001 canonicalmerged.
+- Finite added allocation origin `2026-10-04T04:34:53.250Z`, deadline `2026-10-04T05:04:53.250Z`, elapsed/aggregateactive<=30min, maximum8 childattempts (Maker+3reviews, atmost1 correction+3newreviews only if remainingtimefits). Originalpreflight02:45:34Z/0childattempts preserved; complete historical activityunknown/notreset. Initial Maker hard9min, each reviewer hard4.5min, initial childmax22.5min and hosttarget6min, explicit hostpause during waits recorded/no hidden waiting deduction; elapsed neverpaused. Process host30min ceiling notexpanded. Dispatcherrors/cancellation/retriescount.
+- Maker scope only risk/**, execution/profile.ts, index.ts and authorizedrisk/profiletests; no source outside scope/schema/package/contextcompiler/SDD/governance changes. Existing constructor-injected host ports may coordinate actual compile privately within profilemodule; not genericfilesystem or callbackownerflag/callerregisterbypass. Type shapes/interfaces from frozenSDD. Producer/sourcehash receipts must refer actual compile and host source/repository port, unboundcallerassertion rejected. If material scope/specconflict detected stopOwner, no reinvention.
+- Parent owns workitem/reviewassignments/immutablemanifest/audit/status/commandpersistence, never sourceMaker/finalselfapproval. Required exactNode24.19.0/npm11.17.0 canonical ci/build/typecheck/test/audit-high, separateContext tests and explicitRisk focusedtests (npmtest excludesRisk but includes execution/profile), samecandidate/fullinputhash/rawlog qualification. Build once per candidate before probes, no parallel ci/build races. AllrequiredPASS/noOPENMAJORBLOCKING beforeGate/merge, freshpostmergevalidation beforeDONE. No profiledowngrade, fuzzytaxonomy/newgrammar or skippedtests.
+- Minimal canonicalcontext router/mandatorygovernance/activeRole/Gate/WI plus directSDD4/5.3/5.5/16.1/21/35/38/40.1/46 subsections and reviewedsource/tests on demand. Initial combinednavigation returnedtruncatedoptionaloutput; Constitution/Authority/router explicitly reloadedintact, mandatoryWorkflow/Implementer/Gate read. Contextactual/tokenaggregate null withouttelemetry, target not enforcement. No fullreview_log loaded.
+- Stop after003 closure; originalfiniteMinimalExecutionEngine scope remains with004pending, no Codex/ClaudeAdapter/Pilot/release or wholemilestoneCOMPLETEclaim. Stoplimits: nonPASS aftersolecorrection, newunrelatedMAJORBLOCKING, conflict/security/developdivergence/independentunavailable/budget insufficiency/exhaustion.
+
+## HNS-EXEC-003-IMPLEMENTATION-CHECKPOINT-001
+
+- Result BLOCKED / BUDGET_INSUFFICIENT, not implementation completion. Candidate `5629833c8f076aef5f6ad8592701128c2c789b53`, base develop `90f4ff4fe6479a4644723c33e153f7083e07ec88`, branch `feature/hns-exec-003-implementation`. Fresh Maker `01a10535-54ac-7693-b13a-9085abfc6ca3` returned BLOCKED. Exactly10 authorized source/test paths, existing tests preserved, binary diff sha256:c475101be4d7f7e1e4225c119717e9a66f944468941856bd446b3790a09d5d01. Verbatim Maker report and source hashes saved in validation/HNS-EXEC-003-r1; no fake Reviewer decision or Finding ID.
+- Three existing-AC blockers: full REVIEWER admission must verify current canonical artifact hash and registry execution binding (AC-002/004); every execution-relevant Profile field requires positive hash-change coverage (AC-003); changed-context fresh-compile lifecycle coverage remains incomplete (AC-003/004). Maker self-check, not independently reviewed findings or new scope. All four ACs remain unchecked; root status normalized IN_PROGRESS to BLOCKED.
+- Fresh exact Nodev24.19.0/npm11.17.0 validation on the candidate at2026-10-04T04:50:57.116Z-04:51:02.511Z: ci/build/typecheck/npmtest187/187, bounded Risk+Profile+Context23/23, audit-high0; all exit0, no skipped/cancelled/todo tests. Focused tests overlap the full suite; not210 unique tests.83 captured inputs stable,16 raw log digests verified,10/10 authorized source paths and source-only whitespace checkPASS. Inventory rawsha2569f04748e87dabb9a9036f2bd0ac65d45124679cf31931f153f937f9941b58bff; results rawsha25651470661baac8aa0ba94b6b952540f4d240619c1adc5907b454b119861458015. Validation does not establish missing AC coverage or independent approval.
+- Maker dispatch04:39:03.592Z, hard deadline04:48:03.592Z, actual lifecycle task_complete04:48:30.988Z: finalization27.396s late. Source commit04:47:44Z preceded deadline, but does not prove timely completion. Failure preserved without waiver or Accepted Risk. Agent closed; no known active Maker/reviewer/validation session.
+- Finite allocation origin04:34:53.250Z/deadline05:04:53.250Z, elapsed and aggregateactive ceilings1800s. Explicit host pauses04:39:52.531Z-04:46:26.129Z and04:47:04.532Z-04:49:48.278Z total557.344s; wallclock and childtime still count. At04:52:38Z elapsed1064.750s, unpaused host507.406s + Maker567.396s + conservative management allowance60s =1134.802s, remainingactive665.198s before checkpoint overhead. Three mandatory reviewer hard bounds alone810s; correction plus those reviews/Gate/merge/closure cannot fit. Stopped production, not silently reduced review bounds or expanded budget. Checkpoint preservation only follows; no claim of complete historical activity telemetry or timely finalization.
+- Counters1/8 childattempts, reviewers0, remediation0/1; unused correction remains conditional, not permission for another dispatch after budget insufficiency. Original preflight02:45:34Z and prior records unchanged; no reset. Token actual/complete context telemetry unavailable (null), targets not hardcaps. Mandatory context and direct bounded sections only; no full historical review_log or open-ended probes.
+- No TECH/QA/SECURITY execution, Implementation Gate, develop merge, postmerge validation or lifecycle closure for this implementation. No immutable review-ready manifest issued for an admitted complete candidate. Reviewed clarification SDD/manifest and existing001/002 evidence unchanged; nonblocking FND-HNS-EXEC-002-SECURITY-003-001 remainsOPEN. Root003 metadata changes after captured validation are explicitly distinguished from unchanged executable inputs; no false final-byte invariance.
+- Parent checkpoint-only changes: root003 status/blockers/notes, append this evidence, save raw validation/report/binding. No source remediation, schema/package/governance/SDD/main/develop edits. Normal feature commit/push/upstream and remoteHEAD confirmation preserve local evidence without forcepush/squash. Minimal Execution Engine remainsPARTIAL; stop before003 further production,004/adapters/Pilot. Resume requires an explicit finite sufficient allocation and complete mandatory qualification, not a new requirement or automatic loop.
+- Final checkpoint invariance check:82/83 captured inputs unchanged; sole expected difference primary003 metadata.10/10 candidate source hashes and16/16 raw logs unchanged, allfourACunchecked/BLOCKED, develop/sourceHEAD/ancestry verified. Checkpoint staged whitespace check exit2 only for unmodified raw build/typecheck EOF blank lines and verbatim Maker Markdown hard-break spaces/EOF; raw evidence preserved, no overall whitespacePASS fabricated. Tracked controlplane working diff whitespace check exit0. A first inline static-check invocation failed at shell quoting before execution; corrected read-only invocation above passed, no source change or Maker attempt.
+
+## HNS-EXEC-003-IMPLEMENTATION-RESUME-002
+
+- Human requested continuation after CHECKPOINT-001; exact clean local/remote feature68eb8014470e1c05c269f9a199631386985401a4 and develop90f4ff4fe6479a4644723c33e153f7083e07ec88 verified. Existing candidate/history preserved. Only three existingAC blockers addressed by one fresh correctionMaker; RiskHIGH/securityboundary requires TECH+QA+SECURITY. No newscope/architecture/governance/contract.
+- Added finite increment07:10:21Z-07:40:21Z elapsed/aggregateactive<=30min, max4newattempts: Makerhard8min + three reviewerhard4min each; childmax20min/hostallowance9min/reserve1min. Existing1/8attempts and0/1remediation retained; afterdispatch correction1/1 exhausted, no automatic retries. Originalpreflight02:45:34Z/previousallocation/27.396sMakerfinaloverrun unchanged, completehistoricalactivityunknown. Explicit host pauses documented beforewaits; elapsed/childactivitycount. No enlargement of processruntimeceiling. Fresh independent singleprofile execution for each review, no Maker selfapproval.
+- Parent handles allocation/assignment/manifest/commandpersistence/Gate/merge/closure; no sourceedit by parent. Maker only original003authorizedsource/tests; docs/.ai/workitems/packages/contextcompiler/main prohibited. Local immediate work is controlplane preparation and exactruntimevalidation setup while correctionMaker independently repairs the three alreadyknownAC gaps. No duplicate sourceexploration/probes.
+- Completionconditions: MakerREADY with completeACmapping/selfreview, immutablecandidate+fullinput/rawlogsqualification, exactNode24.19.0/npm11.17.0 canonicalci/build/typecheck/test/audit-high plusRisk/Profile/Context, allthree independent currenthashPASS/noOPENMAJORBLOCKING, ImplementationGate, normaldevelopmerge only ifunchanged, samefreshpostmergevalidation, lifecycleDONE/remoteverify. Each execution includesfinalreport inhardbound; no shrinkingrequiredchecks tofit. NonPASS aftercorrection/newMAJORBLOCKING/conflict/security/divergence/unavailable/budget stopscheckpointonly.
+- Mandatory router/governance/WI/role/Gate/fullprofile plus directSDD5.3/5.5/16.1/21/35/38/40.1/necessaryHarnesssections; optional combinedoutputtruncation must be repaired bydirectselection, not usedtoskipmandatorycontext. TokenTARGET20,000 shared/actualnull, initialcontexttarget16files/24units/64KiB, bytesnotTokens. No fullreview_log/openendedfuzzing. Increment only003; milestonePARTIAL/004pending, noadapters/Pilot/release.
+
+## HNS-EXEC-003-IMPLEMENTATION-CHECKPOINT-002
+
+- Result BLOCKED / HUMAN_DECISION_REQUIRED; no fullWI or milestonecompletion. Fresh correctionMaker01a105c1-8580-7c70-af1c-555ff65aad5d returnedREADY_FOR_REVIEW, candidate52b9dcbae50dd573ade54046c5e5dfe66bf33ae8. Exactlythree authorizedcorrectionfiles risk/review.ts, execution/profile.ts, execution/profile.test.mjs; original10sourcepaths scoped/whitespacePASS, all oldtests preserved. Three knownAC gaps addressed perMaker: trustedcanonicalReviewer/currentartifact/registry/execution verification,38 positiveProfilefieldhashcases, changedcontextactualcompile/lifecycle negatives. No newrequirement/architecture, noMaker selfapproval.
+- Immutable R2 manifest docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r2.md sha256:448394b05c9f435125665148eb03d7583f981ce32860f5005cf93631403d2110. Sourcebinarydiffsha25619fc99ef200037c9cd5943ff9f1a0630f1eed1a798699f0ecbbb03dff4bb23f6. Fresh parent exactNodev24.19.0/npm11.17.0 ci/build/typecheck/npmtest228/focusedRisk+Profile+Context64/audit-high0 all exit0/no skip/cancel/todo,07:19:15.605Z-07:19:21.332Z.96 inputs stable/16 rawlogdigests verified. Inventorysha2562a1a271b8f29e610c8065f7a3df6ee4bc5c0b392e82a04a656d8511e2a1cd850; resultssha256d614af4e397da98811b0c88b662d81a740af892cd1fe5da2c5255a2e50352092. Focusedtests overlapfullsuite, not292 unique.
+- Actual independentTECH01a105c9-cf68-7273-a53c-c7c74dad3ea9 differsfrombothMakers. Dispatch07:21:14.341Z/taskstarted07:21:14.446Z; narrowedhard07:25:14.341Z, finalizationwarning07:25:07Z thenhostclose/actualturn_aborted07:25:26.424Z. Timeoutovershoot12.083s preserved, no timelycompletion claim. ActualReviewer remainedrunning whenclosed; no finalPASS/REQUEST_CHANGES/BLOCK/report or formalFinding exists. Partialselected visiblechecks in tech-partial.json include96input/10artifact/16loghashqualification, freshfocused64/64, fourriskbaselines resolver/executionnegative/missingprofilenegativePASS. Partialchecks do not substitute independentapproval. No QA/Security dispatched.
+- TECH explicit unfinishedarea: complete dist/source provenance qualification; current116builtfiles inventorydigest5a40ef07dc3aa4ae6ad75e87be53d560c6e8ef23e608c19ca76a34795d755430,29sourcemaps/sourcepathsexist and stableinputs reported, butcanonicalrunner doesnotpersistdistdigest. Not a newarchitecture requirement or fabricatedFinding; no parentdeclaredclosed/PASS. Followupmust qualify complete mandatoryevidence beforeanyGate. No sourcepatch/rebuild/probe/reviewretry aftertimeout.
+- Canonical assignments TECH/QA/SECURITY-REVIEW-001 createdbeforedispatch andbound to exactmanifest/Maker. TECHstatusBLOCKED/all3ACunchecked; QA/SecurityTODO/notrun. Primary003BLOCKED/all4ACunchecked pendingcompletequalification. Makerverbatimreport saysremediation0 androundedlaterdeadline; controllingparentcountercorrection1/1, parenthard07:20:11.256Z, completionobserved07:19:15.209Z withinbound. OriginalR1latefinalization retained; no fakeReviewerWIs/retrospectiveapproval/historyrewrite.
+- RESUME-002 origin07:10:21Z/deadline07:40:21Z preserved. Explicit hostwaitpauses07:14:28.530Z-07:19:15.209Z and07:21:14.451Z-07:25:26.446Z total538.674s; elapsed/childactivitystillcount. Atcheckpoint07:28:24.724Z elapsed1083.724s/conservativeactive1281.108s including60s managementallowance, under1800s increment ceiling beforelatercheckpointoverhead. Wholeincrement NOT claimedexhausted: stopfollowsnarrowedTECHbound/incomplete mandatoryreview/noautomaticretry. Totalattempts3/8 (2Makers+interruptedTECH); increment2/4; solecorrection1/1exhausted, remainingmandatory2reviewprofiles+completeTECH+Gate/merge/postmerge/closure. Historicalcompleteaggregateactivityunknown/originalpreflight02:45:34Z/notreset.
+- Parentplanningfailure:4minreviewcap too tight for complete qualification/finalreport; timeoutcancellation12.083s late. SerializationofJSfunctiontemplate failedbeforetextreplacement; onepartialevidenceJSON retrievaltruncated, repeatedonlynarrowvisiblechecks/lifecycle/probeprefix. No hiddenreasoning/transcript/sourcecopied, no falsecompliance. Tokenactual/contextaggregate null/missingcomplete telemetry, targetsnotprecisecaps. Initialmandatory intact/directsections/on-demand; no fullreview_log/generalizedfuzzing. Extra source read request for nonexistent work-items/types.ts returnedmissing; existingindex/parserfixture read only, nofileschanged.
+- Evidence sources/rawlogs/manifest/source/dependencies/governance/SDD unchanged duringcheckpoint; root003 andTECHWIstatusmetadata explicitlypostvalidation, notfalselybyteidenticalsnapshot. Parentonlystatus/audit/partialbindingpersistence. No IndependentGate/merge/postmerge/lifecycle, develop remains90f4ff4fe6479a4644723c33e153f7083e07ec88/mainuntouched. Known FND-HNS-EXEC-002-SECURITY-003-001 remainsOPEN/nonblocking; reviewincomplete meansno globalzeroFindingclaim.
+- Normalfeaturecommit/push/upstream/remoteverificationpreserve candidate/history withoutforce/squash. Stopbeforefurtherreviews/source004/adapters/Pilot. Remainingfixedscope is pendingindependentqualification andnormalGate/merge/closure, notnewfeatureexploration; anyresume requiresfiniteallocationwithreport/closurebuffer andnoautomaticnewcorrection.
+- Parent final controlplaneparse exposed its own assignment reference error: allthree REVIEW-001 RequirementReferences linked a trailing-slash validationdirectory, not a canonical file. Corrected only that evidencepointer to existingresults.json afterTECHinterruption; old committedassignmenthistory preserved, source/manifest unchanged, nofakeapproval. Initialparsefailed4/4 because sharedregistrycontainedinvaliddirectory; corrected fourWIparsesmustPASS beforecheckpointpush. This is an orchestration defect, not a newimplementationFinding or sourcecorrection; no additionalReviewer execution authorized.
+- Final correctedcanonicalparse4/4PASS: primary003BLOCKED/allfourACunchecked, TECHBLOCKED/allthreeACunchecked, QA/SecurityTODO/unexecuted. Captured executable/staticinputs95/96 unchanged (onlyroot003metadata differs),10sourcehashes/16rawloghashes/immutablemanifest unchanged. Exactsevenparentcheckpointpaths only; changedmetadata whitespacePASS. Original committedrawbuild/typecheckEOF/MakerMarkdown whitespace retained, not overallhistoricalwhitespacePASS. Finish normalfeaturecommit/push/cleanremoteverification only.
+
+## HNS-EXEC-003-REVIEW-CLOSURE-RESUME-003
+
+- Human approvedcontinuation of fixedremaining003qualification/closure; exactcleanlocal/remotefeaturec944f10f4beaee335566d3d7dfe287df3c0f4f2f anddevelop90f4ff4fe6479a4644723c33e153f7083e07ec88 verified. Unchangedcandidate52b9dcbae50dd573ade54046c5e5dfe66bf33ae8/manifestsha256448394b05c9f435125665148eb03d7583f981ce32860f5005cf93631403d2110. Source/contract/correction preserved. R1/R2 and interruptedTECH evidence remainhistorical, no fakefinaldecision.
+- Added finite increment08:03:46Z-08:33:46Z, elapsed/aggregateactive<=30min; 3newreviews only, noMaker/source/correction. Existingattempts3/8/correction1/1, newTECH-002 thenQA-001/Security-001 eachhard6min includingreport, childmax18min/host10min/reserve2min. Originalclocks/historyunknownaggregate/latefinalizations retained, no reset/hostceilingexpansion. Explicit hostpausestart/end whilewaiting, elapsedandchildactivitystillcount. Any nonPASS/newMAJORBLOCKING/conflict/security/divergence/incompleteindependence/budget stopsHuman, noautomaticretry.
+- Immediateparentwork: fresh exactruntimecanonicalvalidation plus boundedcompiledoutputinventory/provenance and initialcanonicalassignmentparse. SeparateTECHexecution reviewsallfourAC/threeknownMaker gaps/source/testscope. QA/Security onlyafterTECHPASS; allthree currenthashPASS/noOPENMAJORBLOCKING beforeImplementationGate, normalno-ffmergeunchangeddevelop, freshsamepostmergecommands, lifecycle/remoteverification. No productionGateRunner/adapter/enforcement/crawler or newrequirements. Parentcannot selfapproveasReviewer.
+- Mandatoryrouter/Constitution/Authority/Workflow/role/assignedWI/Gate/fullprofile anddirectSDDsections; combinedoptionaloutputtruncationdoesnotwaivemandatorycontext (Workflowreloadedintact). Initialtarget16files/24sections/64KiB, sourceon-demand, nofullreview_log/newfuzztaxonomy. TokenTARGET20,000 aggregateactualnull/missingtelemetry, no hardtokenclaim. SameexistingRiskHIGH/securitytriggerTECH+QA+SECURITY; no addedunnecessaryprofile.
+- Stopafter003closure; originalMinimalExecutionEnginemilestone remainsPARTIALuntil004. NeverstartCodex/ClaudeAdapter/Pilot/releasefromthisallocation.
+
+## HNS-EXEC-003-TECH-REVIEW-002-EVIDENCE-001
+
+| Field | Value |
+|---|---|
+| Reviewer execution / Profile / Risk | 01a105f5-5385-7f83-8189-01a09da6d2ec / TECH_REVIEWER / HIGH |
+| Makers | 01a105c1-8580-7c70-af1c-555ff65aad5d / original01a10535-54ac-7693-b13a-9085abfc6ca3 |
+| Assigned Work Item | HNS-EXEC-003-TECH-REVIEW-002 |
+| Reviewed candidate | 52b9dcbae50dd573ade54046c5e5dfe66bf33ae8 |
+| Immutable manifest | docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r2.md |
+| Manifest hash | sha256:448394b05c9f435125665148eb03d7583f981ce32860f5005cf93631403d2110 |
+| Reviewer decision | REQUEST_CHANGES |
+| Full evidence / exact bounded probe | validation/HNS-EXEC-003-review-resume-003/tech-review.md / tech-c5-probe.json |
+
+| Finding ID | Profile | Owner | Work Item | Requirement | Description | Severity | Status |
+|---|---|---|---|---|---|---|---|
+| FND-HNS-EXEC-003-TECH-002-001 | TECH_REVIEWER | IMPLEMENTER | HNS-EXEC-003 | SDD21/C5; AC-HNS-EXEC-003-004 | Final host source reads can move repository A to B after repository comparison; build admits a stale A Profile, compile can issue an already-stale receipt | MAJOR | OPEN |
+
+- Exactboundreproduction: normalstablecompile/buildPASS; compile-finalreadtransitionissuescontext/receiptA whilecurrentB (laterbuildrejects); build-finalWorkItemreadtransitionreturnsimmutableProfileA whilecurrentB. Actualprobe08:12:36.432Z-08:12:36.466Z, exactNodev24.19.0/read-onlyexistingfixtures/currentdist,3scenarios/twocounterexamples, exit0meansreproductioncompleted NOTcanonicalC5PASS. Requiredaction under separatelyauthorizedremediation: finalrepository/binding checks coverlastsource/authorityreads beforeprivate receiptregistration/Profileadmission, boundedregressions for exacttransitions. No newrequirement/architecture/generalizedattackgrammar or AcceptedRisk.
+- Reviewerqualified10sourcehashes/96inputs/16current+16R2rawlogs/116builtfiles/runtime/candidate→testedsourceinvariance, distdigest5a40ef07dc3aa4ae6ad75e87be53d560c6e8ef23e608c19ca76a34795d755430. Freshfocused64/64 andboundedthreeC5scenarios, fullfourACreview. AC001/002/003PASSassessment; AC004FAILED. Three priorMakergaps passedbutdoNOTclosethisnewFinding. Completeverbatimreport andexactcommand/output persisted; parent doesnotinvent independentdecision/retest or downgradeFinding.
+- Actualtaskstarted08:08:46.337Z, parentdispatch08:08:46.209Z/hard08:14:46.209Z, actualtaskcomplete08:14:54.422Z:8.213s latefinalization. Productionprobe/lastintegrity08:13:23 beforehard, report timestampislastcheckNOTtaskcompletion. Retainoperationalnoncompliance/no timelycompletionwaiver. BothMakersdifferent, no source/dist/repositorywrites or agent spawning. Allthree assessmentACschecked butTECHWIStatusBLOCKED preservesfailedartifact/latefinalization, not DONE/PASS.
+
+## HNS-EXEC-003-IMPLEMENTATION-CHECKPOINT-003
+
+- Stop REVIEW_LOOP_LIMIT_REACHED - HUMAN REVIEW REQUIRED. RequiredTECHREQUEST_CHANGES/newOPENMAJOR aftersolecorrection; QA/Securityundispatched, ImplementationGate/merge/postmerge/lifecycleNOTRUN. Primary003BLOCKED/fourACunchecked. Totalattempts4/8 (twoMakers, interruptedTECH001, completeTECH002), correction1/1exhausted; thisincrement1/3attempts. No newautomaticMaker/R3/reviewer/Gate dispatch. Originalclocks/counters/history/failuresretained. RemainingfixedactionrequiresHumanexception namingFND-HNS-EXEC-003-TECH-002-001 andfiniteallocation; notAcceptedRisk/newscope/skipgovernance.
+- Freshparent Nodev24.19.0/npm11.17.0 validation08:06:40.792Z-08:06:45.988Z allrequiredci/build/typecheck/npmtest228/focusedRisk+Profile+Context64/audit-high0PASS/no skip/cancel/todo; focusedoverlapnot292unique. Testedcommita25dd12616768d2374f749d79fc33fda45a17f31 boundtounchangedsourcecandidate52b9; onlyprimary003metadata differsfromoldR2inputs. Successfulbuild/testrebuilddistinventoriesidentical,116files/boundedgenerateddistonly/nosymlinks/crawloutsideoutput. Inputinventorysha256931ddbeb69996daf6c809f6c5a7a3014aba6e939f7859fb9c840ebe8e560eaf7, resultssha2561cec15bbf3e062eb971b3d6fcdfd66e62a856d415994859ae69971bff68cda5f, dist.jsonrawsha25645202fbf587c30c0e570394f7e487b91b199b9426df4151ac3fe5796de03e538. Rawrecordsinvalidation/HNS-EXEC-003-review-resume-003; oldimmutablemanifest/logsunchanged.
+- Increment08:03:46Z-08:33:46Z/max1800selapsed+aggregateactive, explicit hostwait08:08:46.350Z-08:15:36.270Z, elapsed/childactivetimecount. At08:19:25.663Z elapsed939.663s/conservativeactive957.956s including60s managementallowance; underincrementboundbeforecheckpointoverhead, notclaimwholebudgetexhausted. Completehistoricalaggregateactivity/token/context unavailable/null; originalpreflight02:45:34Z preserved. Source/reviewnonPASS stoptakesprecedenceoverremainingtime.
+- Parentonlyallocation/WIs/validation/auditstatus/evidence, no source/tests/packages/schemas/governance/SDD/manifests/main/develop edits. BeforedispatchcanonicalassignedfourWIparse4/4PASS; afterreviewonlyprimary/TECHmetadata changed. Fullmandatorycontext/directrequirements/on-demandsource; nofullreview_log/fuzzing. Combinedoptionaltruncationreported, mandatoryWorkflowreloadedintact; Reviewer reportsmandatoryTier1rereadintact. Initialtarget16files/24selections/64KiB andtokenTARGET20,000notactual/hardcap. Firstselectedprobejournaloutput includedunrelatedsourceblockandtruncated; finaldurableextractonlyactualC5command/result/lifecycle, no hiddenreasoning/history/sourcebodycopied. Draftmilliseconds corrected immediatelytostoreddispatch+. No retrospectiveprocessPASS.
+- Candidate/manifest/source/dist/input/rawlog invariance andfinalfourWIparse/scopecheckmustfinishbefore normalfeaturecommit/push/cleanremoteHEADverify. Rootstatusmetadata aftertestexplicitlynotbyteidenticalsnapshot. develop remains90f4ff4fe6479a4644723c33e153f7083e07ec88; noforcepush/squash/historydiscard. Existing FND-HNS-EXEC-002-SECURITY-003-001 remainsOPEN/nonblocking; no globalzeroFindingclaim. SavecurrentFindingratherthanclaimHNS003/milestonecomplete, stopbefore004/adapters/Pilot.
+- Final checkpointchecksPASS: fourcanonicalWIparses (primaryBLOCKED/all4ACunchecked; TECHBLOCKED/all3assessmentACchecked; QA/SecurityTODO/notrun), unchangedsource/manifest/116distfiles/16rawlogs,95/96staticinputs unchangedonlyexpectedrootmetadata. Scopeonlythreeexistingcontrolplane paths +fournewreview/probe/checkpoint/checkfiles. Verbatimreportsha2568831ae9329a16478591fc960d8e26356c1a5f7713e971f081e4976dcf8a3345e; exactprobesh a25692979b68b2f671687e3a61e9fa2eebb6d941b41861ca51eb9270c5815e31fe06 (serializedJSONevidence, notsourcehash). Changedmetadata whitespacePASS, rawhistoricalwhitespacewarningsretained/nooverallPASS. Parentonlynormalcommit/push/remoteverifyremains; no furtherproduction.
+
+## HNS-EXEC-003-HUMAN-TARGETED-REMEDIATION-001
+
+- HUMAN-TARGETED-REMEDIATION-001: Human "繼續修正" authorizes exactly one extra Maker for FND-HNS-EXEC-003-TECH-002-001, not Accepted Risk or architecture change. Added finite allocation 2026-10-04T08:36:08Z-09:06:08Z, elapsed and cumulative active <=30min; prior clocks/activity limitations and4/8 attempts/automatic correction1/1 preserved. At most4 additional attempts: targeted Maker and fresh TECH/QA/SECURITY; total8/8. Exception0/1 before dispatch. Maker hard3min; Reviewers hard5min each including final report; childmax18min/host11min/reserve1min. Explicit host waits logged, child/wallclock counts. Maker writes only profile.ts/profile.test.mjs for final repository/binding check and exact regression boundaries. All canonical ACs/known regressions, no open-ended probes/full review_log. Fresh exact Node24.19.0/npm11.17.0 ci/build/typecheck/test/audit-high plus focused Risk/Profile/Context; new immutable manifest/candidate/hash; TECH then required QA/Security; all PASS/no OPEN MAJOR/BLOCKING before ImplementationGate/unchangeddevelop merge/freshpostmerge/lifecycle. Same Finding unresolved => TARGETED_REMEDIATION_FAILED; new unrelated MAJOR/BLOCKING => NEW_MAJOR_FINDING; budget/conflict/security/independence/divergence also stop. No retry/remediation. Token TARGET20,000/actualnull without aggregate telemetry, mandatoryTier1 intact/directsections/on-demand16files/24units/64KiB target. Stop after003, not004/adapters/Pilot.
+- Preflight clean feature b74f9e43cf699528f4b8dab522c35dabde84eab6 with upstream; local/remote develop90f4ff4fe6479a4644723c33e153f7083e07ec88 unchanged. Named historical TECH evidence remains untouched. Parent owns metadata/evidence only, source repair is a fresh Maker.
+
+## HNS-EXEC-003-TECH-REVIEW-003-EVIDENCE-001
+
+- Actual independent TECH execution 01a10619-ced3-7f91-a776-bbcf150eee6c, Maker 01a10614-5ce0-7992-9ee6-065deba61fe0, exact R3 candidate 8e4c06650d13ead12a66eb02cb9e681e862b504a, manifest docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r3.md / sha256:6b92a4c829c0fdc70c00fc8ad3da65332ca1bd5fdd5d63d2fdf41829855adc02. Complete technical decision PASS, all four ACs and resolved regressions assessed; no new MAJOR/BLOCKING finding. Full returned report preserved unchanged in docs/08_agent_reviews/validation/HNS-EXEC-003-targeted-r3/tech-review-late.md.
+- FND-HNS-EXEC-003-TECH-002-001: RESOLVED in independent technical assessment of this candidate. Final host source/authority movement now rejects before private receipt/admission; same-key compile and changed valid Profile recovery prove no state reservation. Six independent bounded C5 scenarios PASS08:51:18.990Z-08:51:19.050Z, exact Node24.19.0/exit0, raw command/result at docs/08_agent_reviews/validation/HNS-EXEC-003-targeted-r3/tech-c5-probe.json; fresh focused69/69, original38 valid field-change regressions preserved.
+- Reviewer qualified all96 inputs against candidate/current files,16 raw logs/116 compiled output hashes and complete inventory; parent canonical exactNode24.19.0/npm11.17.0 ci/build/typecheck/test233/233/focused69/69/audit0 PASS08:45:28.206Z-08:45:33.710Z. No reviewer source/dist/repo writes or build/ci race. Reviewed source changed only9lines plus62testlines in two authorized paths; all10 original candidate paths authorized, frozen packages/schemas/SDD/governance unchanged.
+- Operational NONCOMPLIANCE: parent hard08:53:37Z; actual final-answer journal timestamp08:53:58.770Z,21.770s late. No task_complete event; aborts08:54:00.714Z/08:54:00.763Z,23.763s stopovershoot preserved. Last internal reportclock08:53:07 is NOT completion. Parent recovered late final-answer from this exact execution journal after cancellation; it is technical evidence, not timely-completion/Gate approval/waiver. Assessment ACschecked but TECH WI BLOCKED. This stop is operational, not new source defect/requirement.
+- Reviewer reports optional navigation returned unrelated review-log headings/truncated output; relevant canonical sections subsequently intact. Initial12 full-document units62,220bytes plus direct sections/source on demand, not a complete aggregate context or pristine compliance claim. No fullreview_log loaded. Exact aggregate token/context usage unavailable/null; no hard token guarantee.
+
+## HNS-EXEC-003-TARGETED-CHECKPOINT-004
+
+- STOP HUMAN_DECISION_REQUIRED - REVIEW_FINALIZATION_TIMEOUT, no automatic re-review/newsource cycle. Primary003BLOCKED/fourACunchecked; named source Finding technicallyRESOLVED, QA/Security002TODO and NOTRUN; ImplementationGate/merge/postmerge/lifecycleNOTRUN. develop90f4ff4fe6479a4644723c33e153f7083e07ec88 unchanged. Newsourcecandidate preserved, originalR1/R2/manifests/evidence/history retained, normalfeaturepushonly.
+- Attempts6/8 (three Makers, interruptedTECH001, completedTECH002, late-finalTECH003); automatic remediation1/1 exhausted, extraHuman targetedremediation1/1 consumed. Added increment2/4 attempts; no reset of original02:45:34Z/predecessorallocations/unknown historicalaggregate. Maker actual08:42:40.335Z-08:45:15.572Z within08:45:40 bound, newTECH08:48:37Z through08:54:00.763Z. Atcheckpoint elapsed1304s, explicit hostwait362s, conservativeaggregateactive1481.335s including60s managementallowance; under30min shared increment beforecheckpoint overhead. Full pauseintervals/counters/limitations in docs/08_agent_reviews/validation/HNS-EXEC-003-targeted-r3/checkpoint.json; not claiming overallhistory bound met.
+- Parent-only status/evidence persistence; no further source/tests/dependency/SDD/schema/governance changes. Fresh fourassignedWIparse beforedispatch4/4PASS. Metadatachanges aftertests explicitly not byte-identical to captured primaryWI input; immutable reviewedsource/manifest and rawlogs/dist must remain unchanged. TokenTARGET20,000/actualnull missingcompleteaggregate telemetry. Historical nonblocking FND-HNS-EXEC-002-SECURITY-003-001 remainsOPEN; no globalzeroFinding claim. No004/adapters/Pilot dispatch.
+
+## HNS-EXEC-003-CONSOLIDATED-PREFLIGHT-005
+
+- CONSOLIDATED-PREFLIGHT-005: Human requests complete bounded defect inventory/adjustment BEFORE formal review. Conservative preflight origin2026-10-04T09:05:00Z (not asserted exact), finite added allocation ends09:35:00Z, elapsed/cumulativeactive<=30min; preserve original02:45:34Z clocks,6 dispatched attempts, automaticcorrection1/1 and namedHumanremediation1/1 exhausted, historicalaggregateunknown. First consolidate all four003ACs, knownriskmodel/SDD R1-R5/C1-C6, positive38field/lifecycle/Reviewer regressions, source-dependency-scope/hash/runtime/evidence checks and004dependency/readiness as remaining work, not implemented functionality. No formalreview until consolidated self-check has no OPEN MAJOR/BLOCKING/specconflict; any new defect is recorded together, no unapproved source correction cycle or piecemealreview. Parent writes only WI/audit/validation evidence; source/contract/package edits not part of preflight. Fresh exactNode24.19.0/npm11.17.0 ci/build/typecheck/test/audit-high/focused Risk-Profile-Context. If ready, finite review-only continuation max3 fresh required profiles TECH/QA/SECURITY, eachhard6min includingreport(target4.5min), childmax18min/host11min/reserve1min; total9 attempts with preserved6 historical (explicit added3, noreset), no Maker/retry. Fresh TECH needed for actual completed timely execution after interrupted/lateTECH003; oldtechnicalPASS/Findingclosure retained, not rewritten as timely. Shared tokenTARGET20,000/actualnull withoutaggregate telemetry. Reuse exactimmutableR3 candidate only ifallsource/manifesthashes unchanged; fresh readonlyreview probes no buildrace/fullreviewlog/fuzzing. AllrequiredcurrentPASS/noOPENMAJORBLOCKING beforeImplementationGate/normalmergeonlyunchangeddevelop90f4ff4fe6479a4644723c33e153f7083e07ec88/freshpostmerge/lifecycle/remoteverify. Budget/security/conflict/divergence/unavailable/newMAJORBLOCKING/nonPASS stop with consolidated evidence; no automaticrepair/retry. Stopafter003,004readinessinspection only, no004implementation/adapters/Pilot.
+- Preflight currentcleanfeature4c591f06dd229e069488ac7f979d631d61051688/upstream; no source changes. This request changes sequencing/time allocation, not canonical architecture/governance/ACs. Initial optional multi-section extraction exceeded output budget; missing directSDD16.1/21/35/38 reloaded intact. MandatoryTier1 retained; no fullreview_log/history loaded.
+
+## HNS-EXEC-003-CONSOLIDATED-CHECKPOINT-005
+
+- Complete bounded pre-review inventory at docs/08_agent_reviews/validation/HNS-EXEC-003-consolidated-005/consolidated-inspection.md; parent/Maker self-check, NOT independentreview. Four003ACs/SDD R1-R5/C1-C6/38field/regression/source/realdependency/evidence checks considered together. Fresh exactNode24.19.0/npm11.17.0 ci/build/typecheck/test233/focused69/audit0,8bounded routingprobesPASS; actualcanonicalWorkItem read integration FAILS. Green unitfixtures do not establish actualworkflow acceptance. No new formalReview/spawn/sourcecorrection after finding.
+- FND-HNS-EXEC-003-PREFLIGHT-005-001 MAJOR/OPEN, ownerIMPLEMENTER/dependencyHNS-EXEC-002: canonicalWorkItem ForbiddenScope is write-only pertemplatecomment/rule17, butcontext/compiler.ts441-445 appends it toread-forbidden boundary. Parsedactual003withhostreadforbidden=[] rejects .ai/CONSTITUTION.md andassignedWorkItem asHNS-CTX-002/FORBIDDEN_SCOPE. Isolationcontrol removingonlywrite-deny input succeeds; NOT runtimepermissionchange. Exactreproducer/results in real-work-item-probe.mjs/.result.json, completed09:16:42.731Z, exit0meansreproduction notcanonicalPASS. Proposedfixonlycontext/compiler.ts+context/compiler.test.mjs, preserveexplicit read-deny/ReadScope/allwrite-deny; outside003WriteScope andrequiresnamedHumanexception/finite ownerallocation, no automaticnewsourcecycle.
+- STOP NEW_MAJOR_FINDING - HUMAN REVIEW REQUIRED. Attempts6 preserved/additionalreviews0of3, automaticremediation1/1 andHuman target1/1 exhausted; no counters/clocks reset. Root003BLOCKED, all4ACunchecked; previousTECHtechnicalPASS/C5closure/21.770slateness/history/manifests unchanged. NoQA/Security/Gate/merge/postmerge/lifecycle/004/adapters/Pilot. develop90f4ff4fe6479a4644723c33e153f7083e07ec88/main/source unchanged. ExistingEXEC002nonblockingobservation remainsOPEN; newly confirmeddependency defect is separate. TokenTARGET20k/actualnull/fullaggregatecontextunknown; no all-defects-eliminated claim. Finalboundedcheckpointscope/hash/normalfeaturepush/remoteverification remain.
+- Final checkpoint checks PASS:95/96 validationinputs unchanged exceptroot003status/blockerNotes,116distfiles/16rawlogs/currentR3manifest unchanged; harness/.ai/template/SDD/packages no source delta. Evidence commit5106f2c1078fec22b21e5d9cd327aa617279b3a6 normallypushed/remoteverified, cleanfeature andunchangedremotedevelop. At09:22:49Z conservativeincrementelapsed/hostactive1069s, children0/explicitpauses0; no known30minsharedcapexhaustion, stopreasonisnewMAJOR/scope. Planned11minhostreservation exceeded during consolidatedinspection/checkpoint while18minreviewallocation unused; recordplanningdeviation, notpristineplancompliance or newtimeallowance. Historicalaggregateunknown. One explicit named two-file owner002repair approval question submitted; sourcefix/newreview must await Humandecision, no automatic continuation.
+
+## HUMAN-HNS-EXEC-003-DEPENDENCY-005
+
+- Timestamp2026-10-04T13:15:00Z; direct latest Human approval names the sole consolidated MAJOR FND-HNS-EXEC-003-PREFLIGHT-005-001. Not Accepted Risk/new requirement; active003 WriteScope extends only compiler.ts/compiler.test.mjs, matching canonical template writeForbidden and SDD18. Prior evidence/manifests/attempts preserved.
+- Finite added allocation13:08:00Z-13:38:00Z, <=30min elapsed/cumulativeactive; historical6 attempts unchanged, max4 added(total10), automatic1/1 and C5exception1/1 exhausted; new005exception0/1. Fresh Maker 01a1070e-3967-72f1-90c0-d576e979a8be dispatched, attempt7, hard13:20:00Z includingfinal; assignedfullTier1+direct18/template+finding, two files only. TokenTARGET20000/actualunknown. Parent prepares nonoverlapping validation/review evidence; no duplicateMakerwork.
+- New composite exactcandidate/hash invalidates prior approval reuse; fresh required TECH/QA/SECURITY each<=6min, no retry/fuzzing/fullhistory. AllPASS/noOPENMAJORBLOCKING beforeGate/unchangeddevelopmerge/exactpostmerge/closure. SameFindingunresolved/newunrelatedMAJOR/security/spec/divergence/independence/budget stopHuman. PreserveEXEC002historicalclosure; stopafter003,004knownpending.
+
+## CHECKPOINT-HNS-EXEC-003-DEPENDENCY-R4
+
+- Maker RC-HNS-EXEC-003-DEPENDENCY-R4 execution01a1070e-3967-72f1-90c0-d576e979a8be READY_FOR_REVIEW; sourcecandidate52ce59dd4867f2f99db0a01386fba325e2266da5, manifest`docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r4.md`/`sha256:b14fb23611b370809aa6b3abe577dacb4c12a26235b4972e5b2244094d69df6a`. RequiredexactNode24.19.0/npm11.17.0 ci/build/typecheck/test233/focused72/audit0 allPASS;96inputs/16rawlogs/116dist/12artifacts qualified. Detailedmaker/scope/evidence `docs/08_agent_reviews/validation/HNS-EXEC-003-dependency-r4/maker-review.md`, results.json/qualification-checks.json.
+- Independent HNS-EXEC-003-TECH-REVIEW-004-EVIDENCE-001: REVIEWER/TECH_REVIEWER/HIGH, MakerIDsallfourdifferent; Reviewer01a10713-cc4e-7872-957a-bdaba8a2551f, actualtaskcomplete13:27:05.681Z/325149ms before13:27:15hard; PASS onexactmanifest/currentsource/all003ACs andaffected002ACs. Completechecks/tests/provenance/limitations `docs/08_agent_reviews/validation/HNS-EXEC-003-dependency-r4/tech-review.md`. Freshfocused72, qualifiedfull233/audit0; no sourcewrites/selfapproval. BothFND-HNS-EXEC-003-PREFLIGHT-005-001 andFND-HNS-EXEC-003-TECH-002-001 technicallyRESOLVED oncurrentcandidate; historicalrecordsunchanged. ExistingFND-HNS-EXEC-002-SECURITY-003-001 OBSERVATION/OPEN unchanged/nonblocking, notAcceptedRisk.
+- BUDGET_EXHAUSTED: QA003 execution01a10719-f855-71e3-8b0b-ac052f91cfa6 andSecurity003 execution01a10719-f8c8-75e1-a786-723bbb4c90ef canceled13:32:11.504Z/.522Z, durations226481/226390ms; no finaldecisions/newFinding inferred, requiredreviewsnotcomplete. Newattempts4/historical6/total10of10; auto1/1,C5exception1/1,new005exception1/1. No retry/sourcecorrection/Gate/merge/postmerge/lifecycle/004/adapters/Pilot. Sourcefixisnot003orwholemilestonecomplete.
+- Allocation13:08:00-13:38:00 retained; atstopelapsed1451.522s, conservativecumulative1978s>1800 by178s aftercountingparallelchildren. Explicitparentpauses13:17:50-13:18:49,13:22:47-13:27:15,13:29:40-13:31:40 onlydeducted. Parent preflight failed tofit bothremainingreviewmaxima+closure; budgetdetectionlate, no capcompliance/reset/waiverclaimed. Checkpointpersistenceafterstop only. Historicalaggregate/tokenactualunknown,target20000notcap; nofullreviewlog/openendedprobes. Remaining003scope strictlyrequiredQA/Security/Gate/merge/postmerge/closure underexplicitfiniteHumancontinuation, no newMaker. EXEC004stillTODO. Source/manifests/governance/packages/main/developunchangedaftercandidate; fullbranchwhitespacecheck reports preservedrawlogs/historicalmarkdown formatting, harness-onlycheckPASS, nohistoricalbytesrewritten.
+
+
+## QA-HNS-EXEC-003-FINAL-R4
+
+## HNS-EXEC-003-QA-REVIEW-004-EVIDENCE-001
+
+**Reviewer decision: PASS.** Independent QA assessment only; this is not Implementation Gate approval.
+
+| Field | Value |
+|---|---|
+| Execution / Reviewer Execution ID | `/root/exec003_qa_final` |
+| Work Item | `work-items/HNS-EXEC-003-QA-REVIEW-004.md` |
+| Role / Primary Profile / Risk | `REVIEWER` / `QA_REVIEWER` / `HIGH` |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r4.md` |
+| Artifact Hash | `sha256:b14fb23611b370809aa6b3abe577dacb4c12a26235b4972e5b2244094d69df6a` |
+| Source Candidate | `52ce59dd4867f2f99db0a01386fba325e2266da5` |
+| Observed Evidence Checkpoint HEAD | `36630ef240bd8d410a1cc748df327c06a6a0663d` |
+| Primary Maker Execution ID | `01a1070e-3967-72f1-90c0-d576e979a8be` |
+| Other Makers | `01a10535-54ac-7693-b13a-9085abfc6ca3`, `01a105c1-8580-7c70-af1c-555ff65aad5d`, `01a10614-5ce0-7992-9ee6-065deba61fe0` |
+| Start / Last Probe | `2026-10-04T14:24:43Z` / `2026-10-04T14:27:25Z` |
+| Runtime | Exact supplied Node `v24.19.0`; npm `11.17.0` |
+
+The collaboration host exposes a canonical task name rather than a reviewer UUID. The parent confirmed `/root/exec003_qa_final` as this execution’s actual host identity. It differs from all four Makers; no invented UUID or reused review decision is involved.
+
+## Specification References
+
+`AC-HNS-007`; all four `AC-HNS-EXEC-003-*` criteria; affected `AC-HNS-EXEC-002-001` through `004`; assigned review ACs `001` through `003`.
+
+Canonical references: full Constitution, Authority, Workflow, REVIEWER role, QA profile, Implementation Gate, assigned review Work Item; extracted SDD sections **5.3, 5.5, 16.1, 18, 21, 35, 38, 40.1**; Harness Contract sections **4, 5, 13**; Work Item template Forbidden Scope contract.
+
+## Checks Performed
+
+| Check | Method / Evidence | Result |
+|---|---|---|
+| Artifact identity | Independently recomputed manifest SHA-256 and all 12 listed artifact hashes; compared each artifact with candidate Git object bytes | PASS |
+| Complete validation inputs | Verified original inventory hash and all **96 original input hashes against candidate Git objects**. Current files: **95 unchanged**, sole delta primary Work Item host metadata; content before Blockers unchanged | PASS |
+| Built output | Independently verified **116 files**, exact inventory cardinality, and canonical inventory digest `109030658ce8f97b3c1528a321a009cde6c01da91f0c754555d0926f88b489cd` | PASS |
+| Reused log completeness | Result JSON hash verified; all **16 stdout/stderr logs** matched their recorded hashes; eight commands exited 0 with null signal | PASS |
+| Runtime / runner provenance | Inspected exact runner commands, working directory, runtime and timestamps; fresh version checks returned required versions | PASS |
+| Current review assignments | Both new QA/SECURITY review Work Items parsed successfully with exact canonical manifest/hash and SDD targets | PASS |
+| Scope / independence | Reviewer made no writes, build, installation, commit, remediation or agent dispatch. Candidate-to-checkpoint diff contained evidence/review metadata, no additional implementation changes | PASS |
+| Final stability | Reverified unchanged current input hashes, 116 dist hashes and manifest hash after fresh checks | PASS |
+
+Qualification reused exact candidate evidence from `docs/08_agent_reviews/validation/HNS-EXEC-003-dependency-r4/`. I inspected `qualify.mjs` but did **not** execute it because it writes evidence.
+
+## Acceptance Criteria Mapping
+
+| Criterion | QA assessment and coverage | Result |
+|---|---|---|
+| EXEC003-001 | R1–R5 cover normalized-equivalent hashes, immutable assignments, maximum applicable risk, directory-prefix versus similar-name boundaries, artifact/fact OR matching, canonical baseline, unknown facts, malformed rows, unsafe paths, omitted facts and stale/tampered policy/source evidence | PASS |
+| EXEC003-002 | Role-aligned deterministic assignments, artifact binding, all Maker identities, sorted profiles, required checks/evidence, self-assignment and execution collisions. Additional independent checks exercised LOW, MEDIUM with QA trigger, HIGH, CRITICAL and LOW with Security trigger, plus missing-reviewer rejection for each | PASS |
+| EXEC003-003 | C1 and positive field-change tests verify canonical hash recomputation, deep freezing, repeat-build determinism and every represented execution-relevant field, including repository, Work Item, context, policy projections, gates, capabilities, audit and review fields | PASS |
+| EXEC003-004 | C2–C6 cover downgrade, identity mismatch, missing gates, stale Work Item/artifact/source hashes, missing/pure/copied/forged receipts, compile-origin collision, repository drift, final-read movement, changed context, closure/supersession/lost records and rejection recovery | PASS |
+| EXEC002-001 | Immutable, order-independent context manifests; byte/hash equality and repeat-build behavior retained | PASS |
+| EXEC002-002 | Tier selection, section extraction, explicit fallback, deduplication, deferred/unrelated exclusion and bounded explicit-source index retained | PASS |
+| EXEC002-003 | Real parsed canonical Work Item now permits mandatory Constitution and assigned-Work-Item reads while preserving write-forbidden metadata. Explicit host read-forbidden and Work Item/host/policy read-scope denials occur before source reads. Path/canonical alias, sensitivity, hash drift, gates and budget negatives retained | PASS |
+| EXEC002-004 | On-demand load/deny/defer, immutable audit hashes, budget deltas, deduplication and permission-preserving revalidation retained | PASS |
+
+Assigned review ACs `001` and `002` are satisfied. AC `003` is satisfied by this complete returned evidence, with durable persistence delegated to the authorized parent.
+
+## Tests Performed
+
+| Type | Command / Runner | Result / Evidence |
+|---|---|---|
+| Fresh focused unit/regression | Exact supplied `node --test harness/tests/unit/risk/classifier.test.mjs harness/tests/unit/execution/profile.test.mjs harness/tests/unit/context/compiler.test.mjs` from repository root | **72/72 PASS**, exit 0; zero failures, skipped, cancelled or todo; duration approximately 701 ms; this execution’s tool output |
+| Fresh bounded independent checks | Exact supplied Node inline module using built resolver, risk fixtures and Work Item parser | **12/12 PASS**, exit 0; five positive profile baselines, five missing-reviewer negatives, two assignment parses; `14:26:51.679Z–14:26:51.722Z` |
+| Dependency installation | Qualified prior exact-runtime `npm ci` | Exit 0; `dependency-r4/ci.*.log` |
+| Build | Qualified prior exact-runtime `npm run build` | Exit 0; `dependency-r4/build.*.log` |
+| Typecheck | Qualified prior exact-runtime `npm run typecheck` | Exit 0; `dependency-r4/typecheck.*.log` |
+| Full tests | Qualified prior exact-runtime `npm test` | **233/233 PASS**, exit 0; zero skipped/cancelled/todo; `dependency-r4/test.*.log` |
+| Security check | Qualified prior exact-runtime `npm audit --audit-level=high --json` | Exit 0; **0 vulnerabilities at every severity**; `dependency-r4/audit.*.log` |
+| Lint | No lint script configured | N/A |
+| Working diff whitespace | `git diff --check` | Exit 0 |
+
+Qualified prior commands ran `2026-10-04T13:19:22.228Z–13:19:27.257Z`. Their exact source/dependency/configuration inputs, runtime, outputs and results were independently verified before reuse. Fresh focused results overlap the prior/full suites; they are not additional unique acceptance-test counts.
+
+## Findings
+
+- **No new findings.**
+- `FND-HNS-EXEC-003-PREFLIGHT-005-001`: **RESOLVED supported independently by QA** on this artifact. Real canonical Work Item regression passes; write prohibitions remain unchanged and actual read prohibitions remain enforced.
+- `FND-HNS-EXEC-003-TECH-002-001`: **RESOLVED supported independently by QA**. Fresh C5 tests cover late compile repository/binding movement and late build Work Item/policy/binding/authority movement, rejection without receipt/admission reservation, subsequent valid recovery and idempotent builds.
+- `FND-HNS-EXEC-002-SECURITY-003-001`: preserve **OBSERVATION / OPEN / nonblocking**. This QA review neither closes it nor records accepted risk.
+
+Implementer Scope Evidence: **N/A — REVIEWER**.
+
+## Context and Execution Audit
+
+Initial canonical selection: **10 full files + 8 extracted SDD sections; 11 unique files, 18 selected units, 82,047 bytes**. Full files were AGENTS, the seven mandatory governance/assignment files, exact manifest and Maker evidence.
+
+This exceeds the ordinary 64 KiB target. The parent explicitly admitted a finite **96 KiB initial context budget, 24 files / 64 sections**, within existing host defaults and hard ceilings. Mandatory context was preserved intact.
+
+On-demand selections were limited to the review template; primary Work Item contract/ACs; affected EXEC002 ACs; template Forbidden Scope; Harness sections 4/5/13; allocation/results/runner/qualification provenance; relevant risk/profile source and tests; context compiler/read-regression excerpts; consolidated named-finding evidence; and named finding snippets. Inventory/source bytes outside those selections were used for hashing only. No full SDD, full review log, mother transcript or primary Work Item historical Notes were loaded.
+
+Probes stopped approximately **162 seconds after start**, well before the 420-second probe limit. This fresh execution consumes one authorized QA attempt, with no retry or remediation. Final evidence is returned within the 480-second individual cap. Aggregate token telemetry is unavailable: **actual null**, not an exact cap claim.
+
+## Limitations and Handoff
+
+The assessment covers this immutable composite artifact and bounded required behaviors. Trusted host wiring, persistent production enforcement, adapters, EXEC004, merge and postmerge validation are outside this reviewer’s scope.
+
+No files were written by this execution. The parent must append this report to controlled audit/review evidence and complete remaining required Security/Gate/closure actions. **QA PASS alone does not authorize Gate PASS, release or completion.**
+
+### Parent Actual Execution Binding
+
+Actual session UUID `01a1074d-6de5-7132-85fd-e2fc1bd5c508` resolved from trusted host journal after the report. Canonical task name above is its host alias. Actual task_complete `2026-10-04T14:28:49.011Z`, duration `251545ms`; internal last-probe/report timestamps are not final completion. Completed before individual hard deadline. Parent preserved returned report verbatim above.
+
+
+## SECURITY-HNS-EXEC-003-FINAL-R4
+
+## Evidence Metadata
+
+| Field | Value |
+|---|---|
+| Evidence ID | `HNS-EXEC-003-SECURITY-REVIEW-004-EVIDENCE-001` |
+| Execution ID / Reviewer Execution ID | `/root/exec003_security_final` — actual host-issued execution identity; no UUID invented |
+| Work Item | `work-items/HNS-EXEC-003-SECURITY-REVIEW-004.md` |
+| Role / Primary Profile / Risk | `REVIEWER / SECURITY_REVIEWER / HIGH` |
+| Maker Execution ID | `01a1070e-3967-72f1-90c0-d576e979a8be` |
+| Other source Maker IDs | `01a10535-54ac-7693-b13a-9085abfc6ca3`, `01a105c1-8580-7c70-af1c-555ff65aad5d`, `01a10614-5ce0-7992-9ee6-065deba61fe0` |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r4.md` |
+| Artifact Hash | `sha256:b14fb23611b370809aa6b3abe577dacb4c12a26235b4972e5b2244094d69df6a` |
+| Reviewed source candidate | `52ce59dd4867f2f99db0a01386fba325e2266da5` |
+| Current metadata checkpoint HEAD | `36630ef240bd8d410a1cc748df327c06a6a0663d` |
+| Timestamp | `2026-10-04T14:27:27Z` |
+| Decision | **PASS** |
+
+This is independent Security review evidence only. It does not approve the Implementation Gate, merge, release, or production enforcement.
+
+## Specification References
+
+Full mandatory Constitution, Authority, Workflow, REVIEWER role, assigned Security profile, assigned review Work Item and Implementation Gate were read. Direct canonical references assessed: `AC-HNS-007`; all four `AC-HNS-EXEC-003-001..004`; affected `AC-HNS-EXEC-002-001..004`; SDD Sections **5.3, 5.5, 16.1, 18, 21, 35, 38, 40.1**.
+
+Additional boundary selections: Harness Contract Sections **3, 4, 5, 13, 16**, Work Item template **Forbidden Scope** section, review evidence template, current primary Work Item requirements/scope/ACs, Maker evidence, manifest and validation provenance. Primary Work Item historical Notes and full historical review log were not loaded as review context; only named finding matches were retrieved.
+
+## Checks Performed
+
+| Check ID | Check / threat-control mapping | Method and evidence | Result |
+|---|---|---|---|
+| SEC-IDENTITY | Immutable artifact; stale evidence substitution | Independently hashed manifest, 12 declared artifacts, original/current input inventories, compiled outputs and raw logs | PASS |
+| SEC-AUTHORITY | Agent-selected policy, omitted sensitive facts, risk downgrade | Risk source inspection; R1–R5 fresh tests; additional omitted-fact, self-rehashed downgrade and unknown-plus-recognized fact probes | PASS |
+| SEC-INJECTION | Executable policy rows, duplicate JSON members, traversal prefixes | JSON-only canonical row parser; exact member/type checks; canonical serialization equality; safe repository-relative paths; malformed/noncanonical row tests | PASS |
+| SEC-INDEPENDENCE | Maker self-review, missing Security assignment, registry collision | Resolver current-authority verification; artifact recomputation; all Maker IDs retained; fresh collision/missing-assignment/forged-check probes | PASS |
+| SEC-PROVENANCE | Caller-forged receipts, copied contexts, repository replay | Private actual-compile records; immutable snapshot identity; repository/source/binding comparisons; fresh C1–C6 tests | PASS |
+| SEC-C5 | Mutable host inputs after earlier comparisons | Final compile source and final build Work Item/policy/binding/authority movement tests reject; rejected transactions leave no receipt/admission reservation | PASS |
+| SEC-READBOUNDARY | Confusing write prohibition with read prohibition | Actual parsed current Work Item reads mandatory Constitution and assigned Work Item; its write-forbidden metadata remains byte-equivalent through compilation | PASS |
+| SEC-DENYFIRST | Read-forbidden, scope and canonical alias escape | Independent host read-forbidden controls and Work Item/host/policy read-scope negatives reject before content reads; canonical target/root checks retained | PASS |
+| SEC-EXPOSURE | Sensitive context, unbounded context, drift | Sensitive path screening; required context/hash/budget failures; immutable bounded on-demand load/deny/defer evidence; tests report no denied content leakage | PASS |
+| SEC-CAPABILITY | Unauthorized process/network/write/adapter expansion | Source inspection and fresh production-context capability regression; no adapters, enforcement or production backend added | PASS |
+| SEC-SUPPLYCHAIN | Vulnerable dependencies | Fresh exact-runtime audit JSON; all vulnerability categories zero | PASS |
+| SEC-SCOPE | Out-of-scope executable changes | Base-to-candidate executable diff contains exactly the 12 manifest paths; source whitespace check exits zero; current executable/governance/config inputs unchanged | PASS |
+
+The trusted host owns policy/facts/repository/source/review admissions. Hash integrity alone does not authorize those inputs. The implementation checks them against that host boundary; it does not establish that an arbitrary untrusted application wiring is trustworthy.
+
+## Acceptance Mapping
+
+| Acceptance criterion | Assessment |
+|---|---|
+| `AC-HNS-EXEC-003-001` | **PASS.** Canonical normalization, maximum applicable risk, baseline preservation, deterministic hashes and immutable assignments verified. Unknown facts yield clarification without a usable assignment, preserving CRITICAL where applicable. |
+| `AC-HNS-EXEC-003-002` | **PASS.** Artifact-aligned basic reviewer and required QA/Security assignments are deterministic, sorted, artifact-bound and bound to all Maker executions. Registry collisions, missing Security, stale artifacts and caller-rehashed requirement replacements reject. |
+| `AC-HNS-EXEC-003-003` | **PASS.** Actual host compilation admits canonical deep-frozen profiles; fresh field-change tests cover execution, repository, Work Item, context, filesystem, tools, commands, environment, gates, adapter requirements, audit and review fields. Changed profiles require a new execution after admission. |
+| `AC-HNS-EXEC-003-004` | **PASS.** Downgrade, stale/forged hashes, missing gates, identity mismatch, Maker/reviewer collisions, receipt loss/closure/supersession, source drift and C5 movement reject. No adapter/enforcement behavior is substituted. |
+| Affected `AC-HNS-EXEC-002-001` | **PASS.** Deterministic immutable context manifests/order/dedup/hash behavior retained. |
+| Affected `AC-HNS-EXEC-002-002` | **PASS.** Tier, section extraction/fallback, exclusion, bounded explicit sources and budgets retained. |
+| Affected `AC-HNS-EXEC-002-003` | **PASS.** Actual canonical mandatory reads now succeed despite write-forbidden paths. Independent read-forbidden, read scopes, sensitive paths, aliases/root escape, concurrent hash drift and budget negatives still fail closed. |
+| Affected `AC-HNS-EXEC-002-004` | **PASS.** On-demand load/deny/defer remain deterministic, immutable and audit-ready; canonical alias and policy boundaries remain effective. |
+| Security review AC `004-001` | **PASS.** Independent identity, exact artifact/source/runtime/log qualification and scope verified. |
+| Security review AC `004-002` | **PASS.** All original ACs and affected Security/context boundaries assessed. |
+| Security review AC `004-003` | Complete evidence returned here for parent-controlled durable persistence. Child performed no writes. |
+
+## Tests Performed
+
+Exact runtime: `/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin`; freshly confirmed **Node v24.19.0 / npm 11.17.0**, exit zero.
+
+| Type | Command / runner | Result / evidence |
+|---|---|---|
+| Fresh focused tests | Exact Node `--test tests/unit/risk/classifier.test.mjs tests/unit/execution/profile.test.mjs tests/unit/context/compiler.test.mjs` | **72/72 PASS**, zero failed/skipped/cancelled/todo; exit 0. Child tool output `860b55`. |
+| Fresh Security audit | Exact-runtime `npm audit --audit-level=high --json --cache=/dev/null --logs-max=0` | **0 vulnerabilities**, exit 0; JSON in child output `118695`. Cache/log suppression preserves the read-only review. |
+| Independent bounded Security probes | Exact Node inline module using admitted fixtures | **8/8 PASS**, exit 0; output `dae4f8`. Covered unknown facts preserving CRITICAL, omitted facts, self-rehashed downgrade, deterministic immutable reviewer assignments, second-Maker collision, missing Security, forged checks and stale artifact. |
+| Current canonical Work Item parsing | Same inline module, canonical targets including exact manifest/hash | **2/2 PASS**: primary EXEC003 and assigned Security004. |
+| Scope / whitespace | `git diff --name-only BASE CANDIDATE -- harness`; `git diff --check BASE CANDIDATE -- harness` | Exactly 12 declared executable paths; exit 0. |
+| Reused dependency validation | Independently qualified `dependency-r4/results.json` and its 16 raw logs | Exact-runtime `npm ci`, build, typecheck, full **233/233**, focused **72/72**, audit zero; every command exit 0 and no signal. Original command interval `13:19:22.228Z–13:19:27.257Z`. |
+| Lint | No configured lint command | Not applicable; scope-specific whitespace check passed. |
+| Integration / production enforcement | Outside this implementation’s scope | Not claimed. |
+
+Independent provenance verification established:
+
+- **96/96 original input hashes** match bytes in source candidate `52ce59…`.
+- **95/96 current inputs unchanged**; the sole current delta is authorized primary Work Item host status/blocker/Notes metadata. Requirements, role, risk, read/write/forbidden scopes and ACs remain unchanged.
+- **12/12 manifest artifacts**, **116/116 compiled files**, **16/16 raw logs** verified.
+- Input bundle hash: `sha256:f7d4b682cf6b1e6c45b7638cb02a059573f35ef93ea6738d9c211ae1669307a3`.
+- Result hash: `sha256:fc0349e8b360b8ac2bc664284815da86e700a1c07c54579ddf49f9f1d3bbdc75`.
+- Compiled inventory canonical hash: `sha256:109030658ce8f97b3c1528a321a009cde6c01da91f0c754555d0926f88b489cd`.
+- Runner semantics checked: compiled inventory digest hashes compact JSON, rather than the pretty-printed inventory file bytes.
+- The manifest is a later evidence artifact binding the source candidate; its addition after that source commit is explicitly distinguished from executable drift.
+
+## Findings
+
+| Finding | Assessment / status |
+|---|---|
+| `FND-HNS-EXEC-003-PREFLIGHT-005-001` | **RESOLVED confirmed from Security perspective.** Corrected write/read separation accepts actual mandatory reads while independent read-deny and all read-scope controls retain failclosed behavior. |
+| `FND-HNS-EXEC-003-TECH-002-001` | **RESOLVED regression confirmed.** Fresh C5 late movement controls reject without minting stale receipt or reserving failed admission. |
+| `FND-HNS-EXEC-002-SECURITY-003-001` | Preserve **OBSERVATION / OPEN / nonblocking**. Historical reviewer context retrieval deviation remains follow-up, without Accepted Risk or retrospective waiver. |
+| New findings | **None** within this bounded review. |
+
+## Known Limitations and Unresolved Issues
+
+No claim of exhaustive vulnerability absence, production sandbox enforcement, secret injection/redaction backend, persistent trusted host records, adapter security, or release readiness. Authentication, payment, external API and destructive production behavior are not implemented in this scoped candidate; applicable privilege/authority and capability boundaries were assessed.
+
+Parent must persist this returned evidence and fresh command results in its authorized audit location. This child did not modify source, tests, dependencies, compiled output, governance, Work Items, manifests or audit files; did not run build/ci, commit, merge or spawn agents.
+
+Context was selected by mandatory governance, eight direct SDD sections, five direct Harness boundary sections, named findings, and necessary risk/profile/context source/tests and provenance evidence. Unrelated documentation, full historical review transcripts and open-ended attack taxonomy were deferred. Aggregate token/context telemetry is unavailable; no exact token or aggregate context count is claimed.
+
+## Integrity, Independence and Time
+
+Artifact/source identity verified; reviewer differs from **all four Makers**; assigned single primary Security profile retained; no Maker activity or Gate approval performed.
+
+Attempt **12/12**; no retry/remediation permitted or used. Conservative host dispatch/start approximately **14:24:50Z**. Last probe/runtime verification completed **14:27:27Z**, approximately **157 seconds** after dispatch, below the six-minute target, seven-minute probe stop and **14:32:50Z** child hard deadline. Parent retains original clocks, historic overrun and incomplete historical telemetry.
+
+**Reviewer decision: PASS.**
+
+### Parent Actual Execution Binding
+
+Actual session UUID `01a1074d-a154-74f2-b9e9-2a97d21eaf9b` resolved from trusted host journal after the report. Canonical task name above is its host alias. Actual task_complete `2026-10-04T14:28:26.157Z`, duration `215535ms`; internal last-probe/report timestamps are not final completion. Completed before individual hard deadline. Parent preserved returned report verbatim above.
+
+
+## IG-HNS-EXEC-003-001 — Implementation Gate
+
+GateResult: `PASS`. Exact R4 manifest `sha256:b14fb23611b370809aa6b3abe577dacb4c12a26235b4972e5b2244094d69df6a`, candidate `52ce59dd4867f2f99db0a01386fba325e2266da5`. Required TECH/QA/SECURITY distinct completed PASS bound to all Makers/current artifact; all4primary and affected002ACs covered, no OPEN MAJOR/BLOCKING. Definition hash `sha256:077ac6969e5a341c3810afee38d60005e524899702701b912fc991f1e1f4b2b1`. Durable full Gate evidence `docs/08_agent_reviews/validation/HNS-EXEC-003-final-r4/gate.json`. Historical budget overrun and OPEN/nonblocking002Observation retained. Gate permits already authorized normal unchanged-develop merge/freshpostmerge/lifecycle only; not release or workbench completion. Timestamp 2026-10-04T14:30:28.315Z.

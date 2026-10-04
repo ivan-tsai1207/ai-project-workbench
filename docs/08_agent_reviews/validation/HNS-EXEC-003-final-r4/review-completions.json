@@ -1,0 +1,48 @@
+{
+  "qa": {
+    "session_id": "01a1074d-6de5-7132-85fd-e2fc1bd5c508",
+    "completion": {
+      "type": "task_complete",
+      "turn_id": "01a1074d-6e3c-7ad1-b2cf-78c9579825bc",
+      "started_at": 1791123877,
+      "completed_at": 1791124129,
+      "duration_ms": 251545,
+      "time_to_first_token_ms": 3922,
+      "timestamp": "2026-10-04T14:28:49.011Z"
+    },
+    "usage": {
+      "input_tokens": 1603461,
+      "cached_input_tokens": 1498240,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9693,
+      "reasoning_output_tokens": 1783,
+      "total_tokens": 1613154
+    },
+    "noncached_input_plus_output": 114914,
+    "review_sha256": "e7a55e2d8d19deecd6d9dfdc204c1c58ea95232503a07c07ec5cce3975d17b0c",
+    "command_output_records": 0
+  },
+  "security": {
+    "session_id": "01a1074d-a154-74f2-b9e9-2a97d21eaf9b",
+    "completion": {
+      "type": "task_complete",
+      "turn_id": "01a1074d-a1aa-7343-a1c5-06904b713b7d",
+      "started_at": 1791123890,
+      "completed_at": 1791124106,
+      "duration_ms": 215535,
+      "time_to_first_token_ms": 3850,
+      "timestamp": "2026-10-04T14:28:26.157Z"
+    },
+    "usage": {
+      "input_tokens": 1451950,
+      "cached_input_tokens": 1327488,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9719,
+      "reasoning_output_tokens": 988,
+      "total_tokens": 1461669
+    },
+    "noncached_input_plus_output": 134181,
+    "review_sha256": "5d3a32d1c9d46087262b938442a72dc18835ff8d16d1c13b1e063bf97f443cb4",
+    "command_output_records": 3
+  }
+}

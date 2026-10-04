@@ -1,0 +1,54 @@
+{
+  "source_unchanged": true,
+  "stable_inputs": 95,
+  "total_inputs": 96,
+  "metadata_changed": [
+    "work-items/HNS-EXEC-003.md"
+  ],
+  "dist_unchanged": 116,
+  "raw_logs_unchanged": 16,
+  "manifest_unchanged": true,
+  "WI_parse": "4/4 PASS",
+  "work_items": [
+    {
+      "path": "work-items/HNS-EXEC-003.md",
+      "status": "BLOCKED",
+      "criteria": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "path": "work-items/HNS-EXEC-003-TECH-REVIEW-002.md",
+      "status": "BLOCKED",
+      "criteria": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "path": "work-items/HNS-EXEC-003-QA-REVIEW-001.md",
+      "status": "TODO",
+      "criteria": [
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "path": "work-items/HNS-EXEC-003-SECURITY-REVIEW-001.md",
+      "status": "TODO",
+      "criteria": [
+        false,
+        false,
+        false
+      ]
+    }
+  ],
+  "checkpoint_scope": "docs/08_agent_reviews/review_log.md\nwork-items/HNS-EXEC-003-TECH-REVIEW-002.md\nwork-items/HNS-EXEC-003.md",
+  "report_sha256": "8831ae9329a16478591fc960d8e26356c1a5f7713e971f081e4976dcf8a3345e",
+  "probe_sha256": "92979b68b2f671687e3a61e9fa2eebb6d941b41861ca51eb9270c5815e31fe06"
+}

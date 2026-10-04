@@ -1,0 +1,23 @@
+{
+  "inputs": 96,
+  "unchanged": 95,
+  "expected_status_only_checkpoint_delta": [
+    "work-items/HNS-EXEC-003.md"
+  ],
+  "source_unchanged": true,
+  "dist_verified": 116,
+  "rawlogs_verified": 16,
+  "manifest_hash": "sha256:6b92a4c829c0fdc70c00fc8ad3da65332ca1bd5fdd5d63d2fdf41829855adc02",
+  "probe_script_hash": "sha256:b91ab64e6bda4cfd9ce55ea96a240b74360ffd823cb11239c7b2af92603df541",
+  "develop": "90f4ff4fe6479a4644723c33e153f7083e07ec88",
+  "required_review_attempts_added": 0,
+  "source_fixes_added": 0,
+  "new_findings": [
+    {
+      "id": "FND-HNS-EXEC-003-PREFLIGHT-005-001",
+      "severity": "MAJOR",
+      "status": "OPEN",
+      "owner_work_item": "HNS-EXEC-002"
+    }
+  ]
+}

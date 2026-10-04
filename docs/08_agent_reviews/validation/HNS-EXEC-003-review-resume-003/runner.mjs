@@ -1,0 +1,38 @@
+import {spawnSync,execFileSync} from "node:child_process";
+import {readFileSync,writeFileSync,mkdirSync,readdirSync} from "node:fs";
+import {createHash} from "node:crypto";
+import {join} from "node:path";
+const repo="/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo";
+const out=process.argv[2],deadline=Number(process.argv[3]);
+const bin="/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin";
+const h=b=>createHash("sha256").update(b).digest("hex");
+const env={...process.env,PATH:bin+":"+process.env.PATH};
+mkdirSync(out,{recursive:true});
+const candidate=execFileSync("git",["rev-parse","HEAD"],{cwd:repo,encoding:"utf8"}).trim();
+const paths=execFileSync("git",["ls-files","harness/src","harness/tests","harness/package.json","harness/package-lock.json","harness/tsconfig.json"],{cwd:repo,encoding:"utf8"}).trim().split("\n");
+paths.push("AGENTS.md",".ai/CONSTITUTION.md",".ai/AUTHORITY.md",".ai/WORKFLOW.md",".ai/HARNESS_CONTRACT.md",".ai/roles/implementer.md",".ai/roles/reviewer.md",".ai/roles/reviewer-profiles/tech-reviewer.md",".ai/roles/reviewer-profiles/qa-reviewer.md",".ai/roles/reviewer-profiles/security-reviewer.md",".ai/gates/implementation-gate.md","templates/Work_Item.md","templates/Agent_Review_Log.md","docs/harness_v0.1_SDD.md","work-items/HNS-EXEC-003.md","work-items/HNS-EXEC-001.md","work-items/HNS-EXEC-002.md");
+const inputs=[...new Set(paths)].sort().map(p=>[p,h(readFileSync(join(repo,p)))]);
+writeFileSync(join(out,"inputs.json"),JSON.stringify(inputs,null,2)+"\n");
+const riskFiles=readdirSync(join(repo,"harness/tests/unit/risk")).filter(p=>p.endsWith(".test.mjs")).sort().map(p=>"tests/unit/risk/"+p);
+if(riskFiles.length===0)throw Error("missing focused risk tests");
+const result={candidate,reviewed_candidate:"52b9dcbae50dd573ade54046c5e5dfe66bf33ae8",runtime:bin,input_sha256:h(readFileSync(join(out,"inputs.json"))),results:[]};
+function compiledInventory(){
+ const files=[];
+ const walk=p=>{for(const e of readdirSync(p,{withFileTypes:true})){const f=join(p,e.name);if(e.isSymbolicLink())throw Error("compiled symlink");if(e.isDirectory())walk(f);else{if(files.length>=1000)throw Error("compiled inventory bound");files.push(f);}}};
+ walk(join(repo,"harness/dist"));
+ return files.sort().map(p=>[p.slice(repo.length+1),h(readFileSync(p))]);
+}
+const commands=[["node",bin+"/node",["--version"]],["npm",bin+"/npm",["--version"]],["ci",bin+"/npm",["ci"]],["build",bin+"/npm",["run","build"]],["typecheck",bin+"/npm",["run","typecheck"]],["test",bin+"/npm",["test"]],["focused",bin+"/node",["--test",...riskFiles,"tests/unit/execution/profile.test.mjs","tests/unit/context/compiler.test.mjs"]],["audit",bin+"/npm",["audit","--audit-level=high","--json"]]];
+for(const[name,exe,args]of commands){
+ if(Date.now()>=deadline)throw Error("deadline");
+ const start=new Date().toISOString(),r=spawnSync(exe,args,{cwd:join(repo,"harness"),env,encoding:"utf8",timeout:Math.min(120000,deadline-Date.now()),maxBuffer:8*1024*1024});
+ const stdout=r.stdout??"",stderr=r.stderr??"";
+ writeFileSync(join(out,name+".stdout.log"),stdout);writeFileSync(join(out,name+".stderr.log"),stderr);
+ result.results.push({name,executable:exe,args,cwd:join(repo,"harness"),start,end:new Date().toISOString(),exit:r.status,signal:r.signal,stdout_sha256:h(stdout),stderr_sha256:h(stderr)});
+ writeFileSync(join(out,"results.json"),JSON.stringify(result,null,2)+"\n");
+ console.log(name,r.status,stdout.slice(-230),stderr.slice(-230));if(r.status!==0)process.exit(1);
+ if(name==="build"||name==="test"){const compiled=compiledInventory(),digest=h(JSON.stringify(compiled));if(result.dist_sha256&&result.dist_sha256!==digest)throw Error("compiled output drift");result.dist_sha256=digest;result.dist_file_count=compiled.length;writeFileSync(join(out,"dist.json"),JSON.stringify(compiled,null,2)+"\n");writeFileSync(join(out,"results.json"),JSON.stringify(result,null,2)+"\n");}
+}
+if(inputs.some(([p,d])=>h(readFileSync(join(repo,p)))!==d))throw Error("input drift");
+if(h(JSON.stringify(compiledInventory()))!==result.dist_sha256)throw Error("final compiled drift");
+console.log("PASS stable inputs",inputs.length,"compiled",result.dist_file_count,"candidate",candidate);

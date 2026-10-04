@@ -1,0 +1,7 @@
+{
+  "chunk_id": "9946fa",
+  "wall_time_seconds": 0.256214042,
+  "exit_code": 0,
+  "original_token_count": 317,
+  "output": "{\n  \"start\": \"2026-10-04T09:16:42.731Z\",\n  \"node\": \"v24.19.0\",\n  \"work_item\": \"HNS-EXEC-003\",\n  \"original_forbidden_scope\": [\n    \".ai/**\",\n    \"docs/**\",\n    \"templates/**\",\n    \"work-items/**\",\n    \"harness/package.json\",\n    \"harness/package-lock.json\",\n    \"harness/src/policy/**\",\n    \"harness/src/gates/**\",\n    \"harness/src/audit/**\",\n    \"harness/src/adapters/**\",\n    \"harness/src/enforcement/**\",\n    \"main\"\n  ],\n  \"host_read_forbidden\": [],\n  \"outcomes\": [\n    {\n      \"case\": \"mandatory-governance\",\n      \"actual\": \"REJECTED\",\n      \"code\": \"HNS-CTX-002\",\n      \"details\": {\n        \"failure\": \"FORBIDDEN_SCOPE\",\n        \"path\": \".ai/CONSTITUTION.md\"\n      }\n    },\n    {\n      \"case\": \"assigned-work-item\",\n      \"actual\": \"REJECTED\",\n      \"code\": \"HNS-CTX-002\",\n      \"details\": {\n        \"failure\": \"FORBIDDEN_SCOPE\",\n        \"path\": \"work-items/HNS-EXEC-003.md\"\n      }\n    }\n  ],\n  \"isolation_control\": \"Removing only Work Item write-forbidden patterns permits compilation; fixture isolation only, NOT authorized runtime remediation\",\n  \"canonical_expected\": \"Work Item Forbidden Scope forbids writes; explicitly allowed mandatory reads remain usable\",\n  \"defect_reproduced\": true,\n  \"required_validation_pass\": false,\n  \"source_writes\": false\n}\n"
+}

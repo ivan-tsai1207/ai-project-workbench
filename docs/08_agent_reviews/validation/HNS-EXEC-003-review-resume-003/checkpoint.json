@@ -1,0 +1,110 @@
+{
+  "evidence_id": "HNS-EXEC-003-IMPLEMENTATION-CHECKPOINT-003",
+  "status": "BLOCKED",
+  "stop_reason": "REVIEW_LOOP_LIMIT_REACHED - HUMAN REVIEW REQUIRED",
+  "finding": "FND-HNS-EXEC-003-TECH-002-001",
+  "severity": "MAJOR",
+  "finding_status": "OPEN",
+  "owner": "IMPLEMENTER",
+  "candidate": "52b9dcbae50dd573ade54046c5e5dfe66bf33ae8",
+  "manifest_hash": "sha256:448394b05c9f435125665148eb03d7583f981ce32860f5005cf93631403d2110",
+  "develop": "90f4ff4fe6479a4644723c33e153f7083e07ec88",
+  "tech_execution": "01a105f5-5385-7f83-8189-01a09da6d2ec",
+  "tech_decision": "REQUEST_CHANGES",
+  "tech_report": "tech-review.md",
+  "probe": "tech-c5-probe.json",
+  "qa": "NOT_RUN",
+  "security": "NOT_RUN",
+  "implementation_gate": "NOT_RUN",
+  "merge": "NOT_RUN",
+  "postmerge_validation": "NOT_RUN",
+  "lifecycle": "NOT_DONE",
+  "validation": {
+    "tested_commit": "a25dd12616768d2374f749d79fc33fda45a17f31",
+    "reviewed_candidate": "52b9dcbae50dd573ade54046c5e5dfe66bf33ae8",
+    "manifest_hash": "sha256:448394b05c9f435125665148eb03d7583f981ce32860f5005cf93631403d2110",
+    "inputs": 96,
+    "raw_logs": 16,
+    "dist": 116,
+    "dist_digest": "5a40ef07dc3aa4ae6ad75e87be53d560c6e8ef23e608c19ca76a34795d755430",
+    "dist_json_raw_sha256": "45202fbf587c30c0e570394f7e487b91b199b9426df4151ac3fe5796de03e538",
+    "results_sha256": "1cec15bbf3e062eb971b3d6fcdfd66e62a856d415994859ae69971bff68cda5f",
+    "inputs_sha256": "931ddbeb69996daf6c809f6c5a7a3014aba6e939f7859fb9c840ebe8e560eaf7",
+    "start": "2026-10-04T08:06:40.792Z",
+    "end": "2026-10-04T08:06:45.988Z",
+    "old_input_metadata_difference": [
+      "work-items/HNS-EXEC-003.md"
+    ],
+    "parses": [
+      {
+        "path": "work-items/HNS-EXEC-003.md",
+        "status": "IN_PROGRESS",
+        "document_hash": "sha256:fbd8c183fe11b7bb05a1c1c5f72aeb6b294033f9563caf62f098c287e4737990"
+      },
+      {
+        "path": "work-items/HNS-EXEC-003-TECH-REVIEW-002.md",
+        "status": "TODO",
+        "document_hash": "sha256:a8856c2a5e270698c9e175b8b4552a6dde9425e78e266e7270164ac71a539136"
+      },
+      {
+        "path": "work-items/HNS-EXEC-003-QA-REVIEW-001.md",
+        "status": "TODO",
+        "document_hash": "sha256:d2597ac606b7da856b60e22f6d6ac5dfc4c373008f1bf2f71af71ad784d208ba"
+      },
+      {
+        "path": "work-items/HNS-EXEC-003-SECURITY-REVIEW-001.md",
+        "status": "TODO",
+        "document_hash": "sha256:6ee4b861b87d0e3087f883a20927003aa71f329d0fd09b03a07904220769c767"
+      }
+    ]
+  },
+  "counts": {
+    "total_attempts": 4,
+    "total_limit": 8,
+    "correction_used": 1,
+    "correction_limit": 1,
+    "new_increment_attempts": 1,
+    "new_increment_limit": 3
+  },
+  "allocation": {
+    "origin": "2026-10-04T08:03:46.000Z",
+    "deadline": "2026-10-04T08:33:46.000Z",
+    "recorded_at": "2026-10-04T08:19:25.663Z",
+    "elapsed_seconds": 939.663,
+    "explicit_host_pauses": [
+      {
+        "start": "2026-10-04T08:08:46.350Z",
+        "end": "2026-10-04T08:15:36.270Z",
+        "reason": "Explicit host wait for independent TECH; management allowance charged separately. Wallclock and child time count."
+      }
+    ],
+    "host_pause_seconds": 409.92,
+    "child_actual_active_seconds": 368.213,
+    "conservative_management_allowance_seconds": 60,
+    "conservative_active_seconds": 957.956,
+    "increment_elapsed_limit_seconds": 1800,
+    "increment_active_limit_seconds": 1800,
+    "parent_review_hard": "2026-10-04T08:14:46.209Z",
+    "actual_task_complete": "2026-10-04T08:14:54.422Z",
+    "late_finalization_seconds": 8.213,
+    "historical_complete_activity": null,
+    "original_preflight": "2026-10-04T02:45:34Z",
+    "notes": "Stop because required TECH REQUEST_CHANGES with new OPEN MAJOR after sole correction; not a claim that this whole increment is exhausted. History/counters/late reports preserved, not reset or waived. No more production/probes/reviews; checkpoint preservation only."
+  },
+  "scope": "No harness source/tests/dependencies/schema/governance/SDD/manifest/main/develop edits this increment. Parent allocation/WIs/validation/audit only.",
+  "post_validation_metadata": "Only primary003/rootstatus and TECH002 assessment/status metadata changed after fresh validation. Captured executable/static inputs and dist/source/manifest unchanged; no false final-byte invariance.",
+  "known_limitations": [
+    "Required canonical C5 final-read rejection failed; prior three Maker gaps independently passed but do not eliminate new defect.",
+    "Trusted host ports need real host wiring; no production enforcement/backend/adapters/Pilot.",
+    "QA/Security and Gate/merge/closure not done.",
+    "Existing FND-HNS-EXEC-002-SECURITY-003-001 remains OPEN/nonblocking.",
+    "TECH complete report finalized8.213s late; actual bounded defect probe before deadline, not Accepted Risk or timely completion."
+  ],
+  "token_actual": null,
+  "context_actual": null,
+  "parent_process_limitations": [
+    "Combined optional output truncation repaired for mandatory Workflow; no waiver of mandatory context.",
+    "First targeted probe-evidence retrieval also contained an unrelated source tool-output block and was output-truncated; repaired by selecting only exact C5 command/result/lifecycle, no unrelated source copied to evidence.",
+    "Initial draft copied a guessed millisecond hard deadline; immediately corrected to stored dispatch+360000 (08:14:46.209Z), all final metadata use actual8.213s overrun."
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "evidence_id": "HNS-EXEC-003-IMPLEMENTATION-CHECKPOINT-001",
+  "status": "BLOCKED",
+  "stop_reason": "BUDGET_INSUFFICIENT",
+  "recorded_at": "2026-10-04 04:56:43 UTC",
+  "base_develop": "90f4ff4fe6479a4644723c33e153f7083e07ec88",
+  "candidate": "5629833c8f076aef5f6ad8592701128c2c789b53",
+  "maker_execution_id": "01a10535-54ac-7693-b13a-9085abfc6ca3",
+  "maker_result": "BLOCKED",
+  "maker_dispatch": "2026-10-04T04:39:03.592Z",
+  "maker_hard_deadline": "2026-10-04T04:48:03.592Z",
+  "maker_lifecycle": [
+    {
+      "timestamp": "2026-10-04T04:39:03.760Z",
+      "type": "task_started"
+    },
+    {
+      "timestamp": "2026-10-04T04:48:30.988Z",
+      "type": "task_complete"
+    }
+  ],
+  "maker_finalization_overrun_seconds": 27.396,
+  "counts": {
+    "child_attempts": 1,
+    "child_attempt_limit": 8,
+    "reviewer_attempts": 0,
+    "remediation_cycles": 0,
+    "remediation_cycle_limit": 1
+  },
+  "allocation": {
+    "origin": "2026-10-04T04:34:53.250Z",
+    "deadline": "2026-10-04T05:04:53.250Z",
+    "elapsed_limit_seconds": 1800,
+    "cumulative_active_limit_seconds": 1800,
+    "explicit_host_pauses": [
+      {
+        "start": "2026-10-04T04:39:52.531Z",
+        "end": "2026-10-04T04:46:26.129Z",
+        "seconds": 393.598,
+        "reason": "Explicit host pause during Maker blocking waits; no host source production/read/probes. Agent management/status commentary overhead counted conservatively outside pause at closure."
+      },
+      {
+        "start": "2026-10-04T04:47:04.532Z",
+        "end": "2026-10-04T04:49:48.278Z",
+        "seconds": 163.746,
+        "reason": "Explicit host pause for Maker completion; wall clock and child activity counted."
+      }
+    ],
+    "pause_seconds": 557.344,
+    "decision_time": "2026-10-04T04:52:38Z",
+    "decision_elapsed_seconds": 1064.75,
+    "decision_unpaused_host_seconds": 507.406,
+    "maker_active_seconds": 567.396,
+    "conservative_management_allowance_seconds": 60,
+    "decision_charge_seconds": 1134.802,
+    "remaining_active_seconds_at_decision": 665.198,
+    "required_review_hard_bounds_seconds": 810,
+    "original_preflight_origin": "2026-10-04T02:45:34Z",
+    "historical_complete_activity": null,
+    "notes": "Full correction + three mandatory reviews + Gate/merge/closure cannot fit. Checkpoint preservation only; no time-compliance claim or counter reset. No retrospective waiting deduction."
+  },
+  "validation": {
+    "runtime": {
+      "node": "v24.19.0",
+      "npm": "11.17.0"
+    },
+    "start": "2026-10-04T04:50:57.116Z",
+    "end": "2026-10-04T04:51:02.511Z",
+    "commands": 8,
+    "tests": 187,
+    "focused_risk_profile_context_tests": 23,
+    "overlap": "Focused tests overlap full suite; do not add as unique tests.",
+    "audit_high_findings": 0,
+    "input_count": 83,
+    "raw_logs": 16,
+    "inputs_sha256": "9f04748e87dabb9a9036f2bd0ac65d45124679cf31931f153f937f9941b58bff",
+    "results_sha256": "51470661baac8aa0ba94b6b952540f4d240619c1adc5907b454b119861458015"
+  },
+  "source_hashes": {
+    "harness/src/execution/profile.ts": "sha256:b690ad5a2ad9a23b4a4780456ecaf5db581553d0431b6f6d69671ac17299cf69",
+    "harness/src/index.ts": "sha256:5b0a98d78f6c7c999ce0978829bd950e36500905c1e2213cd0bae000f1d3e467",
+    "harness/src/risk/classifier.ts": "sha256:d216cdc0c1cf0c3cff655d49b31846971b70acf7e1a0abb3baacfefddba97940",
+    "harness/src/risk/index.ts": "sha256:e471589881e7417ec63efc2649d44ef6dcfa6a85e7c1f80d4e50c4b0c6ef870a",
+    "harness/src/risk/review.ts": "sha256:57e723f7aae2024555df8c88c12dabdc50dee58036ab2ceff4311d8da77da151",
+    "harness/src/risk/types.ts": "sha256:4f1b97481f23d7a5d42303441880178ccd16a415a9982ad1421cd37bf148301c",
+    "harness/src/risk/validation.ts": "sha256:619b9986a2d8a070d224563c66b6ce3f8fbfaeb52efcd7efd01ecb7dc43ca50a",
+    "harness/tests/unit/execution/profile.test.mjs": "sha256:ecff9e9724a272558e3abc679af19e61e72a520fb92a7d3d6b32710b97a65310",
+    "harness/tests/unit/risk/classifier.test.mjs": "sha256:581dbd82374fe15f5551bba603a7606406d6d401d8c31a66f29cbfe08aec34ed",
+    "harness/tests/unit/risk/fixtures.mjs": "sha256:a0dbb1b814817c5df4a9e3e5ae2b9390bfa95bc6198c4889b83248f541b8b383"
+  },
+  "binary_diff_sha256": "c475101be4d7f7e1e4225c119717e9a66f944468941856bd446b3790a09d5d01",
+  "self_check_gaps": [
+    "Full REVIEWER admission: current canonical artifact hash and registry execution binding (AC-002/004).",
+    "Every execution-relevant Profile field needs positive hash-change coverage (AC-003).",
+    "Changed-context fresh-compile lifecycle coverage incomplete (AC-003/004)."
+  ],
+  "independent_reviews": "NOT_RUN",
+  "implementation_gate": "NOT_RUN",
+  "merge": "NOT_RUN",
+  "lifecycle_closure": "NOT_DONE",
+  "post_validation_metadata": "Only primary Work Item status/blockers/notes normalized after validation; input snapshot predates that metadata. Executable source/tests and other captured inputs must remain identical.",
+  "token_actual": null,
+  "context_actual": null,
+  "context_policy": "Mandatory router/governance/WI/role/Gate plus directly required SDD sections/source/tests; no full review_log, no generalized fuzzing."
+}
