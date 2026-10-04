@@ -113,7 +113,6 @@ Implement deterministic Risk Assignment, Reviewer Assignment, and immutable Exec
 
 - LC-HNS-EXEC-003-001: allfourAC checked from exactR4 TECH004/QA004/SECURITY004 completed independent PASS; Gate IG-HNS-EXEC-003-001 PASS; normalmerge `f2cbbb36711132e4ac1b7b6f65b283c348448de1`; fresh exactruntime ci/build/typecheck/full233/focused72/audit0 PASS, no skip/cancel/todo. StatusDONE denotes scoped003 core, not004/adapters/production/workbench complete. Historical12attempts/automatic1/1/C5exception1/1/005exception1/1 retained, no source change thisallocation. Durable postmerge results/inputs/dist/rawlogs/binding in docs/08_agent_reviews/validation/HNS-EXEC-003-postmerge-r4. Original1978s/1800s overrun178s and incompletehistoricalaggregate retained; currentpartial reviewtelemetry249095noncached+output, TARGET30000missed, not billing. Source/manifest/SDD/package bytes unchanged.
 
-### Preserved Historical Blocker Checkpoints
 
 - ACTIVE HUMAN AUTHORIZATION 2026-10-04: latest Human "如果沒有開始修正" approves one named two-file dependency correction FND-HNS-EXEC-003-PREFLIGHT-005-001. Earlier approval/scope/timeout blockers below are preserved historical checkpoints, superseded only by this finite allocation. Finding remains OPEN pending independent review; no Gate/closure claim.
 

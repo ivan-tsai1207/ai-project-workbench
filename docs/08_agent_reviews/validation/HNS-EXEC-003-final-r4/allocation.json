@@ -15,7 +15,7 @@
   "remediation_remaining": 0,
   "token_target": 30000,
   "token_actual": null,
-  "status": "CLOSURE_VALIDATED",
+  "status": "DONE",
   "pauses": [
     {
       "start": "2026-10-04T14:25:49.384932+00:00",
@@ -131,5 +131,18 @@
     "conservative_active_s": 1232.777631,
     "remaining_activity_s": 567.2223690000001,
     "remaining_wall_s": 734.302369
+  },
+  "final_checkpoint": {
+    "timestamp": "2026-10-04T14:32:48.443947+00:00",
+    "conservative_activity_s": 1295.523947,
+    "elapsed_s": 828.443947,
+    "attempts": 12,
+    "required_reviews": "PASS",
+    "gate": "PASS",
+    "postmerge": "PASS",
+    "lifecycle": "DONE",
+    "remaining_activity_s": 504.4760530000001,
+    "remaining_wall_s": 671.556053,
+    "metadata_parse_failure": "ea0759c closure Notes heading rejected; corrected without source change; fresh parse4/4 PASS"
   }
 }

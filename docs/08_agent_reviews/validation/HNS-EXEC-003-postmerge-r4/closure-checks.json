@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-04T14:32:26.620Z",
+  "result": "PASS",
+  "parsed_work_items": [
+    "HNS-EXEC-003",
+    "HNS-EXEC-003-TECH-REVIEW-004",
+    "HNS-EXEC-003-QA-REVIEW-004",
+    "HNS-EXEC-003-SECURITY-REVIEW-004"
+  ],
+  "metadata_correction": "Removed invalid subheading within unordered Notes; history preserved; source unchanged",
+  "prior_failure_preserved": true
+}
