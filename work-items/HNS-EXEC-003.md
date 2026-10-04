@@ -39,6 +39,8 @@ Implement deterministic Risk Assignment, Reviewer Assignment, and immutable Exec
 - `.ai/roles/implementer.md`
 - `.ai/gates/implementation-gate.md`
 - `docs/harness_v0.1_SDD.md`
+- `templates/Work_Item.md`
+- `docs/08_agent_reviews/validation/HNS-EXEC-003-consolidated-005/consolidated-inspection.md`
 - `work-items/HNS-EXEC-001.md`
 - `work-items/HNS-EXEC-002.md`
 - `work-items/HNS-EXEC-003.md`
@@ -58,6 +60,8 @@ Implement deterministic Risk Assignment, Reviewer Assignment, and immutable Exec
 - `harness/src/index.ts`
 - `harness/tests/unit/risk/**`
 - `harness/tests/unit/execution/profile.test.mjs`
+- `harness/src/context/compiler.ts`
+- `harness/tests/unit/context/compiler.test.mjs`
 
 ## Forbidden Scope
 
@@ -103,12 +107,16 @@ Implement deterministic Risk Assignment, Reviewer Assignment, and immutable Exec
 
 ## Blockers
 
+- ACTIVE HUMAN AUTHORIZATION 2026-10-04: latest Human "如果沒有開始修正" approves one named two-file dependency correction FND-HNS-EXEC-003-PREFLIGHT-005-001. Earlier approval/scope/timeout blockers below are preserved historical checkpoints, superseded only by this finite allocation. Finding remains OPEN pending independent review; no Gate/closure claim.
+
 - FND-HNS-EXEC-003-PREFLIGHT-005-001 MAJOR/OPEN: real parsed WorkItem write-forbidden patterns are merged into ContextCompiler read-forbidden scope, rejecting required .ai/CONSTITUTION.md and assignedWorkItem reads. Canonical WorkItem contract forbids writes, not these authorized reads. OwnerIMPLEMENTER/dependency002; sourcecontext/compiler.ts outside003WriteScope. Consolidated self-check NOT_READY_FOR_REVIEW; no new formalreview/sourcefix. Named Human approval/finite owner correction needed before repair; details in validation/HNS-EXEC-003-consolidated-005/consolidated-inspection.md.
 - Technical assessment on R3 confirms FND-HNS-EXEC-003-TECH-002-001 RESOLVED; new TECH report PASS, all four ACs assessed and6 independent C5 probes PASS. Historical OPEN/REQUEST_CHANGES evidence remains unchanged.
 - HUMAN_DECISION_REQUIRED - REVIEW_FINALIZATION_TIMEOUT: TECH-003 final report08:53:58.770Z is21.770s beyond parenthard08:53:37Z, stop08:54:00.763Z is23.763s late. Complete report recovered from actual execution journal, not a timely-completion claim or Gate waiver. Required QA/Security/Gate/merge/postmerge/lifecycle not run.
 - Attempts6/8, automaticcorrection1/1 exhausted andHuman targetedexception1/1 consumed. No source retry/new review dispatch. Any continuation requires finite Human operational allocation/decision; no new implementation defect or scope inferred.
 
 ## Notes
+
+- HUMAN-DEPENDENCY-CORRECTION-005: scope extension above is exactly compiler.ts/compiler.test.mjs for write-forbidden/read-forbidden separation, canonical templates/Work_Item.md Forbidden Scope and SDD Section18; no architecture/governance/schema/package changes. Preserve EXEC002 historical approvals; changed dependency requires fresh composite candidate/immutableR4 manifest and TECH/QA/SECURITY over all003ACs plus affected002 context boundaries. Historical6 attempts, automatic1/1 and C5 exception1/1 unchanged; new named005 exception0/1, maximum4 additional attempts (Maker+three profiles), total<=10. Allocation origin2026-10-04T13:08:00Z/deadline13:38:00Z, elapsed/cumulativeactive<=30min; prior historicalaggregate unknown. Maker hard4min, each review hard6min including final report; childmax22min, remaining host/reserve finite. No retry/additional source cycle; same finding unresolved TARGETED_REMEDIATION_FAILED, new unrelated MAJOR/BLOCKING NEW_MAJOR_FINDING; security/spec/independence/budget/developdivergence stop. Full exactruntime validation plus focused Risk/Profile/Context, source self-check before review, required profiles/Gate/postmerge/closure preserved. Token target20000/actualunknown; mandatoryTier1, directsections, no fullreview_log/open-ended probes. Stop after003;004 remainsTODO, no adapters/Pilot.
 
 - CONSOLIDATED-CHECKPOINT-005: bounded inventory completed for four003ACs/knownriskmodel/directdependencycomposition. Existing233full/69focused/audit0 and8reviewrouting probesPASS; actualcanonicalWorkItem integration has two concrete FORBIDDEN_SCOPE failures, one shared rootcause. OneMAJOR consolidatedFindingOPEN, not newrequirement/fuzztaxonomy; no claimallunknownbugs excluded. ExistingtechnicalC5FindingRESOLVED andlateTECHreport unchanged. Totalattempts6, addedreviews0/3; noMaker/source/reviewdispatch orGate/merge/closure. Automatic1/1 andHuman target1/1 remainexhausted. Proposedminimalfix context/compiler.ts+context/compiler.test.mjs preserves realhostReadForbidden/writeboundaries/ReadScope, owned by002 not unauthorized003sourceedit. StopHuman with single combined inventory, not piecemealreview. EXEC004 remainsknownTODO, adapters/Pilot notstarted.
 - CONSOLIDATED-PREFLIGHT-005: Human requests complete bounded defect inventory/adjustment BEFORE formal review. Conservative preflight origin2026-10-04T09:05:00Z (not asserted exact), finite added allocation ends09:35:00Z, elapsed/cumulativeactive<=30min; preserve original02:45:34Z clocks,6 dispatched attempts, automaticcorrection1/1 and namedHumanremediation1/1 exhausted, historicalaggregateunknown. First consolidate all four003ACs, knownriskmodel/SDD R1-R5/C1-C6, positive38field/lifecycle/Reviewer regressions, source-dependency-scope/hash/runtime/evidence checks and004dependency/readiness as remaining work, not implemented functionality. No formalreview until consolidated self-check has no OPEN MAJOR/BLOCKING/specconflict; any new defect is recorded together, no unapproved source correction cycle or piecemealreview. Parent writes only WI/audit/validation evidence; source/contract/package edits not part of preflight. Fresh exactNode24.19.0/npm11.17.0 ci/build/typecheck/test/audit-high/focused Risk-Profile-Context. If ready, finite review-only continuation max3 fresh required profiles TECH/QA/SECURITY, eachhard6min includingreport(target4.5min), childmax18min/host11min/reserve1min; total9 attempts with preserved6 historical (explicit added3, noreset), no Maker/retry. Fresh TECH needed for actual completed timely execution after interrupted/lateTECH003; oldtechnicalPASS/Findingclosure retained, not rewritten as timely. Shared tokenTARGET20,000/actualnull withoutaggregate telemetry. Reuse exactimmutableR3 candidate only ifallsource/manifesthashes unchanged; fresh readonlyreview probes no buildrace/fullreviewlog/fuzzing. AllrequiredcurrentPASS/noOPENMAJORBLOCKING beforeImplementationGate/normalmergeonlyunchangeddevelop90f4ff4fe6479a4644723c33e153f7083e07ec88/freshpostmerge/lifecycle/remoteverify. Budget/security/conflict/divergence/unavailable/newMAJORBLOCKING/nonPASS stop with consolidated evidence; no automaticrepair/retry. Stopafter003,004readinessinspection only, no004implementation/adapters/Pilot.
