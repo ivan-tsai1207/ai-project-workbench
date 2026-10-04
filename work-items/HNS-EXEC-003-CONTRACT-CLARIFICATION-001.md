@@ -94,10 +94,11 @@ Close only the two canonical contract gaps recorded by HNS-EXEC-003 preflight, k
 
 ## Blockers
 
-- Human authorized saved-checkpoint review continuation. Required independent SPEC/Security reviews and Spec Gate/merge remain pending; EXEC-003 runtime stays blocked until canonical closure.
+- Current-hash SPEC/Security review content PASS and fresh canonical validation PASS are preserved, but reviewer finalization exceeded hard deadlines and shared continuation active-time budget is exhausted. Spec Gate/merge/postmerge/lifecycle not performed. Human decision required; original EXEC-003 runtime remains BLOCKED.
 
 ## Notes
 
+- RESUME-001-CHECKPOINT-001: two new independent review attempts completed, total4/6 attempts, correction1/1 used; no further automatic dispatch/source changes. Current-hash PASS does not waive time-policy deviations. Saved reviewer reports and fresh R2 commands are durable; primary ACs remain unchecked until Gate/merge/closure. Stop at20min aggregate added activity; no Gate/merge/003/004/adapters.
 - Human continuation allocation RESUME-001: origin `2026-10-04T03:58:23.317Z`, deadline `2026-10-04T04:18:23.317Z`, at most2 new reviewer attempts; elapsed and host+child cumulative each<=20min. Original two Maker attempts, remediation1/1 exhausted and deadline failure remain; no new Maker/source edit/retry. Full canonical validation before Gate and after merge, only then closure/normalize003 blocker. SPEC_REVIEWER and SECURITY_REVIEWER only, each hard4min. TokenTARGET20,000, actual null. Stop on nonPASS/new MAJOR/BLOCKING/divergence/budget; no implementation003/004/adapters.
 - Checkpoint `HNS-EXEC-003-CONTRACT-CLARIFICATION-001-CHECKPOINT-001`: two Maker attempts, one correction used, zero independent reviews; no Spec Gate/merge/closure. Initial candidate validation does not qualify corrected checkpoint. Original EXEC-003 remains BLOCKED; all ACs remain unchecked.
 - Human authorization: user approved the proposed PRODUCT_ARCHITECT minimal two-contract correction by asking to proceed. Freeze exception only these two clarifications, no broader architecture/governance/implementation change; CR-HNS-EXEC-003-001 approved for this scope.

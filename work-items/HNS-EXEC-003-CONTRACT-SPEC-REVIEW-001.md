@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `DONE` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `MEDIUM` |
@@ -48,10 +48,16 @@ Independently qualify immutable saved SDD candidate b699b3f/d08636c for the two 
 - `docs/08_agent_reviews/validation/HNS-EXEC-003-contract-r1/maker-reports.md`
 - `docs/08_agent_reviews/validation/HNS-EXEC-003-contract-r2/**` validation metadata/raw output/hash-only inputs
 - `docs/08_agent_reviews/review_log.md` only HNS-EXEC-003-PREFLIGHT-001, clarification CHECKPOINT-001/RESUME-001
-- `harness/src/context/types.ts`, `harness/src/context/compiler.ts` actual compile construction only
-- `harness/src/core/hash/canonical.ts`, `harness/src/core/hash/sha256.ts`
+- `harness/src/context/types.ts`
+- `harness/src/context/compiler.ts` actual compile construction only
+- `harness/src/core/hash/canonical.ts`
+- `harness/src/core/hash/sha256.ts`
 - `harness/src/schemas/documents.ts` existing Risk/Context/Profile shapes/hash patterns only
-- `harness/src/**`, `harness/tests/**`, harness package/lock/tsconfig hash-only validation inputs
+- `harness/src/**` hash-only validation inputs outside named source excerpts
+- `harness/tests/**` hash-only validation inputs
+- `harness/package.json` hash-only validation input
+- `harness/package-lock.json` hash-only validation input
+- `harness/tsconfig.json` hash-only validation input
 - `templates/Agent_Review_Log.md` evidence format on demand
 
 ## Write Scope
@@ -60,8 +66,13 @@ Independently qualify immutable saved SDD candidate b699b3f/d08636c for the two 
 
 ## Forbidden Scope
 
-- All repository writes during reviewer execution
-- Artifact/source/tests/governance/packages/manifests/work-items changes
+- `harness/**`
+- `.ai/**`
+- `AGENTS.md`
+- `docs/harness_v0.1_SDD.md`
+- `docs/05_decisions/**`
+- `docs/08_agent_reviews/manifests/**`
+- `work-items/**`
 - `main`
 
 ## Scope
@@ -78,9 +89,9 @@ Independently qualify immutable saved SDD candidate b699b3f/d08636c for the two 
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-003-CONTRACT-SPEC-REVIEW-001-001`: Exact current manifest/document/candidate/Maker identity and independence verified.
-- [ ] `AC-HNS-EXEC-003-CONTRACT-SPEC-REVIEW-001-002`: Four clarification ACs and assigned profile boundaries assessed with bounded reproducible evidence.
-- [ ] `AC-HNS-EXEC-003-CONTRACT-SPEC-REVIEW-001-003`: Decision, findings, checks/validation applicability and limitations returned for durable audit.
+- [x] `AC-HNS-EXEC-003-CONTRACT-SPEC-REVIEW-001-001`: Exact current manifest/document/candidate/Maker identity and independence verified.
+- [x] `AC-HNS-EXEC-003-CONTRACT-SPEC-REVIEW-001-002`: Four clarification ACs and assigned profile boundaries assessed with bounded reproducible evidence.
+- [x] `AC-HNS-EXEC-003-CONTRACT-SPEC-REVIEW-001-003`: Decision, findings, checks/validation applicability and limitations returned for durable audit.
 
 ## Required Gates
 
@@ -92,13 +103,13 @@ Independently qualify immutable saved SDD candidate b699b3f/d08636c for the two 
 
 ## Blockers
 
-- No required review yet; missing material checks or unresolved major issues must not be called PASS.
+- None for completed review content; parent Gate/merge remains blocked by operational time exhaustion/late finalization, not an implementation finding.
 
 ## Notes
 
+- Actual independent result PASS preserved at `docs/08_agent_reviews/validation/HNS-EXEC-003-contract-r2/spec-review.md`; no material findings. DONE denotes completed review, not Gate approval/merge. Host session lifecycle timestamps prove finalization exceeded4min hard limit; historical overrun retained, not waived.
 - Human authorized saved-checkpoint qualification by continuation. Parent added review/closure-only increment origin `2026-10-04T03:58:23.317Z`, deadline `2026-10-04T04:18:23.317Z`, elapsed and host+child cumulative each<=20min. Original origin/attempts/history retained, not reset. At most2 new reviewer attempts, no retry/Maker/remediation; prior2 attempts and remediation1/1 used.
 - Fresh fork, Maker IDs01a104d9/01a104e1 differ from Checker. One primary profile, do not spawn agents. Parent persists actual identity/report verbatim.
 - Each reviewer hard4min from dispatch or smaller remaining parent/host limit; aim concise complete evidence within3min. Monitor actual time; stop unfinished work with BLOCK rather than produce late/fabricated PASS.
 - Initial context target16files/24selections/64KiB, full mandatory Tier1 intact, SDD sections extracted, source/evidence on demand with scope/reason; no whole review_log.
 - Shared tokenTARGET20,000, actual/remaining null without aggregate telemetry, no hardcap claim. NonPASS or new MAJOR/BLOCKING stops for Human; no automatic remediation allowance remains.
-
