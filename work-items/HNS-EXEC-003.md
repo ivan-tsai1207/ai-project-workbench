@@ -8,7 +8,7 @@
 | Role | `IMPLEMENTER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `IMPLEMENTATION` |
-| Status | `IN_PROGRESS` |
+| Status | `BLOCKED` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -101,10 +101,14 @@ Implement deterministic Risk Assignment, Reviewer Assignment, and immutable Exec
 
 ## Blockers
 
-- None
+- Maker self-check: full REVIEWER admission still requires current canonical artifact hash and registry execution binding verification (AC-002 / AC-004).
+- Maker self-check: positive hash-change coverage for every execution-relevant Profile field is incomplete (AC-003).
+- Maker self-check: changed-context fresh-compile lifecycle coverage is incomplete (AC-003 / AC-004).
+- BUDGET_INSUFFICIENT: remaining finite allocation cannot cover these corrections, all three mandatory independent reviews, Gate, merge, postmerge validation and closure. Evidence: HNS-EXEC-003-IMPLEMENTATION-CHECKPOINT-001. No review or Gate approval exists for this candidate.
 
 ## Notes
 
+- IMPLEMENTATION-CHECKPOINT-001: candidate `5629833c8f076aef5f6ad8592701128c2c789b53` preserved on `feature/hns-exec-003-implementation`. Exact-runtime ci/build/typecheck/test187, focused Risk/Profile/Context23 and audit-high0 PASS; these do not complete the four unchecked ACs. Maker attempts1/8, reviewers0, remediation0/1. Maker finalization exceeded its hard deadline by27.396s; source commit preceded the deadline. Stop before further production/review/Gate/merge; develop remains90f4ff4fe6479a4644723c33e153f7083e07ec88. No historical clocks/counters reset or additional allocation inferred.
 - IMPLEMENTATION-ALLOCATION-001: Human requested next execution after contract closure. Original preflight origin02:45:34Z/no childattempts preserved; added finite implementation allocation origin `2026-10-04T04:34:53.250Z`, deadline `2026-10-04T05:04:53.250Z`, elapsed/cumulative<=30min, max8 attempts R=3/G=0, at most1 remediation only if required fullrequalification fits remaining time. Initial fresh Maker hard9min/target6min, each fresh TECH/QA/SECURITY hard4.5min/target3min; initial child maxima22.5min, host critical work target<=6min, explicit host pause while waiting must record start/end and counts wallclock. No reset of historical clocks/unknown activity, pause is not extra childtime. Required canonical ci/build/typecheck/test/audit-high plus focusedContext/Risk/profile, frozen manifest/source hashes, independent reviews, ImplementationGate, normalmerge/postmerge/lifecycle/remoteverify. TokenTARGET30,000 actualnull; no hardcap. Initialcontexttarget16files/24selections/64KiB, fullTier1 plus directASTSDDsections, source on demand; no whole reviewlog/fuzzing. Stop after003, no004/adapters/Pilot.
 - Current handoff `LC-HNS-EXEC-003-CONTRACT-001`: both `HNS-EXEC-003-PREFLIGHT-001` contract gaps resolved by SDD5.5/16.1/21 in reviewed merge `afcb13a795d99ff3b274cb380dbcd3da2a74b12d`, clarification WI DONE, `SG-HNS-EXEC-003-CONTRACT-001` PASS and CR-HNS-EXEC-003-001 Closed. Scope/Role/HIGH required TECH/QA/SECURITY unchanged; host mappings remain canonical-authority inputs, not invented global policy. StatusTODO means ready for a separate fresh implementation execution, not completed or authorized by this closure to begin. All implementation ACs remain unchecked. Older preflight Notes below remain historical evidence.
 - Host preflight `HNS-EXEC-003-PREFLIGHT-001`, base develop `1b6fdfca5507c5274a893d0074c602b98ff2cb99`; dependency Work Items001/002 DONE. Default one-WI plan would require HIGH TECH/QA/SECURITY (R=3,G=0), initial1Maker+3reviews, at most1remediation+3reviews; maximum8 attempts and30min elapsed/cumulative, tokenTARGET30,000 with actualnull. Preflight began2026-10-04T02:45:34Z; no Maker/Reviewer dispatched, no implementation allocation consumed by childagents. Original milestone/history counters not reset or claimedknown.

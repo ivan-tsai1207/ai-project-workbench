@@ -1,0 +1,31 @@
+✔ compile is immutable, order-independent, section-bounded, deduplicated, and excludes deferred sources (12.119458ms)
+✔ AST section extraction records deterministic full-document fallback only when explicitly allowed (4.464583ms)
+✔ path, forbidden, policy, sensitivity, canonical-root, and unavailable-source boundaries fail closed (0.926167ms)
+✔ canonical alias targets are authorized before initial and on-demand reads (4.669958ms)
+✔ expected hash drift, conflicting duplicate hashes, required gates, and budgets fail closed (28.310583ms)
+✔ optional unrelated candidates are excluded before resolve or read (1.393917ms)
+✔ multiple sections share one document snapshot and enforce each expected document hash (1.97775ms)
+✔ repeated on-demand selections revalidate content and caller expected hashes (3.730208ms)
+✔ the explicit-source ceiling bounds large repositories without scanning (1.246417ms)
+✔ on-demand load, deny, dedup, and defer decisions include immutable audit hashes and budget deltas (3.500167ms)
+✔ production context code has no scan, write, process, network, credential, policy, or adapter capability (7.98825ms)
+✔ C1 actual compile admits deterministic deep-frozen profile and rechecks canonical hash (20.027333ms)
+✔ C2 repository/execution/task/role/risk/feature/phase cross-binding and missing gates reject (14.836584ms)
+✔ C3/C4 pure library context, copied/rehashed contexts and caller receipts cannot authorize (2.79175ms)
+✔ C5 compile-origin collision, compile-time and admission-time repository drift reject (6.076958ms)
+✔ C6 closed/superseded/lost records, changed context and raw-source drift reject (6.287ms)
+✔ unadmitted/self-hashed policy changes and Maker review self-selection reject (3.919541ms)
+✔ R1 highest risk, normalized inputs, immutable deterministic assignment (5.088625ms)
+✔ R2 directory-prefix OR matching and canonical baseline (1.668667ms)
+✔ R3 unknown facts never yield usable assignment and preserve CRITICAL (1.679084ms)
+✔ R4 malformed/noncanonical/duplicate rows and unsafe paths reject (1.073875ms)
+✔ R5 self-hashed policy changes, stale raw source, omitted facts and tampered assignment reject (1.587667ms)
+✔ review assignments are role-aligned, sorted, fully Maker-bound and reject collisions/stale artifacts (11.907625ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 314.854417
