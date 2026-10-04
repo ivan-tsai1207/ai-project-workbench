@@ -46,6 +46,7 @@ Independently review exact candidate `52b9dcbae50dd573ade54046c5e5dfe66bf33ae8` 
 - `docs/harness_v0.1_SDD.md` direct referenced sections only
 - `docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r2.md`
 - `docs/08_agent_reviews/validation/HNS-EXEC-003-r2/**`
+- `docs/08_agent_reviews/validation/HNS-EXEC-003-review-resume-003/**`
 - `docs/08_agent_reviews/review_log.md` named Finding IDs only
 - `harness/src/risk/**`
 - `harness/src/execution/profile.ts`
@@ -106,6 +107,7 @@ Independently review exact candidate `52b9dcbae50dd573ade54046c5e5dfe66bf33ae8` 
 
 ## Notes
 
+- RESUME-003 supersedes previous operationalbound only: Humancontinuation08:03:46Z-08:33:46Z elapsed/aggregateactive<=30min, profilehard6min includingreport (target4.5min/stopprobes5min), noMaker/source/newcorrection. Original3/8attempts/correction1/1 retained; atmost3newrequiredreviews total. Sourcecandidate/manifestriskprofileunchanged. Freshcanonicalci/build/typecheck/test/audit+focused/distinventory evidence at validation/HNS-EXEC-003-review-resume-003; qualifyallinputs/logs/builtoutput before reuse, freshprofilechecks/Securityauditrequired. No automaticretry after nonPASS; parentstopafter003.
 - Fresh single-profile execution, both production Makers != each Reviewer. Parent records actual IDs. No direct repository writes or agent spawning.
 - Parent RESUME-002 origin2026-10-04T07:10:21Z/deadline07:40:21Z, elapsed/aggregateactive<=30min. This review HARD4min from dispatch INCLUDING final report. Correction1/1 exhausted, no retry; nonPASS/newMAJORBLOCKING stops Human.
 - Initialcontexttarget16files/24selections/64KiB, mandatory Tier1 intact, direct sections/on-demand source only. No full review_log. Shared tokenTARGET20,000/actualnull, no hardcap claim.
