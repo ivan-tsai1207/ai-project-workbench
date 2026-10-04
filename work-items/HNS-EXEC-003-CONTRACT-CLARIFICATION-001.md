@@ -8,7 +8,7 @@
 | Role | `PRODUCT_ARCHITECT` |
 | Feature | `minimal-execution-engine` |
 | Phase | `SPEC` |
-| Status | `TODO` |
+| Status | `BLOCKED` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `MEDIUM` |
@@ -94,10 +94,11 @@ Close only the two canonical contract gaps recorded by HNS-EXEC-003 preflight, k
 
 ## Blockers
 
-- None for authorized narrow clarification; EXEC-003 runtime remains blocked until this specification passes and merges.
+- Sole automatic correction missed its hard deadline; preserved checkpoint is unreviewed. Human decision required before any further production or independent review. EXEC-003 runtime remains blocked until this specification passes and merges.
 
 ## Notes
 
+- Checkpoint `HNS-EXEC-003-CONTRACT-CLARIFICATION-001-CHECKPOINT-001`: two Maker attempts, one correction used, zero independent reviews; no Spec Gate/merge/closure. Initial candidate validation does not qualify corrected checkpoint. Original EXEC-003 remains BLOCKED; all ACs remain unchecked.
 - Human authorization: user approved the proposed PRODUCT_ARCHITECT minimal two-contract correction by asking to proceed. Freeze exception only these two clarifications, no broader architecture/governance/implementation change; CR-HNS-EXEC-003-001 approved for this scope.
 - Risk MEDIUM: documentation contract clarification, not runtime/permission/production change; independent basic SPEC_REVIEWER plus SECURITY_REVIEWER required for risk/identity trust-boundary semantics. No code/test-behavior QA or TECH implementation review for this artifact. Original EXEC-003 HIGH TECH/QA/SECURITY unchanged.
 - Default new-primary-WI finite origin `2026-10-04T02:54:06.413Z`, deadline `2026-10-04T03:24:06.413Z`; elapsed and cumulative host/all-child activity each<=30min, maximum6 attempts (R=2,G=0), at most1 automatic remediation. Initial Maker +2distinct reviewers; prior EXEC003 preflight/EXEC002 history preserved, not reset as same WI.
