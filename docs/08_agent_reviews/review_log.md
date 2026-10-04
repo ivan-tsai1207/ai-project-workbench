@@ -6184,3 +6184,33 @@ Raw evidence: [/private/tmp/hns-security-01a103ca-116f-7983-b8e0-79d4873b0401](/
 - Parent host execution01a0db65-c7ed-7a30-b4e1-1c220167de25 handles existing Gate and parent-authorized controlplane only. Mandatory router/governance/role/activeGate/WI intact; five referenced SDD sections AST-extracted, named checkpoint targeted, no full review_log. Optional combined output contained truncation; exact saved report bytes/hash qualification remains available. No new source/probes/fuzzing, scope/version/risk/profile changes.
 - Preflight remaining15min with zero parallelchild overhead is sufficient for fresh canonical exact Node24.19.0/npm11.17.0 ci/build/typecheck/test/audit-high/focusedContext, bounded identity/reference/WI checks, Spec Gate, normal merge unchanged develop, same required postmerge validation, closure/controlplane normalization and remote verification. Commands enforce remaining deadline. Any divergence, requiredvalidation failure, missingcurrenthashreview/newMAJOR/BLOCKING or exhaustion stops without DONE. Scope only this clarification, not implementation003/004/adapters/Pilot/milestonecompletion/release.
 - Existing EOF-blank warnings in immutable manifest/oldcontrolplane/rawstdout are nonsemantic and disclosed by both profiles, not an implementation Finding or cause for artifact rewrite/review loop. Required changed-SDD whitespace/scope checks remain mandatory; raw evidence bytes retained, no overall repository whitespacePASS fabricated.
+
+## SG-HNS-EXEC-003-CONTRACT-001 - Spec Gate
+
+| Field | Value |
+|---|---|
+| Timestamp | `2026-10-04 04:22:18 UTC` |
+| Work Item / Active Gate | HNS-EXEC-003-CONTRACT-CLARIFICATION-001 / SPEC_GATE |
+| Gate Result | `PASS` |
+| Host execution | 01a0db65-c7ed-7a30-b4e1-1c220167de25 |
+| Saved candidate / tested feature | b699b3f1081d885e5a8e990f86612c89edcdfeaa / 3612733fc56052e069732fbf535e1073e1bff648 |
+| Manifest hash | sha256:db2166dbd8ed45734f14c5d20a91626989e4d51c16bd952c6823a23be6ccfed8 |
+| SDD hash | sha256:90bbe07a15f8d4bd2ef33238b2300434ca600e02ae078561b1aabc0aa52c5933 |
+| Required current-hash profiles | SPEC_REVIEWER PASS / SECURITY_REVIEWER PASS |
+| Open material Findings | None for this clarification |
+
+| Canonical Gate Check | Evidence / Result |
+|---|---|
+| Requirement IDs / measurable ACs | AC-HNS-007 and original003-001/003/004 linked to four clarificationACs, SDD5.5/16.1/21 traceability and11 bounded R/C examples; PASS |
+| Roles / permissions defined | Existing PRODUCT_ARCHITECT/REVIEWER, exact assignedprofiles MEDIUM; no governance/source/schema change, host-owned ports preserve permissions; PASS |
+| Business / validation / failure consistency | SPEC evidence verifies normalized JSON rows/highest risk/unknown noadmission and actual compile identity/ownership/provenance failclosed; Security independently verifies threat/control boundaries; PASS |
+| Canonical references / scope | ApprovedCR and SDD sections, original preflight2gaps, all21 TypeScript blocks unchanged, SDDonly66addedlines, protected harness/.ai/AGENTS/templates diffempty, ancestry verified; PASS. Product-specific FeatureSpec/UX/release N/A to this frameworkcontract-only update |
+| Open-question disposition | Both named preflightgaps addressed by reviewedclauses; runtime implementation003 separate, pending004/adapters/Pilot not represented complete; PASS |
+| Required independent currenthash evidence | Exact manifest/SDD hashes verified; SPEC01a10513-df39-76b2-9b36-c6fd9368cb98 and Security01a10513-dfcd-7171-b69e-634830e7457f differ from both Makers01a104d9/01a104e1; actual complete immutable reports/current assignmentbindings; PASS |
+| Fail criteria absent | No new material SPEC GAP/CONFLICT, missing interface/permission, selfapproval/stalehash, or OPEN MAJOR/BLOCKING reported; PASS |
+| Required validation | Exact Nodev24.19.0/npm11.17.0, ci/build/typecheck/test181/Context11/audit0;74stableinputs/16verifiedrawlogs, fourWIs canonicalparse4/4, changedSDDwhitespacePASS; PASS |
+
+- Review evidence IDs HNS-EXEC-003-CONTRACT-SPEC-REVIEW-001-EVIDENCE-001 and SECURITY counterpart refer to unchanged `docs/08_agent_reviews/validation/HNS-EXEC-003-contract-r2/spec-review.md` / security-review.md. No reviewer rerun/newfakePASS. Scope/currenthash/evidence completeness qualified explicitly, not general approvalcache. Historical late reportfinalization remains operational noncompliance; Human continuation authorizes remaining work after disclosure, not fabricated timelycompletion, Accepted Risk or elimination of requiredreview/Gate.
+- Fresh preGate commands 2026-10-04T04:20:47.766Z-2026-10-04T04:20:52.375Z, durable `docs/08_agent_reviews/validation/HNS-EXEC-003-contract-gate-001/`, inventory rawsha2565f92b9581aecc9cd8232afa59d1c33136c9e112a4974837d46f542f57f206c0b, results rawsha25627e341016526605a06499c469885955d102d8e4ad36f7d7266f6127b803a6b38. Existing oldrawEOFwarnings outside changedSDD preserved/disclosed, no whole-repo whitespacePASS claimed. Parent updated only allocation/status evidence, not either reviewedhash.
+- Existing Gatecriteria applied manually by parent; no GateRunner/runtime enforcement implemented. PhaseGatePASS is not release/production/milestoneapproval. Original003/004 stillnotimplemented, unrelated prior observation FND-HNS-EXEC-002-SECURITY-003-001 remains unchanged/nonblocking, not globalzeroFindingclaim.
+- Required next: normal no-ffmerge into exact unchangeddevelop1b6fdfca5507c5274a893d0074c602b98ff2cb99, fresh sameexactruntimepostmergecommands, then canonicalclosure/status003-toTODO/CR and pushverify. No release/main/source/dependency/manifests changes, squash/forcepush or additionalphase dispatch.
