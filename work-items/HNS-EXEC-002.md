@@ -8,7 +8,7 @@
 | Role | `IMPLEMENTER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `IMPLEMENTATION` |
-| Status | `BLOCKED` |
+| Status | `DONE` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -83,10 +83,10 @@ Implement the deterministic least-context compiler needed to assemble a bounded 
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-002-001`: Identical inputs produce byte-identical immutable manifests and context hashes independent of caller ordering.
-- [ ] `AC-HNS-EXEC-002-002`: Tier selection, section extraction, deduplication, unrelated-file exclusion, and bounded large-repository behavior follow Sections 18 and 43.
-- [ ] `AC-HNS-EXEC-002-003`: Path escape, forbidden/sensitive input, concurrent hash drift, unresolved required context, and budget overflow fail closed without leaking content.
-- [ ] `AC-HNS-EXEC-002-004`: On-demand load, deny, and defer decisions are deterministic and include audit-ready hash and budget deltas without expanding permissions.
+- [x] `AC-HNS-EXEC-002-001`: Identical inputs produce byte-identical immutable manifests and context hashes independent of caller ordering.
+- [x] `AC-HNS-EXEC-002-002`: Tier selection, section extraction, deduplication, unrelated-file exclusion, and bounded large-repository behavior follow Sections 18 and 43.
+- [x] `AC-HNS-EXEC-002-003`: Path escape, forbidden/sensitive input, concurrent hash drift, unresolved required context, and budget overflow fail closed without leaking content.
+- [x] `AC-HNS-EXEC-002-004`: On-demand load, deny, and defer decisions are deterministic and include audit-ready hash and budget deltas without expanding permissions.
 
 ## Required Gates
 
@@ -98,10 +98,11 @@ Implement the deterministic least-context compiler needed to assemble a bounded 
 
 ## Blockers
 
-- Exact-R2 fresh TECH/QA/SECURITY REVIEW-003 all PASS; `IG-HNS-EXEC-002-002` PASS, original QA/Security Findings RESOLVED. Review-only increment3/3 attempts and cumulative30-minute allocation exhausted before merge/postmerge/lifecycle closure. Status remains BLOCKED until bounded human merge/closure continuation; see `HNS-EXEC-002-RESUME-002-CHECKPOINT`. No source remediation or additional review authorized.
+- None
 
 ## Notes
 
+- Lifecycle closure `LC-HNS-EXEC-002-001`: exact R2 independent TECH/QA/SECURITY REVIEW-003 PASS and `IG-HNS-EXEC-002-002` PASS; normal merge `efe5530e178a91974a2759293201f7417f65b1f1` and fresh exact-runtime postmerge ci/build/typecheck/test181/context11/audithigh0 PASS. Two original MAJOR/BLOCKING Findings RESOLVED; nonblocking context observation retained OPEN. Superseded R2 review assignments CANCELLED with original BLOCK decisions preserved, not rewritten as PASS. Stop after this Work Item; EXEC-003/004 and adapters/Pilot remain pending.
 - Human merge/closure increment `HNS-EXEC-002-CLOSURE-ALLOCATION-001`: user approved the proposed last5-minute continuation by saying proceed. Origin `2026-10-04T02:27:02.610Z`, deadline `2026-10-04T02:32:02.610Z`; at most5minutes elapsed/cumulative host activity, no new Reviewer/Maker dispatch, no remediation/retry or implementation changes. Preserve previous8/8 and1/1 plus review-only3/3 and1806.565-second exhaustion checkpoint; historical aggregate/token totals remain unknown, not zero. Only normal merge of unchanged reviewed R2, exact-runtime complete postmerge validation plus separate context tests, DONE/evidence normalization and normalpush/remoteHEAD verification. Any divergence/failure/timeout stops. Stop afterEXEC-002; no successors/adapters/Pilot.
 - Human review-only continuation `HNS-EXEC-002-RESUME-002`: user approved the proposed finite increment by asking to proceed. Origin `2026-10-03T21:58:48.089Z`, elapsed deadline `2026-10-03T22:28:48.089Z`; elapsed and cumulative host/reviewer activity each <=30 minutes. Exactly at most 3 new independent TECH/QA/SECURITY attempts, no retries, no new Maker/source remediation. Each reviewer <=6 minutes activity; host activity plus sum of reviewer dispatch-to-completion intervals counted conservatively. Token TARGET20,000; actual/remaining null without full telemetry. Prior 8/8 attempts, 1/1 remediation and unknown historical totals remain unchanged, not reset. Only verify/close `FND-HNS-EXEC-002-QA-001-001` and `FND-HNS-EXEC-002-SECURITY-001-001` against unchanged R2 candidate, canonical ACs and affected boundaries. Non-PASS/new MAJOR/BLOCKING or exhausted allocation stops Human. All PASS permits Implementation Gate, normal merge develop, exact-runtime postmerge validation and lifecycle closure; stop after EXEC-002, no EXEC-003/004 or adapters.
 - Required independent profiles: `TECH_REVIEWER`, `QA_REVIEWER`, `SECURITY_REVIEWER`.

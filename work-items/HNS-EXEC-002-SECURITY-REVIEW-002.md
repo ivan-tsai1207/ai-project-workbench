@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `BLOCKED` |
+| Status | `CANCELLED` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -102,6 +102,7 @@ Independently assess exact fixed EXEC-002 candidate, all canonical ACs and direc
 
 ## Notes
 
+- Superseded assignment lifecycle closure `LC-HNS-EXEC-002-001`: original R2 deadline decision BLOCK and unchecked ACs preserved; completed same-candidate independent `HNS-EXEC-002-SECURITY-REVIEW-003` supplies authoritative PASS. CANCELLED is assignment status, not a historical review decision change or fabricated execution.
 - Parent transcribes returned evidence to avoid shared-log conflicts; do not write repository files. Return PASS / REQUEST_CHANGES / BLOCK with complete required fields; not GateResult.
 - One primary profile, fresh independent execution. WI deadline21:50:22Z, additional8attempts/one remediation shared with Maker/allprofiles; counters/clocks do not reset.
 - Initial context operational target16files/24sections/64KiB; mandatoryTier1 intact, on-demand extra selections recorded. Avoid full HARNESS contract unless needed; exact SDD46 Phase3 row only.

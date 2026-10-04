@@ -1,0 +1,9 @@
+{
+  "evidence_id": "LC-HNS-EXEC-002-001",
+  "merge_commit": "efe5530e178a91974a2759293201f7417f65b1f1",
+  "reviewed_candidate": "bdcd60bb36e30e63855f06bbcb06923eb9b02e1f",
+  "manifest_path": "docs/08_agent_reviews/manifests/HNS-EXEC-002-implementation-r2.md",
+  "manifest_sha256": "eae9aa1501c359f18b02d71e5ba09df3675445c01c7de19dff222f2bdea91c72",
+  "validation_input_sha256": "e60db079e92367573e63062f8bd2c31368029653a70ad97e797d901d91ab7cea",
+  "note": "Commands ran after normal merge, before parent-authorized DONE/checkbox/reviewer-status normalization; executable input bytes remain identical. results.json candidate is reviewed R2 candidate, not merge commit; binding here records actual tested merge."
+}
