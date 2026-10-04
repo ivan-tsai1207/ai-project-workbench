@@ -727,6 +727,22 @@ interface DeliveryCandidateInput { readonly project: string; readonly commit: st
 
 `ReviewProfile`是 `REVIEWER` subordinate binding，不擴張 permission。Review Assignment Resolver擁有 assignment；Maker / Reviewer executions各自擁有 RoleCompletionEvidence；Finding Registry擁有 ReviewFinding lifecycle；Delivery Assurance Coordinator擁有 candidate manifest，`DELIVERY_ASSURANCE_REVIEWER` execution產生 result。
 
+#### RiskPolicy string-row representation
+
+`CR-HNS-EXEC-003-001` clarification: the existing `RiskPolicy.rules: readonly string[]` carries declarative JSON rows, using representation `risk-json-rows/v1`. Each string is parsed with `JSON.parse`, then checked as a plain object with exactly these required members:
+
+```text
+{"artifact_types":["implementation"],"path_prefixes":["harness/src/auth/"],"risk_class":"HIGH","trigger_id":"fixture.auth"}
+```
+
+- `trigger_id` is a nonempty authority-owned identifier; `risk_class` is exactly `LOW`, `MEDIUM`, `HIGH`, or `CRITICAL`.
+- `artifact_types` and `path_prefixes` are arrays of strings, possibly empty. Artifact types use exact identifiers. Each path prefix is a nonempty repository-relative directory ending in `/`; absolute paths, backslashes, empty segments, `.` / `..` segments and glob metacharacters are rejected. There is no regex, expression, code, wildcard or executable DSL evaluation.
+- Identifiers are NFC-normalized and trimmed, remain nonempty and case-sensitive, and contain no control characters. Paths are NFC-normalized, case-sensitive and must already satisfy the relative-path form above; no filesystem access or path expansion occurs in classification. Changed paths use the same relative-segment checks without a required trailing `/`.
+- Normalize and deduplicate each row's selector arrays, then sort them by ascending UTF-16 code unit order, matching the existing canonical serializer's key ordering. To avoid duplicate JSON member / alternate spelling ambiguity without another parser grammar, the supplied row string must exactly equal the existing canonical serializer's output for this normalized row. Noncanonical whitespace, member order, duplicate members, extra members, malformed JSON and wrong types are rejected. Producers serialize normalized rows before supplying them.
+- Sort rows by normalized `trigger_id` using the same ordering; duplicate IDs, including normalization collisions, are rejected even when their payloads agree. The row list is nonempty. `RiskPolicy.version` is a nonempty NFC-normalized authority revision string, compared exactly to the host's admitted revision. `policy_hash` is serialized as `sha256:<64 lowercase hex>` from the SHA-256 digest over canonical UTF-8 `{version, rules}`, with `rules` the sorted canonical row strings and the hash field excluded. Row-array order is insignificant; changing a selector, risk mapping or revision changes this hash.
+
+The canonical authority supplies the actual identifiers and mappings through the existing host policy boundary. The host independently binds this policy to the currently admitted canonical source paths and SHA-256 values computed over raw file bytes and serialized as `sha256:<64 lowercase hex>`, checks source ownership and current revision, and recomputes `policy_hash`; a caller's matching hash alone is insufficient. A raw SHA-256 digest is 32 bytes, conventionally rendered as 64 lowercase hex characters; serialized artifact hash fields and raw-source-file hash evidence include the `sha256:` prefix and match `^sha256:[0-9a-f]{64}$`. These source bindings are host inputs, not additional `RiskPolicy` fields. Missing, stale, unapproved or Agent-selected policy fails closed. No mappings in the illustrative row above become global policy.
+
 ### 5.6 Type Contract Matrix
 
 | Type | Purpose | Required / Optional | Validation | Owner | Mutability |
@@ -1090,6 +1106,24 @@ Generator禁止新增產品需求、擴張Role permission、自創Gate / Role / 
 
 Risk Classifier以 canonical trigger table評估 artifact type、changed paths、auth / authorization、DB / migration、payment、external API、credential、production、destructive operation、security boundary與 data sensitivity，取最高 Risk。相同 normalized inputs與 classifier version必須產生相同 RiskAssignment hash；未知 sensitive trigger至少為`HIGH`並要求 clarification。
 
+For the Section 5.5 JSON rows, the host supplies canonical trigger facts derived from the admitted Work Item, artifact and source evidence. An Agent cannot omit sensitive facts or assert their absence; missing required host fact/source evidence requires clarification. Normalize input identifiers as in Section 5.5, deduplicate/sort `trigger_facts`, normalize/deduplicate/sort `changed_paths`, and validate source hashes as serialized `sha256:<64 lowercase hex>` values. `work_item_id` and `artifact_type` are required nonempty identifiers. Validation precedes matching.
+
+A row matches if its `trigger_id` is an exact input fact, OR its `artifact_types` contains the exact input artifact type, OR any changed path starts with one of its directory prefixes. A prefix `src/auth/` matches `src/auth/login.ts`, not `src/authorize.ts`; selectors are alternatives, not conjunctions. Empty selector arrays add no match. Collect every matching row ID; the order is `LOW < MEDIUM < HIGH < CRITICAL`. Effective risk is the maximum of matched row risks and the admitted Work Item's canonical Risk, which is independently host-bound and cannot be lowered. No match preserves that Work Item risk, provided facts and policy are complete and recognized. This describes table evaluation, not new domain-specific risk assignments.
+
+Every input fact absent from the table is treated as potentially sensitive: the diagnostic minimum is the maximum of `HIGH`, the Work Item risk and matched risks, and clarification is mandatory. No usable RiskAssignment, review assignment or profile may be admitted until canonical authority resolves the unknown; `CRITICAL` is never reduced to `HIGH`. Invalid rows, missing facts/source binding or unverifiable policy likewise fail closed, rather than returning an accepted default.
+
+On successful classification, `trigger_ids` is the sorted unique matched row IDs; `source_hashes` is the sorted unique union of independently verified input evidence hashes, canonical policy raw-source hashes and `policy_hash`, each serialized as `sha256:<64 lowercase hex>`. `classifier_version` is `risk-json-rows/v1`. Deep-freeze the resulting assignment; `assignment_hash` is serialized as `sha256:<64 lowercase hex>` from SHA-256 of its canonical UTF-8 value excluding `assignment_hash`. Thus policy revision/content and source identity participate without changing Section 5.5 types. Hash verification is repeated before downstream assignment/profile admission, against the host's current policy/source bindings. A replay from a superseded policy/source binding is rejected even if its internal hash is valid.
+
+Bounded contract examples (fixture mappings are test data, not production policy):
+
+| Case | Input / authoritative fixture | Expected outcome |
+|---|---|---|
+| R1 positive | Work Item `MEDIUM`; rows `fixture.auth=HIGH` and `fixture.pay=CRITICAL`; facts contain both IDs in either order, with duplicates | `CRITICAL`; sorted two trigger IDs and identical assignment hash for normalized-equivalent inputs |
+| R2 positive | The canonical Section 5.5 fixture row; `LOW` Work Item, artifact `spec`, no facts, changed path `harness/src/auth/login.ts` | `HIGH` by directory prefix; `harness/src/authorize.ts` instead leaves the canonical `LOW` baseline |
+| R3 negative | Unknown fact `fixture.unknown`, even beside a recognized `LOW` row | Diagnostic at least `HIGH`, clarification, no admitted assignment/profile; existing `CRITICAL` baseline stays `CRITICAL` |
+| R4 negative | Duplicate normalized row ID, noncanonical/duplicate-member JSON, extra `code` member, or `../` prefix | Reject before classification; nothing executes |
+| R5 negative | Caller recomputes a hash after changing a risk row, but canonical source/revision is unchanged; or replays an old correctly hashed table | Host ownership/current-source comparison rejects; valid hash alone does not authorize policy |
+
 Review Assignment Resolver先選 artifact-aligned basic Checker，再依 Risk增加 QA / Security；`CRITICAL`還要求 Delivery Assurance與既有 Governance指定的 Human high-risk approval。它輸出依 profile ID排序的 deterministic assignments，一個 assignment對應一個 primary profile與 execution。Maker execution collision、Agent-provided profile、Risk downgrade或 artifact hash缺失都 fail closed。
 
 ```text
@@ -1329,6 +1363,38 @@ interface ExecutionProfileBuilder {
 ```
 
 Builder驗證task / role / feature / phase / Risk / Review Profile在Work Item、Context與Policy sources一致；repository commit等於context compile commit；gate set包含mandatory gates；context / policy hash可重算。Reviewer task還必須驗證 assignment hash、Maker execution分離與 reviewed artifact hash。Canonical serialization使用固定key order、UTF-8、no insignificant whitespace與normalized arrays。
+
+#### Host-owned compile provenance binding
+
+`CR-HNS-EXEC-003-001` clarification: `context/v3` has no repository provenance. The existing host compile adapter records the supplied `ContextCompilerInput.repository` at the actual compile transaction, before profile admission. Through the existing repository/source boundary, the host independently verifies the canonical resolved root, repository identity, exact branch and full Git commit object ID against that supplied repository, both before compilation and after reads complete. A changed repository snapshot or unverified source read prevents receipt issuance. A standalone compiler result plus a later caller-asserted commit is insufficient.
+
+For each successful actual compile, the host owns a deep-frozen receipt with exactly the logical payload below and `receipt_hash`:
+
+```text
+{execution_id, context_hash, repository: {identity, root, branch, commit}}
+receipt_hash = "sha256:" + lowercaseHex(SHA-256(canonical UTF-8 payload without receipt_hash))
+```
+
+`execution_id` is the actual compile input execution ID; `context_hash` is serialized as `sha256:<64 lowercase hex>` from the recomputed SHA-256 of the actual returned manifest without its hash field. Repository fields are the verified actual compile input, not inferred from the manifest or reconstructed at build time. Root uses the existing canonical root resolution; identity and branch compare exactly, and commit uses the host repository's full lowercase Git object ID (40 or 64 bare hex, not a ref or abbreviated SHA). Serialized SHA-256 artifact hashes, including `policy_hash`, `assignment_hash`, every `source_hashes` entry, `context_hash` and `receipt_hash`, match `^sha256:[0-9a-f]{64}$`; the prefix is representation metadata, not part of the raw digest. Git object IDs do not use this prefix. The host binds the receipt to the exact returned immutable context snapshot and its compile transaction. This is a local host-boundary receipt, not a Context/Profile schema field, a new filesystem/store, signing service or enforcement subsystem; `spec_versions` remains specification versions only.
+
+The Builder's existing host construction boundary provides a private, independently host-owned receipt lookup/verification dependency, keyed by `(execution_id, context_hash)`. Its wiring and records belong to the trusted host compile adapter; neither `build(input)` nor an Agent may supply, register, replace or authorize a receipt or verifier. The public Section 21 `build` shape and Sections 5.3/5.5 interface shapes are unchanged. The host verifies receipt origin against its own actual-compile record, not a caller-set owner flag or a callback returning `true`; receipt SHA-256 establishes integrity, never ownership by itself. Absent trusted host construction/actual-compile registration, the Builder must reject, including library callers who directly invoke the pure compiler.
+
+Before returning a Profile, the Builder independently recomputes context and receipt hashes, obtains the exact host-owned record, and compares receipt execution to both context and profile execution; it compares all four receipt repository fields to `input.repository` (`commit` to `commit_before`) and the current independently host-verified repository snapshot. Mismatched root, identity, branch, commit, execution or context, mutable/tampered receipts, missing receipts, and superseded records fail closed even if a caller recomputes all supplied hashes. Existing task/role/policy/review/gate checks still apply.
+
+Within a host execution correlation, the same key and identical payload/actual snapshot may be read repeatedly for an idempotent build before admission. The same key with a different repository payload or different compile origin is a collision and is rejected; it must never overwrite or select an arbitrary receipt. A new execution cannot reuse another execution's receipt. After profile admission, a stale, superseded or completed/cancelled execution record cannot authorize a fresh admission; retries follow Section 35's original execution correlation and must use the host's still-active identical compile record. Restart/loss of that trusted record requires fresh host compilation and execution binding, not reconstruction from caller data. A changed context hash (including on-demand expansion) requires its own verified host compile receipt before subsequent profile admission; the prior receipt cannot authorize it. These checks use existing host transaction/admission state and do not require a new persistence subsystem.
+
+Bounded contract examples (`A` and `B` denote distinct full commit IDs, `h` an actual manifest hash):
+
+| Case | Actual host record / build input | Expected outcome |
+|---|---|---|
+| C1 positive | Host compiled `(exec-1,h,repo-1,/repo,feature,A)`; all Builder fields and current host snapshot agree; hashes recompute | Admit immutable Profile with `commit_before=A`; identical active pre-admission read/build is idempotent |
+| C2 negative | Same Context, caller asserts `B`, another root/repo/branch or `exec-2` | Reject each mismatch; caller-supplied assertions cannot substitute for actual compile provenance |
+| C3 negative | Pure compiler produced a valid Context but no host receipt; caller supplies a valid self-hashed receipt or caller-controlled verifier | Reject missing independent host ownership/actual compile origin |
+| C4 negative | Receipt payload changes without its hash; or attacker recomputes receipt hash after changing payload | Reject integrity failure in the first case and host-record mismatch in the second |
+| C5 negative | A second compile claims `(exec-1,h)` for repo/commit `B`; or repository moves from `A` to `B` during compilation or before build | Reject collision or stale snapshot; do not issue/overwrite a receipt or admit a profile |
+| C6 negative | Replay receipt after execution closure/supersession, after trusted host-record loss, or for changed context hash `h2` | Reject fresh admission; require actual host compile registration for the active execution/context |
+
+Traceability: Section 5.5 / 16.1 closes `HNS-EXEC-003-PREFLIGHT-001` gap 1; this Section 21 binding closes gap 2. They support `AC-HNS-007`, `AC-HNS-EXEC-003-001`, `AC-HNS-EXEC-003-003`, `AC-HNS-EXEC-003-004` and clarification ACs `001-001` through `001-004` in `work-items/HNS-EXEC-003-CONTRACT-CLARIFICATION-001.md`. This candidate requires fresh independent SPEC/Security review and Spec Gate before canonical downstream use; historical approval metadata is not approval of these changed bytes. Runtime implementation and original EXEC-003 HIGH reviewer assignments remain separate.
 
 `profile_hash = SHA-256(canonical profile without profile_hash)`。Profile deep-freeze後交給Adapter；任何field變更都必須建立新execution ID、重新compile context / policy並產生新hash。Adapter不得修改或補填permission。
 

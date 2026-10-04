@@ -1,0 +1,124 @@
+{
+  "candidate": "cc54ba6364839c77295f08b5a736bec65df191d8",
+  "runtime": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin",
+  "input_sha256": "7dae60b7cec16d0fff783f5070fd8aaaa1c73324fd22096d0009a6fcde23e34d",
+  "results": [
+    {
+      "name": "node",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/node",
+      "args": [
+        "--version"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-04T03:03:57.677Z",
+      "end": "2026-10-04T03:03:57.701Z",
+      "exit": 0,
+      "signal": null,
+      "stdout_sha256": "b7677d3ec37ee1897ba07dc2cfe8292fe421c9ac93396cca5bbece486d1a2a41",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "npm",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/npm",
+      "args": [
+        "--version"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-04T03:03:57.703Z",
+      "end": "2026-10-04T03:03:57.869Z",
+      "exit": 0,
+      "signal": null,
+      "stdout_sha256": "a38e383f1e9080b0dd9001481f6e56b341000de90a05061b66734350ad3adc41",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "ci",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/npm",
+      "args": [
+        "ci"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-04T03:03:57.869Z",
+      "end": "2026-10-04T03:03:58.860Z",
+      "exit": 0,
+      "signal": null,
+      "stdout_sha256": "e58bd3b0e9e605298095283a7dbdbf180fd468e8f02fb90ee83bca02dab0a6b0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "build",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/npm",
+      "args": [
+        "run",
+        "build"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-04T03:03:58.860Z",
+      "end": "2026-10-04T03:03:59.824Z",
+      "exit": 0,
+      "signal": null,
+      "stdout_sha256": "4f508288098c0f594f144ba449b406c86a7cfc01338904328b0d973804b30005",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "typecheck",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/npm",
+      "args": [
+        "run",
+        "typecheck"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-04T03:03:59.824Z",
+      "end": "2026-10-04T03:04:00.129Z",
+      "exit": 0,
+      "signal": null,
+      "stdout_sha256": "db3ea65f9010bc3aad2f6222df86f3a730be7c79cfbbde8172073664a5402092",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "test",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/npm",
+      "args": [
+        "test"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-04T03:04:00.129Z",
+      "end": "2026-10-04T03:04:01.829Z",
+      "exit": 0,
+      "signal": null,
+      "stdout_sha256": "cc9d48bccd9fca12a902de085249b3c63ea58c20e2232ea940c8b20082e23a28",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "context",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/node",
+      "args": [
+        "--test",
+        "tests/unit/context/compiler.test.mjs"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-04T03:04:01.830Z",
+      "end": "2026-10-04T03:04:02.035Z",
+      "exit": 0,
+      "signal": null,
+      "stdout_sha256": "9754cdc1ca6d6a8b186f1fd6f87ed8561ab2e765ed4540abbbbcb553ab0048fa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "audit",
+      "executable": "/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/npm",
+      "args": [
+        "audit",
+        "--audit-level=high",
+        "--json"
+      ],
+      "cwd": "/Users/ivan/Documents/Codex/系統開發框架/.orchestration/hns-core-005-r4.hn6GJU/repo/harness",
+      "start": "2026-10-04T03:04:02.035Z",
+      "end": "2026-10-04T03:04:02.590Z",
+      "exit": 0,
+      "signal": null,
+      "stdout_sha256": "9a9a9e22d39e17125ce3f943ccc73c2e5a252b3edb4ebe857cc2067288d34599",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
