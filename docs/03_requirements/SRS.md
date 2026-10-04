@@ -39,3 +39,9 @@ Acceptance: complete home→new→idea→first real-model plan→resume/restart 
 ## WB-016 / AC-WB-016 — Repository 驅動的 PR 命名
 
 AC-WB-016：允許前綴、中文摘要、純紀錄使用 docs、拒絕多重狀態與英文 fallback、規則缺失／衝突提示及原有批准邊界。 規則來源：[PR 命名規則](PR_NAMING_RULES.md)。
+
+<a id="cloud-foundation"></a>
+
+## WB-017 / AC-WB-017 — 雲端基礎版
+
+使用者授權 Vercel＋Supabase 的登入、專案與手動紀錄保存；AI API／GitHub 授權尚不接入。本機模式不變。新增登入角色／RLS 與資料 API、UX、deployment 和驗收邊界由 [雲端規格](../../specs/workbench/cloud.md) 定義；真實部署與隔離驗收未完成前不得宣稱完成。

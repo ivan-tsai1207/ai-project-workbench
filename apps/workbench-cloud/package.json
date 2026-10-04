@@ -1,0 +1,1 @@
+{"name":"ai-project-workbench-cloud","version":"0.1.0","private":true,"type":"module","engines":{"node":">=24"},"scripts":{"build":"node build.mjs","test":"node --test tests/*.test.mjs","check":"node --check build.mjs && node --check public/client.mjs && node --check public/app.mjs && node --check public/config-validation.mjs"}}

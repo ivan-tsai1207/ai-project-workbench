@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {validateConfig} from '../public/config-validation.mjs';
+const key='sb_publishable_'+'x'.repeat(30),url='https://example.supabase.co';const jwt=role=>'e30.'+Buffer.from(JSON.stringify({role})).toString('base64url')+'.signature';
+test('accepts only public publishable or anon keys',()=>{assert.equal(validateConfig(url,key).url,url);assert.equal(validateConfig(url,jwt('anon')).key,jwt('anon'));for(const k of ['sb_secret_abc',jwt('service_role'),jwt('authenticated'),'secret',null])assert.throws(()=>validateConfig(url,k));});
+test('rejects unsafe destinations and credential/port/path confusion',()=>{for(const u of ['http://example.supabase.co','https://example.supabase.co.attacker.com','https://evil.com','https://u:p@example.supabase.co','https://example.supabase.co:123','https://example.supabase.co/path','https://example.supabase.co?x=1'])assert.throws(()=>validateConfig(u,key));});

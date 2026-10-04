@@ -1,0 +1,13 @@
+{
+  "requirement": "WB-017",
+  "acceptance": "AC-WB-017",
+  "design_version": "WB-017-UX-v1",
+  "maker_execution_id": "01a1082a-d5ae-7273-bf02-36ada3e3e831",
+  "spec_artifact_sha256": "482ae09ff51d72b110738eb91cd76c075c4ec564a9eaa188542b9794d4181b6c",
+  "files": {
+    "design/workbench/cloud/UX_Contract.md": "a929546ef048e9913b031e20f69e1dca9f5bbed58bf30988cd54e122087de3c2",
+    "design/workbench/cloud/screens/SCR-WBC-001.md": "780e8437a9bdeaefa2a4ebf74ccc3820a106315a6afd197d0d3903905c802705",
+    "design/workbench/cloud/wireframe.html": "8d2071c13883e1da00bd99d88399d3b3060fe96f42ae0ef737467742522d71eb",
+    "design/workbench/cloud/Design_Source_Map.md": "aefed4318e5eb182bb5d478116c2712eaf84fc42b6997b001baed820e6fcb96a"
+  }
+}
