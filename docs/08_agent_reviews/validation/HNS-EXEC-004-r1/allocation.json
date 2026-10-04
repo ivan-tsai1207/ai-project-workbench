@@ -216,7 +216,7 @@
     "safety_s": 60,
     "token_target": 30000,
     "token_actual": null,
-    "status": "CLOSURE_VALIDATED",
+    "status": "DONE_PUSH_VERIFIED",
     "source_unchanged": true,
     "TECH_QA_hashes_qualified": true,
     "pauses": [
@@ -236,11 +236,19 @@
     ],
     "measured_parent_idle_total_s": 90.0102,
     "checkpoint_at": "2026-10-04T15:00:51.449174+00:00",
-    "elapsed_s": 441.449174,
-    "conservative_added_activity_s": 528.5469740000001,
-    "remaining_activity_s": 71.45302599999991,
-    "remaining_wall_s": 158.55082599999997,
-    "historical_activity_and_unknown_preservation_retained": true
+    "elapsed_s": 472.413987,
+    "conservative_added_activity_s": 559.511787,
+    "remaining_activity_s": 40.48821299999997,
+    "remaining_wall_s": 127.58601299999998,
+    "historical_activity_and_unknown_preservation_retained": true,
+    "verified_at": "2026-10-04T15:01:22.413987+00:00",
+    "pushed_closure_commit": "c1ac948828381b3a152eb858ec627fb842448826",
+    "remote_receipt": "c1ac948828381b3a152eb858ec627fb842448826\trefs/heads/develop\nb629d917788d7ef5beb229aaa2254dfd0c9a1d76\trefs/heads/main\n",
+    "source_unchanged_after_reviews": true,
+    "work_item_parse": "4/4 PASS",
+    "attempts_total": 5,
+    "remediation_used": 0,
+    "final_receipt_commit_note": "This receipt is metadata-only; final receipt HEAD remotely checked after push, outside this self-referential record."
   },
   "security_completion": {
     "type": "task_complete",
