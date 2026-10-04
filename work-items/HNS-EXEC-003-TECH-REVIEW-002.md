@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `TODO` |
+| Status | `BLOCKED` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -89,9 +89,9 @@ Independently review exact candidate `52b9dcbae50dd573ade54046c5e5dfe66bf33ae8` 
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-003-TECH-REVIEW-002-001`: Immutable candidate/hash, independence, full input/runtime/log provenance and scope verified.
-- [ ] `AC-HNS-EXEC-003-TECH-REVIEW-002-002`: All original ACs and directly affected profile-specific boundaries fully assessed.
-- [ ] `AC-HNS-EXEC-003-TECH-REVIEW-002-003`: Complete evidence, findings, limitations and decision returned for durable audit.
+- [x] `AC-HNS-EXEC-003-TECH-REVIEW-002-001`: Immutable candidate/hash, independence, full input/runtime/log provenance and scope verified.
+- [x] `AC-HNS-EXEC-003-TECH-REVIEW-002-002`: All original ACs and directly affected profile-specific boundaries fully assessed.
+- [x] `AC-HNS-EXEC-003-TECH-REVIEW-002-003`: Complete evidence, findings, limitations and decision returned for durable audit.
 
 ## Required Gates
 
@@ -103,10 +103,12 @@ Independently review exact candidate `52b9dcbae50dd573ade54046c5e5dfe66bf33ae8` 
 
 ## Blockers
 
-- None at assignment; full mandatory evidence required, incomplete checks never PASS.
+- FND-HNS-EXEC-003-TECH-002-001 MAJOR / OPEN; actual final decisionREQUEST_CHANGES, ownerIMPLEMENTER, canonicalSDD21/C5/AC-004. No automaticcorrection/retry or GatePASS.
+- AssessmentACs complete, but StatusBLOCKED retains artifact rejection and operational late-finalization: taskcomplete08:14:54.422Z, parenthard08:14:46.209Z. No timelycompletion/DONE claim or Human waiver.
 
 ## Notes
 
+- Actual execution01a105f5-5385-7f83-8189-01a09da6d2ec; report/evidence andexactcompletedC5counterexample preserved in validation/HNS-EXEC-003-review-resume-003/tech-review.md andtech-c5-probe.json. Source/dist writesnone, bothMakersdifferent. Allthree oldMakergaps verified; newcanonicalfinalreaddefect remainsOPEN. Probeexit0 demonstratescounterexample, notrequirementPASS. Existing interrupted001historyunchanged. ParentstopafterREQUEST_CHANGES, QA/Securityundispatched.
 - Fresh independentTECH continuation after interrupted001, no sourceR3 or duplicatedsuccessfulreview. Parent RESUME-003 origin08:03:46Z/deadline08:33:46Z elapsed/aggregateactive<=30min, existing3/8attempts/correction1/1 exhausted. This profilehard6min fromdispatch includingreport; target4.5min/finishprobes5min. No furtherretry. NonPASS/newMAJORBLOCKING stopsHuman.
 - Both Makers01a10535-54ac-7693-b13a-9085abfc6ca3/01a105c1-8580-7c70-af1c-555ff65aad5d differfromReviewer. No repositorywrites/spawn; parent persists complete returnedreport and rawboundedprobe evidence.
 - ExactNode24.19.0/npm11.17.0 runtime. Fresh parent canonicalvalidation anddistinventory in validation/HNS-EXEC-003-review-resume-003 supersede commandfreshness only; immutableR2candidate/manifests unchanged. Verify96inputs/10sourcehashes/allrawlogs/dist.json andsuccessfulbuild/testoutputstability, thenfreshprofilefocusedchecks. No build/ci races/fullreviewlog/fuzzing.
