@@ -1,0 +1,96 @@
+{
+  "gate_id": "IG-HNS-EXEC-004-001",
+  "result": "PASS",
+  "timestamp": "2026-10-04T14:59:58.272208+00:00",
+  "definition": ".ai/gates/implementation-gate.md",
+  "definition_hash": "sha256:077ac6969e5a341c3810afee38d60005e524899702701b912fc991f1e1f4b2b1",
+  "candidate": "b8d5fba1aa656f27cd2b2f8c9a06b4f737a6fb06",
+  "artifact": "docs/08_agent_reviews/manifests/HNS-EXEC-004-implementation-r1.md",
+  "artifact_hash": "sha256:ac1c821cf95113bad849f9bc84ad9b90c55825606c838ad566f9a0f9e988b570",
+  "reviews": [
+    {
+      "profile": "TECH_REVIEWER",
+      "report": "docs/08_agent_reviews/validation/HNS-EXEC-004-r1/tech-review.md",
+      "report_hash": "sha256:024161de85e22c632ea5fdc786abc0645d286893796d63d602e72711ca3981c1",
+      "completion": {
+        "session_id": "01a1075e-e46b-77d2-ba71-4e6796e54779",
+        "completion": {
+          "type": "task_complete",
+          "turn_id": "01a1075e-e4c6-7f91-b26c-57213413306e",
+          "started_at": 1791125021,
+          "completed_at": 1791125187,
+          "duration_ms": 165647,
+          "time_to_first_token_ms": 3766,
+          "timestamp": "2026-10-04T14:46:27.604Z"
+        },
+        "usage": {
+          "input_tokens": 804071,
+          "cached_input_tokens": 732544,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6787,
+          "reasoning_output_tokens": 1412,
+          "total_tokens": 810858
+        },
+        "report_hash": "024161de85e22c632ea5fdc786abc0645d286893796d63d602e72711ca3981c1"
+      }
+    },
+    {
+      "profile": "QA_REVIEWER",
+      "report": "docs/08_agent_reviews/validation/HNS-EXEC-004-r1/qa-review.md",
+      "report_hash": "sha256:b13f34afcbd8034f08cc3dc64dac8abfc127103ae7a6fa38d08fce59182b77bb",
+      "completion": {
+        "session_id": "01a10763-5f4d-7090-8757-68bba5853222",
+        "completion": {
+          "type": "task_complete",
+          "turn_id": "01a10763-5faa-7f33-9aec-654217b11157",
+          "started_at": 1791125315,
+          "completed_at": 1791125476,
+          "duration_ms": 161056,
+          "time_to_first_token_ms": 4761,
+          "timestamp": "2026-10-04T14:51:16.577Z"
+        },
+        "usage": {
+          "input_tokens": 660153,
+          "cached_input_tokens": 602752,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 7120,
+          "reasoning_output_tokens": 1065,
+          "total_tokens": 667273
+        },
+        "report_hash": "b13f34afcbd8034f08cc3dc64dac8abfc127103ae7a6fa38d08fce59182b77bb"
+      }
+    },
+    {
+      "profile": "SECURITY_REVIEWER",
+      "report": "docs/08_agent_reviews/validation/HNS-EXEC-004-r1/security-review.md",
+      "report_hash": "sha256:11b8cee01eea5eaed46f845a93b1323c68d6ba455bc93489a3e1a2046db790ea",
+      "completion": {
+        "type": "task_complete",
+        "turn_id": "01a10769-0cb5-71d1-bc94-862d6d3f0fdc",
+        "started_at": 1791125687,
+        "completed_at": 1791125864,
+        "duration_ms": 177108,
+        "time_to_first_token_ms": 5330,
+        "timestamp": "2026-10-04T14:57:44.620Z",
+        "execution_id": "01a10769-0cb5-71d1-bc94-862d6d3f0fdc",
+        "session_correlation": "01a1074d-a154-74f2-b9e9-2a97d21eaf9b",
+        "report_hash": "sha256:11b8cee01eea5eaed46f845a93b1323c68d6ba455bc93489a3e1a2046db790ea",
+        "token_usage": "Unavailable per-turn; old session cumulative telemetry not attributed to fresh review"
+      }
+    }
+  ],
+  "checks": [
+    "six authorized executable paths only; no API/schema/role/permission/UX addition",
+    "all4AC independently assessed PASS; positive and negative coverage",
+    "host-owned Gate/audit contract validated; no Screen Spec applicable",
+    "ci/build/typecheck/full233/focused95/audit0; no configured formatter/linter, whitespace PASS",
+    "TECH/QA/Security distinct current actual executions; Maker separation",
+    "no new implementation finding or OPEN BLOCKING; historical EXEC002 OBSERVATION remains OPEN nonblocking",
+    "Security actual177108ms timely; complete evidence durable; current source/hash unchanged"
+  ],
+  "limitations": [
+    "in-memory foundation only; not production enforcement or durable Workbench",
+    "context retrieval deviations disclosed in reviews; token aggregate unknown",
+    "Spec/Design/DA extra positive integration coverage retained in TECH evidence; Security independently focuses Implementation Gate"
+  ]
+}

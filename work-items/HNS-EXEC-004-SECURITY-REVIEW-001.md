@@ -8,7 +8,7 @@
 | Role | `REVIEWER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `REVIEW` |
-| Status | `BLOCKED` |
+| Status | `DONE` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -88,9 +88,9 @@ Independently assess immutable candidate `b8d5fba1aa656f27cd2b2f8c9a06b4f737a6fb
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-004-SECURITY-REVIEW-001-001`: Current candidate/input/runtime/evidence/scope and independent identity verified.
-- [ ] `AC-HNS-EXEC-004-SECURITY-REVIEW-001-002`: AllfourACs and assigned profile boundaries fully assessed with bounded positive/negative coverage.
-- [ ] `AC-HNS-EXEC-004-SECURITY-REVIEW-001-003`: Complete final evidence/findings/limitations/decision returned for parent persistence within deadline.
+- [x] `AC-HNS-EXEC-004-SECURITY-REVIEW-001-001`: Current candidate/input/runtime/evidence/scope and independent identity verified.
+- [x] `AC-HNS-EXEC-004-SECURITY-REVIEW-001-002`: AllfourACs and assigned profile boundaries fully assessed with bounded positive/negative coverage.
+- [x] `AC-HNS-EXEC-004-SECURITY-REVIEW-001-003`: Complete final evidence/findings/limitations/decision returned for parent persistence within deadline.
 
 ## Required Gates
 
@@ -106,4 +106,8 @@ Independently assess immutable candidate `b8d5fba1aa656f27cd2b2f8c9a06b4f737a6fb
 
 ## Notes
 
+- HUMAN-REVIEW-CLOSURE-ALLOCATION-002 supersedes operationalblocker only: Humanapproved onefreshSecurity, newactualhostturnexecution/context; hard240s inclfinal fromdispatch and parent15:03:30UTC. Original4attempts unchanged, fifthonly/no retry; priorSecurity003PASScannotapprove004. Fullmandatory/currentartifact/Maker/context reloaded, readonly. Parentrecordsnewturn_id notreusedsessionUUID as executionidentity. Parentallocation r1/allocation.json continuation_002; noMaker/source/TECH/QAredo.
+
 - Parent finite004 allocation origin14:33UTC, hard15:03UTC elapsed/cumulative<=1800s, max8attempts/atmost1conditional existing-scope remediation. Remainingreviewhard210s INCLUDING FINAL, target150s, stopprobes180s; no retry/spawn/writes/build/ci/dist mutations. MandatoryTier1 full +directSDD only, initial96KiB24files64sections; no mothertranscript/fullreviewhistory/adjacentSDD. Existing003Observation remainsOPEN/nonblocking; Maker accidental adjacentcontext noted separately, not waived/sourcefinding. Parentpersistreturnedfullreport; no selfapproval/Gateclaim. NewunrelatedMAJORBLOCKING/spec/security/budget stopconcretehandoff. RequiredsetTECH/QA/SECURITY cannotremoved.
+
+- FRESH-COMPLETION-001: Fresh execution 01a10769-0cb5-71d1-bc94-862d6d3f0fdc completed 2026-10-04T14:57:44.620Z within240s; PASS all4primaryAC/3reviewAC; report and fresh23/audit0/5probes persisted in validation/HNS-EXEC-004-r1. Prior failed dispatch preserved; prior003PASS not reused.

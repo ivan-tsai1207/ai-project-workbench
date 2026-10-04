@@ -5,7 +5,7 @@
   "elapsed_cap_s": 1800,
   "active_cap_s": 1800,
   "max_attempts": 8,
-  "attempts_used": 4,
+  "attempts_used": 5,
   "remediation_max": 1,
   "remediation_used": 0,
   "required_profiles": [
@@ -22,7 +22,7 @@
   "token_target": 30000,
   "token_actual": null,
   "base": "e3c2150620e4a0090f9f263ad0f559b20dc5c108",
-  "status": "BLOCKED_BUDGET_INSUFFICIENT",
+  "status": "CONTINUATION_AUTHORIZED",
   "historical_EXEC003": "DONE at e3c2150;12 attempts and prior1978s/1800s178s overrun preserved, no reset",
   "context_initial_budget": {
     "bytes": 98304,
@@ -101,6 +101,14 @@
       "result": "AGENT_DISPATCH_FAILED",
       "error": "agent thread limit reached",
       "actual_execution_created": false
+    },
+    {
+      "attempt": 5,
+      "profile": "SECURITY_REVIEWER",
+      "execution_id": "01a10769-0cb5-71d1-bc94-862d6d3f0fdc",
+      "session_correlation": "01a1074d-a154-74f2-b9e9-2a97d21eaf9b",
+      "start": "2026-10-04T14:54:47.511Z",
+      "max_s": 240
     }
   ],
   "measured_parent_idle_sleeps_s": [
@@ -192,5 +200,53 @@
     "source_findings": "None in completed bounded Maker/TECH/QA; Security missing",
     "repo_approval": "Pending user reply; no productrepo provisioned",
     "fresh_execution_host_limit": "Newspawn failed; reusing completedworker requires separate actualturnidentity and newfresh binding, not a cachedPASS; no fallback fitsremainingreserve"
+  },
+  "continuation_002": {
+    "authorization": "DirectHuman reply approves10min boundedallocation",
+    "origin": "2026-10-04T14:53:30Z",
+    "deadline": "2026-10-04T15:03:30Z",
+    "added_activity_cap_s": 600,
+    "added_wall_cap_s": 600,
+    "historical_attempts": 4,
+    "max_total_attempts": 5,
+    "historical_activity_checkpoint_s": 1584.006079,
+    "postcheckpoint_preservation_activity": "unknown retained, notreset",
+    "security_max_s": 240,
+    "host_reserve_s": 300,
+    "safety_s": 60,
+    "token_target": 30000,
+    "token_actual": null,
+    "status": "SECURITY_PASS_GATE_CLOSURE",
+    "source_unchanged": true,
+    "TECH_QA_hashes_qualified": true,
+    "pauses": [
+      {
+        "start": "2026-10-04T14:55:05.770104+00:00",
+        "end": "2026-10-04T14:59:58.269115+00:00",
+        "reason": "Explicit parent waits for Security; child/wall continue, only measured idle sleeps deducted"
+      }
+    ],
+    "execution_id": "01a10769-0cb5-71d1-bc94-862d6d3f0fdc",
+    "session_correlation": "01a1074d-a154-74f2-b9e9-2a97d21eaf9b",
+    "dispatch_start": "2026-10-04T14:54:47.511Z",
+    "individual_hard_deadline": "2026-10-04T14:58:47.511000+00:00",
+    "measured_parent_idle_sleeps_s": [
+      45.0049,
+      45.0053
+    ],
+    "measured_parent_idle_total_s": 90.0102
+  },
+  "security_completion": {
+    "type": "task_complete",
+    "turn_id": "01a10769-0cb5-71d1-bc94-862d6d3f0fdc",
+    "started_at": 1791125687,
+    "completed_at": 1791125864,
+    "duration_ms": 177108,
+    "time_to_first_token_ms": 5330,
+    "timestamp": "2026-10-04T14:57:44.620Z",
+    "execution_id": "01a10769-0cb5-71d1-bc94-862d6d3f0fdc",
+    "session_correlation": "01a1074d-a154-74f2-b9e9-2a97d21eaf9b",
+    "report_hash": "sha256:11b8cee01eea5eaed46f845a93b1323c68d6ba455bc93489a3e1a2046db790ea",
+    "token_usage": "Unavailable per-turn; old session cumulative telemetry not attributed to fresh review"
   }
 }
