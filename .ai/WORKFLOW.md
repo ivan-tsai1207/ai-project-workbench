@@ -27,7 +27,7 @@ Independent SPEC_REVIEWER
   ↓
 SPEC GATE
   ↓
-Claude / UX Designer：受約束的 UI/UX 設計
+Claude / UX Designer：先使用者目標與操作邏輯，再線框與 UI 設計
   ↓
 UX CONTRACT / SCREEN SPEC / DESIGN TOKENS
   ↓
@@ -223,3 +223,7 @@ Codex Implementation
 - Human approval、Accepted ADR 與 Approved Change Request 都必須寫回 canonical spec，才可供下游 Agent 執行。
 - Change Request 不得取代正式規格；其狀態與寫回流程依 `.ai/AUTHORITY.md`。
 - 發現上下層規格衝突時，停止受影響工作並回報 `SPEC CONFLICT`。
+
+## UX Before UI
+
+在既有 SPEC_GATE → DESIGN_GATE 流程內，先記錄目標使用者與熟悉程度、要完成的任務、首次／回訪主流程、資訊優先順序、每步主要操作、用語及失敗恢復；再畫線框與視覺 UI。不能以工程任務、Role、Gate、模型設定作為一般使用者的必要入門知識。進階設定使用漸進揭露，重要權限、資料去向與確認不得隱藏。上述 UX 決策寫入 Screen Spec 或其直接引用 UX Flow，與需求逐項對應；線框來源記入 Design Source Map。沿用既有 UX review / Design Gate，不增新 Gate、Role 或每頁額外審查。未做實際使用者測試時明列限制，設計走查不等於可用性驗證。

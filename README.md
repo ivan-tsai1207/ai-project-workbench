@@ -1,4 +1,23 @@
-# AI System Delivery Framework
+# AI Project Workbench
+
+AI 專案工作台：用對話把想法整理成第一份專案計畫，分開管理多個專案，並在確認後建立或同步 GitHub repo。
+
+目前提供單人本機 MVP 候選版：專案首頁 → 開始新專案 → 描述想法 → AI 整理計畫 → 隨時回來繼續。GitHub、模型與技能不必先設定；上傳內容會先顯示確認卡或預覽。這是待交付確認的候選版本，尚未完成正式發布。
+
+## 開始使用
+
+1. 安裝 Node.js 24.19+，並在本機 Codex 完成登入。若需要 GitHub 匯入／建立／同步，再登入 GitHub CLI。
+2. 在 macOS 雙擊 `apps/workbench/Start.command`，開啟工作台首頁。其他啟動方式與環境設定見 [工作台說明](apps/workbench/README.md)。
+3. 點「開始新專案」，填入名稱與想法，按「建立專案並整理計畫」。
+4. 從「所有專案」續接對話；要存到 GitHub 時，展開專案頁的「保存到 GitHub」並確認內容。
+
+AI 使用本機 Codex CLI 登入並傳入所選模型；目前協助分析與討論，尚不會修改程式。想法會送至 OpenAI 分析，專案與對話保存在本機。Claude／ChatGPT 原生執行工具及 GitHub 社群技能安裝尚未接入；目前技能只使用專案內 SKILL.md 的指令文字。一般使用者研究與正式公開服務尚未完成。
+
+## 與交付框架的關係
+
+本工作台內含原有跨 Agent 系統交付框架，保留先 UX、再 UI，以及規格、設計、實作與獨立審查的規則。以下為既有框架文件。
+
+## AI System Delivery Framework
 
 本 repo 是系統開發專案的全域交付框架，適用於 Codex、Claude Code 與其他可讀取 Markdown 規則的 LLM / Agent 工具。
 
