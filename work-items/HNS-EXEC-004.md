@@ -8,7 +8,7 @@
 | Role | `IMPLEMENTER` |
 | Feature | `minimal-execution-engine` |
 | Phase | `IMPLEMENTATION` |
-| Status | `BLOCKED` |
+| Status | `DONE` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `HIGH` |
@@ -87,10 +87,10 @@ Implement deterministic Gate Runner validation and minimal append-only audit/exe
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-004-001`: Missing/stale review evidence, Maker/Checker collision, unassigned profile, open blocking finding, or missing mandatory Gate prevents PASS and completion.
-- [ ] `AC-HNS-EXEC-004-002`: Valid evidence produces deterministic immutable Gate Results with distinct Gate and review decision enums.
-- [ ] `AC-HNS-EXEC-004-003`: Audit events use contiguous sequence and hash chaining, redact sensitive values before hashing, detect tampering, and finalize idempotently.
-- [ ] `AC-HNS-EXEC-004-004`: Minimal execution evidence can reconstruct context/profile references, state transitions, reviews, findings, gates, and final status without filesystem, adapter, Git, or production side effects.
+- [x] `AC-HNS-EXEC-004-001`: Missing/stale review evidence, Maker/Checker collision, unassigned profile, open blocking finding, or missing mandatory Gate prevents PASS and completion.
+- [x] `AC-HNS-EXEC-004-002`: Valid evidence produces deterministic immutable Gate Results with distinct Gate and review decision enums.
+- [x] `AC-HNS-EXEC-004-003`: Audit events use contiguous sequence and hash chaining, redact sensitive values before hashing, detect tampering, and finalize idempotently.
+- [x] `AC-HNS-EXEC-004-004`: Minimal execution evidence can reconstruct context/profile references, state transitions, reviews, findings, gates, and final status without filesystem, adapter, Git, or production side effects.
 
 ## Required Gates
 
@@ -103,7 +103,7 @@ Implement deterministic Gate Runner validation and minimal append-only audit/exe
 
 ## Blockers
 
-- BUDGET_INSUFFICIENT / AGENT_DISPATCH_FAILED: fresh Security spawn rejected by host agent thread limit. Remaining full required review and Gate/merge/postmerge/closure reserve cannot fit current cumulative activity; no security waiver or automatic retry. Candidate/TECH source assessment preserved; missingSecurity prevents Gate/closure.
+- None within assigned scope. Historical budget/dispatch blocker superseded by approved continuation and timely fresh Security PASS.
 
 ## Notes
 
@@ -114,3 +114,5 @@ Implement deterministic Gate Runner validation and minimal append-only audit/exe
 - FINITE-IMPLEMENTATION-ALLOCATION-001: Human new-chat delegation authorizes004 after003closure; independent stage, no003counterreset. Origin 2026-10-04T14:33:00+00:00 harddeadline 2026-10-04T15:03:00+00:00, cumulativeactivity/elapsed<=1800s, max8attempts (initialMaker+requiredTECH/QA/SECURITY, atmost1 existing-scope automaticremediation+allfreshreviews onlyif complete requalification fits remaining). InitialMakerhard480s/target360s, eachReviewhard240s includingreport/target180s, childmax1200s+host480s+safety120s. Required exactruntimeci/build/typecheck/fulltests and focusedgates/audit/risk/profile/context, audit-high, immutablecandidate/selfreview/freshindependentreviews/ImplementationGate/normalunchangeddevelopmerge/freshpostmerge/lifecycle/normalpushremoteverify. Basee3c2150620e4a0090f9f263ad0f559b20dc5c108; mainuntouched/historypreserved. Initial fullTier1+directSDD selections budget96KiB/24files/64sections withinhostdefaults, source/testondemand; no fullhistory. TokenTARGET30000actualnull untilprovidertelemetry, no exactcap/costclaim. Missingcanonicalcontract/newunrelatedMAJORBLOCKING/security/divergence/independence/budget/nonPASSafterremediation stopconcretehandoff. ScopeGateRunner+inmemoryAudit only; notdurable/OSenforcement/production/workbenchcompletion. Parentpersistsevidence/statusonly, Makerwritesonlydeclaredsource/tests.
 
 - Required independent profiles: `TECH_REVIEWER`, `QA_REVIEWER`, `SECURITY_REVIEWER`.
+
+- LIFECYCLE-CLOSURE-001: ImplementationGateIG-HNS-EXEC-004-001PASS; independentTECH/QAfreshSecurityPASS; normalsource merge4de2089748d4adf70f8887298a3e7b55e69f34f3; exactruntimefreshpostmergeci/build/typecheck/full233/focused95/audit0PASS,102inputs124dist16logs stable. AllfourAC independentlymapped; sourceunchanged/sixauthorizedpaths269additions, no production or durableWorkbenchclaim. Historicalblocker retained: BUDGET_INSUFFICIENT / AGENT_DISPATCH_FAILED: fresh Security spawn rejected by host agent thread limit. Remaining full required review and Gate/merge/postmerge/closure reserve cannot fit current cumulative activity; no security waiver or automatic retry. Candidate/TECH source assessment preserved; missingSecurity prevents Gate/closure.

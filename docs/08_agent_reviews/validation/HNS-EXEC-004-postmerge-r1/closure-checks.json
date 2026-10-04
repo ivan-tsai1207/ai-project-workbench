@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-10-04T15:00:51.711Z",
+  "result": "PASS",
+  "parsed_work_items": 4,
+  "source_scope": [
+    "harness/src/audit/index.ts",
+    "harness/src/gates/index.ts",
+    "harness/src/index.ts",
+    "harness/tests/unit/audit/recorder.test.mjs",
+    "harness/tests/unit/gates/fixtures.mjs",
+    "harness/tests/unit/gates/runner.test.mjs"
+  ],
+  "source_unchanged": true,
+  "inputs": 102,
+  "lifecycle_metadata_delta": [
+    "work-items/HNS-EXEC-004.md"
+  ],
+  "dist": 124,
+  "raw_logs": 16,
+  "test_full": 233,
+  "test_focused": 95,
+  "audit_vulnerabilities": 0,
+  "tested_merge": "4de2089748d4adf70f8887298a3e7b55e69f34f3",
+  "reviewed_candidate": "b8d5fba1aa656f27cd2b2f8c9a06b4f737a6fb06"
+}

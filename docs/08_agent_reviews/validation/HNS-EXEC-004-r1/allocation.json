@@ -22,7 +22,7 @@
   "token_target": 30000,
   "token_actual": null,
   "base": "e3c2150620e4a0090f9f263ad0f559b20dc5c108",
-  "status": "CONTINUATION_AUTHORIZED",
+  "status": "DONE",
   "historical_EXEC003": "DONE at e3c2150;12 attempts and prior1978s/1800s178s overrun preserved, no reset",
   "context_initial_budget": {
     "bytes": 98304,
@@ -216,7 +216,7 @@
     "safety_s": 60,
     "token_target": 30000,
     "token_actual": null,
-    "status": "SECURITY_PASS_GATE_CLOSURE",
+    "status": "CLOSURE_VALIDATED",
     "source_unchanged": true,
     "TECH_QA_hashes_qualified": true,
     "pauses": [
@@ -234,7 +234,13 @@
       45.0049,
       45.0053
     ],
-    "measured_parent_idle_total_s": 90.0102
+    "measured_parent_idle_total_s": 90.0102,
+    "checkpoint_at": "2026-10-04T15:00:51.449174+00:00",
+    "elapsed_s": 441.449174,
+    "conservative_added_activity_s": 528.5469740000001,
+    "remaining_activity_s": 71.45302599999991,
+    "remaining_wall_s": 158.55082599999997,
+    "historical_activity_and_unknown_preservation_retained": true
   },
   "security_completion": {
     "type": "task_complete",
