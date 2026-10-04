@@ -1,0 +1,21 @@
+# Framework Workbench Product Vision
+
+Version: workbench-v0.4
+
+The approved 2026-10-04 change evolves this framework repository into a usable local AI workbench while retaining governance, templates and the Harness library. The Workbench is framework tooling; business projects remain separate repositories under the Project Intake Contract. This is an existing-framework tool change; its new project entry can provision a separate Project Repo after explicit target approval.
+
+Primary user: one trusted local project initiator using their own Mac, existing ChatGPT Codex login and Git projects. Goal: open a browser, submit a real project-analysis task, observe progress, cancel it, and recover its stored result after restart. The initial iteration is explicitly read-only; it is not a full governed implementation executor.
+
+No cloud deployment, accounts, multi-user tenancy, paid API-key fallback, automated Agent file editing, production operation, or automatic formal review/Gate approval. Existing Harness v0.1 contracts and evidence remain valid; this separate product layer does not claim their unimplemented capabilities.
+
+Approved expansion: start with an idea or import an existing GitHub repo; maintain independent project conversations; prepare and explicitly approve a private repository proposal; persist and synchronize selected project records; queue tasks; choose a Codex model and declarative skill. Business repos live outside this framework checkout. Claude/ChatGPT adapters are deferred and shown unavailable, never silently substituted.
+
+<a id="workbench-onboarding-v04"></a>
+
+## WB-015 / AC-WB-015 — 專案首頁到第一份計畫
+
+Human2026-10-05 approves: start on a project home, never auto-select an acceptance project or create test/demo records. Home offers primary 開始新專案 and secondary 接續既有 GitHub 專案, existing project cards with name/summary/recent activity/status and resume action. Dedicated new-project flow asks name and idea, explains local persistence and existing Codex ChatGPT-login prerequisite; GitHub/model/skill unnecessary for default use. Final button 建立專案並整理計畫 creates local draft through unchanged API then explicitly submits one planning request through existing messages API/default Luna. Request asks plain Traditional Chinese project goal, users, suggested MVP features, first next step and up to3 unresolved questions; distinguish suggestions/unknowns, no fabricated confirmed facts or coding/Gate approval. Idea sent to OpenAI for AI analysis; the button explains this before submission. User message contains understandable idea, not synthetic technical test instructions.
+
+Selected project workspace exposes latest completed AI reply as 第一份專案計畫／最新成果, read-only user editable by further conversation, persistent task/message binding, ordinary chat secondary, back-to-project-home always present. Failed/unavailable analysis preserves created project/idea, offers explicit 重新整理計畫 with no duplicate project or automatic retries; same action one in-flight submission only, returning/reload never reruns automatically. At most1process/global20queue unchanged. Waiting/cancel/error show plain next step. Results are local records, not automatically GitHub-uploaded/approved specification. Existing full GitHub proposal and preview approvals retained. UI may view and continue multiple projects, data and confirmation state never leak between them.
+
+Acceptance: complete home→new→idea→first real-model plan→resume/restart without advanced settings or GitHub; demonstrate actual output and failure recovery, default fresh user data shows no test records. Home/project navigation clears stale results/approval/skill selection, composer draft does not leak across projects. Mobile375+desktop keyboard/focus/no-overflow checked. Existing alias-identity finding must be repaired and freshly re-reviewed before release: canonicalize new managed roots and existing project paths without rewriting historical hashed task/events; busy/admission checks recognize alias paths for legacy/queued/current tasks. Test aliased managed root and existing rows in both route directions; unrelated project remains available. No extra model engines, GitHub skill installer, accounts/cloud/autonomous coding/new schema/API. Real general-user study deferred and disclosed.

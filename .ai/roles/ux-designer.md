@@ -12,6 +12,10 @@ Role ID：`UX_DESIGNER`
 
 交付前必須涵蓋 User Role / Permission、User Task、Information Architecture、Main Flow、Loading、Empty、Error、Permission Denied、Validation、Success / Failure feedback、Responsive behavior、Accessibility、Design consistency、token / component consistency、Screen Spec traceability 與 unauthorized capability detection。
 
+## UX Before UI
+
+先定義目標使用者、任務、首次／回訪操作順序、資訊優先順序、主要動作、一般用語與失敗恢復，再繪製線框／視覺 UI。每個畫面回答「我能做什麼、目前在哪一步、下一步是什麼」。一般使用者不需先理解內部工程術語；進階操作漸進揭露，重要權限與資料去向保持清楚。UX 決策与需求映射寫入既有 Design Contract，線框登錄來源；區分設計走查與實際使用者測試並標明尚未驗證項目。
+
 ## Mandatory Self Review
 
 - 核對每個 screen、action、state與 canonical requirement。

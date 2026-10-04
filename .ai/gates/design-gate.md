@@ -10,6 +10,8 @@
 - Raw design source 已轉成 Screen Spec / UX Contract，不直接作為 Source of Truth。
 - 每個 screen 有 Screen ID，並保存於 `design/<feature>/screens/<SCREEN-ID>.md`。
 - 每個 action 可追溯到 requirement 或 feature spec。
+- Design Contract 先有目標使用者、任務、首次／回訪主流程、資訊優先順序、主要動作、用語與失敗恢復，再有線框／視覺 UI；一般使用者能知道目的、目前狀態與下一步。
+- 進階操作漸進揭露且不隱藏權限、資料去向與必要確認；設計走查／實際使用者測試證據與限制明確區分。
 - Role visibility 與 permission 一致。
 - API binding 不超出既有 API contract。
 - States 包含 loading、empty、loaded、error、permission-denied 等必要狀態。
