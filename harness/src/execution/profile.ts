@@ -2,7 +2,7 @@ import { defineCoreValue, type GateId, type WorkItem, type WorkItemPhase, type W
 import { encodeUtf8, sha256Hex } from "../core/hash/index.js";
 import { ContextCompiler } from "../context/compiler.js";
 import type { ContextCompilerInput, ExecutionContextManifest } from "../context/types.js";
-import { RiskClassifier, type RiskAuthority, type RiskAssignment, type ReviewAssignment } from "../risk/index.js";
+import { RiskClassifier, ReviewAssignmentResolver, type ReviewAuthority, type RiskAuthority, type RiskAssignment, type ReviewAssignment } from "../risk/index.js";
 import { equal, hashField, hashValue, identifier, relativePath, requireCondition, schema, sorted, verifyHashed } from "../risk/validation.js";
 
 export interface ExecutionPolicy {
@@ -58,6 +58,7 @@ export interface ProfileHostPorts {
   source(path: string): { readonly canonical_path: string; readonly bytes: string | Uint8Array };
   binding(executionId: string): ProfileHostBinding;
   readonly risk: RiskAuthority;
+  readonly review?: ReviewAuthority;
 }
 interface CompileRecord {
   readonly context: ExecutionContextManifest;
@@ -190,6 +191,8 @@ export class ExecutionProfileBuilder {
     requireCondition(equal(assignment ?? null, hostBinding.review_assignment ?? null), "Unassigned review artifact");
     if (wi.role === "REVIEWER") {
       requireCondition(assignment !== undefined, "Missing reviewer assignment");
+      requireCondition(this.#host.review !== undefined, "Missing trusted review authority");
+      new ReviewAssignmentResolver(this.#host.review, this.#risk).verify(assignment, input.execution.execution_id);
       schema(assignment); verifyHashed({ ...assignment }, "assignment_hash");
       requireCondition(assignment.review_profile === wi.review_profile && assignment.risk_class === wi.risk_class
         && equal(assignment.reviewed_artifact, wi.reviewed_artifact)

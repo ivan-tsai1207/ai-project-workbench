@@ -1,7 +1,7 @@
 import { defineCoreValue, REVIEW_PROFILES, type ArtifactReference, type ReviewProfile, type WorkItemRole } from "../core/domain.js";
 import type { RiskClassifier } from "./classifier.js";
 import type { ReviewAssignment, RiskAssignment } from "./types.js";
-import { hashField, hashValue, identifier, relativePath, requireCondition, schema, sorted } from "./validation.js";
+import { equal, hashField, hashValue, identifier, relativePath, requireCondition, schema, sorted } from "./validation.js";
 
 export interface ReviewAdmission {
   readonly work_item_id: string;
@@ -30,10 +30,26 @@ export class ReviewAssignmentResolver {
   constructor(authority: ReviewAuthority, classifier: RiskClassifier) {
     this.#authority = authority; this.#classifier = classifier;
   }
+  verify(assignment: ReviewAssignment, executionId: string): void {
+    const execution = identifier(executionId);
+    const current = defineCoreValue(this.#authority.current(identifier(assignment.work_item_id)));
+    requireCondition(current.work_item_id === assignment.work_item_id, "Review task mismatch");
+    const expected = this.#resolve(current).find(value => value.review_profile === assignment.review_profile);
+    requireCondition(expected !== undefined && equal(expected, assignment), "Unadmitted review assignment");
+    const entry = current.registry.find(value => value.profile === assignment.review_profile);
+    requireCondition(entry !== undefined && entry.execution_id === execution
+      && assignment.assignment_id === `${current.work_item_id}:${entry.profile}:${execution}`
+      && !current.maker_execution_ids.includes(execution)
+      && assignment.reviewed_artifact_hash === this.#authority.artifactHash(assignment.reviewed_artifact),
+    "Stale review registry/execution/artifact binding");
+  }
   resolve(workItemId: string): readonly ReviewAssignment[] {
     const input = defineCoreValue(this.#authority.current(identifier(workItemId)));
     requireCondition(input.work_item_id === identifier(workItemId), "Review task mismatch");
-    this.#classifier.verify(input.risk, workItemId);
+    return this.#resolve(input);
+  }
+  #resolve(input: ReviewAdmission): readonly ReviewAssignment[] {
+    this.#classifier.verify(input.risk, input.work_item_id);
     const basic = { PRODUCT_ARCHITECT: "SPEC_REVIEWER", UX_DESIGNER: "UX_REVIEWER", IMPLEMENTER: "TECH_REVIEWER" } as const;
     requireCondition(input.maker_role in basic, "Invalid Maker role");
     const required: ReviewProfile[] = [basic[input.maker_role], ...input.required_profiles];
