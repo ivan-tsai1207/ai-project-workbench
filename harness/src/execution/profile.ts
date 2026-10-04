@@ -139,6 +139,7 @@ export class ExecutionProfileBuilder {
       requireCondition(!this.#records.has(key), "Compile origin collision");
       const record = defineCoreValue({ context, binding, sources: [...sources.values()], receipt: { ...payload, receipt_hash: hashValue(payload) } });
       this.#verifySources(record.sources);
+      this.#verifyHost(before, binding, frozen.execution_id);
       // Preserve the compiler's exact immutable snapshot identity in the private record.
       this.#records.set(key, Object.freeze({ ...record, context }));
       this.#latest.set(frozen.execution_id, key);
@@ -150,6 +151,13 @@ export class ExecutionProfileBuilder {
       const current = this.#host.source(evidence.path);
       requireCondition(current.canonical_path === evidence.canonical_path && sourceHash(current.bytes) === evidence.sha256, "Stale canonical source");
     }
+  }
+  #verifyHost(repository: ContextCompilerInput["repository"], binding: ProfileHostBinding, executionId: string): void {
+    const currentBinding = defineCoreValue(this.#host.binding(executionId));
+    const currentRepository = defineCoreValue(this.#host.repository());
+    verifyRepository(currentRepository);
+    requireCondition(currentBinding.status === "ACTIVE" && equal(binding, currentBinding)
+      && equal(repository, currentRepository), "Host changed before registration/admission");
   }
   build(input: ProfileBuildInput): ExecutionProfile {
     const key = `${input.execution.execution_id}:${input.context.context_hash}`;
@@ -216,6 +224,7 @@ export class ExecutionProfileBuilder {
     schema(profile);
     const admittedHash = this.#admitted.get(input.execution.execution_id);
     requireCondition(admittedHash === undefined || admittedHash === profile.profile_hash, "Changed profile requires a new execution");
+    this.#verifyHost(record.receipt.repository, record.binding, input.execution.execution_id);
     this.#admitted.set(input.execution.execution_id, profile.profile_hash);
     return profile;
   }

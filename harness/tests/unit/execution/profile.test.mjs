@@ -91,6 +91,68 @@ test("unadmitted/self-hashed policy changes and Maker review self-selection reje
 });
 
 const reviewer = options => { options.review = "TECH_REVIEWER"; options.execution_id = "review-TECH_REVIEWER"; };
+test("C5 final compile source repository/binding movement rejects without registering a receipt", async () => {
+  for (const movement of ["repository", "binding"]) {
+    const f = setup();
+    const repository = f.host.repository();
+    const source = f.host.source;
+    let repositoryReads = 0;
+    let moved = false;
+    f.host.repository = () => { repositoryReads++; return repository; };
+    f.host.source = path => {
+      const result = source(path);
+      if (!moved && repositoryReads === 2) {
+        moved = true;
+        if (movement === "repository") repository.commit = "b".repeat(40);
+        else f.binding.status = "CLOSED";
+      }
+      return result;
+    };
+    await assert.rejects(f.builder.compile(f.compile), /Host changed before registration/);
+    assert.ok(moved);
+    repository.commit = "a".repeat(40); f.binding.status = "ACTIVE";
+    f.host.source = source;
+    // A same-key compile must succeed: the rejected transaction left no receipt.
+    const context = await f.builder.compile(f.compile);
+    assert.equal(f.builder.build(f.build(context)).repository.commit_before, repository.commit);
+  }
+});
+
+for (const target of ["work-item", "policy", "binding", "authority"]) {
+  test(`C5 final build ${target} movement rejects without admitting a profile`, async () => {
+    const f = setup(); const context = await f.builder.compile(f.compile);
+    const input = f.build(context);
+    const repository = f.host.repository();
+    const source = f.host.source;
+    const current = f.host.risk.current;
+    let repositoryReads = 0;
+    let moved = false;
+    f.host.repository = () => { repositoryReads++; return repository; };
+    const move = () => {
+      moved = true;
+      if (target === "binding") f.binding.status = "SUPERSEDED";
+      else repository.commit = "b".repeat(40);
+    };
+    f.host.source = path => {
+      const result = source(path);
+      const selected = target === "policy" ? ".ai/policy.md" : f.wi.source_path;
+      if (!moved && target !== "authority" && repositoryReads > 0 && path === selected) move();
+      return result;
+    };
+    if (target === "authority") f.host.risk.current = (...args) => {
+      const result = current(...args); if (!moved && repositoryReads > 0) move(); return result;
+    };
+    assert.throws(() => f.builder.build(input), /Host changed before registration\/admission/);
+    assert.ok(moved);
+    repository.commit = "a".repeat(40); f.binding.status = "ACTIVE";
+    f.host.source = source; f.host.risk.current = current;
+    // A different valid profile proves the failed admission did not reserve its hash.
+    const recovered = { ...input, audit: { ...input.audit, sink: "recovered" } };
+    assert.equal(f.builder.build(recovered).audit.sink, "recovered");
+    assert.deepEqual(f.builder.build(recovered), f.builder.build(recovered));
+  });
+}
+
 test("Reviewer admission independently rechecks current artifact, registry, profile and execution", async () => {
   const positive = setup(reviewer); const context = await positive.builder.compile(positive.compile);
   const profile = positive.builder.build(positive.build(context));
