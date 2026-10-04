@@ -8,7 +8,7 @@
 | Role | `PRODUCT_ARCHITECT` |
 | Feature | `minimal-execution-engine` |
 | Phase | `SPEC` |
-| Status | `BLOCKED` |
+| Status | `DONE` |
 | Spec Version | `harness-v0.1-review` |
 | Design Version | `N/A` |
 | Risk Class | `MEDIUM` |
@@ -78,10 +78,10 @@ Close only the two canonical contract gaps recorded by HNS-EXEC-003 preflight, k
 
 ## Acceptance Criteria
 
-- [ ] `AC-HNS-EXEC-003-CONTRACT-CLARIFICATION-001-001`: RiskPolicy row format/validation/source binding and highest-risk evaluation are explicit, deterministic and implementable; unknown sensitive input cannot be accepted or downgraded.
-- [ ] `AC-HNS-EXEC-003-CONTRACT-CLARIFICATION-001-002`: Profile receives independently host-owned immutable compile provenance bound to context hash/execution and repository, with missing/stale/tampered/colliding records rejected; no schema change or unbound caller assertion.
-- [ ] `AC-HNS-EXEC-003-CONTRACT-CLARIFICATION-001-003`: Two original gaps map to canonical SDD changes and bounded examples; protected governance/source/tests/packages/schema are unchanged.
-- [ ] `AC-HNS-EXEC-003-CONTRACT-CLARIFICATION-001-004`: Candidate document hash, self-review and distinct SPEC/Security decisions support Spec Gate before downstream implementation; historical evidence/limits preserved.
+- [x] `AC-HNS-EXEC-003-CONTRACT-CLARIFICATION-001-001`: RiskPolicy row format/validation/source binding and highest-risk evaluation are explicit, deterministic and implementable; unknown sensitive input cannot be accepted or downgraded.
+- [x] `AC-HNS-EXEC-003-CONTRACT-CLARIFICATION-001-002`: Profile receives independently host-owned immutable compile provenance bound to context hash/execution and repository, with missing/stale/tampered/colliding records rejected; no schema change or unbound caller assertion.
+- [x] `AC-HNS-EXEC-003-CONTRACT-CLARIFICATION-001-003`: Two original gaps map to canonical SDD changes and bounded examples; protected governance/source/tests/packages/schema are unchanged.
+- [x] `AC-HNS-EXEC-003-CONTRACT-CLARIFICATION-001-004`: Candidate document hash, self-review and distinct SPEC/Security decisions support Spec Gate before downstream implementation; historical evidence/limits preserved.
 
 ## Required Gates
 
@@ -94,10 +94,11 @@ Close only the two canonical contract gaps recorded by HNS-EXEC-003 preflight, k
 
 ## Blockers
 
-- Human authorized Gate/merge/postmerge/closure-only continuation after disclosure of operational overruns. Required closure remains pending; original EXEC-003 runtime stays BLOCKED until canonical merge and closure.
+- None
 
 ## Notes
 
+- Current lifecycle `LC-HNS-EXEC-003-CONTRACT-001`: SPEC/Security PASS, `SG-HNS-EXEC-003-CONTRACT-001` PASS, normal merge `afcb13a795d99ff3b274cb380dbcd3da2a74b12d`, exact-runtime postmerge ci/build/typecheck/test181/Context11/audit0 PASS. Four ACs checked; CR closed for documentation correction only. EXEC-003 normalized toTODO with implementation ACs unchecked. No runtime implementation/milestone/release completion. Following Notes are historical allocations/checkpoints and are preserved, not current blockers.
 - CLOSURE-ALLOCATION-001: Human said to continue after the fixed completion checklist and disclosed late review finalization. Finite additional allocation origin `2026-10-04T04:18:49.724Z`, deadline `2026-10-04T04:33:49.724Z`, elapsed/cumulative<=15min, no child attempt/Maker/reviewer/remediation. Existing4/6 attempts and correction1/1 remain; original clocks/history not reset. Independently completed SPEC/Security PASS are qualified only for unchanged exact artifacts; no Gate/security waiver, fabricated timely PASS or Accepted Risk. Fresh exact-runtime canonical commands before Gate and after merge; final status/CR/evidence updates, normal push/remoteHEAD, then STOP before003 implementation. TokenTARGET10,000 actualnull.
 - RESUME-001-CHECKPOINT-001: two new independent review attempts completed, total4/6 attempts, correction1/1 used; no further automatic dispatch/source changes. Current-hash PASS does not waive time-policy deviations. Saved reviewer reports and fresh R2 commands are durable; primary ACs remain unchecked until Gate/merge/closure. Stop at20min aggregate added activity; no Gate/merge/003/004/adapters.
 - Human continuation allocation RESUME-001: origin `2026-10-04T03:58:23.317Z`, deadline `2026-10-04T04:18:23.317Z`, at most2 new reviewer attempts; elapsed and host+child cumulative each<=20min. Original two Maker attempts, remediation1/1 exhausted and deadline failure remain; no new Maker/source edit/retry. Full canonical validation before Gate and after merge, only then closure/normalize003 blocker. SPEC_REVIEWER and SECURITY_REVIEWER only, each hard4min. TokenTARGET20,000, actual null. Stop on nonPASS/new MAJOR/BLOCKING/divergence/budget; no implementation003/004/adapters.

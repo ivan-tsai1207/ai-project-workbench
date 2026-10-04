@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-10-04T04:26:19.106Z",
+  "tested_merge": "afcb13a795d99ff3b274cb380dbcd3da2a74b12d",
+  "canonical_work_items": {
+    "parsed": 4,
+    "total": 4,
+    "clarification_status": "DONE",
+    "clarification_ACs_complete": 4,
+    "reviewer_assignments_status": "DONE",
+    "implementation_HNS_EXEC_003_status": "TODO",
+    "implementation_HNS_EXEC_003_ACs_complete": 0
+  },
+  "postmerge_inventory": {
+    "unchanged_static_inputs": 72,
+    "expected_metadata_drift": [
+      "docs/05_decisions/CR-HNS-EXEC-003-001.md",
+      "work-items/HNS-EXEC-003-CONTRACT-CLARIFICATION-001.md"
+    ],
+    "raw_logs_verified": 16
+  },
+  "artifact_hashes": {
+    "HNS_EXEC_001": "6dd149a33b1dfa807890fbcc34f258e473ae42d7933555e90187cb59f584730c",
+    "SDD": "90bbe07a15f8d4bd2ef33238b2300434ca600e02ae078561b1aabc0aa52c5933",
+    "manifest": "db2166dbd8ed45734f14c5d20a91626989e4d51c16bd952c6823a23be6ccfed8"
+  },
+  "changed_control_plane_files": [
+    "docs/05_decisions/CR-HNS-EXEC-003-001.md",
+    "docs/08_agent_reviews/review_log.md",
+    "work-items/HNS-EXEC-003-CONTRACT-CLARIFICATION-001.md",
+    "work-items/HNS-EXEC-003.md"
+  ],
+  "working_diff_whitespace_exit": 0,
+  "source_tests_dependencies_governance_manifest_changed": false,
+  "limitations": [
+    "Raw original npm stdout EOF blanks preserved",
+    "Exact aggregate token/context telemetry unavailable",
+    "EXEC-003/004 runtime incomplete",
+    "Historical time overruns unchanged"
+  ]
+}
