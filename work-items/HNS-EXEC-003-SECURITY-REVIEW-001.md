@@ -28,7 +28,7 @@ Independently review exact candidate `52b9dcbae50dd573ade54046c5e5dfe66bf33ae8` 
 - Screen IDs / Screen Specs: `N/A`
 - ADR: `N/A`
 - Architecture / SDD sections: `docs/harness_v0.1_SDD.md` Sections 5.3, 5.5, 16.1, 21, 35, 38, 40.1
-- Review / Evidence references: `docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r2.md`; `docs/08_agent_reviews/validation/HNS-EXEC-003-r2/`
+- Review / Evidence references: `docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r2.md`; `docs/08_agent_reviews/validation/HNS-EXEC-003-r2/results.json`
 
 ## Read Scope
 

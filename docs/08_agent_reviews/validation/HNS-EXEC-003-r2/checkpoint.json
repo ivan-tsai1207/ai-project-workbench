@@ -1,0 +1,137 @@
+{
+  "evidence_id": "HNS-EXEC-003-IMPLEMENTATION-CHECKPOINT-002",
+  "status": "BLOCKED",
+  "stop_reason": "HUMAN_DECISION_REQUIRED",
+  "recorded_at": "2026-10-04T07:28:24.724Z",
+  "candidate": "52b9dcbae50dd573ade54046c5e5dfe66bf33ae8",
+  "base_develop": "90f4ff4fe6479a4644723c33e153f7083e07ec88",
+  "manifest": "docs/08_agent_reviews/manifests/HNS-EXEC-003-implementation-r2.md",
+  "manifest_hash": "sha256:448394b05c9f435125665148eb03d7583f981ce32860f5005cf93631403d2110",
+  "maker_result": "READY_FOR_REVIEW",
+  "tech_decision": null,
+  "tech_operational_result": "interrupted after execution hard bound; no final decision",
+  "qa": "NOT_RUN",
+  "security": "NOT_RUN",
+  "gate": "NOT_RUN",
+  "merge": "NOT_RUN",
+  "lifecycle": "NOT_DONE",
+  "validation": {
+    "candidate": "52b9dcbae50dd573ade54046c5e5dfe66bf33ae8",
+    "parent": "6ce9899359df976a8409bdc7db399c05f83a0cf6",
+    "tree": "52f6ce20e5c9042ffbb95a7bd10b5cd7ddc124b1",
+    "base": "90f4ff4fe6479a4644723c33e153f7083e07ec88",
+    "input_sha256": "2a1a271b8f29e610c8065f7a3df6ee4bc5c0b392e82a04a656d8511e2a1cd850",
+    "results_sha256": "d614af4e397da98811b0c88b662d81a740af892cd1fe5da2c5255a2e50352092",
+    "input_count": 96,
+    "logs": 16,
+    "source": [
+      [
+        "harness/src/execution/profile.ts",
+        "sha256:23eed573adffb80d0103da30f9cc44bc690baf560cc845ec8f39f24393a86533"
+      ],
+      [
+        "harness/src/index.ts",
+        "sha256:5b0a98d78f6c7c999ce0978829bd950e36500905c1e2213cd0bae000f1d3e467"
+      ],
+      [
+        "harness/src/risk/classifier.ts",
+        "sha256:d216cdc0c1cf0c3cff655d49b31846971b70acf7e1a0abb3baacfefddba97940"
+      ],
+      [
+        "harness/src/risk/index.ts",
+        "sha256:e471589881e7417ec63efc2649d44ef6dcfa6a85e7c1f80d4e50c4b0c6ef870a"
+      ],
+      [
+        "harness/src/risk/review.ts",
+        "sha256:d32c6e8420bff2e06783ab903a05be798efac5c2e458ee836bddcdf3ec85b1c0"
+      ],
+      [
+        "harness/src/risk/types.ts",
+        "sha256:4f1b97481f23d7a5d42303441880178ccd16a415a9982ad1421cd37bf148301c"
+      ],
+      [
+        "harness/src/risk/validation.ts",
+        "sha256:619b9986a2d8a070d224563c66b6ce3f8fbfaeb52efcd7efd01ecb7dc43ca50a"
+      ],
+      [
+        "harness/tests/unit/execution/profile.test.mjs",
+        "sha256:19d2574989e25aa1f30733bfa72e6664a1721b8e9ae3a99d97cb4bfac71ba37c"
+      ],
+      [
+        "harness/tests/unit/risk/classifier.test.mjs",
+        "sha256:581dbd82374fe15f5551bba603a7606406d6d401d8c31a66f29cbfe08aec34ed"
+      ],
+      [
+        "harness/tests/unit/risk/fixtures.mjs",
+        "sha256:a0dbb1b814817c5df4a9e3e5ae2b9390bfa95bc6198c4889b83248f541b8b383"
+      ]
+    ],
+    "binary_diff_sha256": "19fc99ef200037c9cd5943ff9f1a0630f1eed1a798699f0ecbbb03dff4bb23f6",
+    "start": "2026-10-04T07:19:15.605Z",
+    "end": "2026-10-04T07:19:21.332Z"
+  },
+  "counts": {
+    "primary_total_attempts": 3,
+    "primary_limit": 8,
+    "correction_used": 1,
+    "correction_limit": 1,
+    "increment_attempts": 2,
+    "increment_limit": 4
+  },
+  "allocation": {
+    "origin": "2026-10-04T07:10:21.000Z",
+    "deadline": "2026-10-04T07:40:21.000Z",
+    "elapsed_seconds": 1083.724,
+    "explicit_host_pauses": [
+      {
+        "start": "2026-10-04T07:14:28.530Z",
+        "end": "2026-10-04T07:19:15.209Z",
+        "reason": "Explicit host wait for correction completion; wallclock/child activity count; management charged separately."
+      },
+      {
+        "start": "2026-10-04T07:21:14.451Z",
+        "end": "2026-10-04T07:25:26.446Z",
+        "reason": "Explicit wait for TECH; management allowance charged separately, elapsed/childtime count."
+      }
+    ],
+    "pause_seconds": 538.674,
+    "children": [
+      {
+        "id": "01a105c1-8580-7c70-af1c-555ff65aad5d",
+        "profile": "IMPLEMENTER",
+        "dispatch": "2026-10-04T07:12:11.256Z",
+        "hard": "2026-10-04T07:20:11.256Z",
+        "observedEnd": "2026-10-04T07:19:15.209Z"
+      },
+      {
+        "id": "01a105c9-cf68-7273-a53c-c7c74dad3ea9",
+        "profile": "TECH_REVIEWER",
+        "dispatch": "2026-10-04T07:21:14.341Z",
+        "hard": "2026-10-04T07:25:14.341Z",
+        "observedEnd": "2026-10-04T07:25:26.446Z"
+      }
+    ],
+    "conservative_management_allowance_seconds": 60,
+    "conservative_active_seconds": 1281.108,
+    "limits_seconds": 1800,
+    "tech_timeout_overshoot_seconds": 12.083,
+    "historical_complete_active": null,
+    "original_preflight_origin": "2026-10-04T02:45:34Z",
+    "notes": "No clock/counter reset; whole increment not claimed exhausted. Stop follows narrowed TECH execution hard bound and unavailable complete mandatory review. Checkpoint overhead remains charged. No automatic retry."
+  },
+  "known_limitations": [
+    "Three Maker self-check gaps fixed per Maker and passing tests, not complete independent acceptance.",
+    "TECH incomplete; partial fresh64/hash/probe results are not approval or formal findings.",
+    "Canonical validation runner does not persist built-dist digest; interrupted reviewer explicitly left complete dist/source qualification unfinished. This is a traceability handoff, not a new architecture requirement or independent finding.",
+    "Trusted host ports require actual host wiring; no production enforcement/backend/adapters.",
+    "Existing FND-HNS-EXEC-002-SECURITY-003-001 remains OPEN/nonblocking."
+  ],
+  "post_validation_metadata": "Only primary and generated TECH WI checkpoint status/blocker/notes changed after captured validation; source/tests/dependencies/governance/SDD and immutable manifest remain unchanged.",
+  "token_actual": null,
+  "context_actual": null,
+  "parent_execution_failures": [
+    "Review bound chosen too tight for complete evidence qualification and report; timeout exceeded by12.083s before host interruption.",
+    "One preparation attempt tried to store a JavaScript function in serializable session storage and failed; text template substituted.",
+    "First selected partial transcript retrieval was tool-output truncated and JSON parsing failed; repaired with narrowly selected lifecycle/visible commentary/completed probe prefix. No final review invented."
+  ]
+}
