@@ -1,0 +1,21 @@
+{
+  "session_id": "01a10763-5f4d-7090-8757-68bba5853222",
+  "completion": {
+    "type": "task_complete",
+    "turn_id": "01a10763-5faa-7f33-9aec-654217b11157",
+    "started_at": 1791125315,
+    "completed_at": 1791125476,
+    "duration_ms": 161056,
+    "time_to_first_token_ms": 4761,
+    "timestamp": "2026-10-04T14:51:16.577Z"
+  },
+  "usage": {
+    "input_tokens": 660153,
+    "cached_input_tokens": 602752,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 7120,
+    "reasoning_output_tokens": 1065,
+    "total_tokens": 667273
+  },
+  "report_hash": "b13f34afcbd8034f08cc3dc64dac8abfc127103ae7a6fa38d08fce59182b77bb"
+}

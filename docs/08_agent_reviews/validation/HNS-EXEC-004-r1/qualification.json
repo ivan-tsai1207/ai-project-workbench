@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-10-04T14:43:05.287Z",
+  "result": "PASS",
+  "inputs": 102,
+  "dist": 124,
+  "logs": 16,
+  "parsed_wis": [
+    "HNS-EXEC-004",
+    "HNS-EXEC-004-TECH-REVIEW-001",
+    "HNS-EXEC-004-QA-REVIEW-001",
+    "HNS-EXEC-004-SECURITY-REVIEW-001"
+  ],
+  "source": "b8d5fba1aa656f27cd2b2f8c9a06b4f737a6fb06",
+  "manifest_hash": "sha256:ac1c821cf95113bad849f9bc84ad9b90c55825606c838ad566f9a0f9e988b570"
+}

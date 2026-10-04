@@ -1,0 +1,252 @@
+{
+  "primary_work_item": "HNS-EXEC-004",
+  "origin": "2026-10-04T14:33:00+00:00",
+  "hard_deadline": "2026-10-04T15:03:00+00:00",
+  "elapsed_cap_s": 1800,
+  "active_cap_s": 1800,
+  "max_attempts": 8,
+  "attempts_used": 5,
+  "remediation_max": 1,
+  "remediation_used": 0,
+  "required_profiles": [
+    "TECH_REVIEWER",
+    "QA_REVIEWER",
+    "SECURITY_REVIEWER"
+  ],
+  "initial_maker_max_s": 480,
+  "review_each_max_s": 240,
+  "initial_child_maxima_s": 1200,
+  "host_reserve_s": 480,
+  "safety_reserve_s": 120,
+  "remediation_rule": "Only one existing-scope cycle if all fresh requalification + validation/closure fits known remaining allocation; new unrelatedMAJOR/BLOCKING stops",
+  "token_target": 30000,
+  "token_actual": null,
+  "base": "e3c2150620e4a0090f9f263ad0f559b20dc5c108",
+  "status": "CONTINUATION_AUTHORIZED",
+  "historical_EXEC003": "DONE at e3c2150;12 attempts and prior1978s/1800s178s overrun preserved, no reset",
+  "context_initial_budget": {
+    "bytes": 98304,
+    "files": 24,
+    "sections": 64
+  },
+  "scope": "GateRunner+minimal in-memory audit only; no persistence/OSenforcement/adapter/production",
+  "remaining_milestones": [
+    "independent local workbench MVP pending repo approval"
+  ],
+  "required_commands": [
+    "exactruntime ci/build/typecheck/fulltests",
+    "focused gate/audit plus risk/profile/context",
+    "audit-high",
+    "fresh postmerge allrequired",
+    "canonical WI/manifest/scope checks",
+    "normal merge unchangeddevelop",
+    "lifecycle/normal push/remoteverify"
+  ],
+  "stop_conditions": [
+    "SPEC GAP/CONFLICT",
+    "new unrelated MAJOR/BLOCKING",
+    "securityfailure",
+    "missingindependence",
+    "hash/source drift afterreview",
+    "divergence",
+    "budget insufficient/exhausted",
+    "nonPASS after sole remediation"
+  ],
+  "pauses": [
+    {
+      "start": "2026-10-04T14:35:15.949176+00:00",
+      "end": "2026-10-04T14:41:31.119615+00:00",
+      "reason": "Explicit parent waiting for Maker; child and wallclock continue, operational commentary/persistence counted separately"
+    },
+    {
+      "start": "2026-10-04T14:43:56.361378+00:00",
+      "end": "2026-10-04T14:48:10.186323+00:00",
+      "reason": "Explicit parent wait for requiredTECH; only measured sleep elapsed deducted, children and wallclock continue"
+    },
+    {
+      "start": "2026-10-04T14:50:59.572549+00:00",
+      "end": "2026-10-04T14:52:01.200879+00:00",
+      "reason": "Explicit wait for already dispatched QA bounded final evidence; no further dispatch/probes by parent"
+    }
+  ],
+  "dispatches": [
+    {
+      "attempt": 1,
+      "agent": "/root/exec004_maker",
+      "role": "IMPLEMENTER",
+      "dispatched_at": "2026-10-04T14:34:35Z",
+      "hard_deadline": "2026-10-04T14:42:35Z",
+      "max_s": 480
+    },
+    {
+      "attempt": 2,
+      "agent": "/root/exec004_tech",
+      "profile": "TECH_REVIEWER",
+      "dispatched_at": "2026-10-04T14:43:30Z",
+      "hard_deadline": "2026-10-04T14:47:30Z",
+      "max_s": 240
+    },
+    {
+      "attempt": 3,
+      "agent": "/root/exec004_qa",
+      "profile": "QA_REVIEWER",
+      "dispatched_at": "2026-10-04T14:48:30Z",
+      "max_s": 210
+    },
+    {
+      "attempt": 4,
+      "agent": null,
+      "profile": "SECURITY_REVIEWER",
+      "dispatched_at": "2026-10-04T14:48:45Z",
+      "result": "AGENT_DISPATCH_FAILED",
+      "error": "agent thread limit reached",
+      "actual_execution_created": false
+    },
+    {
+      "attempt": 5,
+      "profile": "SECURITY_REVIEWER",
+      "execution_id": "01a10769-0cb5-71d1-bc94-862d6d3f0fdc",
+      "session_correlation": "01a1074d-a154-74f2-b9e9-2a97d21eaf9b",
+      "start": "2026-10-04T14:54:47.511Z",
+      "max_s": 240
+    }
+  ],
+  "measured_parent_idle_sleeps_s": [
+    14.9589,
+    45.0044,
+    20.0102,
+    41.0391,
+    45.0077,
+    45.0067,
+    45.0067,
+    21.6014,
+    15.7451,
+    16.6369,
+    6.3577
+  ],
+  "measured_parent_idle_total_s": 316.37480000000005,
+  "pause_accounting": "Only returned sleep elapsed intervals deducted from parent activity; no commentary/tool persistence gaps deducted. Children and elapsedwall continue.",
+  "maker_session_id": "01a10756-a3c2-78d2-9d24-6c48cf133eab",
+  "maker_completion": {
+    "type": "task_complete",
+    "turn_id": "01a10756-a420-7e61-b470-279e72082124",
+    "started_at": 1791124481,
+    "completed_at": 1791124913,
+    "duration_ms": 432477,
+    "time_to_first_token_ms": 4277,
+    "timestamp": "2026-10-04T14:41:53.557Z"
+  },
+  "artifact_hash": "sha256:ac1c821cf95113bad849f9bc84ad9b90c55825606c838ad566f9a0f9e988b570",
+  "candidate": "b8d5fba1aa656f27cd2b2f8c9a06b4f737a6fb06",
+  "review_preflight": {
+    "timestamp": "2026-10-04T14:43:25.603986+00:00",
+    "elapsed_s": 625.603986,
+    "conservative_active_s": 780.445886,
+    "remaining_activity_s": 1019.554114,
+    "remaining_wall_s": 1174.396014,
+    "remaining_review_maxima_s": 720,
+    "host_validation_gate_merge_closure_reserve_s": 180,
+    "safety_reserve_s": 60
+  },
+  "tech_completion": {
+    "type": "task_complete",
+    "turn_id": "01a1075e-e4c6-7f91-b26c-57213413306e",
+    "started_at": 1791125021,
+    "completed_at": 1791125187,
+    "duration_ms": 165647,
+    "time_to_first_token_ms": 3766,
+    "timestamp": "2026-10-04T14:46:27.604Z"
+  },
+  "tech_session_id": "01a1075e-e46b-77d2-ba71-4e6796e54779",
+  "qa_security_preflight": {
+    "timestamp": "2026-10-04T14:48:10.186323+00:00",
+    "active_s": 1198.2932230000001,
+    "elapsed_s": 910.186323,
+    "remaining_activity_s": 601.7067769999999,
+    "remaining_wall_s": 889.813677,
+    "required_children_maxima_s": 420,
+    "host_closure_reserve_s": 120,
+    "safety_s": 30,
+    "allocation_note": "Narrow remaining child cap to210s inclfinal based on TECHactual165647ms and6file/23test scoped candidate; mandatoryprofiles/context/evidence unchanged; no budget increase"
+  },
+  "blocker": "Host Security fresh-agent dispatch rejected; no missingprofile waiver. Remainingfull QA+Security+Gate/merge/closure maxima cannot fit conservative activity allocation; no retry/source/Gate/merge.",
+  "qa_session_id": "01a10763-5f4d-7090-8757-68bba5853222",
+  "qa_completion": {
+    "type": "task_complete",
+    "turn_id": "01a10763-5faa-7f33-9aec-654217b11157",
+    "started_at": 1791125315,
+    "completed_at": 1791125476,
+    "duration_ms": 161056,
+    "time_to_first_token_ms": 4761,
+    "timestamp": "2026-10-04T14:51:16.577Z"
+  },
+  "checkpoint": {
+    "timestamp": "2026-10-04T14:52:01.200879+00:00",
+    "elapsed_s": 1141.200879,
+    "child_activity_s": 759.18,
+    "parent_idle_measured_s": 316.37480000000005,
+    "conservative_activity_s": 1584.0060789999998,
+    "remaining_activity_s": 215.99392100000023,
+    "remaining_wall_s": 658.799121,
+    "review_status": {
+      "TECH": "PASS",
+      "QA": "PASS",
+      "SECURITY": "NOT_EXECUTED"
+    },
+    "required_remaining_reserve_s": 360,
+    "gate": "NOT_RUN",
+    "merge": "NOT_RUN",
+    "lifecycle": "BLOCKED",
+    "source_findings": "None in completed bounded Maker/TECH/QA; Security missing",
+    "repo_approval": "Pending user reply; no productrepo provisioned",
+    "fresh_execution_host_limit": "Newspawn failed; reusing completedworker requires separate actualturnidentity and newfresh binding, not a cachedPASS; no fallback fitsremainingreserve"
+  },
+  "continuation_002": {
+    "authorization": "DirectHuman reply approves10min boundedallocation",
+    "origin": "2026-10-04T14:53:30Z",
+    "deadline": "2026-10-04T15:03:30Z",
+    "added_activity_cap_s": 600,
+    "added_wall_cap_s": 600,
+    "historical_attempts": 4,
+    "max_total_attempts": 5,
+    "historical_activity_checkpoint_s": 1584.006079,
+    "postcheckpoint_preservation_activity": "unknown retained, notreset",
+    "security_max_s": 240,
+    "host_reserve_s": 300,
+    "safety_s": 60,
+    "token_target": 30000,
+    "token_actual": null,
+    "status": "SECURITY_PASS_GATE_CLOSURE",
+    "source_unchanged": true,
+    "TECH_QA_hashes_qualified": true,
+    "pauses": [
+      {
+        "start": "2026-10-04T14:55:05.770104+00:00",
+        "end": "2026-10-04T14:59:58.269115+00:00",
+        "reason": "Explicit parent waits for Security; child/wall continue, only measured idle sleeps deducted"
+      }
+    ],
+    "execution_id": "01a10769-0cb5-71d1-bc94-862d6d3f0fdc",
+    "session_correlation": "01a1074d-a154-74f2-b9e9-2a97d21eaf9b",
+    "dispatch_start": "2026-10-04T14:54:47.511Z",
+    "individual_hard_deadline": "2026-10-04T14:58:47.511000+00:00",
+    "measured_parent_idle_sleeps_s": [
+      45.0049,
+      45.0053
+    ],
+    "measured_parent_idle_total_s": 90.0102
+  },
+  "security_completion": {
+    "type": "task_complete",
+    "turn_id": "01a10769-0cb5-71d1-bc94-862d6d3f0fdc",
+    "started_at": 1791125687,
+    "completed_at": 1791125864,
+    "duration_ms": 177108,
+    "time_to_first_token_ms": 5330,
+    "timestamp": "2026-10-04T14:57:44.620Z",
+    "execution_id": "01a10769-0cb5-71d1-bc94-862d6d3f0fdc",
+    "session_correlation": "01a1074d-a154-74f2-b9e9-2a97d21eaf9b",
+    "report_hash": "sha256:11b8cee01eea5eaed46f845a93b1323c68d6ba455bc93489a3e1a2046db790ea",
+    "token_usage": "Unavailable per-turn; old session cumulative telemetry not attributed to fresh review"
+  }
+}
