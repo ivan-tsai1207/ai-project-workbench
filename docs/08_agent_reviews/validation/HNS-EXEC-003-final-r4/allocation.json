@@ -1,0 +1,128 @@
+{
+  "timestamp": "2026-10-04T14:24:02.811430+00:00",
+  "origin": "2026-10-04T14:19:00Z",
+  "deadline": "2026-10-04T14:44:00Z",
+  "historical_attempts": 10,
+  "previous_known_activity_s": 1978,
+  "previous_cap_s": 1800,
+  "added_activity_cap_s": 1800,
+  "added_wall_cap_s": 1500,
+  "max_attempts": 12,
+  "child_cap_s": 480,
+  "child_maxima_s": 960,
+  "host_reserve_s": 720,
+  "safety_reserve_s": 120,
+  "remediation_remaining": 0,
+  "token_target": 30000,
+  "token_actual": null,
+  "status": "GATE_PASS",
+  "pauses": [
+    {
+      "start": "2026-10-04T14:25:49.384932+00:00",
+      "end": "2026-10-04T14:29:38.072847+00:00",
+      "reason": "Explicit parent wait for two required independent reviewers; child activity and wallclock continue"
+    }
+  ],
+  "dispatches": [
+    {
+      "attempt": 11,
+      "agent": "/root/exec003_qa_final",
+      "profile": "QA_REVIEWER",
+      "dispatched_at": "2026-10-04T14:24:43Z",
+      "hard_deadline": "2026-10-04T14:32:43Z"
+    },
+    {
+      "attempt": 12,
+      "agent": "/root/exec003_security_final",
+      "profile": "SECURITY_REVIEWER",
+      "dispatched_at": "2026-10-04T14:24:50Z",
+      "hard_deadline": "2026-10-04T14:32:50Z"
+    }
+  ],
+  "context": [
+    ".ai/CONSTITUTION.md",
+    ".ai/AUTHORITY.md",
+    ".ai/WORKFLOW.md",
+    ".ai/roles/implementer.md",
+    ".ai/gates/implementation-gate.md",
+    "work-items/HNS-EXEC-003.md",
+    ".ai/HARNESS_CONTRACT.md",
+    "work-items/HNS-EXEC-004.md"
+  ],
+  "later_milestones": [
+    "EXEC004 separately finite",
+    "independent local AI Agent Workbench MVP pending repo approval"
+  ],
+  "context_budget_acknowledgment": {
+    "timestamp": "2026-10-04T14:28:04.726593+00:00",
+    "mandatory_initial_bytes_cap": 98304,
+    "files": 24,
+    "sections": 64,
+    "reason": "Full mandatory Tier1, assigned WI, manifest/Maker and direct8SDD selections measured82047 bytes; ordinary64KiB target exceeded; host adjustment under SDD43.1, no truncation or hard-ceiling increase"
+  },
+  "completed_child_activity_ms": 467080,
+  "review_sessions": {
+    "qa": {
+      "session_id": "01a1074d-6de5-7132-85fd-e2fc1bd5c508",
+      "completion": {
+        "type": "task_complete",
+        "turn_id": "01a1074d-6e3c-7ad1-b2cf-78c9579825bc",
+        "started_at": 1791123877,
+        "completed_at": 1791124129,
+        "duration_ms": 251545,
+        "time_to_first_token_ms": 3922,
+        "timestamp": "2026-10-04T14:28:49.011Z"
+      },
+      "usage": {
+        "input_tokens": 1603461,
+        "cached_input_tokens": 1498240,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 9693,
+        "reasoning_output_tokens": 1783,
+        "total_tokens": 1613154
+      },
+      "noncached_input_plus_output": 114914,
+      "review_sha256": "e7a55e2d8d19deecd6d9dfdc204c1c58ea95232503a07c07ec5cce3975d17b0c",
+      "command_output_records": 0
+    },
+    "security": {
+      "session_id": "01a1074d-a154-74f2-b9e9-2a97d21eaf9b",
+      "completion": {
+        "type": "task_complete",
+        "turn_id": "01a1074d-a1aa-7343-a1c5-06904b713b7d",
+        "started_at": 1791123890,
+        "completed_at": 1791124106,
+        "duration_ms": 215535,
+        "time_to_first_token_ms": 3850,
+        "timestamp": "2026-10-04T14:28:26.157Z"
+      },
+      "usage": {
+        "input_tokens": 1451950,
+        "cached_input_tokens": 1327488,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 9719,
+        "reasoning_output_tokens": 988,
+        "total_tokens": 1461669
+      },
+      "noncached_input_plus_output": 134181,
+      "review_sha256": "5d3a32d1c9d46087262b938442a72dc18835ff8d16d1c13b1e063bf97f443cb4",
+      "command_output_records": 3
+    }
+  },
+  "pause_accounting": "Conservatively deduct zero so audit communications/persistence during wait are not hidden",
+  "premerge_budget": {
+    "timestamp": "2026-10-04T14:30:43.079648+00:00",
+    "elapsed_s": 703.079648,
+    "conservative_activity_s": 1170.159648,
+    "remaining_activity_s": 629.8403519999999,
+    "remaining_wall_s": 796.920352,
+    "reserve_for_merge_validation_closure_s": 300
+  },
+  "review_partial_usage": {
+    "noncached_input_plus_output": 249095,
+    "provider_total_including_cached": 3074823,
+    "cached_input": 2825728,
+    "coverage": "two child executions only; parent/historical aggregate unknown",
+    "target_met": false
+  }
+}
