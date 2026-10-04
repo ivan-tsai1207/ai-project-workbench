@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-10-04T14:52:40.827Z",
+  "result": "PASS",
+  "inputs_unchanged": 101,
+  "metadata_delta": [
+    "work-items/HNS-EXEC-004.md"
+  ],
+  "artifacts": 6,
+  "dist": 124,
+  "logs": 16,
+  "parsed_wis": 4,
+  "candidate_unchanged": true,
+  "requiredSecurity_missing": true,
+  "Gate_not_run": true
+}

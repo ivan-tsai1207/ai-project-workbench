@@ -6599,3 +6599,222 @@ Timestamp 2026-10-04T14:31:45.697631+00:00. EXEC003 Status`DONE`, allfourAC comp
 ## LC-HNS-EXEC-003-001-METADATA-CORRECTION
 
 Timestamp 2026-10-04T14:32:48.443947+00:00. Initial lifecycle Notes subheading failed canonical parser; command chain mistakenly continued to commit/push ea0759c despite parsefailure. This operational error retained, no source defect or independent review invalidation. Parent removed only invalid Notes subheading; fresh canonical parse4/4 PASS at closure-checks.json. All16 postmerge rawlogs explicitly added despite ignore rules. Source/Gate/manifest unchanged, prior history preserved, no new execution/Maker/remediation. Conservative allocationactivity1295.524s/1800s elapsed828.444s/1500s beforefinalpush. Normal evidence correction commit follows.
+
+
+## TECH-HNS-EXEC-004-R1
+
+## Evidence Metadata
+
+| Field | Value |
+|---|---|
+| Evidence ID | `HNS-EXEC-004-TECH-REVIEW-001-R1` |
+| Execution ID / Reviewer Execution ID | Fresh `/root/exec004_tech`; parent must resolve exact execution UUID from host journal before persistence |
+| Work Item | `work-items/HNS-EXEC-004-TECH-REVIEW-001.md` |
+| Role / Profile | `REVIEWER` / `TECH_REVIEWER` |
+| Risk | `HIGH` |
+| Maker Execution ID | `01a10756-a3c2-78d2-9d24-6c48cf133eab` |
+| Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-004-implementation-r1.md` |
+| Artifact Hash | `sha256:ac1c821cf95113bad849f9bc84ad9b90c55825606c838ad566f9a0f9e988b570` |
+| Commit | `b8d5fba1aa656f27cd2b2f8c9a06b4f737a6fb06` |
+| Last measured UTC timestamp | `2026-10-04T14:45:30.321Z`; final completion timestamp available in host journal |
+
+## Specification References
+
+`AC-HNS-012`; all four `AC-HNS-EXEC-004-001`–`004`; assigned review ACs `001`–`003`. Full Constitution, Authority, Workflow, REVIEWER role, TECH profile, assigned Work Item and Implementation Gate were read without truncated output. Direct SDD references: 5.4–5.5, 29–30, 35, 38–40, 44, and Phase 5/7 requirements. Harness Contract lifecycle/Gate/audit/accountability sections and Work Item default-Gate table were inspected.
+
+## Checks Performed
+
+| Check | Method / evidence | Result |
+|---|---|---|
+| Candidate and manifest identity | Current HEAD and independent raw manifest SHA256 | PASS |
+| Validation inputs | Independently recomputed all 102 recorded input hashes; separately compared all 84 harness inputs against exact candidate Git blobs | PASS |
+| Compiled outputs | Independently recomputed 124 hashes and inventory digest; enumerated actual directory to reject omitted files or symlinks | PASS |
+| Command evidence | Independently recomputed all 16 stdout/stderr hashes, checked eight exits/signals, commands, timestamps and runtime paths | PASS |
+| Runtime | Fresh exact-path Node/npm version checks: `24.19.0` / `11.17.0` | PASS |
+| Diff scope | Base `e3c2150620e4a0090f9f263ad0f559b20dc5c108` to candidate: exactly six authorized files, 269 additions, no dependency/schema/core/state edits; whitespace check exit 0 | PASS |
+| Required profiles and independence | Resolver verifies current host registry, Maker exclusion, execution uniqueness, profile assignment, artifact hash and required checks/evidence | PASS |
+| Current Gate criteria | Exact definition bytes/hash, checklist membership and cardinality, mandatory Gate preservation, explicit trusted host authority | PASS |
+| Current completion | Recorded Gate authenticity, current review/definition revalidation at completion and finalization, legal lifecycle transitions | PASS |
+
+## Tests Performed
+
+| Type | Command / evidence | Result |
+|---|---|---|
+| Fresh unit tests | Exact Node path: `node --test harness/tests/unit/gates/*.test.mjs harness/tests/unit/audit/*.test.mjs` | **23/23 PASS**, exit 0; no skipped/cancelled/TODO |
+| Fresh bounded probes | Read-only inline exact-runtime script, importing qualified `dist` and Gate fixtures | **7 assertions/scenarios PASS**, exit 0 |
+| Build | Qualified `commands/results.json`, `build.stdout.log` and matching inventory | Reused exact-candidate PASS |
+| Typecheck | Qualified `typecheck.stdout.log` | Reused PASS |
+| Installation | Qualified `ci.stdout.log`, unchanged package/lock inputs | Reused PASS |
+| Full regression | Qualified `test.stdout.log` | Reused **233/233 PASS** |
+| Focused regression | Qualified `focused.stdout.log` | Reused **95/95 PASS**: 23 new + 72 existing |
+| Security audit | Qualified `audit.stdout.log` | Reused exit 0, zero vulnerabilities; fresh Security audit remains assigned to SECURITY reviewer |
+| Formatter/linter | Package has no configured scripts | N/A |
+
+Fresh bounded probes produced these outputs at `2026-10-04T14:45:08Z`:
+
+```text
+SPEC_GATE positive and negative passed
+DESIGN_GATE positive and negative passed
+DELIVERY_ASSURANCE_GATE positive and negative passed
+explicit host Gate-failure transition/finalization passed; total 7
+```
+
+These used each actual canonical definition, correctly bound phase/role/profile, and tested PASS then a FAILED criterion. Delivery Assurance probing exercised Gate binding only; it did not execute an assurance coordinator or Release Gate.
+
+## Acceptance Mapping
+
+| AC | Positive coverage | Negative / boundary coverage | Assessment |
+|---|---|---|---|
+| `004-001` | Current host-assigned TECH/QA/SECURITY evidence admits required Gate | Missing/stale review; unassigned profile; Maker collision; duplicate execution; REQUEST_CHANGES; missing required checks/evidence; OPEN BLOCKING; missing mandatory Gate; definition mismatch; omitted checklist criterion; failed/clarification Gate prevents completion | PASS |
+| `004-002` | Deterministic deeply immutable result binds artifact and exact Gate-definition hashes; three additional canonical Gate routes freshly exercised | FAILED/NEEDS_CLARIFICATION remain distinct from reviewer decisions; unsupported Release execution rejects | PASS |
+| `004-003` | Contiguous sequence, previous/current hashes, redaction before hashing, frozen snapshots, identical finalization returns same object | Payload/sequence tampering; forged/cross-runner Gate; conflicting Gate/finalization; append after finalization; host-redaction failure returns sanitized `HNS-AUD-001` and blocks continuation | PASS |
+| `004-004` | Context/profile payload capability, reference events, content-addressed review records, transitions, Gate results and final status reconstructable in memory | Current review drift prevents completion or finalization; illegal transitions reject; FAILED_GATE terminal evidence freshly finalized | PASS |
+
+The initially raised lifecycle concern was resolved: this foundation allows the trusted host to explicitly transition `VALIDATING → FAILED_GATE` after recording a failed Gate, and that terminal status finalizes correctly. A rejected completion attempt leaves VALIDATING, permitting the host to record the canonical failure transition. This is not a bypass of completion checks.
+
+## Implementer Scope Evidence
+
+Reviewer field: N/A. Independently verified candidate changes:
+
+- `harness/src/gates/index.ts`
+- `harness/src/audit/index.ts`
+- `harness/src/index.ts`
+- `harness/tests/unit/audit/recorder.test.mjs`
+- `harness/tests/unit/gates/fixtures.mjs`
+- `harness/tests/unit/gates/runner.test.mjs`
+
+No reviewed source, tests, dependencies, compiled outputs or repository files were written by this reviewer.
+
+## Findings
+
+No actionable source finding identified within the assigned bounded scope. No OPEN MAJOR/BLOCKING finding introduced by this review.
+
+Process observation: one SDD extraction accidentally returned the complete Phase table rather than only rows 5 and 7. Other phase rows were not used to expand review scope or infer requirements. This selection deviation should remain visible in parent audit evidence.
+
+## Known Limitations and Unresolved Issues
+
+- Trusted host implementations must remain outside Agent control and supply current canonical criteria evaluations, review/finding state and redaction. This review does not establish a production trust boundary.
+- Host integration owns recording `FAILED_GATE` after Gate failure; the recorder verifies legal transitions and prevents invalid completion.
+- The existing package’s full-test command does not include the new Gate/Audit directory globs; the Work Item’s separate mandatory focused command and this fresh reviewer command cover them.
+- Additional Gate-route probes were bounded synthetic host fixtures, not end-to-end specification/design/assurance executions.
+- Append verification rescans the in-memory chain; no production-scale performance, durable storage, WORM, OS enforcement, adapter, Git or release claim.
+- Existing EXEC003 observation remains unchanged and outside this review.
+- Eleven complete mandatory/direct assignment documents measured **44,161 bytes**. Direct source/tests/spec sections were loaded on demand. Aggregate context/token telemetry was not captured; token actual remains `null`.
+- This is parent attempt **2/8** as assigned; no retries, remediation, spawning, build or installation performed. Final report is returned before the parent’s `14:47:30Z` hard deadline. Host must attach exact journal start/end and elapsed duration.
+- Parent persistence and remaining QA/SECURITY reviews are outstanding; this evidence does not approve the Implementation Gate.
+
+## Result
+
+**Reviewer decision: PASS**
+
+Integrity: exact artifact hash verified; fresh reviewer execution distinct from Maker by canonical task identity, pending journal UUID substitution; assigned TECH profile retained; no artifact mutation; evidence returned for parent-controlled persistence. No Gate approval claimed.
+
+Parent actual execution binding: session`01a1075e-e46b-77d2-ba71-4e6796e54779`, completed`2026-10-04T14:46:27.604Z`, duration`165647ms`; report alias identifies this fresh execution, distinct fromMaker. Source unchanged.
+
+
+## QA-HNS-EXEC-004-R1
+
+## Agent Review Log — HNS-EXEC-004 QA
+
+**Reviewer decision: PASS.** This is independent QA evidence, not Implementation Gate approval. Security review remains required; the host dispatch/budget blocker does not constitute a source finding or Security PASS.
+
+| Field | Value |
+|---|---|
+| Evidence ID | `HNS-EXEC-004-QA-REVIEW-001-R1` |
+| Execution / Reviewer identity | Fresh child `/root/exec004_qa`; parent must resolve actual execution UUID from the journal before persistence |
+| Work Item | `work-items/HNS-EXEC-004-QA-REVIEW-001.md` |
+| Role / Profile / Risk | `REVIEWER` / `QA_REVIEWER` / `HIGH` |
+| Maker Execution ID | `01a10756-a3c2-78d2-9d24-6c48cf133eab` |
+| Reviewed Artifact | `docs/08_agent_reviews/manifests/HNS-EXEC-004-implementation-r1.md` |
+| Artifact Hash | `sha256:ac1c821cf95113bad849f9bc84ad9b90c55825606c838ad566f9a0f9e988b570` |
+| Candidate | `b8d5fba1aa656f27cd2b2f8c9a06b4f737a6fb06` |
+| Base | `e3c2150620e4a0090f9f263ad0f559b20dc5c108` |
+| Observed start / final check | `2026-10-04T14:48:41Z` / `2026-10-04T14:50:31Z` |
+| Specification references | `AC-HNS-012`; four `AC-HNS-EXEC-004` criteria; SDD 5.4–5.5, 29–30, 35, 38–40, 44, 46 Phases 5 and 7; canonical governance and Implementation Gate |
+
+### Identity, qualification and scope
+
+Independently recomputed the manifest hash and six artifact hashes; each source/test artifact matched both the manifest and candidate Git content. HEAD matched the candidate. Candidate diff contains exactly **six authorized paths and 269 additions**. Candidate-to-working-tree `harness/**` diff and candidate whitespace check exited **0**.
+
+Before reusing validation, independently verified:
+
+- **102 inputs**, including complete coverage of **84 tracked source/test/package/config paths**.
+- **124 compiled files**, with exact inventory and aggregate digest.
+- **16 stdout/stderr logs**, their raw hashes, exit statuses, signals and recorded command/runtime binding.
+- Input aggregate hash `0f25ccb0a25843a52525d1bf97b41b56a5c558cab1d73a0b2074808aab5b2dd8`.
+- Compiled aggregate hash `19e2b90fb0d3af9f13310b574d98786c9616748b046762cf6f3561edd2120217`.
+- **Zero mismatches**. Supplied runtime reports Node `v24.19.0`; qualified npm log reports `11.17.0`.
+
+Raw evidence resides under `docs/08_agent_reviews/validation/HNS-EXEC-004-r1/commands/`. Independent qualification output: tool chunk `fbd3e5`.
+
+### Acceptance coverage
+
+| Criterion | Independent assessment | Result |
+|---|---|---|
+| **004-001** | Missing/stale reviews, Maker collision, duplicate executions, unassigned profiles, incomplete checks/evidence, `REQUEST_CHANGES`/`BLOCK`, open blocking findings and missing phase-mandatory Gate reject PASS or completion. Current artifact drift also rejects Gate execution/completion. | PASS |
+| **004-002** | Deterministic deeply frozen Implementation results bind exact artifact and raw Gate-definition hashes. Review and Gate enums remain distinct. Canonical Spec, Design and Delivery Assurance routes independently exercised with valid evidence and failed criteria. Missing checklist items and wrong definition hashes reject. Release execution rejects as scoped. | PASS |
+| **004-003** | Contiguous sequence, previous/current hashes, pre-hash redaction, frozen exports, payload/sequence tampering and truncation detection verified. Same Gate recording and finalization are idempotent; conflicting content rejects. Redaction failure yields sanitized `HNS-AUD-001`, enters `FAILED_RUNTIME` and prevents continuation. | PASS |
+| **004-004** | Recorded context/profile events, content-addressed review assignment, review evidence and finding OPEN→RESOLVED snapshots, lifecycle transitions, Gate results, chain head and final status reconstruct the scoped execution. Completion/finalization revalidate current evidence. Explicit host `FAILED_GATE` transition preserves failure evidence, finalizes idempotently and remains terminal. | PASS |
+
+Normal, boundary, negative, exception, recovery, integration and state behavior were assessed. Recovery before terminal failure succeeds after supplying previously missing Gate evidence. Failed/clarification Gate results cannot complete; the **host explicitly owns the `FAILED_GATE` transition**, independently verified rather than inferred.
+
+### Tests and commands
+
+| Validation | Method / result |
+|---|---|
+| Required fresh Gate/Audit tests | `/private/tmp/hns-exec-runtime.56wper/node-v24.19.0-darwin-arm64/bin/node --test harness/tests/unit/gates/*.test.mjs harness/tests/unit/audit/*.test.mjs` — exit **0**, **23/23 PASS**, zero failed/skipped/cancelled/TODO |
+| Fresh bounded integration probes | Same exact Node executable, inline read-only module — exit **0**, **10/10 groups PASS** |
+| Fresh runtime check | Exact Node executable `--version` — exit **0**, `v24.19.0` |
+| Qualified existing installation/build/typecheck | Exact runtime `npm ci`, `npm run build`, `npm run typecheck` — all exit **0** |
+| Qualified existing full tests | `npm test` — **233/233 PASS**, zero failed/skipped/cancelled/TODO |
+| Qualified existing focused regressions | Gate/Audit/risk/profile/context — **95/95 PASS**, zero failed/skipped/cancelled/TODO |
+| Qualified existing dependency audit | `npm audit --audit-level=high --json` — exit **0**, **0 vulnerabilities** |
+| Scope/whitespace | Candidate source diff and whitespace checks — exit **0** |
+| Formatter/linter | No configured formatter/linter scripts; independently inspected package configuration |
+
+Fresh test output: chunk `04a031`. Fresh bounded probe output: chunk `108753`. Probe groups cover three additional canonical Gate routes, explicit failed-state finalization, recovery, reconstruction/redaction, incomplete evidence/review BLOCK, mandatory Gate omission, artifact drift and immutable/truncated chain export.
+
+### Findings
+
+**No new implementation or QA findings.** No evidence supporting a new MAJOR/BLOCKING defect was identified. Existing EXEC003 observation remains unchanged; its history was not reopened.
+
+### Context, limitations and independence
+
+Full mandatory Constitution, Authority, Workflow, Reviewer role, QA profile, assigned Work Item, Implementation Gate, manifest and Maker evidence were read. Relevant source/tests and direct Harness boundary sections were loaded on demand. Truncated combined output was repaired with smaller targeted reads.
+
+One SDD Phase-table filtering command also displayed adjacent Phase rows; this is a context-selection deviation, **not a source finding or waived policy requirement**. No full SDD, mother transcript or historical review log was loaded. Exact aggregate context/token telemetry was unavailable; token actual remains `null`. No exact context/token cap claim is made.
+
+Separate positive Spec/Design/Delivery Assurance integration fixtures are absent from the committed tests; fresh independent bounded probes covered those routes. Audit is in memory. Typed host authority, canonical criteria evaluation and sensitive-path/value redaction remain trusted host responsibilities outside Agent input. This review establishes no durable storage, OS enforcement, production, Release Gate execution or assurance-coordinator claim.
+
+The child performed **no writes, build, installation, compiled-output mutation, commit, remediation, retry or spawn**. Parent evidence persistence and UUID resolution remain outstanding. Security review, Gate disposition, merge and closure remain parent responsibilities and must not be reported complete under the stated host blocker.
+
+**Final decision: PASS for this exact immutable candidate and assigned QA scope.**
+
+Parent actual execution binding: session`01a10763-5f4d-7090-8757-68bba5853222`, task_complete`2026-10-04T14:51:16.577Z`, duration`161056ms`. Last check14:50:31Z preceded parent-onlyprimaryWI Status/BLOCKER metadata change; exactsource/artifact unchanged.
+
+
+## CHECKPOINT-HNS-EXEC-004-R1
+
+{
+  "timestamp": "2026-10-04T14:52:01.200879+00:00",
+  "elapsed_s": 1141.200879,
+  "child_activity_s": 759.18,
+  "parent_idle_measured_s": 316.37480000000005,
+  "conservative_activity_s": 1584.0060789999998,
+  "remaining_activity_s": 215.99392100000023,
+  "remaining_wall_s": 658.799121,
+  "review_status": {
+    "TECH": "PASS",
+    "QA": "PASS",
+    "SECURITY": "NOT_EXECUTED"
+  },
+  "required_remaining_reserve_s": 360,
+  "gate": "NOT_RUN",
+  "merge": "NOT_RUN",
+  "lifecycle": "BLOCKED",
+  "source_findings": "None in completed bounded Maker/TECH/QA; Security missing",
+  "repo_approval": "Pending user reply; no productrepo provisioned",
+  "fresh_execution_host_limit": "Newspawn failed; reusing completedworker requires separate actualturnidentity and newfresh binding, not a cachedPASS; no fallback fitsremainingreserve"
+}
+
+BUDGET_INSUFFICIENT, not a new sourcefinding. No Gate/merge/closure claim; Security required and missing. Allprior003history/observations unchanged. Parent preservation normalcommit/push only; main untouched.
