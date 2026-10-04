@@ -1,10 +1,12 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, realpath } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 import test from "node:test";
 
 import { ContextCompiler } from "../../../dist/index.js";
 import { canonicalStringify } from "../../../dist/core/hash/index.js";
 import { HarnessError } from "../../../dist/errors/index.js";
+import { parseWorkItem } from "../../../dist/work-items/index.js";
 
 const sectioned = await readFile(new URL("../../fixtures/context/sectioned.md", import.meta.url), "utf8");
 const root = "/virtual/repository";
@@ -111,6 +113,92 @@ function expectHarnessError(code, failure) {
     return true;
   };
 }
+
+async function currentWorkItemInput() {
+  const repositoryRoot = await realpath(fileURLToPath(new URL("../../../../", import.meta.url)));
+  const assignedPath = "work-items/HNS-EXEC-003.md";
+  const constitutionPath = ".ai/CONSTITUTION.md";
+  const document = await readFile(`${repositoryRoot}/${assignedPath}`, "utf8");
+  const parsed = parseWorkItem(assignedPath, document, {
+    canonical_targets: [
+      { path: "docs/harness_v0.1_SDD.md", anchors: ["Sections 5.3, 5.5, 16.1, 21, 35, 38, 40.1, 46 Phases 6-7"] },
+      { path: "work-items/HNS-EXEC-001.md" },
+      { path: "work-items/HNS-EXEC-002.md" },
+    ],
+  });
+  assert.ok(parsed.ok, parsed.ok ? undefined : JSON.stringify(parsed.error));
+  const selected = new Set([assignedPath, constitutionPath]);
+  const reads = [];
+  const sourceProvider = {
+    reads,
+    async resolve(path) {
+      assert.ok(selected.has(path));
+      return realpath(`${repositoryRoot}/${path}`);
+    },
+    async read(path) {
+      assert.ok([...selected].some((ref) => `${repositoryRoot}/${ref}` === path));
+      reads.push(path);
+      return readFile(path);
+    },
+  };
+  const budget = { max_bytes: 65536, max_files: 2, max_sections: 2 };
+  return {
+    sourceProvider,
+    compileInput: input([
+      { path: constitutionPath, context_class: "governance", tier: "TIER_1_MANDATORY", reason: "actual mandatory governance" },
+      { path: assignedPath, context_class: "work_item", tier: "TIER_1_MANDATORY", reason: "actual assigned Work Item" },
+    ], {
+      work_item: parsed.value,
+      repository: { ...input().repository, root: repositoryRoot },
+      boundary: { read_scope: parsed.value.read_scope, policy_read_scope: parsed.value.read_scope, forbidden_scope: [] },
+      required_gates: parsed.value.required_gates,
+      initial_budget: budget,
+      hard_safety_ceiling: budget,
+    }),
+  };
+}
+
+test("current parsed Work Item permits mandatory reads while its write-forbidden scope stays unchanged", async () => {
+  const { sourceProvider, compileInput } = await currentWorkItemInput();
+  const before = canonicalStringify(compileInput.work_item);
+  assert.ok(compileInput.work_item.forbidden_scope.includes(".ai/**"));
+  assert.ok(compileInput.work_item.forbidden_scope.includes("work-items/**"));
+  const compiler = new ContextCompiler(sourceProvider);
+  const manifest = await compiler.compile(compileInput);
+  assert.equal(manifest.governance_context[0].path, ".ai/CONSTITUTION.md");
+  assert.equal(manifest.work_item.path, "work-items/HNS-EXEC-003.md");
+  assert.equal(manifest.work_item.content_sha256, compileInput.work_item.document_hash);
+  assert.equal(sourceProvider.reads.length, 2);
+  const assignedOnly = await compiler.compile({ ...compileInput, sources: compileInput.sources.slice(1) });
+  assert.equal(assignedOnly.work_item.path, manifest.work_item.path);
+  assert.equal(assignedOnly.context_usage.files, 1);
+  assert.equal(canonicalStringify(compileInput.work_item), before);
+});
+
+test("current Work Item still rejects independent host read-forbidden paths before reading", async () => {
+  for (const forbidden of [".ai/**", "work-items/**"]) {
+    const { sourceProvider, compileInput } = await currentWorkItemInput();
+    const sources = compileInput.sources.filter(({ path }) => path.startsWith(forbidden.slice(0, -2)));
+    await assert.rejects(new ContextCompiler(sourceProvider).compile({
+      ...compileInput, sources,
+      boundary: { ...compileInput.boundary, forbidden_scope: [forbidden] },
+    }), expectHarnessError("HNS-CTX-002", "FORBIDDEN_SCOPE"));
+    assert.deepEqual(sourceProvider.reads, []);
+  }
+});
+
+test("current Work Item retains Work Item, host, and policy read-scope restrictions", async () => {
+  for (const deniedScope of ["work_item", "read_scope", "policy_read_scope"]) {
+    const { sourceProvider, compileInput } = await currentWorkItemInput();
+    const deniedInput = deniedScope === "work_item"
+      ? { ...compileInput, work_item: { ...compileInput.work_item, read_scope: [] } }
+      : { ...compileInput, boundary: { ...compileInput.boundary, [deniedScope]: [] } };
+    await assert.rejects(new ContextCompiler(sourceProvider).compile(deniedInput),
+      expectHarnessError("HNS-CTX-002", deniedScope === "policy_read_scope"
+        ? "POLICY_READ_SCOPE_DENIED" : "WORK_ITEM_READ_SCOPE_DENIED"));
+    assert.deepEqual(sourceProvider.reads, []);
+  }
+});
 
 test("compile is immutable, order-independent, section-bounded, deduplicated, and excludes deferred sources", async () => {
   const firstProvider = provider(files);
